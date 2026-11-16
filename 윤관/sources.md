@@ -12,6 +12,8 @@
 6. [짐벌 제어·시험 기록](https://github.com/lwir-deepx-tracking-system/model-bank/blob/b0358a0a68b5f7b250cedecc9605684391f7cd4a/tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md): 실제 카메라와 짐벌, 가상 표적을 사용한 2026-11-10 시험. 등속 비교는 조건당 1회, 별도 가로 지표 악화도 함께 보고한다.
 7. [FLIR 가림 사건 비교](https://app.notion.com/p/40db03d00660819c864dc9bf4d5650d1): 같은 M1 INT8 검출 결과를 사용한 개발 영상의 가림 전후 사례. 구성 선택에 사용된 자료이며 모든 가림 사건의 성능을 뜻하지 않는다.
 
+8. [라벨링 서버 사용 기록, dfd2a9d](https://github.com/lwir-deepx-tracking-system/model-bank/blob/dfd2a9d878cf6ae93824ee1f7ad5ab21795b1c08/label_server/README.md): 사람 박스·ID 수정과 신체 부위 검수, 저장 방식. 발표의 실내·야외 화면은 사용자가 직접 제공한 실제 편집기 캡처다. 선택한 부위는 검수 필요로 표시되어 있으며 이 프레임의 완료·학습 사용 여부는 확인되지 않았다.
+
 ## 논문·방법 참고
 
 - Hu et al., *LoRA: Low-Rank Adaptation of Large Language Models* (2021), [arXiv:2106.09685](https://arxiv.org/abs/2106.09685). 저랭크 적응의 원리 참고. 이 프로젝트의 YOLO 적용 결과는 위 프로젝트 실험에서 따로 확인한다.
