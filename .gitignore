@@ -1,0 +1,17 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary exports / dependencies
+node_modules/
+__pycache__/
+.cache/
+*.tmp
+
+# PDF and preview images are allowed for presentation deliverables.
