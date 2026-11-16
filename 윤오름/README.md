@@ -1,42 +1,46 @@
-# 발표자료 통합 초안
+# LWIR 프로젝트 발표자료
 
-## 발표 통합 초안 — 2026-11-16
+표지·팀 소개·운용 시나리오와 담당 기술 내용을 하나의 발표자료로 통합했습니다. 전체 목차의 1·2·3·4·5·10·11·12·13번, 총 9장입니다. 페이지 번호는 전체 발표 목차 기준을 유지합니다.
 
-- [technical.html](technical.html): 기존 표지·운용 시나리오를 합친 1·2·3·4·5·10·11·12·13번 슬라이드 9장. 브라우저에서 미리보기, 방향키 좌우 또는 Page Up/Down으로 이동. 원래 발표 목차 번호를 유지했습니다.
-- [technical.pdf](technical.pdf): 슬라이드당 한 페이지인 16:9 PDF 9페이지.
-- [technical-notes.md](technical-notes.md): 슬라이드별 핵심 문장·발표 노트·근거와 확인할 자료.
-- `technical.css`: 기존 `slides.css`의 폰트·헤더·로고·푸터·인쇄 규격을 이어받는 기술 파트 레이아웃.
-- `previews/slide-01.png` 등: 9장 개별 미리보기. `previews/validation.json`에 출력 검증 결과 기록.
-- `assets/team/`: `reference/human/`에서 복사한 팀원 누끼 사진. 홍정호.png는 현재 윤오름 사진의 임시 복사본이며 실제 사진 수령 후 교체합니다. 교체 시 HTML의 임시 사진 표시·alt·출처 문구도 갱신합니다.
-- `assets/gui-mock-h264.png`: PC 앱의 기존 모의 영상 수신 시험 캡처. 실제 보드 성능이나 실물 추종 화면으로 사용하지 않음.
-- `render-technical.py`: 설치된 Chrome과 Python `playwright`, `pypdf`를 이용한 PDF·PNG 재생성 및 레이아웃 확인. 실행: `python 윤오름/render-technical.py` (저장소 루트 기준).
+## 파일
 
-성능 원본 로그를 아직 반영하지 않은 항목은 `[측정 예정]`으로 표시했습니다. 11번은 파이프라인·영상 송신 담당 자료와 대조할 공동 설명 초안입니다.
+- [index.html](index.html): 통합 발표자료. 브라우저에서 열어 미리보고 방향키 좌우 또는 Page Up/Down으로 이동합니다.
+- [presentation.pdf](presentation.pdf): 통합 PDF 9페이지, 한 페이지에 슬라이드 한 장.
+- [notes.md](notes.md): 슬라이드별 발표 노트·근거·확인할 자료.
+- `slides.css`: 폰트·공통 디자인·슬라이드 레이아웃·화면 축소·인쇄 스타일.
+- `previews/slide-01.png` 등: 9장 개별 미리보기. `previews/validation.json`은 출력 검증 결과입니다.
+- `render-presentation.py`: 설치된 Chrome과 Python `playwright`, `pypdf`로 PDF·미리보기를 재생성하고 출력 상태를 확인합니다.
+- [model-bank-GUI-제어-비교분석.md](model-bank-GUI-제어-비교분석.md): 기존 Qt 앱과 모델뱅크 웹 GUI·제어의 비교 근거.
 
-검증: 로컬 폰트·로고·인물·GUI 이미지 로딩, JavaScript 오류 없음, 1280px 화면 축소 표시, 본문과 출처·푸터 영역의 경계, 슬라이드 순서, PDF 9페이지·페이지별 1440×810pt(1920×1080px 상당) 확인.
+저장소 루트에서 다시 출력:
 
-## 기존 표지·운용 시나리오 예시
+```powershell
+python 윤오름/render-presentation.py
+```
 
-노션 「발표자료 준비」를 기준으로 만든 표지(01), 프로젝트 목표와 운용 시나리오(03) 두 장입니다.
+## 에셋
 
-- `index.html`: 브라우저에서 열어 미리보기. 상단 버튼으로 PDF 인쇄 가능.
-- `slides.css`: 1920×1080 공통 레이아웃, LIG 블루 #002F6D, 인쇄 스타일.
-- `assets/`: 로컬 Pretendard 폰트와 라이선스.
-- `example.pdf`: 동일 HTML에서 출력한 PDF.
-- `slide-01.png`, `slide-03.png`: 각 장의 미리보기.
+- `assets/team/`: `reference/human/`에서 복사한 팀원 5명의 누끼 사진. 홍정호도 실제 제공 사진입니다.
+- `assets/model-bank-web-gui.png`: model-bank `5ea5b64`의 `tracking_server/images/interface_8090.png`. 12번의 웹 GUI 미리보기입니다. 합성 영상·예시 수치·장치 연결 없음이라는 원본 표시를 유지했습니다.
+- `assets/gui-mock-h264.png`: 이전 Qt 앱 모의 시험 캡처를 보관한 참고 파일. 현재 슬라이드에서는 사용하지 않습니다.
+- `assets/Signature_PNG/`: 제공된 공식 로고. 현재는 Blue 축약형을 사용합니다.
+- `assets/Pretendard-*.woff2`, `FONT-LICENSE.txt`: 로컬 폰트와 라이선스.
+- `assets/0000_프로젝트계획서(천준호).pdf`: 프로젝트명·계획 참고 원본.
 
-프로젝트명은 제공된 `0000_프로젝트계획서(천준호).pdf`의 주제명인 「DEEPX NPU를 이용한 LWIR 표적 추적 시스템 구현」을 사용했습니다.
+## 내용과 확인 범위
 
-표지에 팀원 윤오름·김재남·윤관·정하건·홍정호와 멘토 천준호 선임연구원을 기재했습니다. 두 슬라이드의 우측 상단 240×84px 영역에는 제공된 공식 Blue 로고 `assets/Signature_PNG/1_LIG Innovative Blue/2_LIG_DNA(축약형).png`를 비율과 색상을 유지해 넣었습니다.
+5번은 브라우저–Python 서버–C++ 브리지–짐벌 구성, 10번은 공개 스크립트의 PD·설정 조준점, 11번은 웹 JPEG·선택적 Picture First, 12번은 웹 GUI, 13번은 시스템별 시험 근거 구분을 설명합니다. 모델뱅크 실제 서버의 v25/v27·환경변수·활성 옵션은 미조회 상태이며 공개 기본값과 구분합니다.
 
-도식은 운용 개념을 나타내며 실제 장치 사진, 실제 열화상, 추론 결과나 측정 성능을 나타내지 않습니다. 시스템 목표를 설명하는 슬라이드이며 30Hz 실측 성과나 미검증 정확도는 포함하지 않았습니다.
+성능 원본 로그가 반영되지 않은 항목은 측정·결과 반영 예정으로 표시했습니다. 11번은 다른 담당자의 파이프라인 자료와 대조할 공동 설명 초안입니다. 12번 미리보기의 예시 숫자는 성능 결과가 아닙니다.
 
-브라우저에서 인쇄할 때 머리글/바닥글은 끄고, 배경 그래픽은 켜고, 여백은 없음을 사용하세요. 인쇄 CSS는 PDF 두 페이지에 각각 16:9 크기를 지정합니다.
+도식은 운용 개념이며 실제 장치 사진이나 실측 성과를 대신하지 않습니다. 최종본에서는 실제 운용 GUI 캡처와 동일 설정의 로그를 반영해야 합니다.
 
-요구사항 출처: https://app.notion.com/p/4169de3f14a280ee9e05cec320dfb929
+## 제작·검증 기준
 
-## FHD 제작 기준
+1920×1080px, 흰색 배경, LIG 블루 `#002F6D`, Pretendard 폰트를 사용합니다. 공식 로고 너비는 180px이며 원본 비율과 색상을 유지합니다. 화면에서만 축소하고 인쇄 크기는 유지합니다.
 
-슬라이드 크기를 1920×1080으로 통일했습니다. 기존 디자인의 글자·여백·선·그림 크기는 1.5배로 조정했습니다. 로고 실제 너비는 180px이며 헤더와 중심을 맞춥니다. 화면 미리보기만 가용 너비에 맞춰 축소하고 PDF는 FHD 비율과 원본 크기를 유지합니다.
+출력 검증: 폰트·로고·인물·GUI 이미지 로딩, JavaScript 오류 없음, 1280px 화면 축소 표시, 본문과 출처·푸터 경계, 슬라이드 순서, PDF 9페이지·1440×810pt(1920×1080px 상당)를 확인합니다.
 
-GitHub 작업 방식: https://github.com/lwir-deepx-tracking-system/presentation 에서 각자 담당 폴더에 HTML·CSS·에셋·발표 노트를 직접 올립니다. 별도 작업 브랜치는 필수가 아니며 최종 취합 시 발표 순서로 합칩니다.
+수동 인쇄 시 머리글/바닥글 끄기, 배경 그래픽 켜기, 여백 없음으로 설정합니다.
+
+구성·공통 규격: [Notion 발표자료 준비](https://app.notion.com/p/4169de3f14a280ee9e05cec320dfb929).

@@ -12,7 +12,7 @@ with sync_playwright() as p:
     page = browser.new_page(viewport={'width': 2040, 'height': 1240}, device_scale_factor=1)
     errors = []
     page.on('pageerror', lambda e: errors.append(str(e)))
-    page.goto((root / 'technical.html').as_uri(), wait_until='networkidle')
+    page.goto((root / 'index.html').as_uri(), wait_until='networkidle')
     page.evaluate('document.fonts.ready')
     assets = page.evaluate("""() => ({images:[...document.images].map(i=>({src:i.getAttribute('src'),ok:i.complete&&i.naturalWidth>0})),font:document.fonts.check('36px Pretendard')})""")
     assert all(i['ok'] for i in assets['images']), assets
@@ -25,7 +25,7 @@ with sync_playwright() as p:
     for slide in page.locator('.slide').all():
         slide.screenshot(path=str(out / ('slide-' + slide.get_attribute('data-page') + '.png')))
     page.emulate_media(media='print')
-    page.pdf(path=str(root / 'technical.pdf'), print_background=True, prefer_css_page_size=True, display_header_footer=False)
+    page.pdf(path=str(root / 'presentation.pdf'), print_background=True, prefer_css_page_size=True, display_header_footer=False)
     # Verify a small browser viewport uses scaling without horizontal overflow.
     page.emulate_media(media='screen')
     page.set_viewport_size({'width': 1280, 'height': 900})
@@ -33,7 +33,7 @@ with sync_playwright() as p:
     responsive = page.evaluate('document.documentElement.scrollWidth <= innerWidth')
     browser.close()
 
-pdf = PdfReader(root / 'technical.pdf')
+pdf = PdfReader(root / 'presentation.pdf')
 assert len(pdf.pages) == 9, len(pdf.pages)
 assert [c['page'] for c in checks] == ['01', '02', '03', '04', '05', '10', '11', '12', '13']
 for i, pg in enumerate(pdf.pages):
