@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="올빼미 팀 LWIR 프로젝트 발표 디자인 예시: 표지와 3번 운용 시나리오.">
+  <title>DEEPX NPU를 이용한 LWIR 표적 추적 시스템 구현 — 올빼미</title>
+  <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+  <nav class="preview-toolbar" aria-label="예시 자료 도구">
+    <span><b>올빼미</b> <span class="toolbar-divider">/</span> 발표 디자인 예시 · 01, 03</span>
+    <div><span class="toolbar-hint">16:9 · HTML / PDF</span><button type="button" onclick="window.print()">PDF로 저장</button></div>
+  </nav>
+  <main class="deck">
+    <div class="slide-frame">
+      <section class="slide cover" aria-labelledby="cover-title" data-page="01">
+        <header class="slide-header"><span class="eyebrow">THE SSEN PROJECT · TEAM 05</span></header>
+        <div class="brand-slot"><img src="assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png" alt="LIG D&amp;A"></div>
+        <div class="header-rule"></div>
+        <div class="cover-copy">
+          <p class="section-label">LWIR OBJECT DETECTION &amp; TRACKING</p>
+          <h1 id="cover-title">DEEPX NPU를 이용한<br>LWIR 표적 추적 시스템 구현</h1>
+          <p class="cover-description">열화상으로 찾고,<br>선택한 표적을 따라가다.</p>
+          <div class="cover-team">
+            <span class="team-mark"></span>
+            <div>
+              <b>5팀 올빼미</b>
+              <p class="cover-credit"><span class="credit-label">팀원</span><span>윤오름 · 김재남 · 윤관 · 정하건 · 홍정호</span></p>
+              <p class="cover-credit"><span class="credit-label">멘토</span><span>천준호 선임연구원</span></p>
+            </div>
+          </div>
+        </div>
+        <figure class="cover-figure">
+          <svg viewBox="0 0 440 360" role="img" aria-labelledby="cover-diagram-title">
+            <title id="cover-diagram-title">열화상 카메라와 회전 짐벌, 표적 관측을 표현한 개념도</title>
+            <defs><marker id="arrow-cover" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#002f6d" stroke-width="1.6"/></marker></defs>
+            <g stroke="#dce2ea" stroke-width="1"><path d="M24 66H416M24 138H416M24 210H416M24 282H416M76 36V316M148 36V316M220 36V316M292 36V316M364 36V316"/></g>
+            <path d="M221 154L354 60V250Z" fill="#edf2f8"/>
+            <path d="M237 155L356 62M237 155L356 250" fill="none" stroke="#93a9c5" stroke-dasharray="5 6"/>
+            <g fill="none" stroke="#002f6d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M105 288H250L237 270H119Z" fill="white"/>
+              <path d="M153 269V230H202V269" fill="white"/>
+              <path d="M122 159V211Q122 234 145 234H210Q233 234 233 211V177"/>
+              <path d="M113 132L202 110L232 135V177L144 199L113 176Z" fill="white"/>
+              <path d="M144 155L232 135M144 155V199M113 132L144 155"/>
+              <ellipse cx="205" cy="160" rx="14" ry="18" transform="rotate(12 205 160)" fill="#edf2f8"/>
+              <ellipse cx="205" cy="160" rx="5" ry="8" transform="rotate(12 205 160)"/>
+              <path d="M91 247C59 230 62 205 95 194" marker-end="url(#arrow-cover)" stroke-width="2"/>
+              <path d="M140 92C168 71 207 75 223 97" marker-end="url(#arrow-cover)" stroke-width="2"/>
+            </g>
+            <g transform="translate(337 127)" fill="#002f6d"><circle cx="0" cy="0" r="9"/><path d="M-11 17Q0 10 11 17L16 47H7L4 76H-4L-7 47H-16Z"/></g>
+            <g fill="none" stroke="#002f6d" stroke-width="2"><path d="M308 117V106H320M355 106H367V117M308 204V216H320M355 216H367V204"/><path d="M326 160H348M337 149V171" stroke-width="1"/></g>
+            <text x="25" y="337" fill="#667085" font-size="13">SYSTEM CONCEPT</text><text x="415" y="337" text-anchor="end" fill="#667085" font-size="13">관측 · 추적 · 제어</text>
+          </svg>
+          <figcaption>열화상 카메라 · 엣지 AI · 2축 짐벌 <span>개념도</span></figcaption>
+        </figure>
+        <footer class="slide-footer"><span>올빼미 <span class="footer-separator">/</span> LWIR 표적 추종 시스템</span><span class="page-number">01</span></footer>
+      </section>
+    </div>
+
+    <div class="slide-frame">
+      <section class="slide scenario" aria-labelledby="scenario-title" data-page="03">
+        <header class="slide-header"><h2 id="scenario-title">프로젝트 목표와 운용 시나리오</h2></header>
+        <div class="brand-slot"><img src="assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png" alt="LIG D&amp;A"></div>
+        <div class="header-rule"></div>
+        <div class="scenario-intro"><p class="section-label">PROJECT OBJECTIVE</p><p class="lead">열화상 속 객체를 찾고,<br><strong>선택한 표적을 화면 중심으로 추종합니다.</strong></p></div>
+        <div class="operation-flow">
+          <article class="operation">
+            <div class="operation-heading"><span class="step">01</span><h3>열화상 객체 검출</h3></div>
+            <svg class="operation-graphic" viewBox="0 0 330 150" role="img" aria-label="열화상 영상에서 여러 객체의 위치를 찾는 개념도">
+              <rect x="47" y="12" width="230" height="124" fill="#f3f6fa" stroke="#dce2ea"/>
+              <path d="M57 116H267M69 24V116M119 24V116M169 24V116M219 24V116" fill="none" stroke="#e3e8f0"/>
+              <g fill="#9aabc0"><circle cx="107" cy="62" r="7"/><path d="M99 74H115L120 99H112L109 117H105L102 99H94Z"/><circle cx="211" cy="66" r="7"/><path d="M203 78H219L224 102H216L213 119H209L206 102H198Z"/></g>
+              <g stroke="#002f6d" stroke-width="2" fill="none"><rect x="87" y="49" width="41" height="74"/><rect x="191" y="53" width="41" height="70"/></g>
+              <path d="M277 72H322M316 67L322 72L316 77" fill="none" stroke="#002f6d" stroke-width="2"/>
+            </svg>
+            <p>카메라 영상에서 객체의<br>위치와 종류를 인식</p>
+            <span class="operation-detail">입력 · LWIR 카메라 영상</span>
+          </article>
+          <article class="operation">
+            <div class="operation-heading"><span class="step">02</span><h3>표적 선택</h3></div>
+            <svg class="operation-graphic" viewBox="0 0 330 150" role="img" aria-label="PC 화면에서 사용자가 추적할 표적을 선택하는 개념도">
+              <rect x="48" y="12" width="230" height="112" fill="#f3f6fa" stroke="#9aabc0" stroke-width="1.5"/>
+              <path d="M163 124V138M131 139H195" stroke="#9aabc0" stroke-width="2"/>
+              <g fill="#9aabc0"><circle cx="108" cy="51" r="7"/><path d="M100 63H116L121 87H113L110 108H106L103 87H95Z"/></g>
+              <g fill="#002f6d"><circle cx="210" cy="51" r="7"/><path d="M202 63H218L223 87H215L212 108H208L205 87H197Z"/></g>
+              <rect x="89" y="37" width="39" height="76" fill="none" stroke="#b5c0cf"/>
+              <rect x="189" y="37" width="42" height="76" fill="none" stroke="#002f6d" stroke-width="2"/>
+              <path d="M223 82L244 99L233 101L230 113Z" fill="white" stroke="#002f6d" stroke-width="1.8"/>
+              <path d="M278 72H322M316 67L322 72L316 77" fill="none" stroke="#002f6d" stroke-width="2"/>
+            </svg>
+            <p>PC 화면에서 사용자가<br>추적할 객체를 지정</p>
+            <span class="operation-detail">명령 · 선택한 Track ID</span>
+          </article>
+          <article class="operation">
+            <div class="operation-heading"><span class="step">03</span><h3>추적·짐벌 제어</h3></div>
+            <svg class="operation-graphic" viewBox="0 0 330 150" role="img" aria-label="표적을 추적하고 화면 중심 오차에 따라 짐벌을 회전하는 개념도">
+              <path d="M69 14V129M14 72H125" stroke="#dce2ea" stroke-dasharray="4 5"/>
+              <g stroke="#002f6d" fill="none"><circle cx="69" cy="72" r="33"/><path d="M69 26V48M69 96V118M23 72H45M93 72H115" stroke-width="2"/><rect x="80" y="44" width="25" height="46" stroke-dasharray="3 3"/><path d="M92 66L73 71M78 66L73 71L80 74" stroke-width="1.8"/></g>
+              <path d="M133 72H170M164 67L170 72L164 77" stroke="#9aabc0" stroke-width="1.8" fill="none"/>
+              <g transform="translate(183 14)" fill="white" stroke="#002f6d" stroke-width="2" stroke-linejoin="round"><path d="M35 32L75 23L96 41V68L56 77L35 60Z"/><path d="M56 48L96 41M56 48V77M35 32L56 48"/><ellipse cx="81" cy="54" rx="7" ry="10"/><path d="M31 51V84Q31 95 44 95H89Q102 95 102 84V60"/><path d="M57 95V110H78V95M39 112H97"/></g>
+              <path d="M211 120C189 112 186 99 198 88M192 89L198 88L198 94" fill="none" stroke="#002f6d" stroke-width="1.8"/>
+            </svg>
+            <p>같은 표적의 ID를 유지하고<br>중심 오차에 따라 짐벌 구동</p>
+            <span class="operation-detail">출력 · 회전 방향과 속도</span>
+          </article>
+        </div>
+        <div class="feedback-loop"><svg viewBox="0 0 1136 34" aria-hidden="true"><path d="M950 2V23H186V2M181 9L186 2L191 9" fill="none" stroke="#8da3bf" stroke-width="1.5"/></svg><span>짐벌 회전으로 바뀐 영상을 다시 입력 · 폐루프 추종</span></div>
+        <div class="scenario-note"><span class="note-label">운용 흐름</span><p>사용자는 표적을 지정하고, 시스템은 검출·추적 결과를 제어 명령으로 연결합니다.</p><span class="concept-caption">도식은 운용 개념을 표현</span></div>
+        <footer class="slide-footer"><span>올빼미 <span class="footer-separator">/</span> LWIR 표적 추종 시스템</span><span class="page-number">03</span></footer>
+      </section>
+    </div>
+  </main>
+  <script>
+    // 화면에서만 축소합니다. 인쇄 크기는 CSS의 1920×1080을 유지합니다.
+    function fitSlides() {
+      const scale = Math.min(1, (window.innerWidth - 72) / 1920);
+      document.querySelectorAll('.slide-frame').forEach(frame => {
+        frame.style.width = `${1920 * scale}px`;
+        frame.style.height = `${1080 * scale}px`;
+        frame.querySelector('.slide').style.transform = `scale(${scale})`;
+      });
+    }
+    fitSlides();
+    window.addEventListener('resize', fitSlides);
+  </script>
+</body>
+</html>
