@@ -23,6 +23,32 @@
 - Liao et al., *FastTrackTr: Towards Fast Multi-Object Tracking with Transformers*, [arXiv:2411.15811](https://arxiv.org/abs/2411.15811). 논문의 historical encoder/decoder 및 연결 구조 참고. 프로젝트의 DX-M1 구현은 연산 제약 때문에 다르다.
 - Skogestad, *Simple analytic rules for model reduction and PID controller tuning*, Journal of Process Control 13 (2003), [저자 공개 원문](https://www.nt.ntnu.no/users/skoge/publications/2003/tuningPID/finalpaper.pdf). 제어기 튜닝의 일반 참고이며 이 논문이 프로젝트 설정의 성능을 입증한 것은 아니다.
 
+## 이번에 추가한 이론과 구현 근거
+
+아래 논문은 각 방법의 **원리 설명용 참고자료**다. 프로젝트에서 선택 당시 실제로 읽었거나 논문 수치를 재현했다고 확인된 것은 아니다. 프로젝트의 성능과 설정은 위 실험 기록을 우선한다.
+
+- 전이학습: [Yosinski et al., How transferable are features in deep neural networks?, 2014](https://arxiv.org/abs/1411.1792).
+- 데이터 규모와 스케일링: [Hestness et al., Deep Learning Scaling is Predictable, Empirically, 2017](https://arxiv.org/abs/1712.00409). 발표의 네 점은 데이터 수와 업데이트가 함께 바뀌어 독립적인 법칙 검증은 아니다.
+- 증류: [Hinton et al., Distilling the Knowledge in a Neural Network, 2015](https://arxiv.org/abs/1503.02531), [Wang et al., Distilling Object Detectors with Fine-grained Feature Imitation, 2019](https://arxiv.org/abs/1906.03609). 프로젝트의 특징 증류와 동일 구현이라는 뜻은 아니다.
+- 작은 객체: [Wang et al., A Normalized Gaussian Wasserstein Distance for Tiny Object Detection, 2021](https://arxiv.org/abs/2110.13389).
+- GRU: [Cho et al., RNN Encoder–Decoder, 2014](https://arxiv.org/abs/1406.1078). [프로젝트 위치 기억 코드](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/src/track/position_memory.py)와 별도로 구분한다.
+- 상자 크기 필터: [Casiez et al., 1€ Filter, 2012](https://gery.casiez.net/1euro/). 전체 좌표 필터와 크기만 필터는 다른 실험이다.
+- ONNX 일반 개념: [ONNX 공식 문서](https://onnx.ai/onnx/intro/).
+- 검출기: [YOLO26m DXNN 컴파일 메타데이터](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/models/detect/yolo26m/yolo26m_flir_nms_640x480_compile_metadata.json), [공개 640×480 ONNX 내보내기 예시](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/models/detect/build_scripts/yolo26_640x480_build/build480.py). 후자는 원래 YOLO26m 빌드와 동일한 실행 기록으로 확인되지 않았다.
+- 외형 모델: [OTP2 RepVGG 공개 변환 예시](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/models/reid/build_scripts/repvgg_ft_otp2_build/build_reid.py). 최신 직접학습 가중치의 정확한 변환과 같다고 단정하지 않는다.
+- FastTrackTr: [공개 export 코드](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/models/e2e/fasttracktr/build_scripts/ftt_trained_export.py), [모델 INFO](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/models/e2e/fasttracktr/INFO.json). INFO는 보정용 17장, 공개 코드는 앞 16장을 사용해 차이를 확인해야 한다.
+
+## SOLIDER와 외형 모델 증류를 선택한 배경
+
+사람의 신원을 구별할 열화상 라벨은 수집과 검수에 비용이 들고, M1의 연산 자원도 제한돼 있다. 그래서 대규모 사람 이미지로 사전학습된 교사의 표현을 가벼운 학생 모델에 전달하면 현장 데이터를 활용하면서 장치에서 실행할 수 있을지 시험했다. **이 설명은 설계의 기술적 배경이며, 데이터 부족이 당시 결정적인 이유였다는 직접 기록은 찾지 못했다.** 최근 검수 264장은 후속 실험의 데이터로 전체 학습 데이터 규모가 아니다.
+
+- [SOLIDER 논문](https://arxiv.org/abs/2303.17602)과 [원저자 저장소](https://github.com/tinyvision/SOLIDER): 무라벨 사람 이미지에서 의미·외형 표현을 사전학습한다. 공식 모델은 Swin Transformer 계열이며, 프로젝트 교사의 정확한 세부 체크포인트는 확인되지 않았다.
+- [TransReID](https://arxiv.org/abs/2102.04378): Transformer를 이용한 사람 재식별 연구. 열화상 프로젝트에서 교사가 우월했다는 직접 증거는 아니다.
+- [Efficient Training of Visual Transformers with Small Datasets](https://arxiv.org/abs/2106.03746): 일부 Transformer가 적은 데이터에서 학습에 어려움을 겪을 수 있음을 다룬다. 사전학습과 구조에 따라 달라지므로 모든 ViT에 일반화하지 않는다.
+- [Cross-Architecture Knowledge Distillation](https://arxiv.org/abs/2207.05273): Transformer에서 CNN으로 특징을 전달할 때 구조 차이를 맞추는 문제를 다룬다. 프로젝트가 이 논문의 projector를 사용했다고 확인된 것은 아니다.
+- [RepVGG](https://arxiv.org/abs/2101.03697): 학습 시 여러 갈래 구조를 추론 시 단순한 합성곱 구조로 합치는 모델. 프로젝트의 장치 적합성은 실제 DXNN 빌드와 실행 기록으로 따로 판단한다.
+- [프로젝트 외형 모델 기록](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/models/README.md#L312-L346): 이전 교사 종합 점수 0.738→0.773, 기존 학생 0.694 대비 새 증류 학생 0.660. 768→128차원 차이는 원인 가설이며 검증된 결론은 아니다. SOLIDER 교사의 같은 M1 조건 속도와 정확도 비교는 없다.
+
 ## 아직 필요한 근거
 
 - YOLO26m을 처음 선택할 때의 후보별 동일 조건 속도·정확도 비교 및 의사결정 기록, YOLO26m 자체의 epoch별 곡선과 최적 checkpoint 원자료.
