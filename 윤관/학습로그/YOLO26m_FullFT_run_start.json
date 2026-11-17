@@ -1,0 +1,10 @@
+{
+  "time": 1793494775.5093272,
+  "model": "m",
+  "coco_weights_sha256": "401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7",
+  "train_images": 10491,
+  "val_images": 1144,
+  "batch": 8,
+  "epochs": 30,
+  "fast_amp_tf32_noval": true
+}

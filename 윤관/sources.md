@@ -93,3 +93,8 @@
 ## 자세 모델 분기와 학습 순서 재대조
 
 [모델뱅크 학습 이력](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/models/README.md)은 E의 COCO 초기값 → OTP2 30epoch → 가림·열화상 증강 17epoch → 흑백 COCO 추가 14epoch → MOT17 추가 12epoch 중 선택 순서를 기록한다. [R1v2 실행 스크립트](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/scripts/vast_chains/chain_R1v2.sh)는 조기 종료를 끄고 R1을 10epoch 학습한 설정이다. R1 마지막 가중치에서 O·C를 각각 6epoch 진행했으며, F는 대조 C의 `epoch2.pt`, 즉 세 번째 epoch 체크포인트다. O 6epoch와 C 3epoch 비교는 학습량이 달라 가림 조각의 단독 효과를 증명하지 않는다. [O·C 평가와 F 선정 기록](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/README.md)
+
+
+## 30 epoch 설정과 실행 기록
+
+[비교 설계·실제 m 학습 시간·30개 체크포인트 검증 근거](근거_30epoch.md). 공통 예산 설계는 별도 YOLO26s FT·LoRA 비교이며 m의 최초 설정 이유와 구분한다. m 30 epoch는 X 모델과 RTX 4090을 공유한 1회 기록으로 약 2시간 2분이며, 사후 검증에서 27 epoch가 최고였다.

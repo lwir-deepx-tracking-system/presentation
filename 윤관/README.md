@@ -30,11 +30,11 @@ FLIR 검증에서 YOLOX 39.96%, YOLOv8 42.28%, YOLO26s 44.93%를 비교했습니
 
 COCO 가시광에서 FLIR 열화상으로 옮기면 영상의 밝기와 질감이 다르므로, 사전학습 가중치를 열화상으로 파인튜닝했습니다.
 
-### 04. 학습 에폭과 소형 객체 후보
+### 04. 30 epoch 설정과 검증 결과
 
-![학습 에폭 선정 및 소형 객체 개선](assets/readme-slides/slide-04.jpg)
+![30 epoch 설정과 검증 결과](assets/readme-slides/slide-04.jpg)
 
-YOLO26s seed101의 15→30 epoch와 YOLO26m 소형 후보 6종은 별도 실험입니다. 30 epoch는 최대 비교 예산이며 최적 종료가 입증된 값이 아닙니다.
+FT·LoRA 비교의 공통 예산과 별도 YOLO26m의 실제 학습 시간·체크포인트별 검증 결과를 함께 확인했습니다. [기록과 원자료](근거_30epoch.md)
 
 ### 05. Full FT·LoRA 학습 로그 및 검증 성능
 
