@@ -2,7 +2,7 @@
 
 제가 맡은 학습과 짐벌 제어를 과정별로 정리했습니다. 관련된 선택 이유와 결과는 같은 장에서 볼 수 있습니다.
 
-[발표 흐름 PDF · 29장](발표_전체흐름.pdf) · [상세 근거 PDF · 97장](발표_전체근거.pdf) · [발표 대본](notes.md) · [상세 대본](notes_상세.md) · [논문·실험 출처](sources.md) · [평가자 검토](평가자_검토.md) · [모델별 입출력·로그](학습_입출력_로그.md) · [HTML로 보기](index.html)
+[발표 흐름 PDF · 30장](발표_전체흐름.pdf) · [상세 근거 PDF · 98장](발표_전체근거.pdf) · [발표 대본](notes.md) · [상세 대본](notes_상세.md) · [논문·실험 출처](sources.md) · [평가자 검토](평가자_검토.md) · [모델별 입출력·로그](학습_입출력_로그.md) · [HTML로 보기](index.html)
 
 **흐름:** 탐지 학습 → 자체 데이터·라벨 → 자세·외형 학습 → 위치 예측·박스 안정화 → FastTrackTr → M1 → 짐벌
 
@@ -88,100 +88,106 @@ OTP2 test에서 관절 AP는 E 80.4, F 85.1이었습니다.
 
 자체 카메라 녹화는 야외 15편 8,929장, 실내 7편입니다.
 
-### 14. 원거리 배경 정제 및 관절 검수
+### 14. 사람 박스 정의 및 학습 라벨 생성
 
-![원거리 배경 정제 및 관절 검수](assets/readme-slides/slide-14.jpg)
+![사람 박스 정의 및 학습 라벨 생성](assets/readme-slides/slide-14.jpg)
+
+열화상 라벨 편집기에서는 사람 한 명에 박스와 ID 하나를 두고, 머리와 몸통·관절은 그 사람에 연결해 검수했습니다.
+
+### 15. 원거리 배경 정제 및 관절 검수
+
+![원거리 배경 정제 및 관절 검수](assets/readme-slides/slide-15.jpg)
 
 원거리 자동 상자 8,049개를 제외하고 카메라 위치 두 곳의 빈 배경 띠를 정리해 프레임 밝기를 맞췄습니다.
 
-### 15. 자체·공개 데이터 혼합 학습
+### 16. 자체·공개 데이터 혼합 학습
 
-![자체·공개 데이터 혼합 학습](assets/readme-slides/slide-15.jpg)
+![자체·공개 데이터 혼합 학습](assets/readme-slides/slide-16.jpg)
 
 학습 예제는 자체 야외 1,114, 실내 846, 공개 OTP2 380, 회색조 COCO 1,270, LLVIP 264, MOT17 40이었습니다.
 
-### 16. 검수 데이터 기반 자세 모델 평가
+### 17. 검수 데이터 기반 자세 모델 평가
 
-![검수 데이터 기반 자세 모델 평가](assets/readme-slides/slide-16.jpg)
+![검수 데이터 기반 자세 모델 평가](assets/readme-slides/slide-17.jpg)
 
 V7은 사람 검수 영상 264장, 5장 정정과 증강을 사용해 YOLO26m-pose를 24 epoch, 213 updates 학습했습니다.
 
 ## 외형 모델·추적·M1·짐벌
 
-### 17. 외형 모델 증류: SOLIDER → RepVGG
+### 18. 외형 모델 증류: SOLIDER → RepVGG
 
-![외형 모델 증류: SOLIDER → RepVGG](assets/readme-slides/slide-17.jpg)
+![외형 모델 증류: SOLIDER → RepVGG](assets/readme-slides/slide-18.jpg)
 
 외형 모델에서는 사람 이미지로 사전학습한 SOLIDER의 특징을 RepVGG 학생으로 옮기는 증류를 시험했습니다.
 
-### 18. 외형 모델 추가 학습 및 평가
+### 19. 외형 모델 추가 학습 및 평가
 
-![외형 모델 추가 학습 및 평가](assets/readme-slides/slide-18.jpg)
+![외형 모델 추가 학습 및 평가](assets/readme-slides/slide-19.jpg)
 
 OTP2 시험 신원 60명에서 이전 RepVGG 몸 상자 Rank-1은 72%에서 89%로, 잘림은 18%에서 27%로, 가림은 65%에서 84%로 바뀌었습니다.
 
-### 19. 가림 상황의 위치 예측: GRU·Mamba
+### 20. 가림 상황의 위치 예측: GRU·Mamba
 
-![가림 상황의 위치 예측: GRU·Mamba](assets/readme-slides/slide-19.jpg)
+![가림 상황의 위치 예측: GRU·Mamba](assets/readme-slides/slide-20.jpg)
 
 사람이 보일 때 최근 최대 20프레임의 상자, 속도와 관절 특징을 기록합니다.
 
-### 20. GRU·Kalman 위치 예측 및 ID 비교
+### 21. GRU·Kalman 위치 예측 및 ID 비교
 
-![GRU·Kalman 위치 예측 및 ID 비교](assets/readme-slides/slide-20.jpg)
+![GRU·Kalman 위치 예측 및 ID 비교](assets/readme-slides/slide-21.jpg)
 
 자체 TEST 14편, 유실 238건에서 Kalman 위치 오차는 0.110, 이전 GRU 0.336, 수정 GRU 0.122였습니다.
 
-### 21. 추적 박스 크기 안정화
+### 22. 추적 박스 크기 안정화
 
-![추적 박스 크기 안정화](assets/readme-slides/slide-21.jpg)
+![추적 박스 크기 안정화](assets/readme-slides/slide-22.jpg)
 
 짐벌이 보는 상자가 흔들려 조준점이 튀는 문제를 줄이기 위해 박스 크기 필터와 상체 기준 통일을 시험했습니다.
 
-### 22. FastTrackTr 학습 구성 및 평가
+### 23. FastTrackTr 학습 구성 및 평가
 
-![FastTrackTr 학습 구성 및 평가](assets/readme-slides/slide-22.jpg)
+![FastTrackTr 학습 구성 및 평가](assets/readme-slides/slide-23.jpg)
 
 FastTrackTr은 학습 때 DanceTrack 36편의 grayscale 640×480 영상을 사용했고 RT-DETR ResNet18 COCO 가중치에서 시작했습니다.
 
-### 23. ONNX 내보내기 및 INT8 변환
+### 24. ONNX 내보내기 및 INT8 변환
 
-![ONNX 내보내기 및 INT8 변환](assets/readme-slides/slide-23.jpg)
+![ONNX 내보내기 및 INT8 변환](assets/readme-slides/slide-24.jpg)
 
 학습 PyTorch 가중치를 ONNX로 내보내고 보정 입력으로 DX-COM 컴파일을 거쳐 DXNN을 만듭니다.
 
-### 24. 외형·FastTrackTr 모델 변환
+### 25. 외형·FastTrackTr 모델 변환
 
-![외형·FastTrackTr 모델 변환](assets/readme-slides/slide-24.jpg)
+![외형·FastTrackTr 모델 변환](assets/readme-slides/slide-25.jpg)
 
 외형 모델의 공개 OTP2 변환 예시는 RepVGG 추론 구조를 합쳐 ONNX opset 17로 내보내고 256 crop으로 EMA 보정합니다.
 
-### 25. M1 병렬 처리 및 모델 성능
+### 26. M1 병렬 처리 및 모델 성능
 
-![M1 병렬 처리 및 모델 성능](assets/readme-slides/slide-25.jpg)
+![M1 병렬 처리 및 모델 성능](assets/readme-slides/slide-26.jpg)
 
 11월 3일 저장 FLIR 영상에서 검출을 NPU 0과 1에 교대로 투입하고 CPU 광류, NPU 2의 외형 추출을 겹쳤습니다.
 
-### 26. M1 운영 화면
+### 27. M1 운영 화면
 
-![M1 운영 화면](assets/readme-slides/slide-26.jpg)
+![M1 운영 화면](assets/readme-slides/slide-27.jpg)
 
 실제 TMOT 저장 영상을 재생하는 운영 화면을 넣었습니다.
 
-### 27. 짐벌 제어 및 실제 장치 응답
+### 28. 짐벌 제어 및 실제 장치 응답
 
-![짐벌 제어 및 실제 장치 응답](assets/readme-slides/slide-27.jpg)
+![짐벌 제어 및 실제 장치 응답](assets/readme-slides/slide-28.jpg)
 
 검출·추적에서 선택한 사람 중심과 화면 중심의 차이를 제어 입력으로 써 팬·틸트 명령을 만들었습니다.
 
-### 28. 가림 전후 ID 유지 비교
+### 29. 가림 전후 ID 유지 비교
 
-![가림 전후 ID 유지 비교](assets/readme-slides/slide-28.jpg)
+![가림 전후 ID 유지 비교](assets/readme-slides/slide-29.jpg)
 
 왼쪽은 동일한 가림 사건의 열화상 입력, 오른쪽은 기준 tracker와 후보를 나란히 시각화한 비교입니다.
 
-### 29. 주요 성과 및 후속 검증
+### 30. 주요 성과 및 후속 검증
 
-![주요 성과 및 후속 검증](assets/readme-slides/slide-29.jpg)
+![주요 성과 및 후속 검증](assets/readme-slides/slide-30.jpg)
 
 내 담당은 열화상 검출과 자세 학습, 외형·위치 기억 비교, 모델을 장치에 올리는 과정, 짐벌 제어입니다.
