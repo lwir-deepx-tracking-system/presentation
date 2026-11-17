@@ -63,3 +63,22 @@
 - FT SHA-256: `846a2e5703e0cd7021eea28b574829cbf4c1c5458cd7f85ec2b5d744b0257b7b`
 - LoRA 기본 SHA-256: `28e103eb5f8a98122d19336a2314e6c955b1ec1dc76de03dcbdbdc20fd977a27`
 - LoRA 학습률 조정 SHA-256: `b91cf6c7870ea03e81d917fe7dafbf474e3731c129cb1e5a0326d7356b6d52b2`
+
+## 60 epoch 검출기 증류 학습 로그 대조
+
+[직접 FT CSV](학습로그/YOLO26s_FT_60epoch_seed202.csv) · [특징 증류 CSV](학습로그/YOLO26s_KD_60epoch_seed202.csv). 로컬 `local_execution_v12/runs`와 `retrieved_local_v12/runs` 사본의 SHA-256이 같고, 각각 60 epoch다. `local_evaluation_v2`의 `evaluation_complete.json` 및 `primary6.json`에서 평가된 최종 체크포인트와 사람 AP를 대조했다. FLIR 4,196장, seed 202, 검증 사람 AP FT 44.8575%, KD 44.2334%. 추적 DEV와 검증 AP는 별도 평가이며 개발 자료 노출 한계가 있다.
+
+- 직접 FT CSV SHA-256: `86abce096a3b83e0a709eea277b88ee7933d13a178f0e678008010379bf05143`; 평가 체크포인트 SHA-256 `2f98faf042e2a14e69f2a0823e86494d74b0f856bf9ea1c0133bfc993e6c4196`.
+- 증류 CSV SHA-256: `9c72401f7f62d100379f8fe8292cd0e062700edad109b12370cf7ed82f0d9702`; 평가 체크포인트 SHA-256 `32c5168629a7c281d16e8466959c8462a000d482dad4ceb6ac774616c6f6385c`.
+- `train/dis_loss` 8.77978→1.45011은 증류 학습 중 손실이다. 전체 손실이나 검증 사람 AP가 아니며 손실 감소로 추적 개선을 단정하지 않는다.
+- 11/17 외형 모델 비교의 CAMEL 218질의는 직접 A 200·200·200, 원교사 B 201·201·200, 적응교사 C 201·201·201개. TMOT 432질의는 세 조건·시드 모두 386개. 과거 개발에서 사용한 평가 자료이므로 새 카메라 독립 시험이 아니다. [실험 인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/835fae5259801784d41675948706151e64f5ba3a/tracking_server/research/LWIR_PRESENTATION_KO.md)
+
+## 실제 짐벌 반응 그래프
+
+[표시한 시계열 CSV](학습로그/짐벌_s7_수직응답.csv)는 [2026-11-10 장치 시험 기록](https://github.com/lwir-deepx-tracking-system/model-bank/blob/835fae5259801784d41675948706151e64f5ba3a/tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md)의 stage7 `s7/frames.csv`에서 실제 카메라·짐벌을 사용한 `ramp_y30_PD30_6_db04`와 `ramp_y30_PD30_6_db06`의 `phase=run` 행을 추린 값이다. 원본 SHA-256 `4a0f2a6477c0ff0a19f104c8a1d240a683ec733417de25f070f4a19f8d23cd98`. 정규화 수직 오차 `ey`에 240을 곱해 px로 나타냈으며, 가상 표적 정지는 2.5초다. 각 조건 1회, 각각 99·100프레임이다. 정지 후 방향 반전 4→1회는 원문 summary 값이다. 가로 뒤처짐 14.3→18.6px는 같은 stage의 별도 가로 시험이다. 실제 사람의 종단 추종이나 짐벌 실물 사진을 보여주는 증거는 아니다.
+
+## 학습 에폭 예시 정정
+
+[YOLO26s FT seed 101 원본 CSV](학습로그/YOLO26s_FT_seed101.csv)의 `monitor_primary6/mAP50_95`는 15 epoch 0.404133, 30 epoch 0.413342다. 차이는 **+0.9209%p**이며 단일 s급 실행에서의 검증 추이다. 30 epoch를 m급 최적 종료점으로 입증하지 않는다.
+
+2026-11-17 확인한 model-bank 최신 `835fae5`는 발표 근거의 `6cf676d` 이후 웹 H.264 미리보기 변경만 추가했으며, 학습·평가 자료는 같은 내용이다.
