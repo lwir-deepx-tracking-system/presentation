@@ -55,3 +55,11 @@
 - 자체 카메라 정제 전후의 공개 가능한 이미지, 학습·평가 분할과 시험별 사람·프레임 수.
 - FP32 대 INT8의 동일 가중치·동일 입력 정확도 및 실제 화면까지의 종단 지연 반복 측정.
 - 짐벌·카메라·보드 실물 사진, 동일 시각 영상·명령·오차 로그와 조건별 반복 측정.
+
+## 30에폭 FT·LoRA 실제 CSV
+
+[FT](학습로그/YOLO26s_FT_seed101.csv) · [LoRA 기본](학습로그/YOLO26s_LoRA_seed101.csv) · [LoRA 학습률 조정](학습로그/YOLO26s_LoRA_lr1e-3_seed101.csv). 모두 YOLO26s, seed 101, batch 4의 30 epoch 기록이다. 9월 30일 생성된 학습 곡선의 원본 파일과 SHA-256을 대조했다. 실제 그래프는 Primary-6 검증 곡선이며 회색 COCO 기준은 반복 학습 곡선이 아니라 1회 평가 기준이다. 다른 YOLO26m·자세 모델의 원본 로그와 혼동하지 않는다.
+
+- FT SHA-256: `846a2e5703e0cd7021eea28b574829cbf4c1c5458cd7f85ec2b5d744b0257b7b`
+- LoRA 기본 SHA-256: `28e103eb5f8a98122d19336a2314e6c955b1ec1dc76de03dcbdbdc20fd977a27`
+- LoRA 학습률 조정 SHA-256: `b91cf6c7870ea03e81d917fe7dafbf474e3731c129cb1e5a0326d7356b6d52b2`
