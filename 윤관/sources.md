@@ -81,11 +81,15 @@
 
 [YOLO26s FT seed 101 원본 CSV](학습로그/YOLO26s_FT_seed101.csv)의 `monitor_primary6/mAP50_95`는 15 epoch 0.404133, 30 epoch 0.413342다. 차이는 **+0.9209%p**이며 단일 s급 실행에서의 검증 추이다. 30 epoch를 m급 최적 종료점으로 입증하지 않는다.
 
-2026-11-17 확인한 model-bank 최신 `835fae5`는 발표 근거의 `6cf676d` 이후 웹 H.264 미리보기 변경만 추가했으며, 학습·평가 자료는 같은 내용이다.
+발표 근거로 확인한 model-bank `835fae5`는 발표 근거의 `6cf676d` 이후 웹 H.264 미리보기 변경만 추가했으며, 학습·평가 자료는 같은 내용이다.
 
 ## 사람 박스 생성과 안정화 구현
 
 - [라벨 편집기](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/label_server/README.md): 한 사람에 박스·ID 하나, 관절과 부위는 그 ID에 연결한다. 가림 부위 위치를 모르면 임의로 찍지 않는다. 발표에 쓰인 실제 작업 화면의 선택 부위는 검수 필요 상태다.
-- [학습용 몸 상자 변환](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/scripts/pose_partial.py) · [템플릿 맞춤](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/models/detect/build_scripts/yolo26m_pose_otp2_bodybox_build/skeleton_box.py): 2개 이상의 라벨된 관절로 템플릿을 맞추고 머리 위~골반 목표 상자를 만든다. 관절 부족·맞춤 실패 시 11월 15일 보완된 전처리는 COCO 전신 GT의 높이 0.531배, 폭 0.681배(충분한 관절이 있는 32,951명 중앙값)를 사용한다. 이 보완은 기존 F/O 체크포인트에 소급 적용된 것이 아니다.
+- [비율 측정 원자료](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/results/bodybox_ratio_20261115.json) · [학습용 몸 상자 변환](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/scripts/pose_partial.py) · [템플릿 맞춤](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/models/detect/build_scripts/yolo26m_pose_otp2_bodybox_build/skeleton_box.py): 2개 이상의 라벨된 관절로 템플릿을 맞추고 머리 위~골반 목표 상자를 만든다. 관절 부족·맞춤 실패 시 11월 15일 보완된 전처리는 COCO 전신 GT의 높이 0.531배, 폭 0.681배(충분한 관절이 있는 32,951명 중앙값)를 사용한다. 이 보완은 기존 F/O 체크포인트에 소급 적용된 것이 아니다.
 - [박스 후처리 코드](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/src/track/box_refine.py): `size`는 추적 상자의 log 너비·높이에만 1€ 필터(5Hz, β3)를 적용하고 가로 중심과 필터 전 조준점을 유지한다. `body` 후보는 별도의 변환표와 1.5Hz·β0.3을 사용한다. [11/16 인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/HANDOFF.md)에 따르면 body 2판은 공개 기준 13/14, 장치 속도 녹화 기준 4/4였지만 누락한 조준 떨림 기준 때문에 그날 장치에 켜지 않았다. 이후 실시간 설정은 이 기록으로 확정할 수 없다.
 - model-bank `d5b6446`은 직전 발표 기준 `835fae5` 이후 영상 스트리밍과 짐벌 홈 제어가 갱신된 버전이다. 박스 생성·안정화 코드는 변경 목록에 없다.
+
+## 자세 모델 분기와 학습 순서 재대조
+
+[모델뱅크 학습 이력](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/models/README.md)은 E의 COCO 초기값 → OTP2 30epoch → 가림·열화상 증강 17epoch → 흑백 COCO 추가 14epoch → MOT17 추가 12epoch 중 선택 순서를 기록한다. [R1v2 실행 스크립트](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/scripts/vast_chains/chain_R1v2.sh)는 조기 종료를 끄고 R1을 10epoch 학습한 설정이다. R1 마지막 가중치에서 O·C를 각각 6epoch 진행했으며, F는 대조 C의 `epoch2.pt`, 즉 세 번째 epoch 체크포인트다. O 6epoch와 C 3epoch 비교는 학습량이 달라 가림 조각의 단독 효과를 증명하지 않는다. [O·C 평가와 F 선정 기록](https://github.com/lwir-deepx-tracking-system/model-bank/blob/d5b6446613db5a10aec094d74fd6934e42f47ce9/tracking_server/research/lwir_pose_plan/README.md)
