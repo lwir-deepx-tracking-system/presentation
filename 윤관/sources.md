@@ -14,6 +14,9 @@
 
 8. [라벨링 서버 사용 기록, dfd2a9d](https://github.com/lwir-deepx-tracking-system/model-bank/blob/dfd2a9d878cf6ae93824ee1f7ad5ab21795b1c08/label_server/README.md): 사람 박스·ID 수정과 신체 부위 검수, 저장 방식. 발표의 실내·야외 화면은 사용자가 직접 제공한 실제 편집기 캡처다. 선택한 부위는 검수 필요로 표시되어 있으며 이 프레임의 완료·학습 사용 여부는 확인되지 않았다.
 
+9. [11월 17일 최신 학습·추적 발표 인계, 6cf676d](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/research/LWIR_PRESENTATION_KO.md): 라벨 10%의 FT·LoRA 두 예산, 60에폭 탐지 증류, 검수 264장 V7/V8, RepVGG 직접 적응 및 SOLIDER 증류의 조건·결과·미채택 사유. 시험 자료가 개발에 노출됐거나 학습과 겹친 항목은 독립 평가로 쓰지 않는다.
+10. [11월 17일 인계: 위치 GRU와 서버 규칙](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/HANDOFF.md): GRU 단독 0.122와 같은 체크포인트에 Kalman 경로 규칙을 더한 0.118을 구분한다.
+
 ## 논문·방법 참고
 
 - Hu et al., *LoRA: Low-Rank Adaptation of Large Language Models* (2021), [arXiv:2106.09685](https://arxiv.org/abs/2106.09685). 저랭크 적응의 원리 참고. 이 프로젝트의 YOLO 적용 결과는 위 프로젝트 실험에서 따로 확인한다.
