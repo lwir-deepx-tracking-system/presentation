@@ -1,0 +1,432 @@
+{
+  "target_seconds": 1200,
+  "demo_slot_seconds": 180,
+  "spoken_hangul_chars": 3795,
+  "actual_rehearsal_performed": false,
+  "reports": [
+    {
+      "html": "index.html",
+      "pdf": "presentation.pdf",
+      "slides": 18,
+      "pdf_pages": 18,
+      "page_points": [
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ]
+      ],
+      "fonts_loaded": true,
+      "images": [
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/thermal-example.jpg",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/윤오름.png",
+          "ok": true
+        },
+        {
+          "src": "assets/김재남.png",
+          "ok": true
+        },
+        {
+          "src": "assets/윤관.png",
+          "ok": true
+        },
+        {
+          "src": "assets/정하건.png",
+          "ok": true
+        },
+        {
+          "src": "assets/홍정호.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/learning-curves.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/web-gui-synthetic.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        }
+      ],
+      "javascript_errors": [],
+      "layout": [
+        {
+          "slide": 1,
+          "width": 1920,
+          "height": 1080,
+          "title": "열화상으로 찾고, 같은 사람을 끝까지 따라가다",
+          "problems": []
+        },
+        {
+          "slide": 2,
+          "width": 1920,
+          "height": 1080,
+          "title": "검출 · ID 유지 · 제때 반응, 세 문제를 함께 다뤘다",
+          "problems": []
+        },
+        {
+          "slide": 3,
+          "width": 1920,
+          "height": 1080,
+          "title": "기존 C++ 제어·통신에 Python 추적 서버와 웹 GUI를 연결했다",
+          "problems": []
+        },
+        {
+          "slide": 4,
+          "width": 1920,
+          "height": 1080,
+          "title": "30 Hz 입력을 기준으로, 정확도와 시간의 측정 경계를 나눴다",
+          "problems": []
+        },
+        {
+          "slide": 5,
+          "width": 1920,
+          "height": 1080,
+          "title": "M1 비교에서 m급은 더 정확했고, s급은 호출이 빨랐다",
+          "problems": []
+        },
+        {
+          "slide": 6,
+          "width": 1920,
+          "height": 1080,
+          "title": "열화상 적응과 가림·거리 보강을 단계적으로 학습했다",
+          "problems": []
+        },
+        {
+          "slide": 7,
+          "width": 1920,
+          "height": 1080,
+          "title": "자체 학습 후보는 일부 개선에도 필수 기준을 못 넘어 보류했다",
+          "problems": []
+        },
+        {
+          "slide": 8,
+          "width": 1920,
+          "height": 1080,
+          "title": "학습 모델을 INT8 DXNN으로 배포하고, 호출과 운용을 따로 확인했다",
+          "problems": []
+        },
+        {
+          "slide": 9,
+          "width": 1920,
+          "height": 1080,
+          "title": "관측을 다시 활용하는 OC-SORT로 추적 구조를 바꿨다",
+          "problems": []
+        },
+        {
+          "slide": 10,
+          "width": 1920,
+          "height": 1080,
+          "title": "같은 검출·보드 평가에서 ID 변경을 약 74% 줄였다",
+          "problems": []
+        },
+        {
+          "slide": 11,
+          "width": 1920,
+          "height": 1080,
+          "title": "추가 옵션은 ID 변경·끊김과 정밀도의 절충으로 선택했다",
+          "problems": []
+        },
+        {
+          "slide": 12,
+          "width": 1920,
+          "height": 1080,
+          "title": "외형으로 ID를 잇는 일과, 놓친 위치를 예측하는 일은 다르다",
+          "problems": []
+        },
+        {
+          "slide": 13,
+          "width": 1920,
+          "height": 1080,
+          "title": "조준점 오차를 PD 제어로 연결하고, 실제 장치 응답을 확인했다",
+          "problems": []
+        },
+        {
+          "slide": 14,
+          "width": 1920,
+          "height": 1080,
+          "title": "웹에서 선택·조작·재생·평가를 한 흐름으로 운용한다",
+          "problems": []
+        },
+        {
+          "slide": 15,
+          "width": 1920,
+          "height": 1080,
+          "title": "추적과 JPEG 작업을 분리해 재생 중 결과 대기를 줄였다",
+          "problems": []
+        },
+        {
+          "slide": 16,
+          "width": 1920,
+          "height": 1080,
+          "title": "기능 시험·성능 비교·실물 시험의 증거를 구분했다",
+          "problems": []
+        },
+        {
+          "slide": 17,
+          "width": 1920,
+          "height": 1080,
+          "title": "실제 운용 데모 · 검출에서 표적 추종까지",
+          "problems": []
+        },
+        {
+          "slide": 18,
+          "width": 1920,
+          "height": 1080,
+          "title": "정확도·ID 연속성·운용 반응을 함께 평가하는 시스템을 구현했다",
+          "problems": []
+        }
+      ],
+      "keyboard_navigation": true,
+      "demo_included": false
+    },
+    {
+      "html": "appendix.html",
+      "pdf": "appendix.pdf",
+      "slides": 6,
+      "pdf_pages": 6,
+      "page_points": [
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ]
+      ],
+      "fonts_loaded": true,
+      "images": [
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        }
+      ],
+      "javascript_errors": [],
+      "layout": [
+        {
+          "slide": 1,
+          "width": 1920,
+          "height": 1080,
+          "title": "최종 모델 선정표 · 옥상에서 같은 조건으로 비교",
+          "problems": []
+        },
+        {
+          "slide": 2,
+          "width": 1920,
+          "height": 1080,
+          "title": "지표를 설명할 때 · 높고 낮음보다 정의가 먼저",
+          "problems": []
+        },
+        {
+          "slide": 3,
+          "width": 1920,
+          "height": 1080,
+          "title": "추적 비교 원표 · 보드와 PC의 단계는 분리",
+          "problems": []
+        },
+        {
+          "slide": 4,
+          "width": 1920,
+          "height": 1080,
+          "title": "기존 PC 앱과 웹 GUI는 전송·동기화 정책이 다르다",
+          "problems": []
+        },
+        {
+          "slide": 5,
+          "width": 1920,
+          "height": 1080,
+          "title": "조준점 · PD · 공통 SPD · 추정 위치의 의미",
+          "problems": []
+        },
+        {
+          "slide": 6,
+          "width": 1920,
+          "height": 1080,
+          "title": "후속 모델·전처리 실험을 본문에서 줄인 이유",
+          "problems": []
+        }
+      ],
+      "keyboard_navigation": null,
+      "demo_included": false
+    }
+  ]
+}
