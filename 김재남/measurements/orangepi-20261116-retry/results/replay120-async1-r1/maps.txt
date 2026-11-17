@@ -1,0 +1,741 @@
+557dfb0000-557e06c000 r-xp 00000000 00:22 743                            /tmp/lwir-perf-20261116/build/lwir_runtime
+557e07b000-557e07f000 r--p 000bb000 00:22 743                            /tmp/lwir-perf-20261116/build/lwir_runtime
+557e07f000-557e080000 rw-p 000bf000 00:22 743                            /tmp/lwir-perf-20261116/build/lwir_runtime
+559071c000-5590c46000 rw-p 00000000 00:00 0                              [heap]
+7f40000000-7f40021000 rw-p 00000000 00:00 0 
+7f40021000-7f44000000 ---p 00000000 00:00 0 
+7f48000000-7f48021000 rw-p 00000000 00:00 0 
+7f48021000-7f4c000000 ---p 00000000 00:00 0 
+7f4c000000-7f4c021000 rw-p 00000000 00:00 0 
+7f4c021000-7f50000000 ---p 00000000 00:00 0 
+7f50000000-7f50021000 rw-p 00000000 00:00 0 
+7f50021000-7f54000000 ---p 00000000 00:00 0 
+7f54000000-7f54021000 rw-p 00000000 00:00 0 
+7f54021000-7f58000000 ---p 00000000 00:00 0 
+7f58000000-7f58021000 rw-p 00000000 00:00 0 
+7f58021000-7f5c000000 ---p 00000000 00:00 0 
+7f5c000000-7f5c021000 rw-p 00000000 00:00 0 
+7f5c021000-7f60000000 ---p 00000000 00:00 0 
+7f60000000-7f60021000 rw-p 00000000 00:00 0 
+7f60021000-7f64000000 ---p 00000000 00:00 0 
+7f64000000-7f64021000 rw-p 00000000 00:00 0 
+7f64021000-7f68000000 ---p 00000000 00:00 0 
+7f68000000-7f68ed4000 rw-p 00000000 00:00 0 
+7f68ed4000-7f6c000000 ---p 00000000 00:00 0 
+7f6c000000-7f6d16a000 rw-p 00000000 00:00 0 
+7f6d16a000-7f70000000 ---p 00000000 00:00 0 
+7f70000000-7f70021000 rw-p 00000000 00:00 0 
+7f70021000-7f74000000 ---p 00000000 00:00 0 
+7f74000000-7f74021000 rw-p 00000000 00:00 0 
+7f74021000-7f78000000 ---p 00000000 00:00 0 
+7f78000000-7f78021000 rw-p 00000000 00:00 0 
+7f78021000-7f7c000000 ---p 00000000 00:00 0 
+7f7fd59000-7f88000000 rw-s 00000000 00:01 11                             /memfd:memfd_976_32 (deleted)
+7f88000000-7f88021000 rw-p 00000000 00:00 0 
+7f88021000-7f8c000000 ---p 00000000 00:00 0 
+7f8ccae000-7f8ccbe000 ---p 00000000 00:00 0 
+7f8ccbe000-7f8d4be000 rw-p 00000000 00:00 0 
+7f8d4be000-7f8d4ce000 ---p 00000000 00:00 0 
+7f8d4ce000-7f8dcce000 rw-p 00000000 00:00 0 
+7f8dcce000-7f8dcde000 ---p 00000000 00:00 0 
+7f8dcde000-7f8e4de000 rw-p 00000000 00:00 0 
+7f8e4de000-7f8e4ee000 ---p 00000000 00:00 0 
+7f8e4ee000-7f8ecee000 rw-p 00000000 00:00 0 
+7f8ecee000-7f8ecfe000 ---p 00000000 00:00 0 
+7f8ecfe000-7f8f4fe000 rw-p 00000000 00:00 0 
+7f8f4fe000-7f8f61c000 rw-s 00000000 00:01 10                             /memfd:memfd_976_31 (deleted)
+7f8f61c000-7f8ff46000 rw-s 00000000 00:01 1040                           /memfd:memfd_976_30 (deleted)
+7f8ff46000-7f8ff56000 ---p 00000000 00:00 0 
+7f8ff56000-7f927d0000 rw-p 00000000 00:00 0 
+7f927d0000-7f927e0000 ---p 00000000 00:00 0 
+7f927e0000-7f92fe0000 rw-p 00000000 00:00 0 
+7f92fe0000-7f92ff0000 ---p 00000000 00:00 0 
+7f92ff0000-7f937f0000 rw-p 00000000 00:00 0 
+7f937f0000-7f93800000 ---p 00000000 00:00 0 
+7f93800000-7f94000000 rw-p 00000000 00:00 0 
+7f94000000-7f940be000 rw-p 00000000 00:00 0 
+7f940be000-7f98000000 ---p 00000000 00:00 0 
+7f98008000-7f98546000 rw-p 00000000 00:00 0 
+7f98546000-7f98556000 ---p 00000000 00:00 0 
+7f98556000-7f98d56000 rw-p 00000000 00:00 0 
+7f98d56000-7f98d66000 ---p 00000000 00:00 0 
+7f98d66000-7f99566000 rw-p 00000000 00:00 0 
+7f99566000-7f99576000 ---p 00000000 00:00 0 
+7f99576000-7f99d76000 rw-p 00000000 00:00 0 
+7f99d76000-7f99d86000 ---p 00000000 00:00 0 
+7f99d86000-7f9a586000 rw-p 00000000 00:00 0 
+7f9a586000-7f9a596000 ---p 00000000 00:00 0 
+7f9a596000-7f9ad96000 rw-p 00000000 00:00 0 
+7f9ad96000-7f9ada6000 ---p 00000000 00:00 0 
+7f9ada6000-7f9b5a6000 rw-p 00000000 00:00 0 
+7f9b7f0000-7f9b800000 ---p 00000000 00:00 0 
+7f9b800000-7f9c000000 rw-p 00000000 00:00 0 
+7f9c000000-7f9c021000 rw-p 00000000 00:00 0 
+7f9c021000-7fa0000000 ---p 00000000 00:00 0 
+7fa0060000-7fa0070000 ---p 00000000 00:00 0 
+7fa0070000-7fa0870000 rw-p 00000000 00:00 0 
+7fa0870000-7fa0880000 ---p 00000000 00:00 0 
+7fa0880000-7fa1080000 rw-p 00000000 00:00 0 
+7fa1080000-7fa1090000 ---p 00000000 00:00 0 
+7fa1090000-7fa1890000 rw-p 00000000 00:00 0 
+7fa1890000-7fa18a0000 ---p 00000000 00:00 0 
+7fa18a0000-7fa20a0000 rw-p 00000000 00:00 0 
+7fa20a0000-7fa20a5000 r-xp 00000000 b3:02 15530                          /usr/lib/aarch64-linux-gnu/libdebuginfod-0.186.so
+7fa20a5000-7fa20b4000 ---p 00005000 b3:02 15530                          /usr/lib/aarch64-linux-gnu/libdebuginfod-0.186.so
+7fa20b4000-7fa20b5000 r--p 00004000 b3:02 15530                          /usr/lib/aarch64-linux-gnu/libdebuginfod-0.186.so
+7fa20b5000-7fa20b6000 rw-p 00005000 b3:02 15530                          /usr/lib/aarch64-linux-gnu/libdebuginfod-0.186.so
+7fa20c0000-7fa2120000 rw-p 00000000 00:00 0 
+7fa2120000-7fa2124000 r-xp 00000000 b3:02 10362                          /usr/lib/aarch64-linux-gnu/libkeyutils.so.1.9
+7fa2124000-7fa2133000 ---p 00004000 b3:02 10362                          /usr/lib/aarch64-linux-gnu/libkeyutils.so.1.9
+7fa2133000-7fa2134000 r--p 00003000 b3:02 10362                          /usr/lib/aarch64-linux-gnu/libkeyutils.so.1.9
+7fa2134000-7fa2135000 rw-p 00004000 b3:02 10362                          /usr/lib/aarch64-linux-gnu/libkeyutils.so.1.9
+7fa2140000-7fa2153000 r-xp 00000000 b3:02 5531                           /usr/lib/aarch64-linux-gnu/libtasn1.so.6.6.2
+7fa2153000-7fa2163000 ---p 00013000 b3:02 5531                           /usr/lib/aarch64-linux-gnu/libtasn1.so.6.6.2
+7fa2163000-7fa2164000 r--p 00013000 b3:02 5531                           /usr/lib/aarch64-linux-gnu/libtasn1.so.6.6.2
+7fa2164000-7fa2165000 rw-p 00014000 b3:02 5531                           /usr/lib/aarch64-linux-gnu/libtasn1.so.6.6.2
+7fa2170000-7fa2297000 r-xp 00000000 b3:02 5524                           /usr/lib/aarch64-linux-gnu/libp11-kit.so.0.3.0
+7fa2297000-7fa22a6000 ---p 00127000 b3:02 5524                           /usr/lib/aarch64-linux-gnu/libp11-kit.so.0.3.0
+7fa22a6000-7fa22b0000 r--p 00126000 b3:02 5524                           /usr/lib/aarch64-linux-gnu/libp11-kit.so.0.3.0
+7fa22b0000-7fa22ba000 rw-p 00130000 b3:02 5524                           /usr/lib/aarch64-linux-gnu/libp11-kit.so.0.3.0
+7fa22c0000-7fa22e0000 r-xp 00000000 b3:02 9990                           /usr/lib/aarch64-linux-gnu/libbrotlicommon.so.1.0.9
+7fa22e0000-7fa22ef000 ---p 00020000 b3:02 9990                           /usr/lib/aarch64-linux-gnu/libbrotlicommon.so.1.0.9
+7fa22ef000-7fa22f0000 r--p 0001f000 b3:02 9990                           /usr/lib/aarch64-linux-gnu/libbrotlicommon.so.1.0.9
+7fa22f0000-7fa22f1000 rw-p 00020000 b3:02 9990                           /usr/lib/aarch64-linux-gnu/libbrotlicommon.so.1.0.9
+7fa2300000-7fa2375000 r-xp 00000000 b3:02 10221                          /usr/lib/aarch64-linux-gnu/libgmp.so.10.4.1
+7fa2375000-7fa2385000 ---p 00075000 b3:02 10221                          /usr/lib/aarch64-linux-gnu/libgmp.so.10.4.1
+7fa2385000-7fa2386000 r--p 00075000 b3:02 10221                          /usr/lib/aarch64-linux-gnu/libgmp.so.10.4.1
+7fa2386000-7fa2387000 rw-p 00076000 b3:02 10221                          /usr/lib/aarch64-linux-gnu/libgmp.so.10.4.1
+7fa2390000-7fa23d4000 r-xp 00000000 b3:02 10299                          /usr/lib/aarch64-linux-gnu/libhogweed.so.6.4
+7fa23d4000-7fa23e4000 ---p 00044000 b3:02 10299                          /usr/lib/aarch64-linux-gnu/libhogweed.so.6.4
+7fa23e4000-7fa23e5000 r--p 00044000 b3:02 10299                          /usr/lib/aarch64-linux-gnu/libhogweed.so.6.4
+7fa23e5000-7fa23e6000 rw-p 00045000 b3:02 10299                          /usr/lib/aarch64-linux-gnu/libhogweed.so.6.4
+7fa23f0000-7fa258d000 r-xp 00000000 b3:02 10856                          /usr/lib/aarch64-linux-gnu/libunistring.so.2.2.0
+7fa258d000-7fa259d000 ---p 0019d000 b3:02 10856                          /usr/lib/aarch64-linux-gnu/libunistring.so.2.2.0
+7fa259d000-7fa25a1000 r--p 0019d000 b3:02 10856                          /usr/lib/aarch64-linux-gnu/libunistring.so.2.2.0
+7fa25a1000-7fa25a2000 rw-p 001a1000 b3:02 10856                          /usr/lib/aarch64-linux-gnu/libunistring.so.2.2.0
+7fa25b0000-7fa25c8000 r-xp 00000000 b3:02 10744                          /usr/lib/aarch64-linux-gnu/libsasl2.so.2.0.25
+7fa25c8000-7fa25d7000 ---p 00018000 b3:02 10744                          /usr/lib/aarch64-linux-gnu/libsasl2.so.2.0.25
+7fa25d7000-7fa25d8000 r--p 00017000 b3:02 10744                          /usr/lib/aarch64-linux-gnu/libsasl2.so.2.0.25
+7fa25d8000-7fa25d9000 rw-p 00018000 b3:02 10744                          /usr/lib/aarch64-linux-gnu/libsasl2.so.2.0.25
+7fa25e0000-7fa25ec000 r-xp 00000000 b3:02 1393                           /usr/lib/aarch64-linux-gnu/libkrb5support.so.0.1
+7fa25ec000-7fa25fb000 ---p 0000c000 b3:02 1393                           /usr/lib/aarch64-linux-gnu/libkrb5support.so.0.1
+7fa25fb000-7fa25fc000 r--p 0000b000 b3:02 1393                           /usr/lib/aarch64-linux-gnu/libkrb5support.so.0.1
+7fa25fc000-7fa25fd000 rw-p 0000c000 b3:02 1393                           /usr/lib/aarch64-linux-gnu/libkrb5support.so.0.1
+7fa2600000-7fa2603000 r-xp 00000000 b3:02 10035                          /usr/lib/aarch64-linux-gnu/libcom_err.so.2.1
+7fa2603000-7fa2612000 ---p 00003000 b3:02 10035                          /usr/lib/aarch64-linux-gnu/libcom_err.so.2.1
+7fa2612000-7fa2613000 r--p 00002000 b3:02 10035                          /usr/lib/aarch64-linux-gnu/libcom_err.so.2.1
+7fa2613000-7fa2614000 rw-p 00003000 b3:02 10035                          /usr/lib/aarch64-linux-gnu/libcom_err.so.2.1
+7fa2620000-7fa264a000 r-xp 00000000 b3:02 1391                           /usr/lib/aarch64-linux-gnu/libk5crypto.so.3.1
+7fa264a000-7fa265a000 ---p 0002a000 b3:02 1391                           /usr/lib/aarch64-linux-gnu/libk5crypto.so.3.1
+7fa265a000-7fa265b000 r--p 0002a000 b3:02 1391                           /usr/lib/aarch64-linux-gnu/libk5crypto.so.3.1
+7fa265b000-7fa265c000 rw-p 0002b000 b3:02 1391                           /usr/lib/aarch64-linux-gnu/libk5crypto.so.3.1
+7fa2660000-7fa2719000 r-xp 00000000 b3:02 1475                           /usr/lib/aarch64-linux-gnu/libkrb5.so.3.3
+7fa2719000-7fa2728000 ---p 000b9000 b3:02 1475                           /usr/lib/aarch64-linux-gnu/libkrb5.so.3.3
+7fa2728000-7fa2733000 r--p 000b8000 b3:02 1475                           /usr/lib/aarch64-linux-gnu/libkrb5.so.3.3
+7fa2733000-7fa2735000 rw-p 000c3000 b3:02 1475                           /usr/lib/aarch64-linux-gnu/libkrb5.so.3.3
+7fa2740000-7fa2746000 r-xp 00000000 b3:02 9926                           /usr/lib/aarch64-linux-gnu/libaec.so.0.0.12
+7fa2746000-7fa2755000 ---p 00006000 b3:02 9926                           /usr/lib/aarch64-linux-gnu/libaec.so.0.0.12
+7fa2755000-7fa2756000 r--p 00005000 b3:02 9926                           /usr/lib/aarch64-linux-gnu/libaec.so.0.0.12
+7fa2756000-7fa2757000 rw-p 00006000 b3:02 9926                           /usr/lib/aarch64-linux-gnu/libaec.so.0.0.12
+7fa2760000-7fa437b000 r-xp 00000000 b3:02 10316                          /usr/lib/aarch64-linux-gnu/libicudata.so.70.1
+7fa437b000-7fa438a000 ---p 01c1b000 b3:02 10316                          /usr/lib/aarch64-linux-gnu/libicudata.so.70.1
+7fa438a000-7fa438b000 r--p 01c1a000 b3:02 10316                          /usr/lib/aarch64-linux-gnu/libicudata.so.70.1
+7fa438b000-7fa438c000 rw-p 01c1b000 b3:02 10316                          /usr/lib/aarch64-linux-gnu/libicudata.so.70.1
+7fa4390000-7fa456f000 r-xp 00000000 b3:02 4640                           /usr/lib/aarch64-linux-gnu/libgnutls.so.30.31.0
+7fa456f000-7fa457e000 ---p 001df000 b3:02 4640                           /usr/lib/aarch64-linux-gnu/libgnutls.so.30.31.0
+7fa457e000-7fa458d000 r--p 001de000 b3:02 4640                           /usr/lib/aarch64-linux-gnu/libgnutls.so.30.31.0
+7fa458d000-7fa458f000 rw-p 001ed000 b3:02 4640                           /usr/lib/aarch64-linux-gnu/libgnutls.so.30.31.0
+7fa458f000-7fa4591000 rw-p 00000000 00:00 0 
+7fa45a0000-7fa45df000 r-xp 00000000 b3:02 10469                          /usr/lib/aarch64-linux-gnu/libnettle.so.8.4
+7fa45df000-7fa45ee000 ---p 0003f000 b3:02 10469                          /usr/lib/aarch64-linux-gnu/libnettle.so.8.4
+7fa45ee000-7fa45f0000 r--p 0003e000 b3:02 10469                          /usr/lib/aarch64-linux-gnu/libnettle.so.8.4
+7fa45f0000-7fa45f1000 rw-p 00040000 b3:02 10469                          /usr/lib/aarch64-linux-gnu/libnettle.so.8.4
+7fa4600000-7fa4603000 r-xp 00000000 b3:02 10676                          /usr/lib/aarch64-linux-gnu/libplds4.so
+7fa4603000-7fa4612000 ---p 00003000 b3:02 10676                          /usr/lib/aarch64-linux-gnu/libplds4.so
+7fa4612000-7fa4613000 r--p 00002000 b3:02 10676                          /usr/lib/aarch64-linux-gnu/libplds4.so
+7fa4613000-7fa4614000 rw-p 00003000 b3:02 10676                          /usr/lib/aarch64-linux-gnu/libplds4.so
+7fa4620000-7fa4649000 r-xp 00000000 b3:02 6975                           /usr/lib/aarch64-linux-gnu/libnssutil3.so
+7fa4649000-7fa4659000 ---p 00029000 b3:02 6975                           /usr/lib/aarch64-linux-gnu/libnssutil3.so
+7fa4659000-7fa4660000 r--p 00029000 b3:02 6975                           /usr/lib/aarch64-linux-gnu/libnssutil3.so
+7fa4660000-7fa4661000 rw-p 00030000 b3:02 6975                           /usr/lib/aarch64-linux-gnu/libnssutil3.so
+7fa4670000-7fa47e1000 r-xp 00000000 b3:02 80                             /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0
+7fa47e1000-7fa47f1000 ---p 00171000 b3:02 80                             /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0
+7fa47f1000-7fa47f2000 r--p 00171000 b3:02 80                             /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0
+7fa47f2000-7fa47f4000 rw-p 00172000 b3:02 80                             /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0
+7fa4800000-7fa480b000 r-xp 00000000 b3:02 10499                          /usr/lib/aarch64-linux-gnu/libnuma.so.1.0.0
+7fa480b000-7fa481a000 ---p 0000b000 b3:02 10499                          /usr/lib/aarch64-linux-gnu/libnuma.so.1.0.0
+7fa481a000-7fa481b000 r--p 0000a000 b3:02 10499                          /usr/lib/aarch64-linux-gnu/libnuma.so.1.0.0
+7fa481b000-7fa481c000 rw-p 0000b000 b3:02 10499                          /usr/lib/aarch64-linux-gnu/libnuma.so.1.0.0
+7fa481c000-7fa4820000 rw-p 00000000 00:00 0 
+7fa4830000-7fa483d000 r-xp 00000000 b3:02 272                            /usr/lib/aarch64-linux-gnu/libresolv.so.2
+7fa483d000-7fa484d000 ---p 0000d000 b3:02 272                            /usr/lib/aarch64-linux-gnu/libresolv.so.2
+7fa484d000-7fa484e000 r--p 0000d000 b3:02 272                            /usr/lib/aarch64-linux-gnu/libresolv.so.2
+7fa484e000-7fa484f000 rw-p 0000e000 b3:02 272                            /usr/lib/aarch64-linux-gnu/libresolv.so.2
+7fa484f000-7fa4851000 rw-p 00000000 00:00 0 
+7fa4860000-7fa4865000 r-xp 00000000 b3:02 10170                          /usr/lib/aarch64-linux-gnu/libfygm.so.0.0.0
+7fa4865000-7fa4875000 ---p 00005000 b3:02 10170                          /usr/lib/aarch64-linux-gnu/libfygm.so.0.0.0
+7fa4875000-7fa4876000 r--p 00005000 b3:02 10170                          /usr/lib/aarch64-linux-gnu/libfygm.so.0.0.0
+7fa4876000-7fa4877000 rw-p 00006000 b3:02 10170                          /usr/lib/aarch64-linux-gnu/libfygm.so.0.0.0
+7fa4880000-7fa4888000 r-xp 00000000 b3:02 10171                          /usr/lib/aarch64-linux-gnu/libfyut.so.0.0.0
+7fa4888000-7fa4898000 ---p 00008000 b3:02 10171                          /usr/lib/aarch64-linux-gnu/libfyut.so.0.0.0
+7fa4898000-7fa4899000 r--p 00008000 b3:02 10171                          /usr/lib/aarch64-linux-gnu/libfyut.so.0.0.0
+7fa4899000-7fa489a000 rw-p 00009000 b3:02 10171                          /usr/lib/aarch64-linux-gnu/libfyut.so.0.0.0
+7fa48a0000-7fa48a9000 r-xp 00000000 b3:02 9992                           /usr/lib/aarch64-linux-gnu/libbrotlidec.so.1.0.9
+7fa48a9000-7fa48b9000 ---p 00009000 b3:02 9992                           /usr/lib/aarch64-linux-gnu/libbrotlidec.so.1.0.9
+7fa48b9000-7fa48ba000 r--p 00009000 b3:02 9992                           /usr/lib/aarch64-linux-gnu/libbrotlidec.so.1.0.9
+7fa48ba000-7fa48bb000 rw-p 0000a000 b3:02 9992                           /usr/lib/aarch64-linux-gnu/libbrotlidec.so.1.0.9
+7fa48c0000-7fa48ce000 r-xp 00000000 b3:02 1553                           /usr/lib/aarch64-linux-gnu/liblber-2.5.so.0.1.15
+7fa48ce000-7fa48de000 ---p 0000e000 b3:02 1553                           /usr/lib/aarch64-linux-gnu/liblber-2.5.so.0.1.15
+7fa48de000-7fa48df000 r--p 0000e000 b3:02 1553                           /usr/lib/aarch64-linux-gnu/liblber-2.5.so.0.1.15
+7fa48df000-7fa48e0000 rw-p 0000f000 b3:02 1553                           /usr/lib/aarch64-linux-gnu/liblber-2.5.so.0.1.15
+7fa48f0000-7fa4901000 r-xp 00000000 b3:02 10700                          /usr/lib/aarch64-linux-gnu/libpsl.so.5.3.2
+7fa4901000-7fa4910000 ---p 00011000 b3:02 10700                          /usr/lib/aarch64-linux-gnu/libpsl.so.5.3.2
+7fa4910000-7fa4911000 r--p 00010000 b3:02 10700                          /usr/lib/aarch64-linux-gnu/libpsl.so.5.3.2
+7fa4911000-7fa4912000 rw-p 00011000 b3:02 10700                          /usr/lib/aarch64-linux-gnu/libpsl.so.5.3.2
+7fa4920000-7fa4985000 r-xp 00000000 b3:02 7912                           /usr/lib/aarch64-linux-gnu/libssh.so.4.8.7
+7fa4985000-7fa4995000 ---p 00065000 b3:02 7912                           /usr/lib/aarch64-linux-gnu/libssh.so.4.8.7
+7fa4995000-7fa4997000 r--p 00065000 b3:02 7912                           /usr/lib/aarch64-linux-gnu/libssh.so.4.8.7
+7fa4997000-7fa4999000 rw-p 00067000 b3:02 7912                           /usr/lib/aarch64-linux-gnu/libssh.so.4.8.7
+7fa49a0000-7fa49ba000 r-xp 00000000 b3:02 10731                          /usr/lib/aarch64-linux-gnu/librtmp.so.1
+7fa49ba000-7fa49ca000 ---p 0001a000 b3:02 10731                          /usr/lib/aarch64-linux-gnu/librtmp.so.1
+7fa49ca000-7fa49cb000 r--p 0001a000 b3:02 10731                          /usr/lib/aarch64-linux-gnu/librtmp.so.1
+7fa49cb000-7fa49cc000 rw-p 0001b000 b3:02 10731                          /usr/lib/aarch64-linux-gnu/librtmp.so.1
+7fa49d0000-7fa49ed000 r-xp 00000000 b3:02 10324                          /usr/lib/aarch64-linux-gnu/libidn2.so.0.3.7
+7fa49ed000-7fa49fc000 ---p 0001d000 b3:02 10324                          /usr/lib/aarch64-linux-gnu/libidn2.so.0.3.7
+7fa49fc000-7fa49fd000 r--p 0001c000 b3:02 10324                          /usr/lib/aarch64-linux-gnu/libidn2.so.0.3.7
+7fa49fd000-7fa49fe000 rw-p 0001d000 b3:02 10324                          /usr/lib/aarch64-linux-gnu/libidn2.so.0.3.7
+7fa4a00000-7fa4a23000 r-xp 00000000 b3:02 7910                           /usr/lib/aarch64-linux-gnu/libnghttp2.so.14.20.1
+7fa4a23000-7fa4a32000 ---p 00023000 b3:02 7910                           /usr/lib/aarch64-linux-gnu/libnghttp2.so.14.20.1
+7fa4a32000-7fa4a35000 r--p 00022000 b3:02 7910                           /usr/lib/aarch64-linux-gnu/libnghttp2.so.14.20.1
+7fa4a35000-7fa4a36000 rw-p 00025000 b3:02 7910                           /usr/lib/aarch64-linux-gnu/libnghttp2.so.14.20.1
+7fa4a40000-7fa4aae000 r-xp 00000000 b3:02 10732                          /usr/lib/aarch64-linux-gnu/librttopo.so.1.1.0
+7fa4aae000-7fa4abd000 ---p 0006e000 b3:02 10732                          /usr/lib/aarch64-linux-gnu/librttopo.so.1.1.0
+7fa4abd000-7fa4abe000 r--p 0006d000 b3:02 10732                          /usr/lib/aarch64-linux-gnu/librttopo.so.1.1.0
+7fa4abe000-7fa4abf000 rw-p 0006e000 b3:02 10732                          /usr/lib/aarch64-linux-gnu/librttopo.so.1.1.0
+7fa4ac0000-7fa4ac7000 r-xp 00000000 b3:02 10769                          /usr/lib/aarch64-linux-gnu/libsnappy.so.1.1.8
+7fa4ac7000-7fa4ad6000 ---p 00007000 b3:02 10769                          /usr/lib/aarch64-linux-gnu/libsnappy.so.1.1.8
+7fa4ad6000-7fa4ad7000 r--p 00006000 b3:02 10769                          /usr/lib/aarch64-linux-gnu/libsnappy.so.1.1.8
+7fa4ad7000-7fa4ad8000 rw-p 00007000 b3:02 10769                          /usr/lib/aarch64-linux-gnu/libsnappy.so.1.1.8
+7fa4ae0000-7fa4b38000 r-xp 00000000 b3:02 1554                           /usr/lib/aarch64-linux-gnu/libldap-2.5.so.0.1.15
+7fa4b38000-7fa4b47000 ---p 00058000 b3:02 1554                           /usr/lib/aarch64-linux-gnu/libldap-2.5.so.0.1.15
+7fa4b47000-7fa4b49000 r--p 00057000 b3:02 1554                           /usr/lib/aarch64-linux-gnu/libldap-2.5.so.0.1.15
+7fa4b49000-7fa4b4a000 rw-p 00059000 b3:02 1554                           /usr/lib/aarch64-linux-gnu/libldap-2.5.so.0.1.15
+7fa4b4a000-7fa4b4c000 rw-p 00000000 00:00 0 
+7fa4b50000-7fa4b9b000 r-xp 00000000 b3:02 1487                           /usr/lib/aarch64-linux-gnu/libgssapi_krb5.so.2.2
+7fa4b9b000-7fa4bab000 ---p 0004b000 b3:02 1487                           /usr/lib/aarch64-linux-gnu/libgssapi_krb5.so.2.2
+7fa4bab000-7fa4bad000 r--p 0004b000 b3:02 1487                           /usr/lib/aarch64-linux-gnu/libgssapi_krb5.so.2.2
+7fa4bad000-7fa4baf000 rw-p 0004d000 b3:02 1487                           /usr/lib/aarch64-linux-gnu/libgssapi_krb5.so.2.2
+7fa4bb0000-7fa4c3d000 r-xp 00000000 b3:02 4495                           /usr/lib/aarch64-linux-gnu/libssl.so.3
+7fa4c3d000-7fa4c4c000 ---p 0008d000 b3:02 4495                           /usr/lib/aarch64-linux-gnu/libssl.so.3
+7fa4c4c000-7fa4c56000 r--p 0008c000 b3:02 4495                           /usr/lib/aarch64-linux-gnu/libssl.so.3
+7fa4c56000-7fa4c5a000 rw-p 00096000 b3:02 4495                           /usr/lib/aarch64-linux-gnu/libssl.so.3
+7fa4c60000-7fa4c8a000 r-xp 00000000 b3:02 10841                          /usr/lib/aarch64-linux-gnu/libtirpc.so.3.0.0
+7fa4c8a000-7fa4c9a000 ---p 0002a000 b3:02 10841                          /usr/lib/aarch64-linux-gnu/libtirpc.so.3.0.0
+7fa4c9a000-7fa4c9b000 r--p 0002a000 b3:02 10841                          /usr/lib/aarch64-linux-gnu/libtirpc.so.3.0.0
+7fa4c9b000-7fa4c9c000 rw-p 0002b000 b3:02 10841                          /usr/lib/aarch64-linux-gnu/libtirpc.so.3.0.0
+7fa4ca0000-7fa4ca2000 r-xp 00000000 b3:02 10811                          /usr/lib/aarch64-linux-gnu/libsz.so.2.0.1
+7fa4ca2000-7fa4cb1000 ---p 00002000 b3:02 10811                          /usr/lib/aarch64-linux-gnu/libsz.so.2.0.1
+7fa4cb1000-7fa4cb2000 r--p 00001000 b3:02 10811                          /usr/lib/aarch64-linux-gnu/libsz.so.2.0.1
+7fa4cb2000-7fa4cb3000 rw-p 00002000 b3:02 10811                          /usr/lib/aarch64-linux-gnu/libsz.so.2.0.1
+7fa4cc0000-7fa4cdf000 r-xp 00000000 b3:02 10296                          /usr/lib/aarch64-linux-gnu/libhdf5_serial_hl.so.100.1.4
+7fa4cdf000-7fa4cee000 ---p 0001f000 b3:02 10296                          /usr/lib/aarch64-linux-gnu/libhdf5_serial_hl.so.100.1.4
+7fa4cee000-7fa4cef000 r--p 0001e000 b3:02 10296                          /usr/lib/aarch64-linux-gnu/libhdf5_serial_hl.so.100.1.4
+7fa4cef000-7fa4cf0000 rw-p 0001f000 b3:02 10296                          /usr/lib/aarch64-linux-gnu/libhdf5_serial_hl.so.100.1.4
+7fa4cf0000-7fa4cf1000 rw-p 00000000 00:00 0 
+7fa4d00000-7fa4ede000 r-xp 00000000 b3:02 10321                          /usr/lib/aarch64-linux-gnu/libicuuc.so.70.1
+7fa4ede000-7fa4eee000 ---p 001de000 b3:02 10321                          /usr/lib/aarch64-linux-gnu/libicuuc.so.70.1
+7fa4eee000-7fa4f01000 r--p 001de000 b3:02 10321                          /usr/lib/aarch64-linux-gnu/libicuuc.so.70.1
+7fa4f01000-7fa4f02000 rw-p 001f1000 b3:02 10321                          /usr/lib/aarch64-linux-gnu/libicuuc.so.70.1
+7fa4f02000-7fa4f04000 rw-p 00000000 00:00 0 
+7fa4f10000-7fa4f9e000 r-xp 00000000 b3:02 7914                           /usr/lib/aarch64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fa4f9e000-7fa4fad000 ---p 0008e000 b3:02 7914                           /usr/lib/aarch64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fa4fad000-7fa4fb1000 r--p 0008d000 b3:02 7914                           /usr/lib/aarch64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fa4fb1000-7fa4fb3000 rw-p 00091000 b3:02 7914                           /usr/lib/aarch64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fa4fb3000-7fa4fb4000 rw-p 00000000 00:00 0 
+7fa4fc0000-7fa4fd5000 r-xp 00000000 b3:02 10866                          /usr/lib/aarch64-linux-gnu/liburiparser.so.1.0.29
+7fa4fd5000-7fa4fe4000 ---p 00015000 b3:02 10866                          /usr/lib/aarch64-linux-gnu/liburiparser.so.1.0.29
+7fa4fe4000-7fa4fe5000 r--p 00014000 b3:02 10866                          /usr/lib/aarch64-linux-gnu/liburiparser.so.1.0.29
+7fa4fe5000-7fa4fe6000 rw-p 00015000 b3:02 10866                          /usr/lib/aarch64-linux-gnu/liburiparser.so.1.0.29
+7fa4ff0000-7fa4ff8000 r-xp 00000000 b3:02 10414                          /usr/lib/aarch64-linux-gnu/libminizip.so.1.0.0
+7fa4ff8000-7fa5008000 ---p 00008000 b3:02 10414                          /usr/lib/aarch64-linux-gnu/libminizip.so.1.0.0
+7fa5008000-7fa5009000 r--p 00008000 b3:02 10414                          /usr/lib/aarch64-linux-gnu/libminizip.so.1.0.0
+7fa5009000-7fa500a000 rw-p 00009000 b3:02 10414                          /usr/lib/aarch64-linux-gnu/libminizip.so.1.0.0
+7fa5010000-7fa5018000 r-xp 00000000 b3:02 10384                          /usr/lib/aarch64-linux-gnu/libltdl.so.7.3.1
+7fa5018000-7fa5028000 ---p 00008000 b3:02 10384                          /usr/lib/aarch64-linux-gnu/libltdl.so.7.3.1
+7fa5028000-7fa5029000 r--p 00008000 b3:02 10384                          /usr/lib/aarch64-linux-gnu/libltdl.so.7.3.1
+7fa5029000-7fa502a000 rw-p 00009000 b3:02 10384                          /usr/lib/aarch64-linux-gnu/libltdl.so.7.3.1
+7fa5030000-7fa5213000 r-xp 00000000 b3:02 10201                          /usr/lib/aarch64-linux-gnu/libgeos.so.3.10.2
+7fa5213000-7fa5223000 ---p 001e3000 b3:02 10201                          /usr/lib/aarch64-linux-gnu/libgeos.so.3.10.2
+7fa5223000-7fa522a000 r--p 001e3000 b3:02 10201                          /usr/lib/aarch64-linux-gnu/libgeos.so.3.10.2
+7fa522a000-7fa522b000 rw-p 001ea000 b3:02 10201                          /usr/lib/aarch64-linux-gnu/libgeos.so.3.10.2
+7fa5230000-7fa526a000 r-xp 00000000 b3:02 10490                          /usr/lib/aarch64-linux-gnu/libnspr4.so
+7fa526a000-7fa527a000 ---p 0003a000 b3:02 10490                          /usr/lib/aarch64-linux-gnu/libnspr4.so
+7fa527a000-7fa527b000 r--p 0003a000 b3:02 10490                          /usr/lib/aarch64-linux-gnu/libnspr4.so
+7fa527b000-7fa527c000 rw-p 0003b000 b3:02 10490                          /usr/lib/aarch64-linux-gnu/libnspr4.so
+7fa527c000-7fa527f000 rw-p 00000000 00:00 0 
+7fa5280000-7fa5284000 r-xp 00000000 b3:02 10675                          /usr/lib/aarch64-linux-gnu/libplc4.so
+7fa5284000-7fa5293000 ---p 00004000 b3:02 10675                          /usr/lib/aarch64-linux-gnu/libplc4.so
+7fa5293000-7fa5294000 r--p 00003000 b3:02 10675                          /usr/lib/aarch64-linux-gnu/libplc4.so
+7fa5294000-7fa5295000 rw-p 00004000 b3:02 10675                          /usr/lib/aarch64-linux-gnu/libplc4.so
+7fa52a0000-7fa52c3000 r-xp 00000000 b3:02 6976                           /usr/lib/aarch64-linux-gnu/libsmime3.so
+7fa52c3000-7fa52d2000 ---p 00023000 b3:02 6976                           /usr/lib/aarch64-linux-gnu/libsmime3.so
+7fa52d2000-7fa52d5000 r--p 00022000 b3:02 6976                           /usr/lib/aarch64-linux-gnu/libsmime3.so
+7fa52d5000-7fa52d6000 rw-p 00025000 b3:02 6976                           /usr/lib/aarch64-linux-gnu/libsmime3.so
+7fa52e0000-7fa53ea000 r-xp 00000000 b3:02 6973                           /usr/lib/aarch64-linux-gnu/libnss3.so
+7fa53ea000-7fa53f9000 ---p 0010a000 b3:02 6973                           /usr/lib/aarch64-linux-gnu/libnss3.so
+7fa53f9000-7fa53ff000 r--p 00109000 b3:02 6973                           /usr/lib/aarch64-linux-gnu/libnss3.so
+7fa53ff000-7fa5401000 rw-p 0010f000 b3:02 6973                           /usr/lib/aarch64-linux-gnu/libnss3.so
+7fa5401000-7fa5402000 rw-p 00000000 00:00 0 
+7fa5410000-7fa5467000 r-xp 00000000 b3:02 1343                           /usr/lib/aarch64-linux-gnu/liblcms2.so.2.0.12
+7fa5467000-7fa5477000 ---p 00057000 b3:02 1343                           /usr/lib/aarch64-linux-gnu/liblcms2.so.2.0.12
+7fa5477000-7fa5479000 r--p 00057000 b3:02 1343                           /usr/lib/aarch64-linux-gnu/liblcms2.so.2.0.12
+7fa5479000-7fa547c000 rw-p 00059000 b3:02 1343                           /usr/lib/aarch64-linux-gnu/liblcms2.so.2.0.12
+7fa547c000-7fa547e000 rw-p 00000000 00:00 0 
+7fa5480000-7fa54c6000 r-xp 00000000 b3:02 10154                          /usr/lib/aarch64-linux-gnu/libfontconfig.so.1.12.0
+7fa54c6000-7fa54d5000 ---p 00046000 b3:02 10154                          /usr/lib/aarch64-linux-gnu/libfontconfig.so.1.12.0
+7fa54d5000-7fa54d7000 r--p 00045000 b3:02 10154                          /usr/lib/aarch64-linux-gnu/libfontconfig.so.1.12.0
+7fa54d7000-7fa54d8000 rw-p 00047000 b3:02 10154                          /usr/lib/aarch64-linux-gnu/libfontconfig.so.1.12.0
+7fa54e0000-7fa5591000 r-xp 00000000 b3:02 3975                           /usr/lib/aarch64-linux-gnu/libfreetype.so.6.18.1
+7fa5591000-7fa55a0000 ---p 000b1000 b3:02 3975                           /usr/lib/aarch64-linux-gnu/libfreetype.so.6.18.1
+7fa55a0000-7fa55a7000 r--p 000b0000 b3:02 3975                           /usr/lib/aarch64-linux-gnu/libfreetype.so.6.18.1
+7fa55a7000-7fa55a8000 rw-p 000b7000 b3:02 3975                           /usr/lib/aarch64-linux-gnu/libfreetype.so.6.18.1
+7fa55b0000-7fa560f000 r-xp 00000000 b3:02 10803                          /usr/lib/aarch64-linux-gnu/libsuperlu.so.5.3.0
+7fa560f000-7fa561e000 ---p 0005f000 b3:02 10803                          /usr/lib/aarch64-linux-gnu/libsuperlu.so.5.3.0
+7fa561e000-7fa561f000 r--p 0005e000 b3:02 10803                          /usr/lib/aarch64-linux-gnu/libsuperlu.so.5.3.0
+7fa561f000-7fa5620000 rw-p 0005f000 b3:02 10803                          /usr/lib/aarch64-linux-gnu/libsuperlu.so.5.3.0
+7fa5630000-7fa566b000 r-xp 00000000 b3:02 9937                           /usr/lib/aarch64-linux-gnu/libarpack.so.2.1.0
+7fa566b000-7fa567a000 ---p 0003b000 b3:02 9937                           /usr/lib/aarch64-linux-gnu/libarpack.so.2.1.0
+7fa567a000-7fa567b000 r--p 0003a000 b3:02 9937                           /usr/lib/aarch64-linux-gnu/libarpack.so.2.1.0
+7fa567b000-7fa567c000 rw-p 0003b000 b3:02 9937                           /usr/lib/aarch64-linux-gnu/libarpack.so.2.1.0
+7fa5680000-7fa5be4000 r-xp 00000000 b3:02 11950                          /usr/lib/aarch64-linux-gnu/lapack/liblapack.so.3.10.0
+7fa5be4000-7fa5bf3000 ---p 00564000 b3:02 11950                          /usr/lib/aarch64-linux-gnu/lapack/liblapack.so.3.10.0
+7fa5bf3000-7fa5bf7000 r--p 00563000 b3:02 11950                          /usr/lib/aarch64-linux-gnu/lapack/liblapack.so.3.10.0
+7fa5bf7000-7fa5bf9000 rw-p 00567000 b3:02 11950                          /usr/lib/aarch64-linux-gnu/lapack/liblapack.so.3.10.0
+7fa5c00000-7fa5c6b000 r-xp 00000000 b3:02 11164                          /usr/lib/aarch64-linux-gnu/blas/libblas.so.3.10.0
+7fa5c6b000-7fa5c7a000 ---p 0006b000 b3:02 11164                          /usr/lib/aarch64-linux-gnu/blas/libblas.so.3.10.0
+7fa5c7a000-7fa5c7b000 r--p 0006a000 b3:02 11164                          /usr/lib/aarch64-linux-gnu/blas/libblas.so.3.10.0
+7fa5c7b000-7fa5c7c000 rw-p 0006b000 b3:02 11164                          /usr/lib/aarch64-linux-gnu/blas/libblas.so.3.10.0
+7fa5c80000-7fa5d29000 r-xp 00000000 b3:02 10051                          /usr/lib/aarch64-linux-gnu/libdav1d.so.5.1.1
+7fa5d29000-7fa5d38000 ---p 000a9000 b3:02 10051                          /usr/lib/aarch64-linux-gnu/libdav1d.so.5.1.1
+7fa5d38000-7fa5d3a000 r--p 000a8000 b3:02 10051                          /usr/lib/aarch64-linux-gnu/libdav1d.so.5.1.1
+7fa5d3a000-7fa5d3b000 rw-p 000aa000 b3:02 10051                          /usr/lib/aarch64-linux-gnu/libdav1d.so.5.1.1
+7fa5d3b000-7fa5d7e000 rw-p 00000000 00:00 0 
+7fa5d80000-7fa6018000 r-xp 00000000 b3:02 11072                          /usr/lib/aarch64-linux-gnu/libx265.so.199
+7fa6018000-7fa6028000 ---p 00298000 b3:02 11072                          /usr/lib/aarch64-linux-gnu/libx265.so.199
+7fa6028000-7fa602b000 r--p 00298000 b3:02 11072                          /usr/lib/aarch64-linux-gnu/libx265.so.199
+7fa602b000-7fa602e000 rw-p 0029b000 b3:02 11072                          /usr/lib/aarch64-linux-gnu/libx265.so.199
+7fa602e000-7fa603e000 rw-p 00000000 00:00 0 
+7fa6040000-7fa60d2000 r-xp 00000000 b3:02 10066                          /usr/lib/aarch64-linux-gnu/libde265.so.0.1.1
+7fa60d2000-7fa60e2000 ---p 00092000 b3:02 10066                          /usr/lib/aarch64-linux-gnu/libde265.so.0.1.1
+7fa60e2000-7fa60e5000 r--p 00092000 b3:02 10066                          /usr/lib/aarch64-linux-gnu/libde265.so.0.1.1
+7fa60e5000-7fa60e6000 rw-p 00095000 b3:02 10066                          /usr/lib/aarch64-linux-gnu/libde265.so.0.1.1
+7fa60e6000-7fa60ea000 rw-p 00000000 00:00 0 
+7fa60f0000-7fa63cf000 r-xp 00000000 b3:02 10125                          /usr/lib/aarch64-linux-gnu/libaom.so.3.3.0
+7fa63cf000-7fa63df000 ---p 002df000 b3:02 10125                          /usr/lib/aarch64-linux-gnu/libaom.so.3.3.0
+7fa63df000-7fa63ec000 r--p 002df000 b3:02 10125                          /usr/lib/aarch64-linux-gnu/libaom.so.3.3.0
+7fa63ec000-7fa63f0000 rw-p 002ec000 b3:02 10125                          /usr/lib/aarch64-linux-gnu/libaom.so.3.3.0
+7fa63f0000-7fa643b000 rw-p 00000000 00:00 0 
+7fa6440000-7fa6467000 r-xp 00000000 b3:02 4506                           /usr/lib/aarch64-linux-gnu/libudev.so.1.7.2
+7fa6467000-7fa6476000 ---p 00027000 b3:02 4506                           /usr/lib/aarch64-linux-gnu/libudev.so.1.7.2
+7fa6476000-7fa6477000 r--p 00026000 b3:02 4506                           /usr/lib/aarch64-linux-gnu/libudev.so.1.7.2
+7fa6477000-7fa6478000 rw-p 00027000 b3:02 4506                           /usr/lib/aarch64-linux-gnu/libudev.so.1.7.2
+7fa6480000-7fa648f000 r-xp 00000000 b3:02 65                             /usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4
+7fa648f000-7fa649f000 ---p 0000f000 b3:02 65                             /usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4
+7fa649f000-7fa64a0000 r--p 0000f000 b3:02 65                             /usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4
+7fa64a0000-7fa64a1000 rw-p 00010000 b3:02 65                             /usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4
+7fa64b0000-7fa64cc000 r-xp 00000000 b3:02 3968                           /usr/lib/aarch64-linux-gnu/libelf-0.186.so
+7fa64cc000-7fa64db000 ---p 0001c000 b3:02 3968                           /usr/lib/aarch64-linux-gnu/libelf-0.186.so
+7fa64db000-7fa64dc000 r--p 0001b000 b3:02 3968                           /usr/lib/aarch64-linux-gnu/libelf-0.186.so
+7fa64dc000-7fa64dd000 rw-p 0001c000 b3:02 3968                           /usr/lib/aarch64-linux-gnu/libelf-0.186.so
+7fa64e0000-7fa687d000 r-xp 00000000 b3:02 4494                           /usr/lib/aarch64-linux-gnu/libcrypto.so.3
+7fa687d000-7fa688c000 ---p 0039d000 b3:02 4494                           /usr/lib/aarch64-linux-gnu/libcrypto.so.3
+7fa688c000-7fa68e1000 r--p 0039c000 b3:02 4494                           /usr/lib/aarch64-linux-gnu/libcrypto.so.3
+7fa68e1000-7fa68e4000 rw-p 003f1000 b3:02 4494                           /usr/lib/aarch64-linux-gnu/libcrypto.so.3
+7fa68e4000-7fa68e7000 rw-p 00000000 00:00 0 
+7fa68f0000-7fa6c77000 r-xp 00000000 b3:02 3354                           /usr/lib/aarch64-linux-gnu/libmysqlclient.so.21.2.46
+7fa6c77000-7fa6c86000 ---p 00387000 b3:02 3354                           /usr/lib/aarch64-linux-gnu/libmysqlclient.so.21.2.46
+7fa6c86000-7fa6c8d000 r--p 00386000 b3:02 3354                           /usr/lib/aarch64-linux-gnu/libmysqlclient.so.21.2.46
+7fa6c8d000-7fa6f7a000 rw-p 0038d000 b3:02 3354                           /usr/lib/aarch64-linux-gnu/libmysqlclient.so.21.2.46
+7fa6f7a000-7fa6f7f000 rw-p 00000000 00:00 0 
+7fa6f80000-7fa714e000 r-xp 00000000 b3:02 647                            /usr/lib/aarch64-linux-gnu/libxml2.so.2.9.13
+7fa714e000-7fa715e000 ---p 001ce000 b3:02 647                            /usr/lib/aarch64-linux-gnu/libxml2.so.2.9.13
+7fa715e000-7fa7167000 r--p 001ce000 b3:02 647                            /usr/lib/aarch64-linux-gnu/libxml2.so.2.9.13
+7fa7167000-7fa7168000 rw-p 001d7000 b3:02 647                            /usr/lib/aarch64-linux-gnu/libxml2.so.2.9.13
+7fa7168000-7fa7169000 rw-p 00000000 00:00 0 
+7fa7170000-7fa71a5000 r-xp 00000000 b3:02 10169                          /usr/lib/aarch64-linux-gnu/libfyba.so.0.0.0
+7fa71a5000-7fa71b4000 ---p 00035000 b3:02 10169                          /usr/lib/aarch64-linux-gnu/libfyba.so.0.0.0
+7fa71b4000-7fa71b5000 r--p 00034000 b3:02 10169                          /usr/lib/aarch64-linux-gnu/libfyba.so.0.0.0
+7fa71b5000-7fa71b6000 rw-p 00035000 b3:02 10169                          /usr/lib/aarch64-linux-gnu/libfyba.so.0.0.0
+7fa71b6000-7fa71d5000 rw-p 00000000 00:00 0 
+7fa71e0000-7fa7273000 r-xp 00000000 b3:02 145                            /usr/lib/aarch64-linux-gnu/libcurl.so.4.7.0
+7fa7273000-7fa7282000 ---p 00093000 b3:02 145                            /usr/lib/aarch64-linux-gnu/libcurl.so.4.7.0
+7fa7282000-7fa7286000 r--p 00092000 b3:02 145                            /usr/lib/aarch64-linux-gnu/libcurl.so.4.7.0
+7fa7286000-7fa7288000 rw-p 00096000 b3:02 145                            /usr/lib/aarch64-linux-gnu/libcurl.so.4.7.0
+7fa7288000-7fa7289000 rw-p 00000000 00:00 0 
+7fa7290000-7fa7310000 r-xp 00000000 b3:02 10657                          /usr/lib/aarch64-linux-gnu/libpcre2-8.so.0.10.4
+7fa7310000-7fa7320000 ---p 00080000 b3:02 10657                          /usr/lib/aarch64-linux-gnu/libpcre2-8.so.0.10.4
+7fa7320000-7fa7321000 r--p 00080000 b3:02 10657                          /usr/lib/aarch64-linux-gnu/libpcre2-8.so.0.10.4
+7fa7321000-7fa7322000 rw-p 00081000 b3:02 10657                          /usr/lib/aarch64-linux-gnu/libpcre2-8.so.0.10.4
+7fa7330000-7fa7aad000 r-xp 00000000 b3:02 10781                          /usr/lib/aarch64-linux-gnu/libspatialite.so.7.1.2
+7fa7aad000-7fa7abd000 ---p 0077d000 b3:02 10781                          /usr/lib/aarch64-linux-gnu/libspatialite.so.7.1.2
+7fa7abd000-7fa7abf000 r--p 0077d000 b3:02 10781                          /usr/lib/aarch64-linux-gnu/libspatialite.so.7.1.2
+7fa7abf000-7fa7ac1000 rw-p 0077f000 b3:02 10781                          /usr/lib/aarch64-linux-gnu/libspatialite.so.7.1.2
+7fa7ac1000-7fa7ac2000 rw-p 00000000 00:00 0 
+7fa7ad0000-7fa7c10000 r-xp 00000000 b3:02 6222                           /usr/lib/aarch64-linux-gnu/libsqlite3.so.0.8.6
+7fa7c10000-7fa7c1f000 ---p 00140000 b3:02 6222                           /usr/lib/aarch64-linux-gnu/libsqlite3.so.0.8.6
+7fa7c1f000-7fa7c23000 r--p 0013f000 b3:02 6222                           /usr/lib/aarch64-linux-gnu/libsqlite3.so.0.8.6
+7fa7c23000-7fa7c27000 rw-p 00143000 b3:02 6222                           /usr/lib/aarch64-linux-gnu/libsqlite3.so.0.8.6
+7fa7c30000-7fa7f20000 r-xp 00000000 b3:02 10697                          /usr/lib/aarch64-linux-gnu/libproj.so.22.2.1
+7fa7f20000-7fa7f30000 ---p 002f0000 b3:02 10697                          /usr/lib/aarch64-linux-gnu/libproj.so.22.2.1
+7fa7f30000-7fa7f47000 r--p 002f0000 b3:02 10697                          /usr/lib/aarch64-linux-gnu/libproj.so.22.2.1
+7fa7f47000-7fa7f49000 rw-p 00307000 b3:02 10697                          /usr/lib/aarch64-linux-gnu/libproj.so.22.2.1
+7fa7f49000-7fa7f4b000 rw-p 00000000 00:00 0 
+7fa7f50000-7fa7f58000 r-xp 00000000 b3:02 9982                           /usr/lib/aarch64-linux-gnu/libblosc.so.1.21.1
+7fa7f58000-7fa7f68000 ---p 00008000 b3:02 9982                           /usr/lib/aarch64-linux-gnu/libblosc.so.1.21.1
+7fa7f68000-7fa7f69000 r--p 00008000 b3:02 9982                           /usr/lib/aarch64-linux-gnu/libblosc.so.1.21.1
+7fa7f69000-7fa7f6a000 rw-p 00009000 b3:02 9982                           /usr/lib/aarch64-linux-gnu/libblosc.so.1.21.1
+7fa7f70000-7fa7f8b000 r-xp 00000000 b3:02 10387                          /usr/lib/aarch64-linux-gnu/liblz4.so.1.9.3
+7fa7f8b000-7fa7f9a000 ---p 0001b000 b3:02 10387                          /usr/lib/aarch64-linux-gnu/liblz4.so.1.9.3
+7fa7f9a000-7fa7f9b000 r--p 0001a000 b3:02 10387                          /usr/lib/aarch64-linux-gnu/liblz4.so.1.9.3
+7fa7f9b000-7fa7f9c000 rw-p 0001b000 b3:02 10387                          /usr/lib/aarch64-linux-gnu/liblz4.so.1.9.3
+7fa7fa0000-7fa7fee000 r-xp 00000000 b3:02 3358                           /usr/lib/aarch64-linux-gnu/libpq.so.5.14
+7fa7fee000-7fa7ffd000 ---p 0004e000 b3:02 3358                           /usr/lib/aarch64-linux-gnu/libpq.so.5.14
+7fa7ffd000-7fa8000000 r--p 0004d000 b3:02 3358                           /usr/lib/aarch64-linux-gnu/libpq.so.5.14
+7fa8000000-7fa8001000 rw-p 00050000 b3:02 3358                           /usr/lib/aarch64-linux-gnu/libpq.so.5.14
+7fa8010000-7fa815d000 r-xp 00000000 b3:02 10020                          /usr/lib/aarch64-linux-gnu/libcfitsio.so.9.4.0.0
+7fa815d000-7fa816d000 ---p 0014d000 b3:02 10020                          /usr/lib/aarch64-linux-gnu/libcfitsio.so.9.4.0.0
+7fa816d000-7fa816e000 r--p 0014d000 b3:02 10020                          /usr/lib/aarch64-linux-gnu/libcfitsio.so.9.4.0.0
+7fa816e000-7fa8170000 rw-p 0014e000 b3:02 10020                          /usr/lib/aarch64-linux-gnu/libcfitsio.so.9.4.0.0
+7fa8170000-7fa8300000 rw-p 00000000 00:00 0 
+7fa8310000-7fa833a000 r-xp 00000000 b3:02 10203                          /usr/lib/aarch64-linux-gnu/libgeotiff.so.5.2.0
+7fa833a000-7fa834a000 ---p 0002a000 b3:02 10203                          /usr/lib/aarch64-linux-gnu/libgeotiff.so.5.2.0
+7fa834a000-7fa8353000 r--p 0002a000 b3:02 10203                          /usr/lib/aarch64-linux-gnu/libgeotiff.so.5.2.0
+7fa8353000-7fa8354000 rw-p 00033000 b3:02 10203                          /usr/lib/aarch64-linux-gnu/libgeotiff.so.5.2.0
+7fa8360000-7fa8368000 r-xp 00000000 b3:02 3339                           /usr/lib/aarch64-linux-gnu/libgif.so.7.1.0
+7fa8368000-7fa8378000 ---p 00008000 b3:02 3339                           /usr/lib/aarch64-linux-gnu/libgif.so.7.1.0
+7fa8378000-7fa8379000 r--p 00008000 b3:02 3339                           /usr/lib/aarch64-linux-gnu/libgif.so.7.1.0
+7fa8379000-7fa837a000 rw-p 00009000 b3:02 3339                           /usr/lib/aarch64-linux-gnu/libgif.so.7.1.0
+7fa8380000-7fa8399000 r-xp 00000000 b3:02 9703                           /usr/lib/libogdi.so.4.1
+7fa8399000-7fa83a8000 ---p 00019000 b3:02 9703                           /usr/lib/libogdi.so.4.1
+7fa83a8000-7fa83a9000 r--p 00018000 b3:02 9703                           /usr/lib/libogdi.so.4.1
+7fa83a9000-7fa83aa000 rw-p 00019000 b3:02 9703                           /usr/lib/libogdi.so.4.1
+7fa83b0000-7fa842a000 r-xp 00000000 b3:02 9699                           /usr/lib/libdfalt.so.0.0.0
+7fa842a000-7fa843a000 ---p 0007a000 b3:02 9699                           /usr/lib/libdfalt.so.0.0.0
+7fa843a000-7fa843c000 r--p 0007a000 b3:02 9699                           /usr/lib/libdfalt.so.0.0.0
+7fa843c000-7fa843d000 rw-p 0007c000 b3:02 9699                           /usr/lib/libdfalt.so.0.0.0
+7fa843d000-7fa8466000 rw-p 00000000 00:00 0 
+7fa8470000-7fa8496000 r-xp 00000000 b3:02 9701                           /usr/lib/libmfhdfalt.so.0.0.0
+7fa8496000-7fa84a5000 ---p 00026000 b3:02 9701                           /usr/lib/libmfhdfalt.so.0.0.0
+7fa84a5000-7fa84a6000 r--p 00025000 b3:02 9701                           /usr/lib/libmfhdfalt.so.0.0.0
+7fa84a6000-7fa84a7000 rw-p 00026000 b3:02 9701                           /usr/lib/libmfhdfalt.so.0.0.0
+7fa84a7000-7fa84a8000 rw-p 00000000 00:00 0 
+7fa84b0000-7fa885a000 r-xp 00000000 b3:02 10295                          /usr/lib/aarch64-linux-gnu/libhdf5_serial.so.103.3.0
+7fa885a000-7fa886a000 ---p 003aa000 b3:02 10295                          /usr/lib/aarch64-linux-gnu/libhdf5_serial.so.103.3.0
+7fa886a000-7fa8873000 r--p 003aa000 b3:02 10295                          /usr/lib/aarch64-linux-gnu/libhdf5_serial.so.103.3.0
+7fa8873000-7fa8878000 rw-p 003b3000 b3:02 10295                          /usr/lib/aarch64-linux-gnu/libhdf5_serial.so.103.3.0
+7fa8878000-7fa887b000 rw-p 00000000 00:00 0 
+7fa8880000-7fa89c1000 r-xp 00000000 b3:02 10462                          /usr/lib/aarch64-linux-gnu/libnetcdf.so.19
+7fa89c1000-7fa89d0000 ---p 00141000 b3:02 10462                          /usr/lib/aarch64-linux-gnu/libnetcdf.so.19
+7fa89d0000-7fa89d3000 r--p 00140000 b3:02 10462                          /usr/lib/aarch64-linux-gnu/libnetcdf.so.19
+7fa89d3000-7fa89d9000 rw-p 00143000 b3:02 10462                          /usr/lib/aarch64-linux-gnu/libnetcdf.so.19
+7fa89d9000-7fa89e6000 rw-p 00000000 00:00 0 
+7fa89f0000-7fa8ce5000 r-xp 00000000 b3:02 11097                          /usr/lib/aarch64-linux-gnu/libxerces-c-3.2.so
+7fa8ce5000-7fa8cf4000 ---p 002f5000 b3:02 11097                          /usr/lib/aarch64-linux-gnu/libxerces-c-3.2.so
+7fa8cf4000-7fa8d07000 r--p 002f4000 b3:02 11097                          /usr/lib/aarch64-linux-gnu/libxerces-c-3.2.so
+7fa8d07000-7fa8d29000 rw-p 00307000 b3:02 11097                          /usr/lib/aarch64-linux-gnu/libxerces-c-3.2.so
+7fa8d30000-7fa8d58000 r-xp 00000000 b3:02 1180                           /usr/lib/aarch64-linux-gnu/libexpat.so.1.8.7
+7fa8d58000-7fa8d68000 ---p 00028000 b3:02 1180                           /usr/lib/aarch64-linux-gnu/libexpat.so.1.8.7
+7fa8d68000-7fa8d6a000 r--p 00028000 b3:02 1180                           /usr/lib/aarch64-linux-gnu/libexpat.so.1.8.7
+7fa8d6a000-7fa8d6b000 rw-p 0002a000 b3:02 1180                           /usr/lib/aarch64-linux-gnu/libexpat.so.1.8.7
+7fa8d70000-7fa8da2000 r-xp 00000000 b3:02 10365                          /usr/lib/aarch64-linux-gnu/libkmlengine.so.1.3.0
+7fa8da2000-7fa8db1000 ---p 00032000 b3:02 10365                          /usr/lib/aarch64-linux-gnu/libkmlengine.so.1.3.0
+7fa8db1000-7fa8db2000 r--p 00031000 b3:02 10365                          /usr/lib/aarch64-linux-gnu/libkmlengine.so.1.3.0
+7fa8db2000-7fa8db3000 rw-p 00032000 b3:02 10365                          /usr/lib/aarch64-linux-gnu/libkmlengine.so.1.3.0
+7fa8dc0000-7fa8e4f000 r-xp 00000000 b3:02 10364                          /usr/lib/aarch64-linux-gnu/libkmldom.so.1.3.0
+7fa8e4f000-7fa8e5e000 ---p 0008f000 b3:02 10364                          /usr/lib/aarch64-linux-gnu/libkmldom.so.1.3.0
+7fa8e5e000-7fa8e64000 r--p 0008e000 b3:02 10364                          /usr/lib/aarch64-linux-gnu/libkmldom.so.1.3.0
+7fa8e64000-7fa8e65000 rw-p 00094000 b3:02 10364                          /usr/lib/aarch64-linux-gnu/libkmldom.so.1.3.0
+7fa8e70000-7fa8e88000 r-xp 00000000 b3:02 10363                          /usr/lib/aarch64-linux-gnu/libkmlbase.so.1.3.0
+7fa8e88000-7fa8e98000 ---p 00018000 b3:02 10363                          /usr/lib/aarch64-linux-gnu/libkmlbase.so.1.3.0
+7fa8e98000-7fa8e99000 r--p 00018000 b3:02 10363                          /usr/lib/aarch64-linux-gnu/libkmlbase.so.1.3.0
+7fa8e99000-7fa8e9a000 rw-p 00019000 b3:02 10363                          /usr/lib/aarch64-linux-gnu/libkmlbase.so.1.3.0
+7fa8ea0000-7fa8eae000 r-xp 00000000 b3:02 10501                          /usr/lib/aarch64-linux-gnu/libodbcinst.so.2.0.0
+7fa8eae000-7fa8ebd000 ---p 0000e000 b3:02 10501                          /usr/lib/aarch64-linux-gnu/libodbcinst.so.2.0.0
+7fa8ebd000-7fa8ebe000 r--p 0000d000 b3:02 10501                          /usr/lib/aarch64-linux-gnu/libodbcinst.so.2.0.0
+7fa8ebe000-7fa8ebf000 rw-p 0000e000 b3:02 10501                          /usr/lib/aarch64-linux-gnu/libodbcinst.so.2.0.0
+7fa8ebf000-7fa8ec2000 rw-p 00000000 00:00 0 
+7fa8ed0000-7fa8f27000 r-xp 00000000 b3:02 10500                          /usr/lib/aarch64-linux-gnu/libodbc.so.2.0.0
+7fa8f27000-7fa8f36000 ---p 00057000 b3:02 10500                          /usr/lib/aarch64-linux-gnu/libodbc.so.2.0.0
+7fa8f36000-7fa8f37000 r--p 00056000 b3:02 10500                          /usr/lib/aarch64-linux-gnu/libodbc.so.2.0.0
+7fa8f37000-7fa8f3e000 rw-p 00057000 b3:02 10500                          /usr/lib/aarch64-linux-gnu/libodbc.so.2.0.0
+7fa8f3e000-7fa8f42000 rw-p 00000000 00:00 0 
+7fa8f50000-7fa8f85000 r-xp 00000000 b3:02 10202                          /usr/lib/aarch64-linux-gnu/libgeos_c.so.1.16.0
+7fa8f85000-7fa8f95000 ---p 00035000 b3:02 10202                          /usr/lib/aarch64-linux-gnu/libgeos_c.so.1.16.0
+7fa8f95000-7fa8f96000 r--p 00035000 b3:02 10202                          /usr/lib/aarch64-linux-gnu/libgeos_c.so.1.16.0
+7fa8f96000-7fa8f97000 rw-p 00036000 b3:02 10202                          /usr/lib/aarch64-linux-gnu/libgeos_c.so.1.16.0
+7fa8fa0000-7fa9007000 r-xp 00000000 b3:02 10711                          /usr/lib/aarch64-linux-gnu/libqhull_r.so.8.0.2
+7fa9007000-7fa9016000 ---p 00067000 b3:02 10711                          /usr/lib/aarch64-linux-gnu/libqhull_r.so.8.0.2
+7fa9016000-7fa9017000 r--p 00066000 b3:02 10711                          /usr/lib/aarch64-linux-gnu/libqhull_r.so.8.0.2
+7fa9017000-7fa9018000 rw-p 00067000 b3:02 10711                          /usr/lib/aarch64-linux-gnu/libqhull_r.so.8.0.2
+7fa9020000-7fa9028000 r-xp 00000000 b3:02 10165                          /usr/lib/aarch64-linux-gnu/libfreexl.so.1.1.0
+7fa9028000-7fa9037000 ---p 00008000 b3:02 10165                          /usr/lib/aarch64-linux-gnu/libfreexl.so.1.1.0
+7fa9037000-7fa9038000 r--p 00007000 b3:02 10165                          /usr/lib/aarch64-linux-gnu/libfreexl.so.1.1.0
+7fa9038000-7fa9039000 rw-p 00008000 b3:02 10165                          /usr/lib/aarch64-linux-gnu/libfreexl.so.1.1.0
+7fa9040000-7fa931a000 r-xp 00000000 b3:02 7013                           /usr/lib/aarch64-linux-gnu/libpoppler.so.118.0.0
+7fa931a000-7fa9329000 ---p 002da000 b3:02 7013                           /usr/lib/aarch64-linux-gnu/libpoppler.so.118.0.0
+7fa9329000-7fa9380000 r--p 002d9000 b3:02 7013                           /usr/lib/aarch64-linux-gnu/libpoppler.so.118.0.0
+7fa9380000-7fa9386000 rw-p 00330000 b3:02 7013                           /usr/lib/aarch64-linux-gnu/libpoppler.so.118.0.0
+7fa9390000-7fa939f000 r-xp 00000000 b3:02 9697                           /usr/lib/libarmadillo.so.10.8.2
+7fa939f000-7fa93ae000 ---p 0000f000 b3:02 9697                           /usr/lib/libarmadillo.so.10.8.2
+7fa93ae000-7fa93af000 r--p 0000e000 b3:02 9697                           /usr/lib/libarmadillo.so.10.8.2
+7fa93af000-7fa93b0000 rw-p 0000f000 b3:02 9697                           /usr/lib/libarmadillo.so.10.8.2
+7fa93c0000-7fa9432000 r-xp 00000000 b3:02 10297                          /usr/lib/aarch64-linux-gnu/libheif.so.1.12.0
+7fa9432000-7fa9441000 ---p 00072000 b3:02 10297                          /usr/lib/aarch64-linux-gnu/libheif.so.1.12.0
+7fa9441000-7fa9445000 r--p 00071000 b3:02 10297                          /usr/lib/aarch64-linux-gnu/libheif.so.1.12.0
+7fa9445000-7fa9446000 rw-p 00075000 b3:02 10297                          /usr/lib/aarch64-linux-gnu/libheif.so.1.12.0
+7fa9450000-7fa94c0000 r-xp 00000000 b3:02 9849                           /usr/lib/aarch64-linux-gnu/libIex-2_5.so.25.0.6
+7fa94c0000-7fa94cf000 ---p 00070000 b3:02 9849                           /usr/lib/aarch64-linux-gnu/libIex-2_5.so.25.0.6
+7fa94cf000-7fa94d3000 r--p 0006f000 b3:02 9849                           /usr/lib/aarch64-linux-gnu/libIex-2_5.so.25.0.6
+7fa94d3000-7fa94d4000 rw-p 00073000 b3:02 9849                           /usr/lib/aarch64-linux-gnu/libIex-2_5.so.25.0.6
+7fa94e0000-7fa9522000 r-xp 00000000 b3:02 9844                           /usr/lib/aarch64-linux-gnu/libHalf-2_5.so.25.0.6
+7fa9522000-7fa9531000 ---p 00042000 b3:02 9844                           /usr/lib/aarch64-linux-gnu/libHalf-2_5.so.25.0.6
+7fa9531000-7fa9532000 r--p 00041000 b3:02 9844                           /usr/lib/aarch64-linux-gnu/libHalf-2_5.so.25.0.6
+7fa9532000-7fa9533000 rw-p 00042000 b3:02 9844                           /usr/lib/aarch64-linux-gnu/libHalf-2_5.so.25.0.6
+7fa9540000-7fa9546000 r-xp 00000000 b3:02 9853                           /usr/lib/aarch64-linux-gnu/libIlmThread-2_5.so.25.0.6
+7fa9546000-7fa9556000 ---p 00006000 b3:02 9853                           /usr/lib/aarch64-linux-gnu/libIlmThread-2_5.so.25.0.6
+7fa9556000-7fa9557000 r--p 00006000 b3:02 9853                           /usr/lib/aarch64-linux-gnu/libIlmThread-2_5.so.25.0.6
+7fa9557000-7fa9558000 rw-p 00007000 b3:02 9853                           /usr/lib/aarch64-linux-gnu/libIlmThread-2_5.so.25.0.6
+7fa9560000-7fa956f000 r-xp 00000000 b3:02 9854                           /usr/lib/aarch64-linux-gnu/libImath-2_5.so.25.0.6
+7fa956f000-7fa957f000 ---p 0000f000 b3:02 9854                           /usr/lib/aarch64-linux-gnu/libImath-2_5.so.25.0.6
+7fa957f000-7fa9580000 r--p 0000f000 b3:02 9854                           /usr/lib/aarch64-linux-gnu/libImath-2_5.so.25.0.6
+7fa9580000-7fa9581000 rw-p 00010000 b3:02 9854                           /usr/lib/aarch64-linux-gnu/libImath-2_5.so.25.0.6
+7fa9590000-7fa95aa000 r-xp 00000000 b3:02 10070                          /usr/lib/aarch64-linux-gnu/libdeflate.so.0
+7fa95aa000-7fa95b9000 ---p 0001a000 b3:02 10070                          /usr/lib/aarch64-linux-gnu/libdeflate.so.0
+7fa95b9000-7fa95ba000 r--p 00019000 b3:02 10070                          /usr/lib/aarch64-linux-gnu/libdeflate.so.0
+7fa95ba000-7fa95bb000 rw-p 0001a000 b3:02 10070                          /usr/lib/aarch64-linux-gnu/libdeflate.so.0
+7fa95c0000-7fa95ca000 r-xp 00000000 b3:02 10350                          /usr/lib/aarch64-linux-gnu/libjbig.so.0
+7fa95ca000-7fa95d9000 ---p 0000a000 b3:02 10350                          /usr/lib/aarch64-linux-gnu/libjbig.so.0
+7fa95d9000-7fa95da000 r--p 00009000 b3:02 10350                          /usr/lib/aarch64-linux-gnu/libjbig.so.0
+7fa95da000-7fa95dd000 rw-p 0000a000 b3:02 10350                          /usr/lib/aarch64-linux-gnu/libjbig.so.0
+7fa95e0000-7fa9605000 r-xp 00000000 b3:02 2002                           /usr/lib/aarch64-linux-gnu/liblzma.so.5.2.5
+7fa9605000-7fa9615000 ---p 00025000 b3:02 2002                           /usr/lib/aarch64-linux-gnu/liblzma.so.5.2.5
+7fa9615000-7fa9616000 r--p 00025000 b3:02 2002                           /usr/lib/aarch64-linux-gnu/liblzma.so.5.2.5
+7fa9616000-7fa9617000 rw-p 00026000 b3:02 2002                           /usr/lib/aarch64-linux-gnu/liblzma.so.5.2.5
+7fa9620000-7fa96d2000 r-xp 00000000 b3:02 11123                          /usr/lib/aarch64-linux-gnu/libzstd.so.1.4.8
+7fa96d2000-7fa96e1000 ---p 000b2000 b3:02 11123                          /usr/lib/aarch64-linux-gnu/libzstd.so.1.4.8
+7fa96e1000-7fa96e2000 r--p 000b1000 b3:02 11123                          /usr/lib/aarch64-linux-gnu/libzstd.so.1.4.8
+7fa96e2000-7fa96e3000 rw-p 000b2000 b3:02 11123                          /usr/lib/aarch64-linux-gnu/libzstd.so.1.4.8
+7fa96f0000-7fa970d000 r-xp 00000000 b3:02 10185                          /usr/lib/aarch64-linux-gnu/libgdcmCommon.so.3.0.10
+7fa970d000-7fa971c000 ---p 0001d000 b3:02 10185                          /usr/lib/aarch64-linux-gnu/libgdcmCommon.so.3.0.10
+7fa971c000-7fa971d000 r--p 0001c000 b3:02 10185                          /usr/lib/aarch64-linux-gnu/libgdcmCommon.so.3.0.10
+7fa971d000-7fa971e000 rw-p 0001d000 b3:02 10185                          /usr/lib/aarch64-linux-gnu/libgdcmCommon.so.3.0.10
+7fa971e000-7fa9720000 rw-p 00000000 00:00 0 
+7fa9730000-7fa9740000 r-xp 00000000 b3:02 10188                          /usr/lib/aarch64-linux-gnu/libgdcmIOD.so.3.0.10
+7fa9740000-7fa9741000 r--p 00010000 b3:02 10188                          /usr/lib/aarch64-linux-gnu/libgdcmIOD.so.3.0.10
+7fa9741000-7fa9742000 rw-p 00011000 b3:02 10188                          /usr/lib/aarch64-linux-gnu/libgdcmIOD.so.3.0.10
+7fa9750000-7fa975f000 r-xp 00000000 b3:02 10355                          /usr/lib/aarch64-linux-gnu/libjson-c.so.5.1.0
+7fa975f000-7fa976f000 ---p 0000f000 b3:02 10355                          /usr/lib/aarch64-linux-gnu/libjson-c.so.5.1.0
+7fa976f000-7fa9770000 r--p 0000f000 b3:02 10355                          /usr/lib/aarch64-linux-gnu/libjson-c.so.5.1.0
+7fa9770000-7fa9771000 rw-p 00010000 b3:02 10355                          /usr/lib/aarch64-linux-gnu/libjson-c.so.5.1.0
+7fa9780000-7fa9786000 r-xp 00000000 b3:02 990                            /usr/lib/aarch64-linux-gnu/libuuid.so.1.3.0
+7fa9786000-7fa9795000 ---p 00006000 b3:02 990                            /usr/lib/aarch64-linux-gnu/libuuid.so.1.3.0
+7fa9795000-7fa9796000 r--p 00005000 b3:02 990                            /usr/lib/aarch64-linux-gnu/libuuid.so.1.3.0
+7fa9796000-7fa9797000 rw-p 00006000 b3:02 990                            /usr/lib/aarch64-linux-gnu/libuuid.so.1.3.0
+7fa97a0000-7fa97e1000 r-xp 00000000 b3:02 10021                          /usr/lib/aarch64-linux-gnu/libcharls.so.2.3.4
+7fa97e1000-7fa97f1000 ---p 00041000 b3:02 10021                          /usr/lib/aarch64-linux-gnu/libcharls.so.2.3.4
+7fa97f1000-7fa97f2000 r--p 00041000 b3:02 10021                          /usr/lib/aarch64-linux-gnu/libcharls.so.2.3.4
+7fa97f2000-7fa97f3000 rw-p 00042000 b3:02 10021                          /usr/lib/aarch64-linux-gnu/libcharls.so.2.3.4
+7fa97f3000-7fa97fb000 rw-p 00000000 00:00 0 
+7fa9800000-7fa9825000 r-xp 00000000 b3:02 10192                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg16.so.3.0.10
+7fa9825000-7fa9834000 ---p 00025000 b3:02 10192                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg16.so.3.0.10
+7fa9834000-7fa9836000 r--p 00024000 b3:02 10192                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg16.so.3.0.10
+7fa9836000-7fa9837000 rw-p 00026000 b3:02 10192                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg16.so.3.0.10
+7fa9840000-7fa9865000 r-xp 00000000 b3:02 10191                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg12.so.3.0.10
+7fa9865000-7fa9874000 ---p 00025000 b3:02 10191                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg12.so.3.0.10
+7fa9874000-7fa9876000 r--p 00024000 b3:02 10191                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg12.so.3.0.10
+7fa9876000-7fa9877000 rw-p 00026000 b3:02 10191                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg12.so.3.0.10
+7fa9880000-7fa98a5000 r-xp 00000000 b3:02 10193                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg8.so.3.0.10
+7fa98a5000-7fa98b4000 ---p 00025000 b3:02 10193                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg8.so.3.0.10
+7fa98b4000-7fa98b6000 r--p 00024000 b3:02 10193                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg8.so.3.0.10
+7fa98b6000-7fa98b7000 rw-p 00026000 b3:02 10193                          /usr/lib/aarch64-linux-gnu/libgdcmjpeg8.so.3.0.10
+7fa98c0000-7fa9a60000 r-xp 00000000 b3:02 10186                          /usr/lib/aarch64-linux-gnu/libgdcmDICT.so.3.0.10
+7fa9a60000-7fa9b84000 r--p 001a0000 b3:02 10186                          /usr/lib/aarch64-linux-gnu/libgdcmDICT.so.3.0.10
+7fa9b84000-7fa9b85000 rw-p 002c4000 b3:02 10186                          /usr/lib/aarch64-linux-gnu/libgdcmDICT.so.3.0.10
+7fa9b85000-7fa9b86000 rw-p 00000000 00:00 0 
+7fa9b90000-7fa9b91000 r-xp 00000000 b3:02 97                             /usr/lib/aarch64-linux-gnu/libdl.so.2
+7fa9b91000-7fa9ba0000 ---p 00001000 b3:02 97                             /usr/lib/aarch64-linux-gnu/libdl.so.2
+7fa9ba0000-7fa9ba1000 r--p 00000000 b3:02 97                             /usr/lib/aarch64-linux-gnu/libdl.so.2
+7fa9ba1000-7fa9ba2000 rw-p 00001000 b3:02 97                             /usr/lib/aarch64-linux-gnu/libdl.so.2
+7fa9bb0000-7fa9bca000 r-xp 00000000 b3:02 10867                          /usr/lib/aarch64-linux-gnu/libusb-1.0.so.0.3.0
+7fa9bca000-7fa9bda000 ---p 0001a000 b3:02 10867                          /usr/lib/aarch64-linux-gnu/libusb-1.0.so.0.3.0
+7fa9bda000-7fa9bdb000 r--p 0001a000 b3:02 10867                          /usr/lib/aarch64-linux-gnu/libusb-1.0.so.0.3.0
+7fa9bdb000-7fa9bdc000 rw-p 0001b000 b3:02 10867                          /usr/lib/aarch64-linux-gnu/libusb-1.0.so.0.3.0
+7fa9be0000-7fa9c44000 r-xp 00000000 b3:02 10649                          /usr/lib/aarch64-linux-gnu/libpcre.so.3.13.3
+7fa9c44000-7fa9c54000 ---p 00064000 b3:02 10649                          /usr/lib/aarch64-linux-gnu/libpcre.so.3.13.3
+7fa9c54000-7fa9c55000 r--p 00064000 b3:02 10649                          /usr/lib/aarch64-linux-gnu/libpcre.so.3.13.3
+7fa9c55000-7fa9c56000 rw-p 00065000 b3:02 10649                          /usr/lib/aarch64-linux-gnu/libpcre.so.3.13.3
+7fa9c60000-7fa9c69000 r-xp 00000000 b3:02 10134                          /usr/lib/aarch64-linux-gnu/libffi.so.8.1.0
+7fa9c69000-7fa9c78000 ---p 00009000 b3:02 10134                          /usr/lib/aarch64-linux-gnu/libffi.so.8.1.0
+7fa9c78000-7fa9c79000 r--p 00008000 b3:02 10134                          /usr/lib/aarch64-linux-gnu/libffi.so.8.1.0
+7fa9c79000-7fa9c7a000 rw-p 00009000 b3:02 10134                          /usr/lib/aarch64-linux-gnu/libffi.so.8.1.0
+7fa9c80000-7fa9d1b000 r-xp 00000000 b3:02 1938                           /usr/lib/aarch64-linux-gnu/libdw-0.186.so
+7fa9d1b000-7fa9d2a000 ---p 0009b000 b3:02 1938                           /usr/lib/aarch64-linux-gnu/libdw-0.186.so
+7fa9d2a000-7fa9d32000 r--p 0009a000 b3:02 1938                           /usr/lib/aarch64-linux-gnu/libdw-0.186.so
+7fa9d32000-7fa9d33000 rw-p 000a2000 b3:02 1938                           /usr/lib/aarch64-linux-gnu/libdw-0.186.so
+7fa9d40000-7fa9d4d000 r-xp 00000000 b3:02 10864                          /usr/lib/aarch64-linux-gnu/libunwind.so.8.0.1
+7fa9d4d000-7fa9d5c000 ---p 0000d000 b3:02 10864                          /usr/lib/aarch64-linux-gnu/libunwind.so.8.0.1
+7fa9d5c000-7fa9d5d000 r--p 0000c000 b3:02 10864                          /usr/lib/aarch64-linux-gnu/libunwind.so.8.0.1
+7fa9d5d000-7fa9d5e000 rw-p 0000d000 b3:02 10864                          /usr/lib/aarch64-linux-gnu/libunwind.so.8.0.1
+7fa9d5e000-7fa9d7f000 rw-p 00000000 00:00 0 
+7fa9d80000-7fa9d83000 r-xp 00000000 b3:02 1616                           /usr/lib/aarch64-linux-gnu/libgmodule-2.0.so.0.7200.4
+7fa9d83000-7fa9d92000 ---p 00003000 b3:02 1616                           /usr/lib/aarch64-linux-gnu/libgmodule-2.0.so.0.7200.4
+7fa9d92000-7fa9d93000 r--p 00002000 b3:02 1616                           /usr/lib/aarch64-linux-gnu/libgmodule-2.0.so.0.7200.4
+7fa9d93000-7fa9d94000 rw-p 00003000 b3:02 1616                           /usr/lib/aarch64-linux-gnu/libgmodule-2.0.so.0.7200.4
+7fa9da0000-7fa9e1b000 r-xp 00000000 b3:02 10247                          /usr/lib/aarch64-linux-gnu/libgstbase-1.0.so.0.2003.0
+7fa9e1b000-7fa9e2a000 ---p 0007b000 b3:02 10247                          /usr/lib/aarch64-linux-gnu/libgstbase-1.0.so.0.2003.0
+7fa9e2a000-7fa9e2b000 r--p 0007a000 b3:02 10247                          /usr/lib/aarch64-linux-gnu/libgstbase-1.0.so.0.2003.0
+7fa9e2b000-7fa9e2c000 rw-p 0007b000 b3:02 10247                          /usr/lib/aarch64-linux-gnu/libgstbase-1.0.so.0.2003.0
+7fa9e30000-7fa9e5b000 r-xp 00000000 b3:02 10816                          /usr/lib/aarch64-linux-gnu/libtbb.so.2
+7fa9e5b000-7fa9e6a000 ---p 0002b000 b3:02 10816                          /usr/lib/aarch64-linux-gnu/libtbb.so.2
+7fa9e6a000-7fa9e6c000 r--p 0002a000 b3:02 10816                          /usr/lib/aarch64-linux-gnu/libtbb.so.2
+7fa9e6c000-7fa9e6d000 rw-p 0002c000 b3:02 10816                          /usr/lib/aarch64-linux-gnu/libtbb.so.2
+7fa9e6d000-7fa9e6e000 rw-p 00000000 00:00 0 
+7fa9e70000-7fa9e88000 r-xp 00000000 b3:02 11119                          /usr/lib/aarch64-linux-gnu/libz.so.1.2.11
+7fa9e88000-7fa9e98000 ---p 00018000 b3:02 11119                          /usr/lib/aarch64-linux-gnu/libz.so.1.2.11
+7fa9e98000-7fa9e99000 r--p 00018000 b3:02 11119                          /usr/lib/aarch64-linux-gnu/libz.so.1.2.11
+7fa9e99000-7fa9e9a000 rw-p 00019000 b3:02 11119                          /usr/lib/aarch64-linux-gnu/libz.so.1.2.11
+7fa9ea0000-7fa9f76000 r-xp 00000000 b3:02 10187                          /usr/lib/aarch64-linux-gnu/libgdcmDSED.so.3.0.10
+7fa9f76000-7fa9f85000 ---p 000d6000 b3:02 10187                          /usr/lib/aarch64-linux-gnu/libgdcmDSED.so.3.0.10
+7fa9f85000-7fa9f88000 r--p 000d5000 b3:02 10187                          /usr/lib/aarch64-linux-gnu/libgdcmDSED.so.3.0.10
+7fa9f88000-7fa9f89000 rw-p 000d8000 b3:02 10187                          /usr/lib/aarch64-linux-gnu/libgdcmDSED.so.3.0.10
+7fa9f90000-7fab21c000 r-xp 00000000 b3:02 9700                           /usr/lib/libgdal.so.30.0.1
+7fab21c000-7fab22b000 ---p 0128c000 b3:02 9700                           /usr/lib/libgdal.so.30.0.1
+7fab22b000-7fab319000 r--p 0128b000 b3:02 9700                           /usr/lib/libgdal.so.30.0.1
+7fab319000-7fab31b000 rw-p 01379000 b3:02 9700                           /usr/lib/libgdal.so.30.0.1
+7fab31b000-7fab35e000 rw-p 00000000 00:00 0 
+7fab360000-7fab60c000 r-xp 00000000 b3:02 9851                           /usr/lib/aarch64-linux-gnu/libIlmImf-2_5.so.25.0.6
+7fab60c000-7fab61b000 ---p 002ac000 b3:02 9851                           /usr/lib/aarch64-linux-gnu/libIlmImf-2_5.so.25.0.6
+7fab61b000-7fab61e000 r--p 002ab000 b3:02 9851                           /usr/lib/aarch64-linux-gnu/libIlmImf-2_5.so.25.0.6
+7fab61e000-7fab61f000 rw-p 002ae000 b3:02 9851                           /usr/lib/aarch64-linux-gnu/libIlmImf-2_5.so.25.0.6
+7fab620000-7fab670000 r-xp 00000000 b3:02 6988                           /usr/lib/aarch64-linux-gnu/libopenjp2.so.2.4.0
+7fab670000-7fab680000 ---p 00050000 b3:02 6988                           /usr/lib/aarch64-linux-gnu/libopenjp2.so.2.4.0
+7fab680000-7fab681000 r--p 00050000 b3:02 6988                           /usr/lib/aarch64-linux-gnu/libopenjp2.so.2.4.0
+7fab681000-7fab682000 rw-p 00051000 b3:02 6988                           /usr/lib/aarch64-linux-gnu/libopenjp2.so.2.4.0
+7fab690000-7fab70a000 r-xp 00000000 b3:02 2553                           /usr/lib/aarch64-linux-gnu/libtiff.so.5.7.0
+7fab70a000-7fab719000 ---p 0007a000 b3:02 2553                           /usr/lib/aarch64-linux-gnu/libtiff.so.5.7.0
+7fab719000-7fab71e000 r--p 00079000 b3:02 2553                           /usr/lib/aarch64-linux-gnu/libtiff.so.5.7.0
+7fab71e000-7fab71f000 rw-p 0007e000 b3:02 2553                           /usr/lib/aarch64-linux-gnu/libtiff.so.5.7.0
+7fab720000-7fab8c7000 r-xp 00000000 b3:02 10190                          /usr/lib/aarch64-linux-gnu/libgdcmMSFF.so.3.0.10
+7fab8c7000-7fab8d6000 ---p 001a7000 b3:02 10190                          /usr/lib/aarch64-linux-gnu/libgdcmMSFF.so.3.0.10
+7fab8d6000-7fab8dc000 r--p 001a6000 b3:02 10190                          /usr/lib/aarch64-linux-gnu/libgdcmMSFF.so.3.0.10
+7fab8dc000-7fab8dd000 rw-p 001ac000 b3:02 10190                          /usr/lib/aarch64-linux-gnu/libgdcmMSFF.so.3.0.10
+7fab8e0000-7fab915000 r-xp 00000000 b3:02 6960                           /usr/lib/aarch64-linux-gnu/libpng16.so.16.37.0
+7fab915000-7fab924000 ---p 00035000 b3:02 6960                           /usr/lib/aarch64-linux-gnu/libpng16.so.16.37.0
+7fab924000-7fab925000 r--p 00034000 b3:02 6960                           /usr/lib/aarch64-linux-gnu/libpng16.so.16.37.0
+7fab925000-7fab926000 rw-p 00035000 b3:02 6960                           /usr/lib/aarch64-linux-gnu/libpng16.so.16.37.0
+7fab930000-7fab97b000 r-xp 00000000 b3:02 11042                          /usr/lib/aarch64-linux-gnu/libwebp.so.7.1.3
+7fab97b000-7fab98b000 ---p 0004b000 b3:02 11042                          /usr/lib/aarch64-linux-gnu/libwebp.so.7.1.3
+7fab98b000-7fab98c000 r--p 0004b000 b3:02 11042                          /usr/lib/aarch64-linux-gnu/libwebp.so.7.1.3
+7fab98c000-7fab98d000 rw-p 0004c000 b3:02 11042                          /usr/lib/aarch64-linux-gnu/libwebp.so.7.1.3
+7fab98d000-7fab98f000 rw-p 00000000 00:00 0 
+7fab990000-7fab9d9000 r-xp 00000000 b3:02 10353                          /usr/lib/aarch64-linux-gnu/libjpeg.so.8.2.2
+7fab9d9000-7fab9e8000 ---p 00049000 b3:02 10353                          /usr/lib/aarch64-linux-gnu/libjpeg.so.8.2.2
+7fab9e8000-7fab9e9000 r--p 00048000 b3:02 10353                          /usr/lib/aarch64-linux-gnu/libjpeg.so.8.2.2
+7fab9e9000-7fab9ea000 rw-p 00049000 b3:02 10353                          /usr/lib/aarch64-linux-gnu/libjpeg.so.8.2.2
+7fab9f0000-7fac9f1000 r-xp 00000000 b3:02 137302                         /usr/local/lib/libonnxruntime.so.1.20.1
+7fac9f1000-7faca00000 ---p 01001000 b3:02 137302                         /usr/local/lib/libonnxruntime.so.1.20.1
+7faca00000-7faca35000 r--p 01000000 b3:02 137302                         /usr/local/lib/libonnxruntime.so.1.20.1
+7faca35000-7faca39000 rw-p 01035000 b3:02 137302                         /usr/local/lib/libonnxruntime.so.1.20.1
+7faca39000-7faca44000 rw-p 00000000 00:00 0 
+7faca50000-7faca51000 r-xp 00000000 b3:02 268                            /usr/lib/aarch64-linux-gnu/libpthread.so.0
+7faca51000-7faca60000 ---p 00001000 b3:02 268                            /usr/lib/aarch64-linux-gnu/libpthread.so.0
+7faca60000-7faca61000 r--p 00000000 b3:02 268                            /usr/lib/aarch64-linux-gnu/libpthread.so.0
+7faca61000-7faca62000 rw-p 00001000 b3:02 268                            /usr/lib/aarch64-linux-gnu/libpthread.so.0
+7faca70000-7faca79000 r-xp 00000000 b3:02 139279                         /usr/local/lib/libi3system_imgproc_impl_64.so.2.12.1
+7faca79000-7faca88000 ---p 00009000 b3:02 139279                         /usr/local/lib/libi3system_imgproc_impl_64.so.2.12.1
+7faca88000-7faca89000 r--p 00008000 b3:02 139279                         /usr/local/lib/libi3system_imgproc_impl_64.so.2.12.1
+7faca89000-7faca8a000 rw-p 00009000 b3:02 139279                         /usr/local/lib/libi3system_imgproc_impl_64.so.2.12.1
+7faca8a000-7facb4a000 rw-p 00000000 00:00 0 
+7facb50000-7facb55000 r-xp 00000000 b3:02 140023                         /usr/local/lib/libi3system_usb_64.so.2.12.1
+7facb55000-7facb64000 ---p 00005000 b3:02 140023                         /usr/local/lib/libi3system_usb_64.so.2.12.1
+7facb64000-7facb65000 r--p 00004000 b3:02 140023                         /usr/local/lib/libi3system_usb_64.so.2.12.1
+7facb65000-7facb66000 rw-p 00005000 b3:02 140023                         /usr/local/lib/libi3system_usb_64.so.2.12.1
+7facb70000-7faccfe000 r-xp 00000000 b3:02 70                             /usr/lib/aarch64-linux-gnu/libc.so.6
+7faccfe000-7facd0d000 ---p 0018e000 b3:02 70                             /usr/lib/aarch64-linux-gnu/libc.so.6
+7facd0d000-7facd11000 r--p 0018d000 b3:02 70                             /usr/lib/aarch64-linux-gnu/libc.so.6
+7facd11000-7facd13000 rw-p 00191000 b3:02 70                             /usr/lib/aarch64-linux-gnu/libc.so.6
+7facd13000-7facd1f000 rw-p 00000000 00:00 0 
+7facd20000-7facd34000 r-xp 00000000 b3:02 7855                           /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
+7facd34000-7facd43000 ---p 00014000 b3:02 7855                           /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
+7facd43000-7facd44000 r--p 00013000 b3:02 7855                           /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
+7facd44000-7facd45000 rw-p 00014000 b3:02 7855                           /usr/lib/aarch64-linux-gnu/libgcc_s.so.1
+7facd50000-7facdd6000 r-xp 00000000 b3:02 156                            /usr/lib/aarch64-linux-gnu/libm.so.6
+7facdd6000-7facde5000 ---p 00086000 b3:02 156                            /usr/lib/aarch64-linux-gnu/libm.so.6
+7facde5000-7facde6000 r--p 00085000 b3:02 156                            /usr/lib/aarch64-linux-gnu/libm.so.6
+7facde6000-7facde7000 rw-p 00086000 b3:02 156                            /usr/lib/aarch64-linux-gnu/libm.so.6
+7facdf0000-7facffb000 r-xp 00000000 b3:02 129                            /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30
+7facffb000-7fad00b000 ---p 0020b000 b3:02 129                            /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30
+7fad00b000-7fad016000 r--p 0020b000 b3:02 129                            /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30
+7fad016000-7fad019000 rw-p 00216000 b3:02 129                            /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30
+7fad019000-7fad01c000 rw-p 00000000 00:00 0 
+7fad020000-7fad159000 r-xp 00000000 b3:02 1614                           /usr/lib/aarch64-linux-gnu/libglib-2.0.so.0.7200.4
+7fad159000-7fad169000 ---p 00139000 b3:02 1614                           /usr/lib/aarch64-linux-gnu/libglib-2.0.so.0.7200.4
+7fad169000-7fad16a000 r--p 00139000 b3:02 1614                           /usr/lib/aarch64-linux-gnu/libglib-2.0.so.0.7200.4
+7fad16a000-7fad16b000 rw-p 0013a000 b3:02 1614                           /usr/lib/aarch64-linux-gnu/libglib-2.0.so.0.7200.4
+7fad16b000-7fad16c000 rw-p 00000000 00:00 0 
+7fad170000-7fad1cf000 r-xp 00000000 b3:02 1618                           /usr/lib/aarch64-linux-gnu/libgobject-2.0.so.0.7200.4
+7fad1cf000-7fad1df000 ---p 0005f000 b3:02 1618                           /usr/lib/aarch64-linux-gnu/libgobject-2.0.so.0.7200.4
+7fad1df000-7fad1e2000 r--p 0005f000 b3:02 1618                           /usr/lib/aarch64-linux-gnu/libgobject-2.0.so.0.7200.4
+7fad1e2000-7fad1e3000 rw-p 00062000 b3:02 1618                           /usr/lib/aarch64-linux-gnu/libgobject-2.0.so.0.7200.4
+7fad1e3000-7fad1e4000 rw-p 00000000 00:00 0 
+7fad1f0000-7fad33c000 r-xp 00000000 b3:02 10264                          /usr/lib/aarch64-linux-gnu/libgstreamer-1.0.so.0.2003.0
+7fad33c000-7fad34c000 ---p 0014c000 b3:02 10264                          /usr/lib/aarch64-linux-gnu/libgstreamer-1.0.so.0.2003.0
+7fad34c000-7fad352000 r--p 0014c000 b3:02 10264                          /usr/lib/aarch64-linux-gnu/libgstreamer-1.0.so.0.2003.0
+7fad352000-7fad355000 rw-p 00152000 b3:02 10264                          /usr/lib/aarch64-linux-gnu/libgstreamer-1.0.so.0.2003.0
+7fad355000-7fad356000 rw-p 00000000 00:00 0 
+7fad360000-7fad373000 r-xp 00000000 b3:02 10244                          /usr/lib/aarch64-linux-gnu/libgstapp-1.0.so.0.2003.0
+7fad373000-7fad383000 ---p 00013000 b3:02 10244                          /usr/lib/aarch64-linux-gnu/libgstapp-1.0.so.0.2003.0
+7fad383000-7fad384000 r--p 00013000 b3:02 10244                          /usr/lib/aarch64-linux-gnu/libgstapp-1.0.so.0.2003.0
+7fad384000-7fad385000 rw-p 00014000 b3:02 10244                          /usr/lib/aarch64-linux-gnu/libgstapp-1.0.so.0.2003.0
+7fad390000-7fad5ff000 r-xp 00000000 b3:02 10524                          /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4d
+7fad5ff000-7fad600000 ---p 0026f000 b3:02 10524                          /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4d
+7fad600000-7fad60b000 r--p 00270000 b3:02 10524                          /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4d
+7fad60b000-7fad60d000 rw-p 0027b000 b3:02 10524                          /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4d
+7fad60d000-7fad611000 rw-p 00000000 00:00 0 
+7fad615000-7fad620000 rw-p 00000000 00:00 0 
+7fad620000-7fad8c3000 r-xp 00000000 b3:02 10556                          /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4d
+7fad8c3000-7fad8d0000 ---p 002a3000 b3:02 10556                          /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4d
+7fad8d0000-7fad8de000 r--p 002b0000 b3:02 10556                          /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4d
+7fad8de000-7fad8e6000 rw-p 002be000 b3:02 10556                          /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4d
+7fad8e6000-7fad983000 rw-p 00000000 00:00 0 
+7fad984000-7fad990000 rw-p 00000000 00:00 0 
+7fad990000-7fad9d7000 r-xp 00000000 b3:02 10554                          /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
+7fad9d7000-7fad9e6000 ---p 00047000 b3:02 10554                          /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
+7fad9e6000-7fad9ea000 r--p 00046000 b3:02 10554                          /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
+7fad9ea000-7fad9eb000 rw-p 0004a000 b3:02 10554                          /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
+7fad9ec000-7fad9f0000 rw-p 00000000 00:00 0 
+7fad9f0000-7fadc3c000 r-xp 00000000 b3:02 154596                         /usr/local/lib/libdxrt.so
+7fadc3c000-7fadc4c000 ---p 0024c000 b3:02 154596                         /usr/local/lib/libdxrt.so
+7fadc4c000-7fadc51000 r--p 0024c000 b3:02 154596                         /usr/local/lib/libdxrt.so
+7fadc51000-7fadc53000 rw-p 00251000 b3:02 154596                         /usr/local/lib/libdxrt.so
+7fadc53000-7fadc54000 rw-p 00000000 00:00 0 
+7fadc54000-7fadc60000 rw-p 00000000 00:00 0 
+7fadc60000-7fadc95000 r-xp 00000000 b3:02 518                            /usr/lib/aarch64-linux-gnu/libyaml-cpp.so.0.7.0
+7fadc95000-7fadca5000 ---p 00035000 b3:02 518                            /usr/lib/aarch64-linux-gnu/libyaml-cpp.so.0.7.0
+7fadca5000-7fadca6000 r--p 00035000 b3:02 518                            /usr/lib/aarch64-linux-gnu/libyaml-cpp.so.0.7.0
+7fadca6000-7fadca7000 rw-p 00036000 b3:02 518                            /usr/lib/aarch64-linux-gnu/libyaml-cpp.so.0.7.0
+7fadca7000-7fadca8000 rw-p 00000000 00:00 0 
+7fadca8000-7fadcb6000 rw-p 00000000 00:00 0 
+7fadcd0000-7fadd2e000 r-xp 00000000 b3:02 139815                         /usr/local/lib/libi3system_te_64.so.2.12.1
+7fadd2e000-7fadd3e000 ---p 0005e000 b3:02 139815                         /usr/local/lib/libi3system_te_64.so.2.12.1
+7fadd3e000-7fadd44000 r--p 0005e000 b3:02 139815                         /usr/local/lib/libi3system_te_64.so.2.12.1
+7fadd44000-7fadd85000 rw-p 00064000 b3:02 139815                         /usr/local/lib/libi3system_te_64.so.2.12.1
+7fadd85000-7fadd88000 rw-p 00000000 00:00 0 
+7fadd89000-7fadd97000 rw-p 00000000 00:00 0 
+7fadd97000-7faddc2000 r-xp 00000000 b3:02 49                             /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+7faddc2000-7faddce000 rw-p 00000000 00:00 0 
+7faddce000-7faddd0000 r--p 00000000 00:00 0                              [vvar]
+7faddd0000-7faddd1000 r-xp 00000000 00:00 0                              [vdso]
+7faddd1000-7faddd3000 r--p 0002a000 b3:02 49                             /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+7faddd3000-7faddd5000 rw-p 0002c000 b3:02 49                             /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+7fe0c96000-7fe0cb7000 rw-p 00000000 00:00 0                              [stack]

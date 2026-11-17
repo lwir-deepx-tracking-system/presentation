@@ -1,0 +1,6 @@
+[INFO] [Runtime] 실행 모드: core
+[INFO] [Measurement] 결과 경로: /tmp/lwir-perf-20261116/results/smoke-async6-r1/results/core/20261116_153650
+[INFO] [Tracking] ByteTrackTracker 생성 완료
+[INFO] [ModelManagerThread] started
+[ERROR] [ModelManagerThread] initial model load failed: [dxrt-exception] Service input & output exception {"Dynamic IPC task init failed":/home/orangepi/deepx_sdk_new/dx_rt/lib/device_pool/service_layer.cpp:353:SignalTaskInitLocked}
+[ERROR] [Runtime] [dxrt-exception] Service input & output exception {"Dynamic IPC task init failed":/home/orangepi/deepx_sdk_new/dx_rt/lib/device_pool/service_layer.cpp:353:SignalTaskInitLocked}

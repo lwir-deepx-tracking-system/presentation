@@ -1,0 +1,12 @@
+{
+  "case": "async6",
+  "tag": "smoke",
+  "rep": 1,
+  "pid": 1037460,
+  "duration_s": 5,
+  "warm_s": 5,
+  "source_commit": "0fe016f7edd069900457a746dc4cc787569c5ae6",
+  "model_sha256": "c4f1f93431f0854ec495a4a91a510238224c03901de8e788625ba31317f496d8",
+  "valid": false,
+  "error": "camera not ready: [INFO] [Runtime] \uc2e4\ud589 \ubaa8\ub4dc: core\n[INFO] [Measurement] \uacb0\uacfc \uacbd\ub85c: /tmp/lwir-perf-20261116/results/smoke-async6-r1/results/core/20261116_153650\n[INFO] [Tracking] ByteTrackTracker \uc0dd\uc131 \uc644\ub8cc\n[INFO] [ModelManagerThread] started\n[ERROR] [ModelManagerThread] initial model load failed: [dxrt-exception] Service input & output exception {\"Dynamic IPC task init failed\":/home/orangepi/deepx_sdk_new/dx_rt/lib/device_pool/service_layer.cpp:353:SignalTaskInitLocked}\n[ERROR] [Runtime] [dxrt-exception] Service input & output exception {\"Dynamic IPC task init failed\":/home/orangepi/deepx_sdk_new/dx_rt/lib/device_pool/service_layer.cpp:353:SignalTaskInitLocked}\n"
+}

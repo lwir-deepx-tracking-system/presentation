@@ -1,0 +1,18 @@
+[INFO] [Runtime] 실행 모드: core
+[INFO] [Measurement] 결과 경로: /tmp/lwir-perf-20261116/results/replay120-async4-r3/results/core/20261116_164321
+[INFO] [Tracking] ByteTrackTracker 생성 완료
+[INFO] [ModelManagerThread] started
+[INFO] [ModelManagerThread] active model id=1
+[INFO] [ControlThread] 시작
+[INFO] [ControlThread] AUTO 제어 비활성화: Tracking 결과만 소비합니다
+[INFO] [TrackingThread] 시작
+[INFO] [CameraThread] 시작
+[INFO] [DetectionThread] 시작
+[INFO] [Replay] actual-frame memory replay FPS=120.000000
+[INFO] [Runtime] 측정 결과 저장 후 종료 요청
+[INFO] [CameraThread] 종료
+[INFO] [DetectionThread] 종료
+[INFO] [TrackingThread] 종료
+[INFO] [ControlThread] 종료
+[INFO] [ModelManagerThread] stopped
+[INFO] [Measurement] 측정 결과 저장 완료: /tmp/lwir-perf-20261116/results/replay120-async4-r3/results/core/20261116_164321

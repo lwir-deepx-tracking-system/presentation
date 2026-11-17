@@ -1,0 +1,4 @@
+stage,frame_id,capture_ns,done_ns,preprocess_ms,latency_ms,postprocess_ms,npu_ms,input_format_us,output_format_us,cpu_task_us,cpu_valid
+camera,1,76000377889963,76000377900172,0,0,0,0,0,0,0,0
+submit,1,76000377889963,76000378113377,0,0,0,0,0,0,0,0
+camera,2,76000447659847,76000447660722,0,0,0,0,0,0,0,0

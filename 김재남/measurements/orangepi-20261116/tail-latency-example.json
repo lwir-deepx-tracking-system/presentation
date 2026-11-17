@@ -1,0 +1,19 @@
+{
+  "run": "off-on-ort8-r2",
+  "frame_id": "207",
+  "e2e_ms": 77.480579,
+  "detection": {
+    "stage": "detection",
+    "frame_id": "207",
+    "capture_ns": "76668022514447",
+    "done_ns": "76668099951277",
+    "preprocess_ms": "2.010434",
+    "latency_ms": "70.681913",
+    "postprocess_ms": "4.561027",
+    "npu_ms": "5.36",
+    "input_format_us": "9.916",
+    "output_format_us": "3456.207",
+    "cpu_task_us": "2645.384",
+    "cpu_valid": "1"
+  }
+}

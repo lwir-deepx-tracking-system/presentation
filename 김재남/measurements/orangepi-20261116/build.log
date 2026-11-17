@@ -1,0 +1,74 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /usr (found version "4.5.4") found components: core imgproc imgcodecs 
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for modules 'gstreamer-1.0>=1.20;gstreamer-app-1.0>=1.20'
+--   Found gstreamer-1.0, version 1.20.3
+--   Found gstreamer-app-1.0, version 1.20.3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/lwir-perf-20261116/build
+[1/47] Building CXX object CMakeFiles/lwir_app_support.dir/src/app/shutdown.cpp.o
+[2/47] Building CXX object CMakeFiles/lwir_common.dir/src/common/logger.cpp.o
+[3/47] Building CXX object CMakeFiles/lwir_app_support.dir/src/app/run_directory.cpp.o
+[4/47] Building CXX object CMakeFiles/lwir_camera.dir/src/camera/camera.cpp.o
+[5/47] Building CXX object CMakeFiles/lwir_app_support.dir/src/app/pipeline_console.cpp.o
+[6/47] Building CXX object CMakeFiles/lwir_vision.dir/src/tracking/kalman_filter.cpp.o
+[7/47] Building CXX object CMakeFiles/lwir_vision.dir/src/detection/lwir_preprocessor.cpp.o
+[8/47] Building CXX object CMakeFiles/lwir_app_support.dir/src/app/metrics_writer.cpp.o
+[9/47] Building CXX object CMakeFiles/lwir_vision.dir/src/tracking/tracker_factory.cpp.o
+[10/47] Building CXX object CMakeFiles/lwir_vision.dir/src/detection/yolov8_postprocessor.cpp.o
+[11/47] Building CXX object CMakeFiles/lwir_vision.dir/src/tracking/tracker_manager.cpp.o
+[12/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/target/target_selector.cpp.o
+[13/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/control/gimbal_device.cpp.o
+[14/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/control/pid_controller.cpp.o
+[15/47] Building CXX object CMakeFiles/lwir_vision.dir/src/tracking/bytetrack_tracker.cpp.o
+[16/47] Building CXX object CMakeFiles/lwir_vision.dir/src/detection/yolo26_postprocessor.cpp.o
+[17/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/control/auto_tracking_controller.cpp.o
+[18/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/gui/gui_protocol.cpp.o
+[19/47] Building CXX object CMakeFiles/lwir_common.dir/src/config/app_config.cpp.o
+[20/47] Linking CXX static library liblwir_common.a
+[21/47] Linking CXX static library liblwir_app_support.a
+[22/47] Linking CXX static library liblwir_camera.a
+[23/47] Building CXX object CMakeFiles/lwir_vision.dir/src/tracking/ocsort_tracker.cpp.o
+/tmp/lwir-perf-20261116/source/src/tracking/ocsort_tracker.cpp: In function ‘std::pair<double, double> {anonymous}::speed_direction(const Box5&, const Box5&)’:
+/tmp/lwir-perf-20261116/source/src/tracking/ocsort_tracker.cpp:178:73: note: parameter passing for argument of type ‘std::pair<double, double>’ when C++17 is enabled changed to match C++14 in GCC 10.1
+  178 | std::pair<double, double> speed_direction(const Box5& b1, const Box5& b2)
+      |                                                                         ^
+[24/47] Building CXX object CMakeFiles/lwir_vision.dir/src/detection/yolo_postprocessor_core.cpp.o
+[25/47] Building CXX object CMakeFiles/lwir_vision.dir/src/detection/detector_factory.cpp.o
+[26/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/gui/gui_command_handler.cpp.o
+[27/47] Building CXX object CMakeFiles/lwir_vision.dir/src/detection/dxrt_detection_pipeline.cpp.o
+In file included from /tmp/lwir-perf-20261116/source/src/detection/dxrt_detection_pipeline.cpp:14:
+/tmp/lwir-perf-20261116/source/include/common/common_util.hpp:263:27: warning: inline function ‘std::atomic<bool>& dxapp::g_interrupted()’ used but never defined
+  263 | inline std::atomic<bool>& g_interrupted();
+      |                           ^~~~~~~~~~~~~
+[28/47] Linking CXX static library liblwir_vision.a
+[29/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/control/tracking_command_handler.cpp.o
+[30/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/gui/gui_receiver.cpp.o
+[31/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/camera_thread.cpp.o
+[32/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/tracker_change_service.cpp.o
+[33/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/gui/gui_sender.cpp.o
+[34/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/gui_receiver_thread.cpp.o
+[35/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/runtime_control.cpp.o
+[36/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/detection_thread.cpp.o
+[37/47] Building CXX object CMakeFiles/lwir_runtime.dir/apps/runtime/main.cpp.o
+[38/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/control_thread.cpp.o
+[39/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/tracking_thread.cpp.o
+[40/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/active_pipeline_slot.cpp.o
+[41/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/gui_sender_thread.cpp.o
+[42/47] Building CXX object CMakeFiles/lwir_runtime.dir/apps/runtime/runtime_workers.cpp.o
+[43/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/model_manager_thread.cpp.o
+[44/47] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/control/gimbal_command_executor.cpp.o
+[45/47] Linking CXX static library liblwir_runtime_core.a
+[46/47] Building CXX object CMakeFiles/lwir_runtime.dir/apps/runtime/runtime.cpp.o
+[47/47] Linking CXX executable lwir_runtime

@@ -1,0 +1,2 @@
+?? .local/
+?? tests/tracking/lwir_to_mot.py

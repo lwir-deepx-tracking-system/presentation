@@ -1,54 +1,146 @@
 {
-  "fonts": true,
-  "images": true,
-  "slides": [
-    {
-      "width": 1280,
-      "height": 720,
-      "overflow": []
-    },
-    {
-      "width": 1280,
-      "height": 720,
-      "overflow": []
-    },
-    {
-      "width": 1280,
-      "height": 720,
-      "overflow": []
-    },
-    {
-      "width": 1280,
-      "height": 720,
-      "overflow": []
-    }
-  ],
-  "svg_overflow": {},
-  "pages": 4,
-  "pdf_points": [
-    [
-      960.0,
-      540.0
+  "index.html": {
+    "fonts": true,
+    "images": true,
+    "slides": [
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      }
     ],
-    [
-      960.0,
-      540.0
+    "pages": 8,
+    "pdf_points": [
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ]
     ],
-    [
-      960.0,
-      540.0
-    ],
-    [
-      960.0,
-      540.0
+    "text_chars": [
+      381,
+      429,
+      378,
+      393,
+      549,
+      654,
+      580,
+      498
     ]
-  ],
-  "pdf_text_characters": [
-    381,
-    429,
-    378,
-    393
-  ],
+  },
+  "performance.html": {
+    "fonts": true,
+    "images": true,
+    "slides": [
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "overflow": []
+      }
+    ],
+    "pages": 4,
+    "pdf_points": [
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ],
+      [
+        960.0,
+        540.0
+      ]
+    ],
+    "text_chars": [
+      549,
+      654,
+      580,
+      498
+    ]
+  },
   "javascript_errors": [],
   "remote_requests": []
 }
