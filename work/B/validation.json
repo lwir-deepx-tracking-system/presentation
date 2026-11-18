@@ -1,0 +1,834 @@
+{
+  "target_seconds": 1200,
+  "demo_slot_seconds": 180,
+  "spoken_hangul_chars": 3372,
+  "actual_rehearsal_performed": false,
+  "reports": [
+    {
+      "html": "index.html",
+      "pdf": "presentation.pdf",
+      "slides": 32,
+      "pdf_pages": 32,
+      "page_points": [
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ]
+      ],
+      "fonts_loaded": true,
+      "images": [
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/윤오름.png",
+          "ok": true
+        },
+        {
+          "src": "assets/김재남.png",
+          "ok": true
+        },
+        {
+          "src": "assets/윤관.png",
+          "ok": true
+        },
+        {
+          "src": "assets/정하건.png",
+          "ok": true
+        },
+        {
+          "src": "assets/홍정호.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/operating-replay.jpg",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/label-outdoor.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/label-indoor.png",
+          "ok": true
+        },
+        {
+          "src": "assets/label-outdoor.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/y26m-validation.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        }
+      ],
+      "javascript_errors": [],
+      "layout": [
+        {
+          "slide": 1,
+          "width": 1920,
+          "height": 1080,
+          "title": "프로젝트 소개",
+          "problems": []
+        },
+        {
+          "slide": 2,
+          "width": 1920,
+          "height": 1080,
+          "title": "팀 구성 및 역할",
+          "problems": []
+        },
+        {
+          "slide": 3,
+          "width": 1920,
+          "height": 1080,
+          "title": "운용 화면",
+          "problems": []
+        },
+        {
+          "slide": 4,
+          "width": 1920,
+          "height": 1080,
+          "title": "시스템 요구사항",
+          "problems": []
+        },
+        {
+          "slide": 5,
+          "width": 1920,
+          "height": 1080,
+          "title": "시스템 구성",
+          "problems": []
+        },
+        {
+          "slide": 6,
+          "width": 1920,
+          "height": 1080,
+          "title": "소프트웨어 구성",
+          "problems": []
+        },
+        {
+          "slide": 7,
+          "width": 1920,
+          "height": 1080,
+          "title": "열화상 검출 과제",
+          "problems": []
+        },
+        {
+          "slide": 8,
+          "width": 1920,
+          "height": 1080,
+          "title": "학습 데이터 구축",
+          "problems": []
+        },
+        {
+          "slide": 9,
+          "width": 1920,
+          "height": 1080,
+          "title": "모델 학습 결과",
+          "problems": []
+        },
+        {
+          "slide": 10,
+          "width": 1920,
+          "height": 1080,
+          "title": "검출 성능 비교",
+          "problems": []
+        },
+        {
+          "slide": 11,
+          "width": 1920,
+          "height": 1080,
+          "title": "추론 시간 비교",
+          "problems": []
+        },
+        {
+          "slide": 12,
+          "width": 1920,
+          "height": 1080,
+          "title": "모델 배포 과정",
+          "problems": []
+        },
+        {
+          "slide": 13,
+          "width": 1920,
+          "height": 1080,
+          "title": "표적 가림과 ID 유지",
+          "problems": []
+        },
+        {
+          "slide": 14,
+          "width": 1920,
+          "height": 1080,
+          "title": "OC-SORT 추적 방식",
+          "problems": []
+        },
+        {
+          "slide": 15,
+          "width": 1920,
+          "height": 1080,
+          "title": "ID 변경 감소 결과",
+          "problems": []
+        },
+        {
+          "slide": 16,
+          "width": 1920,
+          "height": 1080,
+          "title": "추적 품질 비교",
+          "problems": []
+        },
+        {
+          "slide": 17,
+          "width": 1920,
+          "height": 1080,
+          "title": "처리 지연 요인",
+          "problems": []
+        },
+        {
+          "slide": 18,
+          "width": 1920,
+          "height": 1080,
+          "title": "비동기 요청 처리",
+          "problems": []
+        },
+        {
+          "slide": 19,
+          "width": 1920,
+          "height": 1080,
+          "title": "처리 지연 개선 결과",
+          "problems": []
+        },
+        {
+          "slide": 20,
+          "width": 1920,
+          "height": 1080,
+          "title": "표적 위치 오차",
+          "problems": []
+        },
+        {
+          "slide": 21,
+          "width": 1920,
+          "height": 1080,
+          "title": "PD 제어",
+          "problems": []
+        },
+        {
+          "slide": 22,
+          "width": 1920,
+          "height": 1080,
+          "title": "수동 전환 및 정지",
+          "problems": []
+        },
+        {
+          "slide": 23,
+          "width": 1920,
+          "height": 1080,
+          "title": "짐벌 제어 시험",
+          "problems": []
+        },
+        {
+          "slide": 24,
+          "width": 1920,
+          "height": 1080,
+          "title": "GUI 구성",
+          "problems": []
+        },
+        {
+          "slide": 25,
+          "width": 1920,
+          "height": 1080,
+          "title": "GUI 조작 순서",
+          "problems": []
+        },
+        {
+          "slide": 26,
+          "width": 1920,
+          "height": 1080,
+          "title": "명령 및 상태 흐름",
+          "problems": []
+        },
+        {
+          "slide": 27,
+          "width": 1920,
+          "height": 1080,
+          "title": "시연 구성",
+          "problems": []
+        },
+        {
+          "slide": 28,
+          "width": 1920,
+          "height": 1080,
+          "title": "통합 시연",
+          "problems": []
+        },
+        {
+          "slide": 29,
+          "width": 1920,
+          "height": 1080,
+          "title": "검출 거리 검증",
+          "problems": []
+        },
+        {
+          "slide": 30,
+          "width": 1920,
+          "height": 1080,
+          "title": "ID 유지 검증",
+          "problems": []
+        },
+        {
+          "slide": 31,
+          "width": 1920,
+          "height": 1080,
+          "title": "처리량 및 지연 검증",
+          "problems": []
+        },
+        {
+          "slide": 32,
+          "width": 1920,
+          "height": 1080,
+          "title": "성과 및 향후 과제",
+          "problems": []
+        }
+      ],
+      "keyboard_navigation": true,
+      "demo_included": false
+    },
+    {
+      "html": "appendix.html",
+      "pdf": "appendix.pdf",
+      "slides": 18,
+      "pdf_pages": 18,
+      "page_points": [
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ]
+      ],
+      "fonts_loaded": true,
+      "images": [
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/y26m-validation.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        }
+      ],
+      "javascript_errors": [],
+      "layout": [
+        {
+          "slide": 1,
+          "width": 1920,
+          "height": 1080,
+          "title": "최종 모델 선정 기준",
+          "problems": []
+        },
+        {
+          "slide": 2,
+          "width": 1920,
+          "height": 1080,
+          "title": "평가 지표 정의",
+          "problems": []
+        },
+        {
+          "slide": 3,
+          "width": 1920,
+          "height": 1080,
+          "title": "추적 성능 원표",
+          "problems": []
+        },
+        {
+          "slide": 4,
+          "width": 1920,
+          "height": 1080,
+          "title": "PC 통신 인터페이스",
+          "problems": []
+        },
+        {
+          "slide": 5,
+          "width": 1920,
+          "height": 1080,
+          "title": "조준점 및 제어 명령",
+          "problems": []
+        },
+        {
+          "slide": 6,
+          "width": 1920,
+          "height": 1080,
+          "title": "후속 모델 실험",
+          "problems": []
+        },
+        {
+          "slide": 7,
+          "width": 1920,
+          "height": 1080,
+          "title": "외형 및 위치 기억",
+          "problems": []
+        },
+        {
+          "slide": 8,
+          "width": 1920,
+          "height": 1080,
+          "title": "과거 F·NF 후보 비교",
+          "problems": []
+        },
+        {
+          "slide": 9,
+          "width": 1920,
+          "height": 1080,
+          "title": "시간 요구사항 및 계측 구간",
+          "problems": []
+        },
+        {
+          "slide": 10,
+          "width": 1920,
+          "height": 1080,
+          "title": "검출 성능 및 호출 시간",
+          "problems": []
+        },
+        {
+          "slide": 11,
+          "width": 1920,
+          "height": 1080,
+          "title": "검출 모델 학습 기록",
+          "problems": []
+        },
+        {
+          "slide": 12,
+          "width": 1920,
+          "height": 1080,
+          "title": "FT·KD 비교",
+          "problems": []
+        },
+        {
+          "slide": 13,
+          "width": 1920,
+          "height": 1080,
+          "title": "INT8 배포 및 장치 성능",
+          "problems": []
+        },
+        {
+          "slide": 14,
+          "width": 1920,
+          "height": 1080,
+          "title": "OC-SORT 동작 원리",
+          "problems": []
+        },
+        {
+          "slide": 15,
+          "width": 1920,
+          "height": 1080,
+          "title": "PC 추적 옵션 비교",
+          "problems": []
+        },
+        {
+          "slide": 16,
+          "width": 1920,
+          "height": 1080,
+          "title": "Runtime 부하 시험",
+          "problems": []
+        },
+        {
+          "slide": 17,
+          "width": 1920,
+          "height": 1080,
+          "title": "짐벌 제어 상세",
+          "problems": []
+        },
+        {
+          "slide": 18,
+          "width": 1920,
+          "height": 1080,
+          "title": "영상 출력 지연 시험",
+          "problems": []
+        }
+      ],
+      "keyboard_navigation": null,
+      "demo_included": false
+    }
+  ]
+}
