@@ -1,7 +1,7 @@
 {
   "target_seconds": 1200,
   "demo_slot_seconds": 180,
-  "spoken_hangul_chars": 3372,
+  "spoken_hangul_chars": 3413,
   "actual_rehearsal_performed": false,
   "reports": [
     {
@@ -174,10 +174,6 @@
           "ok": true
         },
         {
-          "src": "assets/operating-replay.jpg",
-          "ok": true
-        },
-        {
           "src": "assets/lig-logo.png",
           "ok": true
         },
@@ -330,7 +326,7 @@
           "slide": 3,
           "width": 1920,
           "height": 1080,
-          "title": "운용 화면",
+          "title": "프로젝트 소개",
           "problems": []
         },
         {

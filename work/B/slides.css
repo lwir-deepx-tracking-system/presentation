@@ -51,3 +51,6 @@ figure{margin:0}figure img{display:block;max-width:100%;object-fit:contain}figca
 .team-contributions h3{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px;min-height:48px}.leader-badge{font-size:20px;font-weight:600;color:#006bb1;background:#e9f2fa;border-radius:5px;padding:5px 9px}.member-focus{padding-top:22px;border-top:1px solid #dce2ea;text-align:center}.member-focus p{font-size:26px;line-height:1.65;color:#354f6a;margin:0 0 10px}
 
 .demo-gui-placeholder{height:410px;border:2px dashed #c5d1de;border-radius:12px;background:#f5f7fa;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:35px}.demo-gui-placeholder h2{font-size:51px;color:#627b92}.demo-gui-placeholder p{font-size:28px;color:#8190a2}
+
+/* Introduce the project before implementation and operating details. */
+.project-overview{padding-top:30px}.project-overview h2{font-size:54px;line-height:1.45;margin:0 0 26px;letter-spacing:-1.5px}.project-overview>p{font-size:25px;color:#667085;margin-bottom:20px}.project-overview .b-chain{padding-top:30px;gap:16px}.project-overview .b-chain>div{padding:25px 18px;min-height:230px}.project-overview .b-chain small{font-size:22px}.project-overview .b-chain h3{font-size:30px;margin:25px 0 15px}.project-overview .b-chain p{font-size:25px}
