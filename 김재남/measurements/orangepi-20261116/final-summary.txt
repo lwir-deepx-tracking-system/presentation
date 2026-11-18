@@ -1,0 +1,12 @@
+gui async6 n 1 fps 18.2 p95 25.17 CPU 41.2
+off-off ort8 n 3 fps 19.04 p95 20.98 CPU 30.4
+off-on async6 n 3 fps 18.82 p95 25.29 CPU 24.1
+off-on ort8 n 3 fps 19.98 p95 17.98 CPU 28.8
+on-off ort8 n 3 fps 19.53 p95 19.48 CPU 26.1
+on-on async1 n 3 fps 18.38 p95 24.34 CPU 20.2
+on-on async4 n 3 fps 18.64 p95 23.36 CPU 20.0
+on-on async6 n 3 fps 19.02 p95 23.67 CPU 22.3
+on-on ort8 n 3 fps 19.07 p95 17.14 CPU 23.8
+on-on rect6 n 3 fps 18.91 p95 17.96 CPU 19.6
+on-on serial640 n 3 fps 18.69 p95 23.97 CPU 20.1
+restore async6 n 1 fps 19.6 p95 26.44 CPU 30.1

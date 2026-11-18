@@ -1,0 +1,62 @@
+{
+  "commit": "7ade544b92ebda3a715ffd09bcf2f044136ff52f",
+  "date": "2026-11-18",
+  "files": [
+    {
+      "path": "윤관/notes.md",
+      "sha256": "8e6f9d315e41866403f68ee35738389a1fcd9b11d904fb71df4e872920bee753"
+    },
+    {
+      "path": "윤관/sources.md",
+      "sha256": "e3d792ec696d053b7168c72f65c078383bec587bc8af08819217e048bc6e4a92"
+    },
+    {
+      "path": "윤관/평가자_검토.md",
+      "sha256": "b8f5c531a2ff323e194fee6f6991628364d98c7fcca2ec42944e24a1ab089bcb"
+    },
+    {
+      "path": "윤관/학습_설정_데이터_근거.md",
+      "sha256": "44fba75e71a3f14652463d19d21abf799b38d0fc8729ea8d1adc229c398cd014"
+    },
+    {
+      "path": "윤관/학습_입출력_로그.md",
+      "sha256": "aab97b01fa2c58a1153f95768e080571fb6138059915d30a04d1a15d04d294d0"
+    },
+    {
+      "path": "윤관/학습로그/YOLO26m_FullFT_30epoch_validation.csv",
+      "sha256": "6f6bbb9e4409d3c9d40578a9d15abc86226a950641c0bd1973a684a5d8d20fd8"
+    },
+    {
+      "path": "윤관/학습로그/YOLO26m_FullFT_run_start.json",
+      "sha256": "a9df868cc75d89e22a82671ee701af18eae78ae4004945378f3d46f218d9b46d"
+    },
+    {
+      "path": "윤관/학습로그/YOLO26m_FullFT_run_completed.json",
+      "sha256": "bc02692ed92433984c8fcb3d57e3e2b87f555ff71583f1633f186eaeaf0bcb82"
+    },
+    {
+      "path": "윤관/학습로그/YOLO26s_FT_60epoch_seed202.csv",
+      "sha256": "86abce096a3b83e0a709eea277b88ee7933d13a178f0e678008010379bf05143"
+    },
+    {
+      "path": "윤관/학습로그/YOLO26s_KD_60epoch_seed202.csv",
+      "sha256": "9c72401f7f62d100379f8fe8292cd0e062700edad109b12370cf7ed82f0d9702"
+    },
+    {
+      "path": "윤관/학습로그/짐벌_s7_수직응답.csv",
+      "sha256": "320695b7e03daa6edf0fd8e4e4306996013877619f83ec57f822cf7cf629aedd"
+    },
+    {
+      "path": "김재남/measurements/orangepi-20261116-retry/report.md",
+      "sha256": "8a2c363ebf82592d8f6b5e85da1fd6bb2525287db33b2170f34a0e9ece8add8e"
+    },
+    {
+      "path": "김재남/measurements/orangepi-20261116-retry/replay-summary.csv",
+      "sha256": "9e336934db423505e05be4205052932412bfed93aced729b5a0eb26c91f81c0c"
+    },
+    {
+      "path": "김재남/measurements/orangepi-20261116-retry/replay-validation.json",
+      "sha256": "d0cf2dfeae440f518781a099d2db8390be5acfdcb84b4e16a7eaaa426f88fff2"
+    }
+  ]
+}

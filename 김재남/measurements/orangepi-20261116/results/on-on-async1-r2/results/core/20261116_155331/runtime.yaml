@@ -1,0 +1,64 @@
+logging:
+  level: info
+measurement:
+  enabled: true
+  output_root: /tmp/lwir-perf-20261116/results/on-on-async1-r2/results
+model:
+  config: /tmp/lwir-perf-20261116/configs/y26-640.yaml
+model_catalog:
+- id: 1
+  config: /tmp/lwir-perf-20261116/configs/y26-640.yaml
+detection:
+  max_inflight: 1
+  buffer_count: 6
+  use_ort: false
+tracking:
+  id: 1
+tracking_catalog:
+- id: 1
+  config: /tmp/lwir-perf-20261116/source/config/tracking/bytetrack.yaml
+control:
+  enabled: false
+  auto:
+    min_confidence: 0.0
+    input_timeout_ms: 500
+    reacquire_timeout_ms: 2000
+    controller: p
+    pid_x:
+      kp: 40.0
+      ki: 0.0
+      kd: 0.0
+    pid_y:
+      kp: 40.0
+      ki: 0.0
+      kd: 0.0
+    deadband_x: 0.06
+    deadband_y: 0.06
+    speed_max: 70
+    speed_rate: 100.0
+  gimbal:
+    device: /dev/serial/by-id/usb-Silicon_Labs_CP2102N_USB_to_UART_Bridge_Controller_5a321a87be72ef1184f1744f8fcc3fa0-if00-port0
+    speed: 30
+gui:
+  enabled: false
+  video:
+    host: 192.168.50.1
+    port: 5000
+    codec: h264
+    encoder: mpph264enc
+    bitrate_kbps: 3000
+    jpeg_quality: 80
+    keyframe_interval: 30
+    fps: 30
+    rtp_mtu: 1200
+  metadata:
+    enabled: false
+    host: 192.168.50.1
+    port: 5001
+    max_packet_bytes: 1200
+  command:
+    handler: tracking
+    enabled: false
+    bind_address: 192.168.50.2
+    port: 5002
+    receive_timeout_ms: 1000

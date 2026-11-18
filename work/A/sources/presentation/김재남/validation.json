@@ -1,0 +1,54 @@
+{
+  "fonts": true,
+  "images": true,
+  "slides": [
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": []
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": []
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": []
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": []
+    }
+  ],
+  "svg_overflow": {},
+  "pages": 4,
+  "pdf_points": [
+    [
+      960.0,
+      540.0
+    ],
+    [
+      960.0,
+      540.0
+    ],
+    [
+      960.0,
+      540.0
+    ],
+    [
+      960.0,
+      540.0
+    ]
+  ],
+  "pdf_text_characters": [
+    381,
+    429,
+    378,
+    393
+  ],
+  "javascript_errors": [],
+  "remote_requests": []
+}

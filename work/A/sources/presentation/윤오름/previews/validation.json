@@ -1,0 +1,113 @@
+{
+  "slides": 9,
+  "pdf_pages": 9,
+  "pdf_size_points": [
+    1440,
+    810
+  ],
+  "assets": {
+    "images": [
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/team/윤오름.png",
+        "ok": true
+      },
+      {
+        "src": "assets/team/김재남.png",
+        "ok": true
+      },
+      {
+        "src": "assets/team/윤관.png",
+        "ok": true
+      },
+      {
+        "src": "assets/team/정하건.png",
+        "ok": true
+      },
+      {
+        "src": "assets/team/홍정호.png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      },
+      {
+        "src": "assets/model-bank-web-gui.png",
+        "ok": true
+      },
+      {
+        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
+        "ok": true
+      }
+    ],
+    "font": true
+  },
+  "layout": [
+    {
+      "page": "01",
+      "outside": []
+    },
+    {
+      "page": "02",
+      "outside": []
+    },
+    {
+      "page": "03",
+      "outside": []
+    },
+    {
+      "page": "04",
+      "outside": []
+    },
+    {
+      "page": "05",
+      "outside": []
+    },
+    {
+      "page": "10",
+      "outside": []
+    },
+    {
+      "page": "11",
+      "outside": []
+    },
+    {
+      "page": "12",
+      "outside": []
+    },
+    {
+      "page": "13",
+      "outside": []
+    }
+  ],
+  "responsive_1280": true,
+  "javascript_errors": []
+}

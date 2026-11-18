@@ -1,0 +1,23 @@
+{
+  "case": "ort8",
+  "tag": "smoke",
+  "rep": 1,
+  "pid": 1046246,
+  "duration_s": 5,
+  "warm_s": 5,
+  "source_commit": "0fe016f7edd069900457a746dc4cc787569c5ae6",
+  "model_sha256": "f11c80721fb88d7c4cb153b165d381e778e5bf8de1bc5302d32496baf70831d7",
+  "first_camera_ns": 76000377900172,
+  "window_start_ns": 76005377900172,
+  "window_end_ns": 76010377900172,
+  "loaded_libraries": [
+    "/usr/local/lib/libdxrt.so",
+    "/usr/local/lib/libonnxruntime.so.1.20.1"
+  ],
+  "library_sha256": {
+    "/usr/local/lib/libdxrt.so": "1c0ec747639a6e4f204db42a80faae175c34409351acef6a1ce86d97d286ec7a",
+    "/usr/local/lib/libonnxruntime.so.1.20.1": "3eba764424b9eeb145d11d3299edcc6f767f14debd247bbf09151e53085e3a0e"
+  },
+  "valid": false,
+  "error": "runtime exited before end"
+}

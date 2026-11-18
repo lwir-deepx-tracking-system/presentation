@@ -1,0 +1,5 @@
+[1/5] Building CXX object CMakeFiles/lwir_runtime_core.dir/src/pipeline/camera_thread.cpp.o
+[2/5] Linking CXX static library liblwir_runtime_core.a
+[3/5] Linking CXX executable lwir_runtime
+[4/5] Building CXX object CMakeFiles/lwir_perf_parity.dir/parity.cpp.o
+[5/5] Linking CXX executable lwir_perf_parity

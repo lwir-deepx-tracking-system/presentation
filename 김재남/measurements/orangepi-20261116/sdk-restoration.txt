@@ -1,0 +1,5 @@
+/usr/local/lib/libdxrt.so: OK
+/home/orangepi/deepx_sdk_new/dx_rt/cmake/dxrt.cfg.cmake: OK
+
+option(USE_NPU_FORMAT_CONVERSION_ACCELERATION "Accelerate NPU data format conversion (transpose/padding)" ON)
+option(USE_CPU_OP_ACCELERATION "Accelerate CPU-side ONNX operations" ON)

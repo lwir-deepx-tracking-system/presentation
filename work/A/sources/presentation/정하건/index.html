@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="올빼미 팀 LWIR 프로젝트 추적 파트: ByteTrack과 OC-SORT의 구조·성능 비교와 최종 선택.">
+  <title>추적 알고리즘 — 올빼미 · 정하건</title>
+  <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+  <nav class="preview-toolbar" aria-label="미리보기 도구">
+    <span><b>올빼미</b> <span class="toolbar-divider">/</span> 추적 알고리즘 · 정하건 · 4장</span>
+    <div><button type="button" onclick="window.print()">PDF로 저장</button></div>
+  </nav>
+  <main class="deck">
+    <div class="slide-frame">
+      <section class="slide" data-page="01">
+        <header class="slide-header"><h2>추적 알고리즘: ByteTrack에서 OC-SORT로</h2></header>
+        <div class="brand-slot"><img src="assets/logo/LIG_DNA.png" alt="LIG D&amp;A" onerror="this.remove()"></div>
+        <div class="header-rule"></div>
+        <div class="body">
+<p class="section-label">TRACKING · 정하건</p>
+<p class="lead">같은 사람에게 같은 ID를 유지해야<br><strong>짐벌이 고른 표적을 놓치지 않습니다.</strong></p>
+<div class="cols" style="grid-template-columns:repeat(3,1fr);margin-top:64px">
+  <div class="col"><div class="heading"><span class="step">01</span><h3>ByteTrack 구현·개선</h3></div>
+    <p>C++로 직접 구현하고<br>옵션 조합 14가지 비교</p>
+    <span class="detail">XYWH · NSA · 버퍼 · L1 · Buffered IoU · OCR</span></div>
+  <div class="col"><div class="heading"><span class="step">02</span><h3>OC-SORT 구현·비교</h3></div>
+    <p>공식 구현과 출력 일치를 확인한 뒤<br>같은 검출로 정면 비교</p>
+    <span class="detail">실데이터 18개 시퀀스 · TrackEval</span></div>
+  <div class="col"><div class="heading"><span class="step">03</span><h3>파라미터·옵션 확정</h3></div>
+    <p>OC-SORT를 채택하고<br>LWIR 작은 표적에 맞게 조정</p>
+    <span class="detail">iou 0.2 · Buffered IoU 0.5 · L1</span></div>
+</div>
+<div style="position:absolute;left:0;right:0;top:470px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #dce2ea;padding-top:30px">
+  <div><p class="kpi-label">ID 전환 (IDSW)</p><div class="kpi"><span class="from">2,964</span><span class="arrow">→</span><span class="to">531</span></div><p class="kpi-sub">ByteTrack 최선 → OC-SORT 최종</p></div>
+  <div><p class="kpi-label">ID 유지 (IDF1)</p><div class="kpi"><span class="from">49.6%</span><span class="arrow">→</span><span class="to">66.7%</span></div><p class="kpi-sub">같은 사람을 같은 ID로 이은 비율</p></div>
+  <div><p class="kpi-label">우세한 시퀀스</p><div class="kpi"><span class="to">18 / 18</span></div><p class="kpi-sub">IDF1 · HOTA · IDSW · 헛출력 모두</p></div>
+</div>
+<div class="cond"><span class="k">측정 조건</span><p>YOLO26s 검출 · LWIR 실데이터 18개 시퀀스 · TrackEval. 최종값은 같은 검출을 PC에서 재실행한 결과</p></div>
+</div>
+        <footer class="slide-footer"><span>올빼미 <span class="footer-separator">/</span> LWIR 표적 추종 시스템 · 추적 알고리즘</span><span class="page-number">01</span></footer>
+      </section>
+    </div>
+    <div class="slide-frame">
+      <section class="slide" data-page="02">
+        <header class="slide-header"><h2>두 알고리즘의 구조 차이</h2></header>
+        <div class="brand-slot"><img src="assets/logo/LIG_DNA.png" alt="LIG D&amp;A" onerror="this.remove()"></div>
+        <div class="header-rule"></div>
+        <div class="body">
+<svg viewBox="0 0 1752 660" width="1752" height="660" role="img" aria-label="ByteTrack과 OC-SORT의 프레임당 처리 단계 비교">
+<text x="0" y="50" font-size="36" fill="#002f6d" text-anchor="start" font-weight="600" >ByteTrack</text><text x="0" y="92" font-size="24" fill="#667085" text-anchor="start" font-weight="400" >점수로 검출을 나눠 두 번 매칭 · 움직임은 Kalman 예측에만 의존</text><rect x="0" y="124" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="132.0" y="182" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >Kalman 예측</text><text x="132.0" y="222" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >위치·크기·속도</text><path d="M268 194.0H291M283 187.0L291 194.0L283 201.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="297" y="124" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="429.0" y="182" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >1차 매칭</text><text x="429.0" y="222" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >높은 점수 · IoU</text><path d="M565 194.0H588M580 187.0L588 194.0L580 201.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="594" y="124" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="726.0" y="182" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >2차 매칭</text><text x="726.0" y="222" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >낮은 점수 · IoU</text><path d="M862 194.0H885M877 187.0L885 194.0L877 201.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="891" y="124" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="1023.0" y="182" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >미확정 Track</text><text x="1023.0" y="222" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >새 ID 후보 확인</text><path d="M1159 194.0H1182M1174 187.0L1182 194.0L1174 201.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="1188" y="124" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="1320.0" y="182" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >출력</text><text x="1320.0" y="222" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >Kalman 상태 박스</text>
+<text x="0" y="380" font-size="36" fill="#002f6d" text-anchor="start" font-weight="600" >OC-SORT</text><text x="0" y="422" font-size="24" fill="#667085" text-anchor="start" font-weight="400" >관측(실제 검출) 중심 · 방향과 마지막 관측으로 끊긴 ID를 다시 연결</text><rect x="0" y="454" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="132.0" y="512" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >Kalman 예측</text><text x="132.0" y="552" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >위치·크기·속도</text><path d="M268 524.0H291M283 517.0L291 524.0L283 531.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="297" y="454" width="264" height="140" fill="#f3f6fa" stroke="#002f6d" stroke-width="3"/><text x="429.0" y="512" font-size="28" fill="#002f6d" text-anchor="middle" font-weight="600" >1차 매칭 + OCM</text><text x="429.0" y="552" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >IoU + 이동 방향 일치</text><path d="M565 524.0H588M580 517.0L588 524.0L580 531.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="594" y="454" width="264" height="140" fill="#fff" stroke="#9aabc0" stroke-width="2"/><text x="726.0" y="512" font-size="28" fill="#202b3a" text-anchor="middle" font-weight="600" >2차 매칭</text><text x="726.0" y="552" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >낮은 점수 (use_byte)</text><path d="M862 524.0H885M877 517.0L885 524.0L877 531.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="891" y="454" width="264" height="140" fill="#f3f6fa" stroke="#002f6d" stroke-width="3"/><text x="1023.0" y="512" font-size="28" fill="#002f6d" text-anchor="middle" font-weight="600" >OCR</text><text x="1023.0" y="552" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >마지막 관측 위치로 재매칭</text><path d="M1159 524.0H1182M1174 517.0L1182 524.0L1174 531.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="1188" y="454" width="264" height="140" fill="#f3f6fa" stroke="#002f6d" stroke-width="3"/><text x="1320.0" y="512" font-size="28" fill="#002f6d" text-anchor="middle" font-weight="600" >ORU</text><text x="1320.0" y="552" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >재등장 시 상태 재계산</text><path d="M1456 524.0H1479M1471 517.0L1479 524.0L1471 531.0" fill="none" stroke="#002f6d" stroke-width="2"/><rect x="1485" y="454" width="264" height="140" fill="#f3f6fa" stroke="#002f6d" stroke-width="3"/><text x="1617.0" y="512" font-size="28" fill="#002f6d" text-anchor="middle" font-weight="600" >출력</text><text x="1617.0" y="552" font-size="23" fill="#667085" text-anchor="middle" font-weight="400" >검출 박스 그대로</text>
+</svg>
+<div class="cond"><span class="k">구현</span><p>C++17 · 공통 Tracker 인터페이스 · 설정 <b style="color:#202b3a">tracking.id</b>로 전환. OC-SORT는 공식 Python 구현과 무작위 60개 장면에서 출력 일치 확인. <b style="color:#002f6d">파란 칸 = OC-SORT에만 있는 단계</b></p></div>
+</div>
+        <footer class="slide-footer"><span>올빼미 <span class="footer-separator">/</span> LWIR 표적 추종 시스템 · 추적 알고리즘</span><span class="page-number">02</span></footer>
+      </section>
+    </div>
+    <div class="slide-frame">
+      <section class="slide" data-page="03">
+        <header class="slide-header"><h2>성능 비교와 개선 원인</h2></header>
+        <div class="brand-slot"><img src="assets/logo/LIG_DNA.png" alt="LIG D&amp;A" onerror="this.remove()"></div>
+        <div class="header-rule"></div>
+        <div class="body">
+<p class="section-label">HEAD-TO-HEAD · 같은 YOLO26s 검출, 18개 시퀀스</p>
+<table class="data" style="font-size:28px">
+  <tr><th>추적기 · 설정</th><th>IDF1</th><th>IDSW</th><th>HOTA<span style="font-weight:400;font-size:20px"> (평균)</span></th><th>MOTA</th><th>헛출력</th><th>누락</th></tr>
+  <tr><td>ByteTrack 최선 <span style="color:#667085;font-size:23px">(Buffered IoU + OCR)</span></td><td>49.6%</td><td>2,964</td><td>49.1</td><td>58.8%</td><td>29,644</td><td>13,690</td></tr>
+  <tr class="pick"><td>OC-SORT 조정 <span style="font-size:23px;font-weight:400">(det 0.5, min_hits 1, use_byte)</span></td><td>64.1%</td><td>775</td><td>60.5</td><td>68.7%</td><td>19,386</td><td>15,053</td></tr>
+</table>
+<p class="section-label" style="margin-top:34px">WHY · ByteTrack이 ID를 잃은 원인과 OC-SORT의 대응 <span class="tag gray">분석</span></p>
+<table class="data" style="font-size:26px">
+  <tr><th style="text-align:left;width:190px">장면</th><th style="width:220px">IDSW</th><th style="text-align:left">ByteTrack에서 ID를 잃은 원인</th><th style="text-align:left;width:470px">OC-SORT의 대응</th></tr>
+  <tr><td style="text-align:left"><b style="color:#202b3a">정지</b></td><td>473 → 132</td><td style="text-align:left;white-space:normal;color:#667085">Kalman이 다듬은 박스가 늦고 커서 작은 박스의 IoU 저하</td><td style="text-align:left;color:#002f6d;font-weight:600">검출 박스 그대로 출력<span class="sub">DetA 18/18 시퀀스 상승</span></td></tr>
+  <tr><td style="text-align:left"><b style="color:#202b3a">교차</b></td><td>1,064 → 300</td><td style="text-align:left;white-space:normal;color:#667085">겹쳤다 갈라질 때 IoU만으로는 누가 누구인지 구별 불가</td><td style="text-align:left;color:#002f6d;font-weight:600">OCM<span class="sub">이동 방향이 맞는 쪽과 매칭</span></td></tr>
+  <tr><td style="text-align:left"><b style="color:#202b3a">불규칙 이동</b></td><td>418 → 72</td><td style="text-align:left;white-space:normal;color:#667085">놓친 동안 예전 속도로 예측이 밀려 재등장 시 IoU 0</td><td style="text-align:left;color:#002f6d;font-weight:600">ORU<span class="sub">놓친 구간을 보간해 속도 재계산</span></td></tr>
+  <tr><td style="text-align:left"><b style="color:#202b3a">접근 · 가림</b></td><td>1,009 → 271</td><td style="text-align:left;white-space:normal;color:#667085">가려진 동안 예측 위치가 표류</td><td style="text-align:left;color:#002f6d;font-weight:600">OCR<span class="sub">마지막 관측 위치로 재매칭</span></td></tr>
+</table>
+<div class="cond"><span class="k">측정 조건</span><p>Orange Pi lwir_benchmark · TrackEval · 18개 시퀀스 합산. OC-SORT가 <b style="color:#002f6d">18개 시퀀스 모두</b>에서 IDF1 · HOTA · IDSW · 헛출력 우세. 원인 열은 구조로 본 분석</p></div>
+</div>
+        <footer class="slide-footer"><span>올빼미 <span class="footer-separator">/</span> LWIR 표적 추종 시스템 · 추적 알고리즘</span><span class="page-number">03</span></footer>
+      </section>
+    </div>
+    <div class="slide-frame">
+      <section class="slide" data-page="04">
+        <header class="slide-header"><h2>최종 파라미터와 옵션</h2></header>
+        <div class="brand-slot"><img src="assets/logo/LIG_DNA.png" alt="LIG D&amp;A" onerror="this.remove()"></div>
+        <div class="header-rule"></div>
+        <div class="body">
+<p class="section-label">FINAL CONFIGURATION · config/tracking/ocsort.yaml</p>
+<table class="data" style="font-size:26px">
+  <tr><th>파라미터</th><th style="text-align:left">동작</th><th>공식 기본</th><th>최종</th><th style="text-align:left">선택 이유 (측정)</th></tr>
+  <tr class="pick"><td>det_threshold</td><td style="text-align:left;font-weight:400;color:#202b3a">이 점수 이상 검출만 1차 매칭 · 새 ID</td><td style="font-weight:400;color:#667085">0.6</td><td>0.5</td><td style="text-align:left;font-weight:400;color:#202b3a">LWIR 검출 점수가 낮아 누락 47,178 → 15,053</td></tr>
+  <tr class="pick"><td>min_hits</td><td style="text-align:left;font-weight:400;color:#202b3a">연속 매칭 몇 번 뒤에 출력할지</td><td style="font-weight:400;color:#667085">3</td><td>1</td><td style="text-align:left;font-weight:400;color:#202b3a">확정 대기 없이 바로 출력</td></tr>
+  <tr class="pick"><td>use_byte</td><td style="text-align:left;font-weight:400;color:#202b3a">낮은 점수 검출로 2차 매칭</td><td style="font-weight:400;color:#667085">끔</td><td>켬</td><td style="text-align:left;font-weight:400;color:#202b3a">놓친 Track을 낮은 점수 검출로 유지</td></tr>
+  <tr class="pick"><td>iou_threshold</td><td style="text-align:left;font-weight:400;color:#202b3a">같은 사람으로 인정하는 최소 겹침</td><td style="font-weight:400;color:#667085">0.3</td><td>0.2</td><td style="text-align:left;font-weight:400;color:#202b3a">HOTA 최고 · IDSW 784 → 656 (0.15는 오연결)</td></tr>
+  <tr class="pick"><td>buffer_scale <span class="tag">추가</span></td><td style="text-align:left;font-weight:400;color:#202b3a">박스를 넓혀 남은 Track과 재매칭</td><td style="font-weight:400;color:#667085">–</td><td>0.5</td><td style="text-align:left;font-weight:400;color:#202b3a">IDSW 656 → 589</td></tr>
+  <tr class="pick"><td>lost_output_frames <span class="tag">추가</span></td><td style="text-align:left;font-weight:400;color:#202b3a">놓친 1프레임은 예측 박스로 출력</td><td style="font-weight:400;color:#667085">–</td><td>1</td><td style="text-align:left;font-weight:400;color:#202b3a">박스 끊김(Frag) 2,164 → 1,832</td></tr>
+  <tr class="dim"><td>max_age · delta_t · inertia</td><td style="text-align:left;font-weight:400;color:#667085">기억 프레임 · 방향 간격 · 방향 가중치</td><td style="font-weight:400;color:#667085">30 · 3 · 0.2</td><td>유지</td><td style="text-align:left;font-weight:400;color:#667085">바꿔도 HOTA ±0.3 이내</td></tr>
+</table>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:34px">
+  <div><p class="kpi-label">ID 전환 (IDSW)</p><div class="kpi"><span class="from">2,964</span><span class="arrow">→</span><span class="from">775</span><span class="arrow">→</span><span class="to">531</span></div><p class="kpi-sub">ByteTrack 최선 → OC-SORT 조정 → 최종</p></div>
+  <div><p class="kpi-label">ID 유지 (IDF1)</p><div class="kpi"><span class="from">49.6%</span><span class="arrow">→</span><span class="to">66.7%</span></div><p class="kpi-sub">ByteTrack 최선 → 최종</p></div>
+  <div><p class="kpi-label">대가</p><div class="kpi"><span class="to" style="font-size:48px">−1.1%p</span></div><p class="kpi-sub">정밀도 · L1 예측 박스 일부가 빗나감</p></div>
+</div>
+<div class="cond"><span class="k">측정 조건</span><p>같은 YOLO26s 검출. 파라미터 조정과 최종값(531, 66.7%)은 PC 재실행 · TrackEval 합산, 기준값은 Orange Pi와 IDSW 784 vs 775로 일치</p></div>
+</div>
+        <footer class="slide-footer"><span>올빼미 <span class="footer-separator">/</span> LWIR 표적 추종 시스템 · 추적 알고리즘</span><span class="page-number">04</span></footer>
+      </section>
+    </div>
+  </main>
+  <script>
+    // 화면에서만 축소합니다. 인쇄 크기는 CSS의 1920×1080을 유지합니다.
+    function fitSlides() {
+      const scale = Math.min(1, (window.innerWidth - 48) / 1920);
+      document.querySelectorAll('.slide-frame').forEach(frame => {
+        frame.style.width = `${1920 * scale}px`;
+        frame.style.height = `${1080 * scale}px`;
+        frame.querySelector('.slide').style.transform = `scale(${scale})`;
+      });
+    }
+    fitSlides();
+    window.addEventListener('resize', fitSlides);
+    window.addEventListener('beforeprint', () => document.querySelectorAll('.slide-frame').forEach(f => { f.style.width = ''; f.style.height = ''; f.querySelector('.slide').style.transform = ''; }));
+    window.addEventListener('afterprint', fitSlides);
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "main_runs": 30,
+  "valid_measured_frames": 8558,
+  "input_fps_min": 16.866666666666667,
+  "input_fps_max": 20.8,
+  "resolution_reduction_pct": {
+    "preprocess_ms": 19.6665645798052,
+    "npu_ms": 25.77555429828412,
+    "e2e_p95_ms": 24.09894014770806,
+    "e2e_max_ms": 27.01087149877145
+  },
+  "format_output_reduction_pct": 61.43161610219055
+}

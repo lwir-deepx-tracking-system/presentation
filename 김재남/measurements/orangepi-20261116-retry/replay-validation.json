@@ -1,0 +1,18 @@
+{
+  "valid_runs": 36,
+  "unique_stage_frame_ids": true,
+  "nonnegative_timestamps": true,
+  "stage_frame_sets_consistent": true,
+  "actual_input_within_2_percent": true,
+  "same_model_sha256": "c4f1f93431f0854ec495a4a91a510238224c03901de8e788625ba31317f496d8",
+  "same_library_sha256": {
+    "/usr/local/lib/libdxrt.so": "1c0ec747639a6e4f204db42a80faae175c34409351acef6a1ce86d97d286ec7a",
+    "/usr/local/lib/libonnxruntime.so.1.20.1": "3eba764424b9eeb145d11d3299edcc6f767f14debd247bbf09151e53085e3a0e"
+  },
+  "native_runtime_csv_difference_under_2ms": true,
+  "native_runtime_csv_max_difference_ms": 0.031207999999992353,
+  "max_is_global_observed_max": true,
+  "drop_rate_end_guard_ms": 500,
+  "fps_latency_window_s": 15,
+  "drop_cohort_s": 14.5
+}
