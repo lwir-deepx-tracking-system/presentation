@@ -2,11 +2,11 @@
 
 제가 맡은 학습과 짐벌 제어를 과정별로 정리했습니다. 관련된 선택 이유와 결과는 같은 장에서 볼 수 있습니다.
 
-[발표 흐름 PDF · 32장](발표_전체흐름.pdf) · [상세 근거 PDF · 100장](발표_전체근거.pdf) · [발표 대본](notes.md) · [이전 상세 대본 · 별도 72장](notes_상세.md) · [논문·실험 출처](sources.md) · [평가자 검토](평가자_검토.md) · [모델별 입출력·로그](학습_입출력_로그.md) · [학습 설정·데이터 근거](학습_설정_데이터_근거.md) · [HTML로 보기](index.html)
+[발표 흐름 PDF · 35장](발표_전체흐름.pdf) · [상세 근거 PDF · 103장](발표_전체근거.pdf) · [발표 대본](notes.md) · [이전 상세 대본 · 별도 72장](notes_상세.md) · [논문·실험 출처](sources.md) · [평가자 검토](평가자_검토.md) · [모델별 입출력·로그](학습_입출력_로그.md) · [학습 설정·데이터 근거](학습_설정_데이터_근거.md) · [11월 19일 최신 근거](근거_최신_20261119.md) · [HTML로 보기](index.html)
 
 **발표 흐름:** 열화상 검출 학습·실험 비교 → 자세 학습의 데이터 계보 → 실제 라벨링과 후속 박스 생성·자체 학습 → 외형(ReID)·위치 예측(GRU/Mamba)·FastTrackTr의 세 갈래 → 추적 결과·박스 안정화 → ONNX/DXNN·M1 → 짐벌 제어. 각 실험은 별도 조건이며 한 모델을 모두 순차 학습한 이력은 아닙니다.
 
-*발표 대본은 32장 흐름과 일치합니다. 이전 상세 대본은 별도 72장 초안입니다.*
+*발표 대본은 35장 흐름과 일치합니다. 이전 상세 대본은 별도 72장 초안입니다.*
 
 *논문은 원리 참고자료입니다. 실제 라벨링 사진은 작업 중 화면이며, 선택 부위는 검수 필요 상태입니다.*
 
@@ -128,80 +128,98 @@ V7은 사람 검수 영상 264장, 5장 정정과 증강을 사용해 YOLO26m-po
 
 ## 외형 모델·추적·M1·짐벌
 
-### 20. 추적 성능을 보완한 세 가지 별도 갈래
+### 20. 현장 650장으로 상체 모델 학습
 
-![외형 모델 증류: SOLIDER → RepVGG](assets/readme-slides/slide-20.jpg)
+![현장 650장으로 상체 모델 학습](assets/readme-slides/slide-20.jpg)
+
+현장 라벨 650장으로 학습한 E10과 추가 시간 손실 실험을 검증했습니다.
+
+### 21. 추적 성능을 보완한 세 가지 별도 갈래
+
+![외형 모델 증류: SOLIDER → RepVGG](assets/readme-slides/slide-21.jpg)
 
 외형 모델에서는 사람 이미지로 사전학습한 SOLIDER의 특징을 RepVGG 학생으로 옮기는 증류를 시험했습니다.
 
-### 21. 외형 모델 추가 학습 및 평가
+### 22. 외형 모델 추가 학습 및 평가
 
-![외형 모델 추가 학습 및 평가](assets/readme-slides/slide-21.jpg)
+![외형 모델 추가 학습 및 평가](assets/readme-slides/slide-22.jpg)
 
 OTP2 시험 신원 60명에서 이전 RepVGG 몸 상자 Rank-1은 72%에서 89%로, 잘림은 18%에서 27%로, 가림은 65%에서 84%로 바뀌었습니다.
 
-### 22. 가림 상황의 위치 예측: GRU·Mamba
+### 23. 가림 상황의 위치 예측: GRU·Mamba
 
-![가림 상황의 위치 예측: GRU·Mamba](assets/readme-slides/slide-22.jpg)
+![가림 상황의 위치 예측: GRU·Mamba](assets/readme-slides/slide-23.jpg)
 
 사람이 보일 때 최근 최대 20프레임의 상자, 속도와 관절 특징을 기록합니다.
 
-### 23. GRU·Kalman 위치 예측 및 ID 비교
+### 24. GRU·Kalman 위치 예측 및 ID 비교
 
-![GRU·Kalman 위치 예측 및 ID 비교](assets/readme-slides/slide-23.jpg)
+![GRU·Kalman 위치 예측 및 ID 비교](assets/readme-slides/slide-24.jpg)
 
 자체 TEST 14편, 유실 238건에서 Kalman 위치 오차는 0.110, 이전 GRU 0.336, 수정 GRU 0.122였습니다.
 
-### 24. 가림 ID 사례 · 별도 추적 후보 비교
+### 25. 가림 ID 사례 · 별도 추적 후보 비교
 
-![가림 ID 사례 · 별도 추적 후보 비교](assets/readme-slides/slide-24.jpg)
+![가림 ID 사례 · 별도 추적 후보 비교](assets/readme-slides/slide-25.jpg)
 
 왼쪽은 동일한 가림 사건의 열화상 입력, 오른쪽은 기준 tracker와 후보를 나란히 시각화한 비교입니다.
 
-### 25. 추적 박스 크기 안정화
+### 26. 추적 박스 크기 안정화
 
-![추적 박스 크기 안정화](assets/readme-slides/slide-25.jpg)
+![추적 박스 크기 안정화](assets/readme-slides/slide-26.jpg)
 
 짐벌이 보는 상자가 흔들려 조준점이 튀는 문제를 줄이기 위해 박스 크기 필터와 상체 기준 통일을 시험했습니다.
 
-### 26. 별도 종단간 실험 · FastTrackTr
+### 27. 상체 박스와 전신 표시
 
-![FastTrackTr 학습 구성 및 평가](assets/readme-slides/slide-26.jpg)
+![상체 박스와 전신 표시](assets/readme-slides/slide-27.jpg)
+
+같은 검출의 상체와 전신 추정 표시를 실제 장치 재생 화면으로 비교했습니다.
+
+### 28. 별도 종단간 실험 · FastTrackTr
+
+![FastTrackTr 학습 구성 및 평가](assets/readme-slides/slide-28.jpg)
 
 FastTrackTr은 학습 때 DanceTrack 36편의 grayscale 640×480 영상을 사용했고 RT-DETR ResNet18 COCO 가중치에서 시작했습니다.
 
-### 27. ONNX 내보내기 및 INT8 변환
+### 29. ONNX 내보내기 및 INT8 변환
 
-![ONNX 내보내기 및 INT8 변환](assets/readme-slides/slide-27.jpg)
+![ONNX 내보내기 및 INT8 변환](assets/readme-slides/slide-29.jpg)
 
 학습 PyTorch 가중치를 ONNX로 내보내고 보정 입력으로 DX-COM 컴파일을 거쳐 DXNN을 만듭니다.
 
-### 28. 외형·FastTrackTr 모델 변환
+### 30. 외형·FastTrackTr 모델 변환
 
-![외형·FastTrackTr 모델 변환](assets/readme-slides/slide-28.jpg)
+![외형·FastTrackTr 모델 변환](assets/readme-slides/slide-30.jpg)
 
 외형 모델의 공개 OTP2 변환 예시는 RepVGG 추론 구조를 합쳐 ONNX opset 17로 내보내고 256 crop으로 EMA 보정합니다.
 
-### 29. M1 병렬 처리 및 모델 성능
+### 31. M1 병렬 처리 및 모델 성능
 
-![M1 병렬 처리 및 모델 성능](assets/readme-slides/slide-29.jpg)
+![M1 병렬 처리 및 모델 성능](assets/readme-slides/slide-31.jpg)
 
 11월 3일 저장 FLIR 영상에서 검출을 NPU 0과 1에 교대로 투입하고 CPU 광류, NPU 2의 외형 추출을 겹쳤습니다.
 
-### 30. M1 운영 화면
+### 32. 두 NPU로 한 프레임 동시 검출
 
-![M1 운영 화면](assets/readme-slides/slide-30.jpg)
+![두 NPU로 한 프레임 동시 검출](assets/readme-slides/slide-32.jpg)
+
+두 NPU의 동시 분할 구조와 65초 구간에서 측정한 지연·큐 버림을 정리했습니다.
+
+### 33. M1 운영 화면
+
+![M1 운영 화면](assets/readme-slides/slide-33.jpg)
 
 실제 TMOT 저장 영상을 재생하는 운영 화면을 넣었습니다.
 
-### 31. 짐벌 제어 및 실제 장치 응답
+### 34. 짐벌 제어 및 실제 장치 응답
 
-![짐벌 제어 및 실제 장치 응답](assets/readme-slides/slide-31.jpg)
+![짐벌 제어 및 실제 장치 응답](assets/readme-slides/slide-34.jpg)
 
 검출·추적에서 선택한 사람 중심과 화면 중심의 차이를 제어 입력으로 써 팬·틸트 명령을 만들었습니다.
 
-### 32. 주요 성과 및 후속 검증
+### 35. 주요 성과 및 후속 검증
 
-![주요 성과 및 후속 검증](assets/readme-slides/slide-32.jpg)
+![주요 성과 및 후속 검증](assets/readme-slides/slide-35.jpg)
 
 내 담당은 열화상 검출과 자세 학습, 외형·위치 기억 비교, 모델을 장치에 올리는 과정, 짐벌 제어입니다.
