@@ -1,113 +1,179 @@
 {
-  "slides": 9,
-  "pdf_pages": 9,
-  "pdf_size_points": [
-    1440,
-    810
-  ],
-  "assets": {
-    "images": [
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/team/윤오름.png",
-        "ok": true
-      },
-      {
-        "src": "assets/team/김재남.png",
-        "ok": true
-      },
-      {
-        "src": "assets/team/윤관.png",
-        "ok": true
-      },
-      {
-        "src": "assets/team/정하건.png",
-        "ok": true
-      },
-      {
-        "src": "assets/team/홍정호.png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      },
-      {
-        "src": "assets/model-bank-web-gui.png",
-        "ok": true
-      },
-      {
-        "src": "assets/Signature_PNG/1_LIG%20Innovative%20Blue/2_LIG_DNA(%EC%B6%95%EC%95%BD%ED%98%95).png",
-        "ok": true
-      }
-    ],
-    "font": true
-  },
-  "layout": [
+  "reports": [
     {
-      "page": "01",
-      "outside": []
-    },
-    {
-      "page": "02",
-      "outside": []
-    },
-    {
-      "page": "03",
-      "outside": []
-    },
-    {
-      "page": "04",
-      "outside": []
-    },
-    {
-      "page": "05",
-      "outside": []
-    },
-    {
-      "page": "10",
-      "outside": []
-    },
-    {
-      "page": "11",
-      "outside": []
-    },
-    {
-      "page": "12",
-      "outside": []
-    },
-    {
-      "page": "13",
-      "outside": []
+      "html": "index.html",
+      "pdf": "presentation.pdf",
+      "slides": 9,
+      "pdf_pages": 9,
+      "page_points": [
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ]
+      ],
+      "fonts_loaded": true,
+      "images": [
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/윤오름.png",
+          "ok": true
+        },
+        {
+          "src": "assets/김재남.png",
+          "ok": true
+        },
+        {
+          "src": "assets/윤관.png",
+          "ok": true
+        },
+        {
+          "src": "assets/정하건.png",
+          "ok": true
+        },
+        {
+          "src": "assets/홍정호.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        }
+      ],
+      "javascript_errors": [],
+      "layout": [
+        {
+          "slide": 1,
+          "width": 1920,
+          "height": 1080,
+          "title": "프로젝트 소개",
+          "problems": []
+        },
+        {
+          "slide": 2,
+          "width": 1920,
+          "height": 1080,
+          "title": "팀 구성 및 역할",
+          "problems": []
+        },
+        {
+          "slide": 3,
+          "width": 1920,
+          "height": 1080,
+          "title": "프로젝트 소개",
+          "problems": []
+        },
+        {
+          "slide": 4,
+          "width": 1920,
+          "height": 1080,
+          "title": "시스템 요구사항",
+          "problems": []
+        },
+        {
+          "slide": 5,
+          "width": 1920,
+          "height": 1080,
+          "title": "시스템 구성",
+          "problems": []
+        },
+        {
+          "slide": 6,
+          "width": 1920,
+          "height": 1080,
+          "title": "표적 선택 및 짐벌 제어",
+          "problems": []
+        },
+        {
+          "slide": 7,
+          "width": 1920,
+          "height": 1080,
+          "title": "영상·메타데이터 통신",
+          "problems": []
+        },
+        {
+          "slide": 8,
+          "width": 1920,
+          "height": 1080,
+          "title": "추적기 선택 및 변경 확인",
+          "problems": []
+        },
+        {
+          "slide": 9,
+          "width": 1920,
+          "height": 1080,
+          "title": "연동 및 검증 범위",
+          "problems": []
+        }
+      ],
+      "keyboard_navigation": true,
+      "demo_included": false
     }
   ],
-  "responsive_1280": true,
-  "javascript_errors": []
+  "slides": 9,
+  "pdf_pages": 9,
+  "target_seconds": 425,
+  "actual_rehearsal_performed": false
 }

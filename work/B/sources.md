@@ -16,6 +16,7 @@
 - **S10** [model-bank · 11-17 공개 발표 근거](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/research/LWIR_PRESENTATION_KO.md)
 - **S11** [11-18 검출 학습·평가 원본 대조](https://github.com/lwir-deepx-tracking-system/presentation/blob/7ade544b92ebda3a715ffd09bcf2f044136ff52f/윤관/sources.md)
 - **S12** [실제 NPU 메모리 재생 부하 시험](https://github.com/lwir-deepx-tracking-system/presentation/blob/7ade544b92ebda3a715ffd09bcf2f044136ff52f/김재남/measurements/orangepi-20261116-retry/report.md)
+- **S14** [정하건 v3 · 3종 추적·GUI 교체·성능](https://github.com/lwir-deepx-tracking-system/presentation/blob/7249d7b/정하건/정하건_v3/근거_비교표.md)
 - **S13** [팀원 담당 업무 · 사용자 제공](team-roles.md)
 
 ## 본문 주요 숫자
@@ -28,8 +29,8 @@
 | 예비 11 | m급 1/30 epoch 사람 AP | 43.7461 / 50.6209 | % | S11 | FLIR 검증1144장 · 원본 epoch CSV | 최적 epoch·INT8 성능으로 해석하지 않음 |
 | 예비 13 | 호출 p50/p95 | 24.43 / 31.22 | ms | S6 | 11-04 임의 입력300회 | 실카메라 별도 |
 | 예비 13 | 실카메라 처리량 | 23.9–24.5 | fps | S6 | 11-09 모델당 약20초 | 현재 운용값 아님 |
-| 본문 15–16 / 예비 03 | 보드 IDSW | 2964 / 775 | 회 | S9 | 자체18편 동일검출 Orange Pi | 개발 비교 |
-| 본문 15–16 / 예비 03 | 보드 IDF1 | 49.56 / 64.10 | % | S9 | 같은 보드 비교 | PC 531과 분리 |
+| 예비 03 · 과거 보드 비교 | 보드 IDSW | 2964 / 775 | 회 | S9 | 자체18편 동일검출 Orange Pi | 개발 비교 |
+| 예비 03 · 과거 보드 비교 | 보드 IDF1 | 49.56 / 64.10 | % | S9 | 같은 보드 비교 | PC 531과 분리 |
 | 예비 15 | PC IDSW | 656 / 531 | 회 | S9 | IoU0.2 기준 옵션 대조 | 같은 검출 PC 재실행 |
 | 예비 15 | PC Frag | 2164 / 1832 | 회 | S9 | 같은 옵션 대조 | 헛출력 절충 |
 | 예비 15 | PC 정밀도 | 84.1 / 83.0 | % | S9 | 같은 옵션 대조 | −1.1%p |
@@ -39,6 +40,9 @@
 | 본문 23 / 예비 17 | 별도 가로 뒤처짐 | 14.3 / 18.6 | px | S5,S6,S7 | 별도 가로시험 | 악화 결과도 함께 보고 |
 | 예비 18 | 녹화 입력→결과 p95 | 240.53 / 52.80 | ms | S10 | 11-13 212장×4 ABBA 동일서버 시청1 | 브라우저·실카메라 아님 |
 | 예비 18 | 녹화 출력간격 p95 | 51.90 / 50.79 | ms | S10 | 같은 ABBA | 33.3ms 목표 미달 |
+| 본문 15–16 / 예비 19 | 동일 PC OC-SORT / BoT-SORT HOTA | 59.1 / 60.7 | 점 | S14 | 동일 검출·PC bench_mot17·18편 | 종합 품질 |
+| 본문 15–16 / 예비 19 | 동일 PC IDF1 | 66.7 / 67.5 | % | S14 | 같은 PC 비교 | +0.8%p |
+| 본문 15–16 / 예비 19 | 동일 PC IDSW | 531 / 566 | 회 | S14 | 같은 PC 비교 | OC-SORT가 더 적음 |
 
 ## 계산한 파생값
 
@@ -46,7 +50,7 @@
 
 - AP 차이: 45.79 − 42.32 = 3.47%p.
 - 호출 차이: 27.12 − 19.02 = 8.10ms.
-- 보드 IDSW 감소율: (2964−775)/2964×100 = 73.85%, 본문 73.9%.
+- 보드 IDSW 감소율: (2964−775)/2964×100 = 73.85%, 과거 보드 비교 73.9%.
 - 보드 IDF1 차이: 64.10−49.56 = 14.54%p.
 - PC IDSW 감소율: (656−531)/656×100 = 19.05%, 본문 19.1%.
 - PC Frag 감소율: (2164−1832)/2164×100 = 15.34%, 본문 15.3%.

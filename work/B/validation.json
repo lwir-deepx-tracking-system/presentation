@@ -1,7 +1,7 @@
 {
   "target_seconds": 1200,
   "demo_slot_seconds": 180,
-  "spoken_hangul_chars": 3413,
+  "spoken_hangul_chars": 3521,
   "actual_rehearsal_performed": false,
   "reports": [
     {
@@ -403,21 +403,21 @@
           "slide": 14,
           "width": 1920,
           "height": 1080,
-          "title": "OC-SORT 추적 방식",
+          "title": "추적 알고리즘 구성",
           "problems": []
         },
         {
           "slide": 15,
           "width": 1920,
           "height": 1080,
-          "title": "ID 변경 감소 결과",
+          "title": "추적 연속성 비교",
           "problems": []
         },
         {
           "slide": 16,
           "width": 1920,
           "height": 1080,
-          "title": "추적 품질 비교",
+          "title": "추적 품질 및 선택 기준",
           "problems": []
         },
         {
@@ -487,7 +487,7 @@
           "slide": 26,
           "width": 1920,
           "height": 1080,
-          "title": "명령 및 상태 흐름",
+          "title": "추적기 변경 및 응답",
           "problems": []
         },
         {
@@ -539,9 +539,17 @@
     {
       "html": "appendix.html",
       "pdf": "appendix.pdf",
-      "slides": 18,
-      "pdf_pages": 18,
+      "slides": 20,
+      "pdf_pages": 20,
       "page_points": [
+        [
+          1440.0,
+          810.0
+        ],
+        [
+          1440.0,
+          810.0
+        ],
         [
           1440.0,
           810.0
@@ -663,6 +671,14 @@
         },
         {
           "src": "assets/y26m-validation.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/lig-logo.png",
           "ok": true
         },
         {
@@ -820,6 +836,20 @@
           "width": 1920,
           "height": 1080,
           "title": "영상 출력 지연 시험",
+          "problems": []
+        },
+        {
+          "slide": 19,
+          "width": 1920,
+          "height": 1080,
+          "title": "최신 추적기 비교",
+          "problems": []
+        },
+        {
+          "slide": 20,
+          "width": 1920,
+          "height": 1080,
+          "title": "추적기 카탈로그 및 교체",
           "problems": []
         }
       ],

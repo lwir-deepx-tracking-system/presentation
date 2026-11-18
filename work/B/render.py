@@ -73,7 +73,7 @@ for r in reports:
  print(r['html'],r['slides'],'slides /',r['pdf_pages'],'PDF pages / layout issues',sum(len(x['problems']) for x in r['layout']),'JS errors',len(r['javascript_errors']))
 print('Target',report['target_seconds'],'seconds. Actual speaking time not measured. Demo file present:',reports[0]['demo_included'])
 assert report['target_seconds']==1200 and manifest['demo_seconds']==180
-assert [r['pdf_pages'] for r in reports]==[len(manifest['slides']),18]
+assert [r['pdf_pages'] for r in reports]==[len(manifest['slides']),20]
 for r in reports:
  assert r['slides']==r['pdf_pages']
  assert r['fonts_loaded'] and all(i['ok'] for i in r['images'])
