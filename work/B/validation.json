@@ -1,7 +1,7 @@
 {
   "target_seconds": 1200,
   "demo_slot_seconds": 180,
-  "spoken_hangul_chars": 4345,
+  "spoken_hangul_chars": 4461,
   "actual_rehearsal_performed": false,
   "reports": [
     {
@@ -448,7 +448,7 @@
           "slide": 21,
           "width": 1920,
           "height": 1080,
-          "title": "PD 제어",
+          "title": "PD 제어 선택 근거",
           "problems": []
         },
         {

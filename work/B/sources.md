@@ -16,6 +16,7 @@
 - **S10** [model-bank · 11-17 공개 발표 근거](https://github.com/lwir-deepx-tracking-system/model-bank/blob/6cf676df1c1be72bd6e8220a6240a0d3f1c7127e/tracking_server/research/LWIR_PRESENTATION_KO.md)
 - **S11** [11-18 검출 학습·평가 원본 대조](https://github.com/lwir-deepx-tracking-system/presentation/blob/7ade544b92ebda3a715ffd09bcf2f044136ff52f/윤관/sources.md)
 - **S12** [실제 NPU 메모리 재생 부하 시험](https://github.com/lwir-deepx-tracking-system/presentation/blob/7ade544b92ebda3a715ffd09bcf2f044136ff52f/김재남/measurements/orangepi-20261116-retry/report.md)
+- **S16** [11-10 PID 후보 비교·PD 선택 근거](sources/pd-selection/PID_TUNING_RECORD_20261110.md)
 - **S15** [윤관 11-19 · 상체 E10·표시·실카메라 NPU](https://github.com/lwir-deepx-tracking-system/presentation/blob/afa734f399a2c2e53171abd3131fffddc64351b3/윤관/근거_최신_20261119.md)
 - **S14** [정하건 v3 · 3종 추적·GUI 교체·성능](https://github.com/lwir-deepx-tracking-system/presentation/blob/7249d7b/정하건/정하건_v3/근거_비교표.md)
 - **S13** [팀원 담당 업무 · 사용자 제공](team-roles.md)
