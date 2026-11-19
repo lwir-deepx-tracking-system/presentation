@@ -1,7 +1,7 @@
 {
   "target_seconds": 1200,
   "demo_slot_seconds": 180,
-  "spoken_hangul_chars": 3521,
+  "spoken_hangul_chars": 4345,
   "actual_rehearsal_performed": false,
   "reports": [
     {
@@ -198,19 +198,7 @@
           "ok": true
         },
         {
-          "src": "assets/label-indoor.png",
-          "ok": true
-        },
-        {
-          "src": "assets/label-outdoor.png",
-          "ok": true
-        },
-        {
           "src": "assets/lig-logo.png",
-          "ok": true
-        },
-        {
-          "src": "assets/y26m-validation.svg",
           "ok": true
         },
         {
@@ -271,6 +259,14 @@
         },
         {
           "src": "assets/lig-logo.png",
+          "ok": true
+        },
+        {
+          "src": "assets/20261119-real-upper-replay.jpg",
+          "ok": true
+        },
+        {
+          "src": "assets/20261119-real-full-replay.jpg",
           "ok": true
         },
         {
@@ -361,28 +357,28 @@
           "slide": 8,
           "width": 1920,
           "height": 1080,
-          "title": "학습 데이터 구축",
+          "title": "현장 데이터 구축",
           "problems": []
         },
         {
           "slide": 9,
           "width": 1920,
           "height": 1080,
-          "title": "모델 학습 결과",
+          "title": "상체 모델 학습",
           "problems": []
         },
         {
           "slide": 10,
           "width": 1920,
           "height": 1080,
-          "title": "검출 성능 비교",
+          "title": "상체 검출 결과",
           "problems": []
         },
         {
           "slide": 11,
           "width": 1920,
           "height": 1080,
-          "title": "추론 시간 비교",
+          "title": "추가 학습 채택 판단",
           "problems": []
         },
         {
@@ -431,21 +427,21 @@
           "slide": 18,
           "width": 1920,
           "height": 1080,
-          "title": "비동기 요청 처리",
+          "title": "두 NPU 동시 타일 처리",
           "problems": []
         },
         {
           "slide": 19,
           "width": 1920,
           "height": 1080,
-          "title": "처리 지연 개선 결과",
+          "title": "실카메라 지연 측정",
           "problems": []
         },
         {
           "slide": 20,
           "width": 1920,
           "height": 1080,
-          "title": "표적 위치 오차",
+          "title": "추적 좌표와 조준점",
           "problems": []
         },
         {
@@ -473,7 +469,7 @@
           "slide": 24,
           "width": 1920,
           "height": 1080,
-          "title": "GUI 구성",
+          "title": "상체 추적과 전신 표시",
           "problems": []
         },
         {
@@ -522,14 +518,14 @@
           "slide": 31,
           "width": 1920,
           "height": 1080,
-          "title": "처리량 및 지연 검증",
+          "title": "시간 검증 현황",
           "problems": []
         },
         {
           "slide": 32,
           "width": 1920,
           "height": 1080,
-          "title": "성과 및 향후 과제",
+          "title": "개선 결과 및 적용 범위",
           "problems": []
         }
       ],

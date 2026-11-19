@@ -30,10 +30,12 @@ def render(name, pdfname, prefix):
   page.wait_for_timeout(300)
   checks=page.evaluate('''() => [...document.querySelectorAll('.slide')].map((s,i)=>{
    const box=s.getBoundingClientRect(), source=s.querySelector('.slide-source').getBoundingClientRect();
+   const caption=s.querySelector('main .scene-caption');
+   const limit=caption?Math.min(source.top,caption.getBoundingClientRect().top):source.top;
    const problems=[];
-   for(const el of s.querySelectorAll('main p, main li, main h2, main h3, main table, main figure, main .flow, main .takeaway, main .team-strip, main .closing, main .demo-cues')){
+   for(const el of s.querySelectorAll('main p, main li, main h2, main h3, main table, main figure, main svg, main .flow, main .takeaway, main .team-strip, main .closing, main .demo-cues, main .ribbon, main .b-keywords, main .paired-summary, main .outcome-map, main .coordinate-paths, main .measurement-boundary')){
     const r=el.getBoundingClientRect();
-    if(r.width&&r.height&&(r.right>box.right-70||r.left<box.left+65||r.bottom>source.top-9))problems.push({tag:el.tagName,text:el.textContent.slice(0,70),right:r.right-box.left,bottom:r.bottom-box.top,limit:source.top-box.top});
+    if(r.width&&r.height&&(r.right>box.right-70||r.left<box.left+65||r.bottom>limit-9))problems.push({tag:el.tagName,text:el.textContent.slice(0,70),right:r.right-box.left,bottom:r.bottom-box.top,limit:limit-box.top});
    }
    return {slide:i+1,width:box.width,height:box.height,title:s.querySelector('h1')?.textContent||s.getAttribute('aria-label'),problems};
   })''')
