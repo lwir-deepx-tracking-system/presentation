@@ -1,0 +1,2 @@
+- 화면 오차 피드백과 불감대 — model-bank 31ac21b tracking_server/README.md
+- 조준: 상체 박스 중심을 화면 정가운데에(`--aim-screen-y 0.5`) — model-bank 31ac21b HANDOFF.md (2026-11-15 밤 장치 상태 정리)

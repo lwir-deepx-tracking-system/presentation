@@ -1,0 +1,41 @@
+<article class="content-slide" id="m12-pose-eval" data-section="자세·상체 모델"><header><h1>공개 데이터 평가</h1></header>
+<style>
+#m12-pose-eval .m12-legend{display:flex;gap:22px;justify-content:flex-end;margin-top:14px;font-size:17px;color:#29435a}
+#m12-pose-eval .m12-legend i{display:inline-block;width:15px;height:15px;margin-right:7px;vertical-align:-2px}
+#m12-pose-eval .m12-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:4px}
+#m12-pose-eval section{background:#f7f9fc;border-top:4px solid #477c76;padding:14px 16px 6px}
+#m12-pose-eval h2{display:flex;justify-content:space-between;align-items:baseline;font-size:21px}
+#m12-pose-eval h2 span{font-size:21px;color:#2f6f69}
+#m12-pose-eval section p{font-size:16px;color:#526277;margin-top:3px}
+#m12-pose-eval svg{display:block;width:100%;height:auto;margin-top:6px}
+#m12-pose-eval .m12-tick{font-size:15px;fill:#526277;text-anchor:end}
+#m12-pose-eval .m12-val{font-size:21px;font-weight:700;fill:#193654;text-anchor:middle}
+#m12-pose-eval .m12-x{font-size:18px;font-weight:600;fill:#29435a;text-anchor:middle}
+</style>
+<div class="m12-legend"><span><i style="background:#073771"></i>근거리 E</span><span><i style="background:#41817d"></i>범용 F</span></div>
+<div class="m12-grid">
+<section><h2>OTP2 관절 AP<span>+4.6%p</span></h2><p>시험 2,151장</p>
+<svg viewBox="0 0 330 310" role="img" aria-label="OTP2 시험 관절 AP: 근거리 E 80.4%, 범용 F 85.1%">
+<line x1="48" y1="270" x2="320" y2="270" stroke="#7d92a5"/><line x1="48" y1="140" x2="320" y2="140" stroke="#e1e7ee"/><line x1="48" y1="10" x2="320" y2="10" stroke="#e1e7ee"/>
+<text class="m12-tick" x="40" y="275">0</text><text class="m12-tick" x="40" y="145">50</text><text class="m12-tick" x="40" y="15">100%</text>
+<rect x="85" y="61.0" width="80" height="209.0" fill="#073771"/><rect x="205" y="48.7" width="80" height="221.3" fill="#41817d"/>
+<text class="m12-val" x="125" y="52">80.4</text><text class="m12-val" x="245" y="40">85.1</text>
+<text class="m12-x" x="125" y="297">E</text><text class="m12-x" x="245" y="297">F</text></svg></section>
+<section><h2>TMOT 추적 HOTA<span>+13.3%p</span></h2><p>검증 6편 · 야외 여러 명</p>
+<svg viewBox="0 0 330 310" role="img" aria-label="TMOT 검증 HOTA: 근거리 E 19.5%, 범용 F 32.8%">
+<line x1="48" y1="270" x2="320" y2="270" stroke="#7d92a5"/><line x1="48" y1="140" x2="320" y2="140" stroke="#e1e7ee"/><line x1="48" y1="10" x2="320" y2="10" stroke="#e1e7ee"/>
+<text class="m12-tick" x="40" y="275">0</text><text class="m12-tick" x="40" y="145">50</text><text class="m12-tick" x="40" y="15">100%</text>
+<rect x="85" y="219.3" width="80" height="50.7" fill="#073771"/><rect x="205" y="184.7" width="80" height="85.3" fill="#41817d"/>
+<text class="m12-val" x="125" y="210">19.5</text><text class="m12-val" x="245" y="176">32.8</text>
+<text class="m12-x" x="125" y="297">E</text><text class="m12-x" x="245" y="297">F</text></svg></section>
+<section><h2>작은 사람 검출률<span>+34.2%p</span></h2><p>TMOT 키 25–50 px · 박스 4,605개</p>
+<svg viewBox="0 0 330 310" role="img" aria-label="TMOT 키 25에서 50 픽셀 사람 검출률: 근거리 E 6.6%, 범용 F 40.8%">
+<line x1="48" y1="270" x2="320" y2="270" stroke="#7d92a5"/><line x1="48" y1="140" x2="320" y2="140" stroke="#e1e7ee"/><line x1="48" y1="10" x2="320" y2="10" stroke="#e1e7ee"/>
+<text class="m12-tick" x="40" y="275">0</text><text class="m12-tick" x="40" y="145">50</text><text class="m12-tick" x="40" y="15">100%</text>
+<rect x="85" y="252.8" width="80" height="17.2" fill="#073771"/><rect x="205" y="163.9" width="80" height="106.1" fill="#41817d"/>
+<text class="m12-val" x="125" y="244">6.6</text><text class="m12-val" x="245" y="155">40.8</text>
+<text class="m12-x" x="125" y="297">E</text><text class="m12-x" x="245" y="297">F</text></svg></section>
+</div>
+<p class="meta" style="font-size:15px;margin-top:10px">학습·선택에 안 쓴 시험 · TMOT는 관절로 전신 박스 복원, 이후 추적 개발에도 사용 · FP32 1회</p>
+<div class="visual-take">범용 F가 세 지표 모두 높고, 작은 사람 검출에서 차이가 가장 큼</div>
+</article>

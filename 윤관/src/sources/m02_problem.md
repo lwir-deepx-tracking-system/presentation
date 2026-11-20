@@ -1,0 +1,7 @@
+- FLIR 검증 사람의 60%가 키 32 px 미만: 4,470명 중 2,668명(59.7%), 키 = 640×480 배치 화면에서 정답 박스 높이 — 작성자 PC 기록(비공개): SCORES_FINAL.json, baseline_start.json(tiers: person_gt_in_band 4470, lt32 gt 2668, "bucket = clipped (480-band) GT height in px"), FLIR 검증 1,144장
+- 작은 사람을 놓치기 쉬움(노트): 같은 기록에서 conf 0.25 재현율 키 32 px 미만 67.9%, 32~64 px 91.1%, 64 px 이상 95.5% — baseline_start.json(recall_fp_conf025)
+- 처음 M1에선 80%의 장이 33 ms 초과: YOLO26m(640 패딩, NPU 코어 1개) 33.3 ms 초과 80.3%, p50/p95 38.2/44.3 ms, M1 INT8, FLIR 시험 영상 3,749프레임, 검출 경로만, 1회(10-22, INT8 입력 범위 오류를 고친 뒤 첫 실측; 이때 YOLO26m은 4,196장으로 학습한 이전 모델) — Notion 팀 내부 기록 「LWIR 연구 통합」 4막 표; 작성자 PC 기록(비공개): FULL_RESULTS_20261022_KO.md
+- 장면 → 짐벌 반응 약 0.2초: 카메라 35~55 ms(추정) + 서버 약 30 ms(측정) + 제어 박자 대기 평균 12.5 ms(추정) + 명령→움직임 0.108 s(측정) 등을 더한 약 190~210 ms 추정(11-15 점검 시점 값; 이후 줄인 내용은 '짐벌까지 지연' 장) — 작성자 PC 기록(비공개): AUDIT_20261115.md
+- 그림 1: 자체 실카메라 녹화와 저장된 M1 출력(11-06) 일부 확대 — assets/figure-06-a68a4856.png
+- 그림 2: FLIR 시험 영상 4/8, YOLO26m INT8 + ByteTrack 기준에서 번호 456→306 바뀜 — assets/figure-07-0fc1eee4.png; Notion 팀 내부 기록 「FLIR 가림 사건 비교」
+- 그림 3·4는 설명용 개념도(측정 그림 아님)

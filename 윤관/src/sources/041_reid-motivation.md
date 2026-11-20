@@ -1,0 +1,1 @@
+- 외형 모델 실험 기록 — model-bank 6cf676d tracking_server/models/README.md (312~346행)

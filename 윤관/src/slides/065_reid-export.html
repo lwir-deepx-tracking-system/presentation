@@ -1,0 +1,3 @@
+<article class="content-slide" id="reid-export"><header><h1>외형 모델 변환</h1></header>
+<div class="ev-flow" style="margin-top:55px"><div><strong>RepVGG</strong><span>학습 가중치<br>추론 구조로 합치기</span></div><i>→</i><div><strong>ONNX</strong><span>opset 17<br>128차원 임베딩</span></div><i>→</i><div><strong>보정</strong><span>사람 crop 256개<br>EMA · CPU · opt 1</span></div><i>→</i><div><strong>DXNN</strong><span>입력 128×64×3<br>uint8 · 출력 128차원</span></div></div>
+<p class="recent-note">공개 OTP2 빌드 스크립트의 예시. 11/17 최신 직접학습 모델의 정확한 빌드와 동일하다고 확인되지 않았다.</p></article>

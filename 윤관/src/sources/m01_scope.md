@@ -1,0 +1,3 @@
+- 발표용 역할 두 줄 '적외선 모델 학습 · 경량화 · 최신 모델 조사'(윤관), 'GUI · 짐벌 제어'와 'PID 기반 짐벌 자동 추적 제어 알고리즘 구현'(윤오름) — 팀 자료 work/B/team-roles.md
+- 짐벌 추종 개선(튜닝·실측·지연·놓침 대응)은 PID 기본 구조 위에서 한 일: 11-10 PD·불감대 시험 — model-bank 6ee8022 tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md; 11-15 실측 응답 — 작성자 PC 기록(비공개): gimbal_speed/RESULT.md; 지연 점검 — 작성자 PC 기록(비공개): AUDIT_20261115.md; 놓침 대응 — 작성자 PC 기록(비공개): recatch/RESULT.md, search2/RESULT.md
+- 4단계 그림의 항목은 이 발표의 섹션(열화상 검출기 학습 · 자세·상체 모델 / 경량화·M1 실행 / 추적 보완 모델 / 짐벌 추종)에 대응 — 이 발표 src/deck.txt

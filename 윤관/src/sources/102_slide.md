@@ -1,0 +1,2 @@
+- 구현 기록 — model-bank 31ac21b tracking_server/README.md
+- 11-20 장치 각도 피드백·중앙 기준 눈금(명령 적산값으로 대체하지 않음, 피드백 누락·1.5초 만료 시 숨김), '보드 배포 … 하지 않았습니다' — model-bank 984c077 tracking_server/src/gimbal/V27_CHANGES.md (2026-11-20 장치 각도 피드백과 중앙 기준 눈금, 장치 미적용); 31ac21b tracking_server/README.md

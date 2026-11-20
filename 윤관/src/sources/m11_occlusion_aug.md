@@ -1,0 +1,8 @@
+- 가림: 사진의 50%에서 한 사람에게 가림 조각. 아래 띠 50%·옆 25%·덩어리 25%, 조각은 같은 사진의 사람 없는 곳(없으면 다른 사진의 배경 조각; OTP2는 사람이 화면을 채운 사진이 많아 모델뱅크 README는 "다른 그림의 실제 배경 조각"으로 적음). 절반은 강한 가림(몸 60~90%, 머리·어깨만 남음) — model-bank 31ac21b tracking_server/research/lwir_pose_plan/scripts/pose_partial.py (Occlude); tracking_server/models/README.md
+- 확대 잘림: 50%, 몸 한 부위를 1.4~4배 확대해 나머지를 화면 밖으로 — 같은 파일 (PartialCrop)
+- 열화상 화질: 초점 흐림 0.30, 움직임 흐림 0.15, 저해상 0.15, 대비·밝기·감마 0.50, 센서 잡음 0.30, 세로줄 잡음 0.10 — 같은 파일 (ThermalLook)
+- 가려지거나 화면 밖인 관절은 "위치 있음·안 보임"(flag 1)으로 남기고 손실에 사용, 모자이크 0(잘린 관절 표시가 바뀌지 않는 문제) — 같은 파일 머리말; tracking_server/research/lwir_pose_plan/README.md 2-1절
+- 기하 증강 크기 ±50%, 이동 20%, 회전 5°, 좌우 반전 0.5 — tracking_server/research/lwir_pose_plan/README.md 2-1절
+- 마지막 O·C 단계는 강한 가림 비율을 학습 중 점차 높임 — tracking_server/research/lwir_pose_plan/README.md 7-5절
+- 그림 3장: OTP2 학습 이미지 600장에 위 증강을 실제로 적용한 점검 출력에서 골라 자름(노랑 = 정답 몸 박스, 하늘색 = 보이는 관절, 빨강 = 가려진 관절). 같은 점검에서 가려진 관절 정답은 증강 전 0개 → 증강 후 5,082개 — 작성자 PC 기록(비공개): partial_samples.jpg, pipeline_test.json (11-13 강한 가림·화질 증강 점검); 이미지는 OTP2(MIT, assets/OPENTHERMALPOSE-LICENSE.txt)
+- 증강을 켜고 끈 단독 비교는 없음 — tracking_server/research/lwir_pose_plan/README.md 2-3절 5번

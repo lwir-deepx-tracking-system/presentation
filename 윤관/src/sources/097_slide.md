@@ -1,0 +1,1 @@
+- 운영 최적화 기록 — model-bank 31ac21b HANDOFF.md

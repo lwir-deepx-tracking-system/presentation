@@ -1,0 +1,7 @@
+- 야외 녹화 전체는 15편 8,929장, 정리는 그중 학습 녹화 10편(3장마다 1장) 1,267장에 했고, 학습 목록에 들어간 것은 1,114장 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md 7-7절 표 1단계; 작성자 PC 기록(비공개): SPLIT.json, build_v3b_log.txt (frames_out 1267), all_frames.txt·train_prereview.txt (ft16g4)
+- 먼 줄에 정답 없는 사람이 많고 정답은 키 32px 이상만 있어 그대로 학습하면 배경으로 배움 — 같은 README 6-1절
+- 자동 먼 사람 박스 8,049개 제외(작성자 결정, 11/16) — README 7-7절 표 2단계; 작성자 PC 기록(비공개): build_v3b_log.txt (band_lines_removed 8049)
+- 카메라 위치 2곳마다 여러 프레임 중간값으로 빈 배경, 프레임마다 밝기 맞춤, 정답 박스 4,835개는 원본 픽셀 그대로(사람 수가 아니라 프레임별 박스 수). 우리 사람 윤곽과 겹쳐 지울 수 없는 먼 사람은 무시 구역으로 둠 — README 7-7절 표 3단계; 작성자 PC 기록(비공개): build_v3b_log.txt (mask_people 4835, gt_not_identical 없음, overlap_ignore_boxes 3344)
+- 정답 밖 사람 검출(범용 F, 확신 0.5 이상) 1,806개 → 0개, 학습 1,114장 — README 7-7절 표 3단계; 작성자 PC 기록(비공개): counts_before_after.json (원본 1,806개·792장 → 정리본 0개; 확신 0.25 이상은 7,005 → 12), scan_orig_all.json (frames 1114)
+- 관절 1,069명 검수 — README 7-7절 표 4단계는 '야외 1,069명'으로 적었지만 실제로는 야외 3편 954명 + 실내 115명 — 작성자 PC 기록(비공개): KPT_CHECK.json (부록 ax_joint_review)
+- 그림 — 직접 그린 개념도(자체 카메라 사진·라벨은 공개 저장소에 올리지 않음, README 7-7절 마지막 문단)

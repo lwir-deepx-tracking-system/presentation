@@ -1,0 +1,71 @@
+<article class="content-slide" id="m24-box-stab" data-section="추적 보완 모델"><header><h1>박스 크기 안정화</h1></header>
+<style>
+#m24-box-stab .m24-grid{display:grid;grid-template-columns:480px 1fr;gap:28px;margin-top:26px}
+#m24-box-stab .ev-panel{padding:16px 22px 10px}
+#m24-box-stab .ev-panel h2{font-size:23px;margin:0 0 4px}
+#m24-box-stab svg{display:block;width:100%;height:auto}
+#m24-box-stab svg text{font-family:Pretendard,sans-serif}
+#m24-box-stab .t-h{font-size:19px;font-weight:700;fill:#263c55}
+#m24-box-stab .t-s{font-size:16px;fill:#526277}
+#m24-box-stab .t-l{font-size:18px;font-weight:600;fill:#263c55;text-anchor:end}
+#m24-box-stab .t-c{font-size:18px;font-weight:600;fill:#263c55;text-anchor:middle}
+#m24-box-stab .t-v{font-size:19px;font-weight:700;fill:#193654}
+#m24-box-stab .t-a{font-size:15px;fill:#526277;text-anchor:middle}
+#m24-box-stab .t-d{font-size:19px;font-weight:700;fill:#2f6b65}
+#m24-box-stab .meta{font-size:16px;margin-top:10px}
+</style>
+<div class="m24-grid">
+<section class="ev-panel"><h2>보일 때 · 크기 필터</h2>
+<svg viewBox="0 0 436 400" role="img" aria-label="프레임 간 키 변화 상위 1퍼센트: 추적기 상자 0.071, 크기 필터 0.054, 24퍼센트 감소. 짐벌 조준점은 그대로">
+<rect x="58" y="22" width="78" height="150" fill="none" stroke="#9aa7b6" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="66" y="34" width="62" height="126" fill="none" stroke="#41817d" stroke-width="3"/>
+<g fill="#073771"><circle cx="97" cy="56" r="13"/><rect x="82" y="73" width="30" height="82" rx="11"/></g>
+<line x1="82" y1="97" x2="112" y2="97" stroke="#be8750" stroke-width="3"/><line x1="97" y1="82" x2="97" y2="112" stroke="#be8750" stroke-width="3"/>
+<line x1="150" y1="97" x2="176" y2="97" stroke="#be8750" stroke-width="2"/>
+<text x="184" y="103" class="t-v" style="fill:#9a5b1e">조준점은 그대로</text>
+<text x="184" y="146" class="t-v" style="fill:#2f6b65">크기만 천천히</text>
+<line x1="150" y1="140" x2="176" y2="140" stroke="#41817d" stroke-width="2"/>
+<text x="10" y="226" class="t-h">프레임 간 키 변화 상위 1%</text>
+<text x="10" y="250" class="t-s">낮을수록 안정</text>
+<line x1="128" y1="266" x2="128" y2="364" stroke="#8191a6"/>
+<text x="118" y="296" class="t-l">추적기 상자</text>
+<rect x="128" y="274" width="245" height="34" fill="#9aa7b6"/><text x="381" y="298" class="t-v">0.071</text>
+<text x="118" y="346" class="t-l">크기 필터</text>
+<rect x="128" y="324" width="186" height="34" fill="#41817d"/><text x="322" y="348" class="t-v">0.054</text><text x="380" y="348" class="t-d">−24%</text>
+<text x="128" y="388" class="t-a">0</text><text x="214" y="388" class="t-a">0.025</text><text x="300" y="388" class="t-a">0.05</text><text x="386" y="388" class="t-a">0.075</text>
+</svg>
+</section>
+<section class="ev-panel"><h2>놓쳤을 때 · 보일 때 크기 유지</h2>
+<svg viewBox="0 0 616 400" role="img" aria-label="놓친 첫 장 빈 상자 562번에서 0번, 가까운 사람의 놓친 상자 크기 보일 때 대비 70퍼센트에서 100퍼센트">
+<text x="190" y="22" class="t-c">보임</text><text x="345" y="22" class="t-c">놓침 1장</text><text x="490" y="22" class="t-c">놓침 2장</text>
+<text x="96" y="82" class="t-l" style="text-anchor:middle">끔</text><text x="96" y="160" class="t-l" style="text-anchor:middle">켬</text>
+<line x1="130" y1="112" x2="580" y2="112" stroke="#dce2ea"/>
+<g fill="#073771"><circle cx="190" cy="48" r="8"/><rect x="180" y="58" width="20" height="40" rx="7"/><circle cx="190" cy="126" r="8"/><rect x="180" y="136" width="20" height="40" rx="7"/></g>
+<rect x="173" y="36" width="34" height="68" fill="none" stroke="#073771" stroke-width="2.5"/>
+<rect x="173" y="114" width="34" height="68" fill="none" stroke="#073771" stroke-width="2.5"/>
+<text x="345" y="77" class="t-s" style="text-anchor:middle">상자 없음</text>
+<rect x="478" y="56" width="24" height="48" fill="none" stroke="#9aa7b6" stroke-width="2.5" stroke-dasharray="6 4"/>
+<rect x="328" y="114" width="34" height="68" fill="none" stroke="#41817d" stroke-width="3" stroke-dasharray="7 4"/>
+<rect x="473" y="114" width="34" height="68" fill="none" stroke="#41817d" stroke-width="3" stroke-dasharray="7 4"/>
+<text x="0" y="230" class="t-h">놓친 첫 장 빈 상자</text>
+<text x="0" y="254" class="t-s">놓침 562번 중</text>
+<line x1="44" y1="268" x2="44" y2="364" stroke="#8191a6"/>
+<text x="36" y="298" class="t-l">끔</text>
+<rect x="44" y="276" width="195" height="34" fill="#9aa7b6"/><text x="234" y="300" class="t-v" style="text-anchor:end">562</text>
+<text x="36" y="346" class="t-l">켬</text>
+<text x="52" y="350" class="t-v">0</text><text x="76" y="350" class="t-d">−100%</text>
+<text x="44" y="388" class="t-a">0</text><text x="148" y="388" class="t-a">300</text><text x="252" y="388" class="t-a">600</text>
+<text x="306" y="230" class="t-h">가까운 사람 상자 크기</text>
+<text x="306" y="254" class="t-s">보일 때 대비 · 7번</text>
+<line x1="348" y1="268" x2="348" y2="364" stroke="#8191a6"/>
+<text x="340" y="298" class="t-l">끔</text>
+<rect x="348" y="276" width="105" height="34" fill="#9aa7b6"/><text x="461" y="300" class="t-v">70%</text>
+<text x="340" y="346" class="t-l">켬</text>
+<rect x="348" y="324" width="150" height="34" fill="#41817d"/><text x="490" y="348" class="t-v" style="fill:#fff;text-anchor:end">100%</text><text x="508" y="348" class="t-d">+30%p</text>
+<text x="348" y="388" class="t-a">0</text><text x="423" y="388" class="t-a">50</text><text x="498" y="388" class="t-a">100%</text>
+</svg>
+</section>
+</div>
+<div class="visual-take">11/16부터 장치에서 켬 · 짐벌 조준점과 추적 결과는 그대로</div>
+<p class="meta">PC 계산 · 실내 녹화 3편 · 자체 녹화 17편</p>
+</article>

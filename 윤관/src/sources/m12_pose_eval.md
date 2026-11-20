@@ -1,0 +1,7 @@
+- OTP2 시험 2,151장 관절 AP(학습 때 방식, 몸 박스 기준) E 80.44 → F 85.08, +4.64%p. 논문 방식은 86.0 / 89.0 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md 7-6절; 작성자 PC 기록(비공개): fe_otp2_test.json, fe_otp2_test_stock.json
+- TMOT 검증 6편(1,683장, 126명) HOTA E 19.52 → F 32.78, +13.26%p(추적기는 서버 ByteTrack 기본값, 장치의 BoT-SORT 아님). 박스는 계획 3절의 관절 규칙(예측 관절로 전신 박스 복원). 다른 규칙에서도 F > E(고정 비율 18.91 → 23.32, 몸 박스 그대로 11.74 → 27.21) — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md 7-6절; 작성자 PC 기록(비공개): fe_tmot_val.json, RESULTS_KO.md
+- TMOT 키 25~50 px 사람 박스 4,605개(프레임마다 센 수, 검증 6편 전체 13,552개·126명 중) 검출률 E 6.6% → F 40.8%, +34.2%p(점수 0.25, IoU 0.5, 관절 규칙 박스). 박스 규칙과 상관없는 1:1 짝짓기로 세어도 E 307개 → F 2,031개 — 작성자 PC 기록(비공개): fe_tmot_sizebins.json, RESULTS_KO.md
+- 두 시험 모두 E·F 학습과 모델 선택에 쓰지 않음. TMOT 검증은 이후 추적 보완(위치 보정) 개발의 검증에도 사용. OTP2 시험 33명 중 2명(276장)은 학습 분할에도 나옴 — 작성자 PC 기록(비공개): RESULTS_KO.md; tracking_server/research/lwir_pose_plan/README.md 7-6절
+- 평가는 GPU 서버의 PyTorch FP32, 1회(장치 INT8 아님) — 작성자 PC 기록(비공개): fe_pose_val.py, fe_tmot_pred.py, WORKLOG.md 2026-11-15 final eval
+- LLVIP-Pose 시험(E 45.9 → F 82.9)은 같은 카메라 묶음으로 학습했고 모델 선택에도 써서 화면에서 뺌 — tracking_server/research/lwir_pose_plan/README.md 7-6절
+- 실내 근거리 개발 녹화에서는 E가 앞섬: 찾음 51% vs 48%, 반 넘게 가려진 사람 36% vs 25% → 당시 E를 근거리 기본, F를 범용 선택지로 둠 — tracking_server/research/lwir_pose_plan/README.md 7-5절; 작성자 PC 기록(비공개): indoor_score_v2b_E.json, indoor_score_v2b_C_e2.json

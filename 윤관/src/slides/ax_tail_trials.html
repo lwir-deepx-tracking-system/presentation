@@ -1,0 +1,46 @@
+<article class="content-slide" id="ax-tail-trials" data-section="경량화·M1 실행"><header><h1>되돌린 지연 시험</h1></header>
+<style>
+#ax-tail-trials svg text{font-family:Pretendard,sans-serif}
+#ax-tail-trials .yk-chart{margin-top:22px}
+#ax-tail-trials .hd{font-size:20px;font-weight:700;fill:#263c55}
+#ax-tail-trials .lb{font-size:19px;font-weight:600;fill:#263c55;text-anchor:end}
+#ax-tail-trials .vl{font-size:18px;font-weight:700;fill:#193654;paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+#ax-tail-trials .ax{font-size:15px;fill:#526277;text-anchor:middle}
+#ax-tail-trials .tg{font-size:16px;font-weight:700;fill:#b5452f;text-anchor:middle}
+#ax-tail-trials .recent-note{margin-top:4px;font-size:18px;color:#263c55}
+#ax-tail-trials .visual-take{margin-top:10px}
+#ax-tail-trials .meta{margin-top:8px}
+</style>
+<div class="yk-chart"><svg viewBox="0 0 1168 420" width="1168" height="420" role="img" aria-label="ID 최대 17개 녹화 재생에서 최대 지연과 33 ms 초과 장 수: 기존 66.87 ms 217장, 후처리 먼저 78.10 ms 293장, CPU 코어 분리 78.73 ms 391장, SDK 준비 줄임 84.83 ms 179장, 입력 512×384 63.09 ms 16장">
+<text x="0" y="26" class="hd">최대 지연 (ms) · 낮을수록 좋음</text>
+<text x="720" y="26" class="hd">33 ms 넘은 장 (약 592장 중)</text>
+<line x1="250.0" y1="44" x2="250.0" y2="380" stroke="#9aa9b9"/><text x="250.0" y="404" class="ax">0</text>
+<line x1="350.0" y1="44" x2="350.0" y2="380" stroke="#e3e9f0"/><text x="350.0" y="404" class="ax">30</text>
+<line x1="450.0" y1="44" x2="450.0" y2="380" stroke="#e3e9f0"/><text x="450.0" y="404" class="ax">60</text>
+<line x1="550.0" y1="44" x2="550.0" y2="380" stroke="#e3e9f0"/><text x="550.0" y="404" class="ax">90</text>
+<line x1="720.0" y1="44" x2="720.0" y2="380" stroke="#9aa9b9"/><text x="720.0" y="404" class="ax">0</text>
+<line x1="802.5" y1="44" x2="802.5" y2="380" stroke="#e3e9f0"/><text x="802.5" y="404" class="ax">100</text>
+<line x1="885.0" y1="44" x2="885.0" y2="380" stroke="#e3e9f0"/><text x="885.0" y="404" class="ax">200</text>
+<line x1="967.5" y1="44" x2="967.5" y2="380" stroke="#e3e9f0"/><text x="967.5" y="404" class="ax">300</text>
+<line x1="1050.0" y1="44" x2="1050.0" y2="380" stroke="#e3e9f0"/><text x="1050.0" y="404" class="ax">400</text>
+<line x1="360.0" y1="48" x2="360.0" y2="380" stroke="#b5452f" stroke-width="2.5" stroke-dasharray="8 6"/><text x="360.0" y="42" class="tg">목표 33</text>
+<text x="232" y="88" class="lb">기존 분할 (기준)</text>
+<rect x="250" y="58" width="222.9" height="44" fill="#9caebe"><title>기존 분할 (기준) 최대 66.87 ms</title></rect><text x="480.9" y="88" class="vl">66.87</text>
+<rect x="720" y="58" width="179.0" height="44" fill="#9caebe"><title>기존 분할 (기준) 초과 217장</title></rect><text x="907.0" y="88" class="vl">217</text>
+<text x="232" y="152" class="lb">검출 후처리 먼저</text>
+<rect x="250" y="122" width="260.3" height="44" fill="#c9a27a"><title>검출 후처리 먼저 최대 78.10 ms</title></rect><text x="518.3" y="152" class="vl">78.10</text>
+<rect x="720" y="122" width="241.7" height="44" fill="#c9a27a"><title>검출 후처리 먼저 초과 293장</title></rect><text x="969.7" y="152" class="vl">293</text>
+<text x="232" y="216" class="lb">CPU 코어 분리</text>
+<rect x="250" y="186" width="262.4" height="44" fill="#c9a27a"><title>CPU 코어 분리 최대 78.73 ms</title></rect><text x="520.4" y="216" class="vl">78.73</text>
+<rect x="720" y="186" width="322.6" height="44" fill="#c9a27a"><title>CPU 코어 분리 초과 391장</title></rect><text x="1050.6" y="216" class="vl">391</text>
+<text x="232" y="280" class="lb">SDK 준비·관절 복사 줄임</text>
+<rect x="250" y="250" width="282.8" height="44" fill="#c9a27a"><title>SDK 준비·관절 복사 줄임 최대 84.83 ms</title></rect><text x="540.8" y="280" class="vl">84.83</text>
+<rect x="720" y="250" width="147.7" height="44" fill="#c9a27a"><title>SDK 준비·관절 복사 줄임 초과 179장</title></rect><text x="875.7" y="280" class="vl">179</text>
+<text x="232" y="344" class="lb">입력 512×384</text>
+<rect x="250" y="314" width="210.3" height="44" fill="#c9a27a"><title>입력 512×384 최대 63.09 ms</title></rect><text x="468.3" y="344" class="vl">63.09</text>
+<rect x="720" y="314" width="13.2" height="44" fill="#c9a27a"><title>입력 512×384 초과 16장</title></rect><text x="741.2" y="344" class="vl">16</text>
+</svg></div>
+<p class="recent-note">11-20 공유 메모리 전송은 실카메라 1,800장에서 최대 35.64 ms(파이프 30.16 ms)여서 파이프를 유지</p>
+<div class="visual-take">네 후보 모두 최대 33 ms를 넘겨 되돌림 · 512×384 입력은 초과 16장이었지만 최대 63 ms</div>
+<p class="meta">11-19 · ID 최대 17개 녹화 재생 591~593장 · 운영 장치 · 상체 E10 분할 · 입력 버림 0장 · 각 1회</p>
+</article>

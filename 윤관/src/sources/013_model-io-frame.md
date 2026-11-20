@@ -1,0 +1,4 @@
+- 50.72% = 배포 YOLO26m을 같은 채점기로 다시 잰 사람 AP50–95 — 작성자 PC 기록(비공개): start_score.json
+- OTP2 관절 AP E 80.4 → F 85.1 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md 7-6절
+- YOLO26m loss·검증 기록 — 학습로그/YOLO26m_FullFT_30epoch_lr_loss.csv, 학습로그/YOLO26m_FullFT_30epoch_validation.csv
+- 검출·자세 실험 기록 — model-bank 6cf676d tracking_server/research/LWIR_PRESENTATION_KO.md, tracking_server/research/lwir_pose_plan/README.md

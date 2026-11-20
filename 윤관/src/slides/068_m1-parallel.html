@@ -1,0 +1,4 @@
+<article class="content-slide" id="m1-parallel"><header><h1>M1 병렬 처리</h1></header>
+<div class="ev-flow" style="margin-top:45px"><div><strong>NPU 0 · 1</strong><span>검출을 번갈아 투입<br>다음 프레임 준비</span></div><i>→</i><div><strong>CPU</strong><span>광류 · 추적 처리<br>다른 연산과 겹치기</span></div><i>→</i><div><strong>NPU 2</strong><span>외형 특징 추출<br>검출과 병렬화</span></div></div>
+<div class="recent-band"><section><strong>46.5 → 72.5 FPS</strong>11/03 저장 FLIR · 동등 계산의 처리량</section><section><strong>출력 바이트 동일</strong>비교한 파이프라인의 결과 유지</section></div>
+<p class="recent-note">저장 영상의 처리량 비교다. 카메라→화면 종단 지연이나 INT8 변환 전후 속도가 아니다.</p></article>

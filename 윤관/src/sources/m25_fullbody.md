@@ -1,0 +1,5 @@
+- 전신 표시 규칙(발목 → 무릎 + 0.43h → 선 사람 비율 1.77배), 화면 표시 단계에서만 계산, ID 연결·채점·짐벌 조준은 상체 추적 결과 사용 — model-bank 31ac21b tracking_server/docs/box-display-2026-11-19.md (관절로 전신 경계를 추정하는 규칙, 화면에 그리는 좌표)
+- 8090에서 상체·전신 표시 전환 가능(11-19) — model-bank 31ac21b HANDOFF.md (2026-11-19 상체 E10·E10+3 박스 표시)
+- 전신 정답과 중앙 IoU 0.427 → 0.744(+0.317), 밑변 중앙 오차 60.4 → 4.8 px, E10 seq_003 56장·190박스, 190건 모두 발목 경로 — 같은 box-display-2026-11-19.md (검증 기록); 작성자 PC 기록(비공개): POSE_FULL_SEQ003_SAMPLE_V2.json (records 190개에서 중앙값을 다시 계산해 같음; methods 발목 190·무릎 0·비율 0; 채점 범위는 상체 박스와 짝지은 서 있는 사람의 수동 박스만, TrackEval 아님)
+- 사진: 장치 녹화 재생 화면, 같은 야외 녹화의 서로 다른 프레임(번호 8·9 대 17·18) — 작성자 PC 기록(비공개): BOARD_POSE_UPPER_REPLAY.jpg, BOARD_POSE_FULL_REPLAY.jpg (이 폴더 assets/20261119-real-upper-replay.jpg, assets/20261119-real-full-replay.jpg)
+- 전신 계산 코드 pose_full_box.py는 아직 공개 트리에 없음(중복 판정 pose_duplicate.py는 공개) — model-bank 31ac21b 파일 목록

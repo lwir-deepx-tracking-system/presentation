@@ -1,0 +1,2 @@
+- OC-SORT 별도 브랜치 기록 — model-bank 커밋 1ccf016
+- feature/ocsort 커밋 작성자는 모두 팀원(정하건), main 병합 PR #1(11-16 b0358a0) · #4(11-18 c374f1b) · #5(11-20 173c0c5) · #6(11-20 31ac21b) — model-bank git 기록

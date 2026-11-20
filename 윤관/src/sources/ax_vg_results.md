@@ -1,0 +1,6 @@
+- Kp별 첫 맞춤 시간(느린 보행 장면 A, seq66): Kp 20 1.12 s, Kp 30 0.62 s(5회 평균, 0.54–0.77), Kp 45 1.41 s, Kp 60 1.58 s(각 1회) — 작성자 PC 기록(비공개): virtual_gimbal_tmot/tuning_sweep/controller_summary.csv (A_slow settle_s), RESULT.md ("kp 30 is the best of those tried")
+- 불감대 나오는 기준 0.10(장치) vs 0.06(`--deadband-exit 0.06`), 다가오는 사람 장면 D(seq54): 중앙 오차 31.55 → 24.6 px(−22%), 출발 횟수 26.75 → 38.33회(+43%), 3~4회 평균; 장면 A에서도 중앙 오차 21.7 → 15.9 px; 사전 규칙(95% 오차)으로는 선택되지 않아 보류 — tuning_sweep/controller_summary.csv (D_approach base, nohyst e_medw, starts), RESULT.md (Short answer)
+- 제어값 비교 조건: 장치 가상 카메라, TMOT(초당 5장), 최고 속도 100, 유효 112회, 짐벌 모델은 11-10 실측 속도표(SPD 20 위 450 px/s 가정) — tuning_sweep/RESULT.md (What was run, Caveats)
+- 예측 앞당김: 놓친 뒤 같은 번호로 복귀 끔 23/32(71.9%) vs 켬 100~400 ms 묶음 25/48(52.1%), −19.8%p; 다른 사람으로 넘어감 8/32 vs 21/48; 둘 다 p ≈ 0.10(Fisher)이라 나빠지는 경향일 뿐 확정 아님 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/lead_tuning/RESULT.md (Short answer), lead_tuning/all_normal/pooled.csv
+- 예측 앞당김 시험 조건: BU-TIV Lab(초당 30장) + PTB-TIR meetion1, 사용 장면 4개, 장면당 끔 3~7회·켬 8~13회; 복귀 = same + recaught, 묶음 수는 pooled.csv에서 다시 셈(끔 32·23·8, 켬 48·25·21) — lead_tuning/RESULT.md, lead_tuning/all_normal/pooled.csv
+- 이 시험 뒤 장치는 앞당김을 끈 채 두었으나, 이후 장치 기록에는 앞당김 200 ms가 다시 켜져 있음 — lead_tuning/RESULT.md (Short answer); model-bank 31ac21b HANDOFF.md 8절 (11-15 1985511 장치 적용 줄 "예측 제어 켜짐(200 ms)")

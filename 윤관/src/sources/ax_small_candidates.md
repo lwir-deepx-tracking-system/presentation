@@ -1,0 +1,7 @@
+- 여섯 후보의 최고 epoch 사람 AP50–95: NWD 0.3·seed 303 51.06, NWD 0.3 51.03, 조합 50.87, 공개 소형 데이터 추가 50.86, YOLO26x 교사 증류 50.59, NWD 0.5 50.37%; 키 32 px 미만 AP 38.39 · 38.52 · 38.30 · 37.89 · 38.09 · 37.95% — 작성자 PC 기록(비공개): SCORES_FINAL.json(vast_batch/results/runs)
+- 기준(배포 YOLO26m) 50.72%(0.50719), 32 px 미만 37.97% — 작성자 PC 기록(비공개): tiers/baseline_start.json, runs/baseline_start/start_score.json
+- 'seed 303' 실행은 1위 후보(NWD 0.3)의 설정을 seed 303으로 반복한 것(11-19판의 '실제 소형 · 303' 이름은 틀림) — 작성자 PC 기록(비공개): select_and_combo.py, chain_stdout.log(RANKED: r3_nwd_030 1위)
+- 조합 = NWD 0.3 + 공개 소형 데이터(AAU-PD-T, CAMEL, HIT-UAV, POP 추가); 증류 = YOLO26x 교사 KD + 지운 박스 25개 보완 — 작성자 PC 기록(비공개): runs/*.json 실행 명세
+- 조건: 배포 YOLO26m에서 12 epoch 추가 학습, 각 실행 최고 epoch, FLIR 검증 1,144장, 각 1회 — Notion 팀 내부 기록 「24 · 검출기 재학습 결과」
+- 추적: 여섯 후보 모두 추적에서 일관된 이득 없음 → 채택 안 함 — Notion 팀 내부 기록 「LWIR 연구 통합」(검출기 재학습 6종), 「25 · 후보 검출기 추적 평가」
+- 부록 079_flir-method-small(재학습 조건) 바로 뒤에 둠

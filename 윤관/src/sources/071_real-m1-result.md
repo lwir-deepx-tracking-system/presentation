@@ -1,0 +1,1 @@
+- 왼쪽: 장치 운영 화면 캡처(11-15, TMOT seq66 재생) — assets/figure-02-88dcf248.jpg; 오른쪽: 실카메라 녹화와 저장된 M1 출력(11-06) — assets/figure-06-a68a4856.png

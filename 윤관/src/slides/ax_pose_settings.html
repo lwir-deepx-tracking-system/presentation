@@ -1,0 +1,23 @@
+<article class="content-slide" id="ax-pose-settings" data-section="자세·상체 모델"><header><h1>자세 모델 학습 설정</h1></header>
+<style>
+#ax-pose-settings table{margin-top:26px;font-size:20px}
+#ax-pose-settings th{font-size:17px;padding:9px 14px;text-align:left}
+#ax-pose-settings td{padding:13px 14px;text-align:left;vertical-align:middle;border-bottom:1px solid #dce2ea}
+#ax-pose-settings td:first-child{font-weight:700;color:#002f6d;white-space:nowrap}
+#ax-pose-settings td:nth-child(2){white-space:nowrap;color:#193654;font-variant-numeric:tabular-nums}
+#ax-pose-settings td:last-child{color:#3f5368}
+#ax-pose-settings tr.ax-chg td{background:#edf4f5}
+</style>
+<table aria-label="자세 모델 학습 설정과 이유">
+<thead><tr><th>설정</th><th>값</th><th>이유</th></tr></thead>
+<tbody>
+<tr><td>배치</td><td>16 × 4번 누적 = 64</td><td>32는 메모리 부족</td></tr>
+<tr class="ax-chg"><td>학습률</td><td>2e-4 · O·C부터 1e-4</td><td>다듬은 모델을 2e-4로 이어 하면 첫 epoch 점수 하락</td></tr>
+<tr class="ax-chg"><td>조기 멈춤</td><td>R1부터 끔</td><td>흔들리는 박스 점수 탓에 E로 4 epoch 판이 골라짐</td></tr>
+<tr><td>모자이크</td><td>끔</td><td>잘린 관절의 보임 표시 어긋남</td></tr>
+<tr><td>입력 크기</td><td>640</td><td>960은 놓침 증가</td></tr>
+<tr><td>기하 증강</td><td>크기 ±50% · 이동 20% · 회전 5°</td><td>크기는 OTP2 원 학습과 같음</td></tr>
+</tbody></table>
+<p class="meta" style="font-size:15px;margin-top:10px">색칠한 줄: 학습 기록을 보고 바꾼 설정</p>
+<div class="visual-take">기본값을 쓰고, 기록으로 문제가 확인된 설정만 바꿈</div>
+</article>

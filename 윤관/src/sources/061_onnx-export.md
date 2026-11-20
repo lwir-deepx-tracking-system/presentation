@@ -1,0 +1,1 @@
+- 공개 640×480 변환 스크립트 — model-bank 6cf676d tracking_server/models/detect/build_scripts/yolo26_640x480_build/build480.py

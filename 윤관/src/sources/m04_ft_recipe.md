@@ -1,0 +1,7 @@
+- 레시피 = 이전 m 교사(4,196장)의 설정(AdamW lr0 3e-4, 워밍업 3 epoch, warmup_bias_lr 0, nbs 64, BN 이동통계 고정, seed 202)에서 스크립트가 적은 변경은 넷: 데이터(4,196 → 10,491장), 증강(이전: mosaic 0, scale 0.5, hsv_h 0.015, hsv_s 0.7 → 이번: mosaic 1.0·마지막 10 epoch 끔, scale 0.75, 색상·채도 변화 끔, 밝기 hsv_v 0.4 유지), 학습 화면(모자이크 때문에 이전 480×640 고정 화면 대신 640 정사각 레터박스로 학습, 평가는 480×640 그대로), 일정(30 epoch 고정 cosine, '모자이크 종료가 21~30 epoch에 오도록') — 작성자 PC 기록(비공개): train_full.py 머리말(YOLO26m·x 10,491장 학습 스크립트), train_remote.py 머리말(이전 실행: 480×640 고정 화면, 모자이크 끔)
+- 실행 값: epochs 30, patience 0, batch 8, nbs 64(64장마다 갱신), cos_lr, lrf 0.01, close_mosaic 10, mosaic 1.0, scale 0.75, fliplr 0.5, translate 0.1, hsv_v 0.4, hsv_h·hsv_s 0, amp true — 작성자 PC 기록(비공개): 이 실행의 args.yaml
+- 그래프의 epoch별 학습률(1 epoch 1.0e-4 → 3 epoch 2.97e-4 → 30 epoch 3.8e-6) — 학습로그/YOLO26m_FullFT_30epoch_lr_loss.csv(이 실행의 results.csv lr/pg0에서 옮김, 30행 값 일치 확인)
+- COCO 가중치에서 시작, 학습 10,491장 · 검증 1,144장 · batch 8 · 30 epoch — 학습로그/YOLO26m_FullFT_run_start.json
+- FLIR 학습 10,491장 · 30 epoch(640 정사각으로 학습) — model-bank 6ee8022 tracking_server/models/README.md
+- 10,491장은 FLIR 학습 10,742장 중 학습에 쓸 수 있는 전체(eligible) — train_full.py 머리말 'FULL eligible thermal train set (10,491 images)'; 작성자 PC 기록(비공개): nested_ladder_summary.json(eligible_pool_images 10491, 1,074장 묶음 = 원래 학습셋의 10.00%, eligible의 10.24%)
+- 11-19판의 '최초 선택 이유 미확인' 문구는 위 실행 스크립트 기록으로 대체

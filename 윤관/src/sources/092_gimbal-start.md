@@ -1,0 +1,1 @@
+- 장치·짐벌 연결 구조 — model-bank 31ac21b tracking_server/README.md

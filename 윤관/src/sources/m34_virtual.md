@@ -1,0 +1,9 @@
+- 가상 카메라: 녹화 한 장에서 W × 0.75W 창을 잘라 640×480으로 키움, 고른 사람이 약 225 px로 보이게 확대 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/SPEC.md (3절)
+- 장치에서 카메라 프로그램 대신 가상 카메라를 넣고, 서버·NPU 검출기·추적기·KeepID·짐벌 브리지는 운영 실행 인자 그대로 사용; 짐벌 브리지의 직렬 명령은 가상 단말로 받아 짐벌 모델이 창을 옮김 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/device_pipeline/src/run_vg.sh, vcam.py, vg_plant.py (머리말 설명)
+- 짐벌 모델: 실측 속도·반응 지연·STOP 지연(11-15 시험은 11-10 실측 속도표에 SPD 20 위 450 px/s 가정, 11-16 시험부터 11-15 실측 속도) — virtual_gimbal_tmot/SPEC.md 2절; virtual_gimbal_tmot/search2/RESULT.md (Device test 조건)
+- 정답 라벨로 같은 사람(ON) · 다른 사람(SWITCHED) · 놓침(LOST) 판정 — virtual_gimbal_tmot/tuning_sweep/RESULT.md (Metrics); virtual_gimbal_tmot/viewer/README_KO.md (정답 확인 띠)
+- 녹화: TMOT(초당 5장), PTB-TIR, BU-TIV — virtual_gimbal_tmot/tuning_sweep/RESULT.md, lead_tuning/RESULT.md
+- 제어값 비교 유효 112회(2026-11-15): 현재 장치 값보다 나은 설정 없음, 시험한 Kp(20·45·60)보다 30이 나음; 불감대 나오는 기준 0.06은 오차를 줄였지만 출발·정지가 약 45% 늘어 보류 — virtual_gimbal_tmot/tuning_sweep/RESULT.md (Short answer)
+- 예측 앞당김(lead 100~400 ms) 시험(2026-11-15): 꺼짐보다 나은 값 없음; 같은 번호 복귀 꺼짐 23/32 · 켬 25/48, 다른 사람으로 넘어감 8/32 · 21/48(p ≈ 0.10, 나빠지는 경향, 확정 아님) — virtual_gimbal_tmot/lead_tuning/RESULT.md (Short answer)
+- 같은 방법으로 놓침 대응(coast·guard·탐색)도 시험 — virtual_gimbal_tmot/recatch/RESULT.md, search2/RESULT.md (놓쳤을 때 대응 장)
+- 한계: 확대한 녹화, TMOT 초당 5장, 다가옴·가림·근거리 흔들림은 재현 못함 — virtual_gimbal_tmot/SPEC.md (0절)

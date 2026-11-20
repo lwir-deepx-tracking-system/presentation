@@ -1,0 +1,2 @@
+- Skogestad, 2003 — Skogestad (2003), Simple analytic rules for model reduction and PID controller tuning
+- 실제 짐벌 설정 선택 기록 — model-bank b0358a0 tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md

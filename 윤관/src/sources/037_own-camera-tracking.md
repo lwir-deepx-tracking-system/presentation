@@ -1,0 +1,1 @@
+- 추적 결과와 2차 후보 범위 — model-bank ccf1ea9 tracking_server/research/lwir_pose_plan/README.md (271~287행)

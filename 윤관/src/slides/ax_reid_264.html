@@ -1,0 +1,34 @@
+<article class="content-slide" id="ax-reid-264" data-section="추적 보완 모델"><header><h1>검수 264장 외형 학습</h1></header>
+<style>
+#ax-reid-264 .meta{font-size:17px;margin-top:20px}
+#ax-reid-264 svg{display:block;width:100%;height:auto;margin-top:12px}
+#ax-reid-264 svg text{font-family:Pretendard,sans-serif}
+#ax-reid-264 .t-h{font-size:21px;font-weight:700;fill:#263c55}
+#ax-reid-264 .t-l{font-size:20px;font-weight:600;fill:#263c55;text-anchor:end}
+#ax-reid-264 .t-ls{font-size:15px;fill:#526277;text-anchor:end}
+#ax-reid-264 .t-v{font-size:19px;font-weight:700;fill:#193654}
+#ax-reid-264 .t-a{font-size:15px;fill:#526277;text-anchor:middle}
+</style>
+<p class="meta">공개 열화상 질의(과거 개발에 쓴 자료) · PC FP32 · 증류는 조건별 3시드</p>
+<svg viewBox="0 0 1168 400" role="img" aria-label="맞힌 질의 수. TMOT 432개 중 시작 387, 직접 미세조정 386, 증류 B 386, 증류 C 386. CAMEL 218개 중 시작 197, 직접 200, 증류 B 200에서 201, 증류 C 201">
+<text x="345" y="26" class="t-h">TMOT · 맞힌 질의 / 432</text>
+<text x="770" y="26" class="t-h">CAMEL · 맞힌 질의 / 218</text>
+<g><text x="325" y="84" class="t-l">시작 모델</text><text x="325" y="106" class="t-ls">11-03 공개 열화상 증류</text></g>
+<g><text x="325" y="160" class="t-l">직접 미세조정</text><text x="325" y="182" class="t-ls">장치 사용 (11-17)</text></g>
+<g><text x="325" y="236" class="t-l">증류 B</text><text x="325" y="258" class="t-ls">고정 교사: 11-10 실내 SOLIDER</text></g>
+<g><text x="325" y="312" class="t-l">증류 C</text><text x="325" y="334" class="t-ls">264장에 다시 맞춘 교사</text></g>
+<line x1="345" y1="52" x2="345" y2="356" stroke="#8191a6"/>
+<rect x="345" y="70" width="268.8" height="40" fill="#9aa7b6"/><text x="621.8" y="97" class="t-v">387</text>
+<rect x="345" y="146" width="268.1" height="40" fill="#41817d"/><text x="621.1" y="173" class="t-v">386</text>
+<rect x="345" y="222" width="268.1" height="40" fill="#073771"/><text x="621.1" y="249" class="t-v">386 ×3</text>
+<rect x="345" y="298" width="268.1" height="40" fill="#5b7fa6"/><text x="621.1" y="325" class="t-v">386 ×3</text>
+<text x="345" y="380" class="t-a">0</text><text x="495" y="380" class="t-a">216</text><text x="645" y="380" class="t-a">432</text>
+<line x1="770" y1="52" x2="770" y2="356" stroke="#8191a6"/>
+<rect x="770" y="70" width="271.1" height="40" fill="#9aa7b6"/><text x="1049.1" y="97" class="t-v">197</text>
+<rect x="770" y="146" width="275.2" height="40" fill="#41817d"/><text x="1053.2" y="173" class="t-v">200</text>
+<rect x="770" y="222" width="276.6" height="40" fill="#073771"/><text x="1054.6" y="249" class="t-v">201·201·200</text>
+<rect x="770" y="298" width="276.6" height="40" fill="#5b7fa6"/><text x="1054.6" y="325" class="t-v">201 ×3</text>
+<text x="770" y="380" class="t-a">0</text><text x="920" y="380" class="t-a">109</text><text x="1070" y="380" class="t-a">218</text>
+</svg>
+<div class="visual-take">어느 방법도 질의 0~3개 차이 → 증류판은 장치에 등록하지 않음</div>
+</article>

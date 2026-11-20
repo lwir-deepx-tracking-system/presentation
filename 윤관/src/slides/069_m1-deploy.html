@@ -1,0 +1,4 @@
+<article class="content-slide" id="m1-deploy"><header><h1>검출기 M1 적용</h1></header>
+<div class="ev-flow" style="margin-top:55px"><div><strong>학습 모델</strong><span>YOLO26m · FLIR FT<br>PC 학습 가중치</span></div><i>→</i><div><strong>변환·보정</strong><span>640×480 DXNN<br>INT8 보정 8장</span></div><i>→</i><div><strong>NPU 실행</strong><span>코어 1개 · 호출 300회<br>임의 입력 시험</span></div><i>→</i><div><strong>장치 평가</strong><span>실카메라·녹화로<br>검출·추적 별도 평가</span></div></div>
+<div class="recent-band"><section><strong>24.43 / 31.22 ms</strong>NPU 호출 p50 / p95 · 2026-11-04 · 임의 입력 300회</section><section><strong>23.9~24.5 fps</strong>실카메라 별도 시험 · 모델당 약 20초 · 2026-11-09</section></div>
+<p class="recent-note">호출 시간과 실카메라 처리량은 다른 시험이다. 모니터 화면까지의 종단 지연은 포함된 값으로 취급하지 않는다. FP32↔INT8 정합 추가 비교가 필요하다.</p></article>

@@ -1,0 +1,3 @@
+- 실제 학습 설정과 장치 채점 — model-bank ccf1ea9 tracking_server/models/e2e/fasttracktr/INFO.json
+- 학습 설정(학습률 5e-5, 백본 0.1배, 1 epoch 워밍업, 2 epoch 뒤 0.1배, 배치 4, bf16)은 INFO.json training 필드의 실제 기록(계획이 아님) — model-bank 31ac21b tracking_server/models/e2e/fasttracktr/INFO.json
+- 11-15 학습 중단, 시험 기능으로 유지 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md (7-3)

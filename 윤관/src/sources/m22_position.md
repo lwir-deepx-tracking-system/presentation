@@ -1,0 +1,4 @@
+- 최근 20프레임 기록, 15프레임 보정 뒤 Kalman만, 관측 4장 미만·관절 없는 64 px 이상 사람은 Kalman, 프레임당 입력 68개 — model-bank 31ac21b tracking_server/src/track/position_memory.py (KP_HIST, KP_STEPS, KP_MINOBS, KP_NOKPT_H)
+- 카메라 움직임 보정 + Kalman 경로를 GRU가 중심·크기 보정 — model-bank 31ac21b tracking_server/models/README.md (2. 추적, GRU · Mamba 위치 기억 + 관절)
+- 학습: TMOT 학습 24편 + DanceTrack 검출 출력, 처음부터 30 epoch, val-A로 29 epoch 선택 — model-bank 31ac21b tracking_server/models/README.md (같은 항목, 새 GRU(v2))
+- Mamba도 같은 방법으로 재학습해 선택지로 둠 — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 두 파일 더)

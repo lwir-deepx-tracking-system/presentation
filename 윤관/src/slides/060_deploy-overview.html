@@ -1,0 +1,4 @@
+<article class="content-slide" id="deploy-overview"><header><h1>M1 실행 과정</h1></header>
+<div class="ev-flow" style="margin-top:60px"><div><strong>학습</strong><span>PyTorch 가중치<br>FLIR · 640×640</span></div><i>→</i><div><strong>ONNX</strong><span>모델 연산 그래프<br>내보내기 · PC 대조</span></div><i>→</i><div><strong>DX-COM</strong><span>보정 이미지로<br>INT8 양자화 · 컴파일</span></div><i>→</i><div><strong>DXNN · M1</strong><span>640×480 실행<br>서버 후처리 · 평가</span></div></div>
+<div class="visual-take">학습 → 파일 변환 → 보정 → 장치 검증은 서로 다른 단계</div>
+<p class="recent-note">참고: ONNX 공식 문서(onnx.ai) · 모델 형식과 도구의 일반 원리</p></article>

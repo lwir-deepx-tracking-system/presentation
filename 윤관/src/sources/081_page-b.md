@@ -1,0 +1,5 @@
+- 왼쪽 곡선의 30에폭 값(그림에서 읽은 Full FT 약 41.1%, LoRA 약 38.1%)은 데이터 규모 시험 10,491장 점 41.09 / 38.11%(seed 202)와 같음 — 작성자 PC 기록(비공개): evidence.json; 이 곡선의 에폭별 원본은 이 폴더에 없음
+- seed 101 전체 라벨 Full FT 15→30에폭 40.41 → 41.33%(+0.92%p) — 학습로그/YOLO26s_FT_seed101.csv (monitor_primary6/mAP50_95)
+- YOLO26m 30에폭 고정, 매 에폭 EMA 검증, 27에폭 50.75% 선택 — 학습로그/YOLO26m_FullFT_30epoch_validation.csv, 학습로그/YOLO26m_FullFT_run_completed.json
+- 라벨 10% 묶음 A/B/C 평균: 30에폭 Full FT 34.22 · LoRA 32.61%, 297에폭(5,049회) Full FT 29.89 · LoRA 33.96%, 30→297에폭 변화 −4.33 / +1.35%p — model-bank 6ee8022 tracking_server/research/LWIR_PRESENTATION_KO.md; 작성자 PC 기록(비공개): REPORT.md, FINAL_COMPARISON.json
+- 기준 50.72%(배포 YOLO26m 재채점), 소형 후보 6종 50.37~51.06% — 작성자 PC 기록(비공개): start_score.json; 근거 자료 ax_small_candidates 장

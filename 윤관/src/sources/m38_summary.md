@@ -1,0 +1,22 @@
+- 이 장은 새 숫자 없이 앞 장(m01~m37)과 그 근거 파일(src/sources 폴더의 같은 이름 파일)을 모아 정리함. 장치 상태는 각 장이 적은 11-19~11-20 기록 기준
+- 채택 · 상체 E10 검출기: 현장 650장(새 439 + 검수 211)으로 F에서 10 epoch, 장치 기본 검출기 — 이 발표 m18_e10 (model-bank 31ac21b HANDOFF.md '8090 후속 적용', model-bank 7e4ed20 tracking_server/models/detect/yolo26m/LWIR650_E10_CLAHE_REPRO_20261120.md)
+- 채택 · INT8 · NPU 분할: DX-COM INT8 DXNN, 화면을 384 px 타일 두 개로 나눠 NPU 0·1 동시 검출, 제출·회수와 좌표·관절 후처리 C++ — 이 발표 m27_int8, m29_split, m30_tail (model-bank 31ac21b HANDOFF.md 2026-11-19·11-20 절)
+- 채택 · RepVGG: 장치 외형 모델 = 검수 264장 미세조정 RepVGG, SOLIDER 교사를 직접 넣어도 IDF1 −0.2%p로 이득 없음 — 이 발표 m20_branches, m21_reid
+- 채택 · 관절 GRU: 장치는 11-16 관절 GRU 유지(수정 GRU 위치 오차 0.122, Kalman 0.110, IDF1 +0.6%p로 차이 없는 수준) — 이 발표 m22_position, m23_position_result
+- 채택 · 짐벌 PD: Kp 30 · Ki 0 · Kd 6, 불감대 0.06, 최고 SPD 100 — 이 발표 m31_gimbal_loop, m32_pd (model-bank 31ac21b HANDOFF.md 2절, tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md)
+- 채택 · 원거리 가속: 가속 한도 150 SPD/초 · 화면 가장자리 이득 1.6배, 11-15 장치 적용, 11-20 장치 인자에 그대로 있음 — 이 발표 m35_speed (작성자 PC 기록(비공개): WORKLOG.md, rules_20261120.txt)
+- 채택 · 예측 따라가기: 놓친 뒤 0.8초 예측 자리 따라가기 켬; 가상 비교에서 속도 예측 방식은 재포착 +20%p, 장치에 켠 fused 방식은 +6%p로 근거가 약함 — 이 발표 m37_loss
+- 장치에 켰지만 장에서 뺀 것: 결과 도착 즉시 명령 · 카메라 읽기 박자 고정 · 명령 계산 C++(m36_latency), 상자 크기 필터 · 놓친 상자 크기 유지(m24_box_stab, 11-20 재설치 뒤 상태 기록 없음), 외형으로 다른 사람 막기 · 예측 주변 좁게 보기 · 가려지면 아래로 안 내림(m37_loss, 효과 미측정)
+- 보류 · LoRA: 전체 라벨 30 epoch에서는 Full FT가 높아, 라벨이 적을 때의 후보로 보류 — 이 발표 m06_ft_lora
+- 미채택 · 증류: 사람 AP −0.62%p, 놓침 +9, ID 바뀜 +5 — 이 발표 m08_distill
+- 미채택 · NF: 혼합 학습, 미리 정한 기준 3개 탈락 — 이 발표 m16_mixed
+- 미채택 · V7 · V8: 상체 박스는 올랐지만 관절 기준 미달 — 이 발표 m17_v7v8
+- 미채택 · 교체 후보: 11-19 재학습 8종 중 박스·관절, 실내·실외를 함께 앞선 후보 없음 → E10 유지 — 이 발표 m19_retrain
+- 보류 · FastTrackTr: 기존 검출+추적보다 낮아 11-15 학습 중단, 장치에는 선택 기능으로만 남김 — 이 발표 m20_branches, m26_fasttracktr
+- 미채택 · 훑기: 좌우로 훑기(`--search`)와 예측 쪽으로 넓게 훑기(`--seek`) 모두 끔 — 이 발표 m37_loss
+- 장에서 뺀 보류·미채택: E10 추가 3 epoch(m18_e10), 속도 보정 GRU(m23_position_result), 1채널 입력(m27_int8)
+- 남은 측정 · 사람 있을 때 33 ms: 사람이 있는 실카메라 지연은 C++ 이식 뒤 아직 안 잼, 사람이 많은 녹화는 최대 57~67 ms, 사람 없는 장시간 18,497장도 5장이 33 ms 초과 — 이 발표 m29_split, m30_tail
+- 남은 측정 · 실제 재포착률: 켠 놓침 대응 기능의 실제 사람 재포착률 미측정 — 이 발표 m37_loss
+- 남은 측정 · 짐벌 세로 · 고속: 세로(틸트)와 SPD 40 이상 응답 미측정, 원거리 가속 모의 시험에는 SPD 30 위 미측정 구간이 들어감 — 이 발표 m33_plant, m35_speed
+- 노트에만 넣은 남은 일: FP32와 INT8의 정답 기준 정확도 비교 없음 — 이 발표 m27_int8 근거; E10의 OTP2 별도 시험 2,151장 평가와 CLAHE 대조 학습 안 함 — 이 발표 m18_e10 근거(model-bank 7e4ed20 같은 문서)
+- 그 밖의 남은 측정(장·노트 생략): 실제 짐벌 종단 지연(m36_latency), 우리 카메라의 독립 ID 정확도(m21_reid), 무릎·키 비율로 정한 전신 표시 정확도(m25_fullbody)

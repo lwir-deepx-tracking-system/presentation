@@ -164,3 +164,9 @@ body{font-family:Pretendard,"Noto Sans KR",sans-serif}
 @media print{.slide{margin:0;break-after:page}.slide:last-child{break-after:auto}.content-slide{break-after:auto}.slide-control{display:none}}
 
 .team-nav{max-width:1920px;margin:16px auto;font-size:17px;color:#526277;padding:0 12px}.team-nav a{color:#002f6d}@media print{.team-nav{display:none}}
+
+/* 2026-11-20 readability: no slide text under 14px on the 1280x720 canvas (21px on the 1920x1080 slide) */
+.content-slide .meta,.content-slide .small-note,.content-slide .xlab,.content-slide p.label,.content-slide .pair-label,.content-slide .legend,.content-slide .figure-note-small,.content-slide figcaption{font-size:14px}
+.content-slide .legend span,.content-slide .chart b,.content-slide .chart span{font-size:max(14px,1em)}
+/* 2026-11-20 footer: page number only (team rule, work/DESIGN.md) */
+.team-footer{font-size:15px;color:#667085}

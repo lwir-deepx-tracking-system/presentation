@@ -1,0 +1,6 @@
+- 박스 = 머리 꼭대기~골반, 보이는 관절 2개 이상이면 공통 골격 틀의 크기·회전·위치를 맞춤, 몸이 가려지거나 화면 밖이어도 박스가 줄지 않음 — model-bank 31ac21b tracking_server/models/detect/build_scripts/yolo26m_pose_otp2_bodybox_build/skeleton_box.py (파일 첫 설명), tracking_server/models/README.md (몸 네모 설명)
+- 조준점은 얼굴과 가슴 사이 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md (첫 문단)
+- 장치 상체 E10의 박스는 머리~골반 — model-bank 31ac21b tracking_server/docs/box-display-2026-11-19.md
+- 관절 2개 미만(또는 틀 맞춤 실패) 사람용 비율 규칙(높이 0.531·폭 0.681, 11/15), 옵션 0은 11/15 이전과 같음(그런 사람은 전신 박스 그대로 학습) — model-bank 31ac21b lwir_pose_plan/README.md 6-1절, 7-6절
+- 이후 학습에서 이 규칙은 꺼짐(box_only_body 0): NF·V7 — 작성자 PC 기록(비공개): RUN_MANIFEST.json (FT16v4_NF_s0, FT16v7_FX_reviewed264_cos24_s0); E10 — 작성자 PC 기록(비공개): TRAIN_PROTOCOL.json (650장 상체 학습, --box-only-body 0). PC 코드에서는 비율을 0.543·0.709로 다시 쟀지만 역시 꺼져 있음 — 같은 RUN_MANIFEST.json
+- 그림 — 직접 그린 개념도

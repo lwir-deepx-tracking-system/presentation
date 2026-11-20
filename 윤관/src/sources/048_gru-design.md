@@ -1,0 +1,4 @@
+- Cho et al., 2014 — arXiv:1406.1078
+- 위치 기억 구현 코드 — model-bank 6cf676d tracking_server/src/track/position_memory.py
+- 15프레임 보정 뒤 Kalman만, 관측 4장 미만·관절 없는 64 px 이상 사람은 Kalman — model-bank 31ac21b tracking_server/src/track/position_memory.py (KP_STEPS, KP_MINOBS, KP_NOKPT_H)
+- 장치는 11-16 관절 GRU 사용 — model-bank 31ac21b HANDOFF.md (2026-11-19 추종 대상의 기존 번호 복구와 관절 모델 추가 학습)

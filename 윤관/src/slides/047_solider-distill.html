@@ -1,0 +1,4 @@
+<article class="content-slide" id="solider-distill"><header><h1>SOLIDER 교사 적응 비교</h1></header>
+<p class="meta">같은 RepVGG 초기화·검수 데이터 · 조건별 3시드 × 8ep × 304 업데이트</p>
+<div class="ev-two" style="margin-top:36px"><div class="ev-panel"><h2>교사 적응 사전 기준</h2><div class="label-stat"><strong>0.001007</strong><span>코사인 변화 중앙값</span></div><div class="label-stat"><strong>0.003 미달</strong><span>사전 기준 통과 실패</span></div><p class="recent-note">이후 증류는 별도 탐색 비교</p></div><div class="ev-panel"><h2>Rank-1 정답 수 · 3시드</h2><div class="label-stat"><strong>386 / 432</strong><span>TMOT · 직접 A · 고정 교사 B · 적응 교사 C 모두 같음</span></div><div class="label-stat"><strong>200–201 / 218</strong><span>CAMEL · 조건별 차이 0~1개</span></div><p class="recent-note">3시드 모두 사전 유지력 기준 미충족</p></div></div>
+<p class="recent-note">B의 고정 교사는 사전학습 SOLIDER를 11/10 실내 데이터로 먼저 튜닝한 ep3이다. 과거 TEST와 학습 원본이 겹쳐 그 TEST는 제외했다. 적응 교사의 추가 이득과 실제 카메라 ID 성능은 확인되지 않았다.</p></article>

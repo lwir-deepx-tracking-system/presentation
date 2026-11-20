@@ -1,0 +1,3 @@
+- 제어 시험과 참고 문헌 — model-bank 31ac21b tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md
+- 적분 포함 PID 30/5/1·30/1/6 세로 8회 반전, 불감대 비교는 PD 30/0/6 고정에서 0.04 vs 0.06, 반전 4 → 1회, 가로 뒤처짐 14.3 → 18.6 px, 시험 최고 속도 10 — model-bank 31ac21b tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md (1, 3.4, 6, 7, 8절); 학습로그/짐벌_s7_수직응답.csv
+- 운영 최고 속도 100 — model-bank 31ac21b HANDOFF.md (2절)

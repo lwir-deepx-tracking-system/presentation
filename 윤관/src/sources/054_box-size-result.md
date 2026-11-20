@@ -1,0 +1,2 @@
+- 상자 크기 비교 · 11-16 — model-bank 6cf676d tracking_server/models/README.md
+- 장치는 크기 필터(size) 그대로, 상체 통일 2판은 공개 val-B 규칙 1개를 못 맞춰 켜지 않음 — model-bank 31ac21b tracking_server/models/README.md (측정 1·2), HANDOFF.md (2026-11-16 상체 네모로 통일 2판)

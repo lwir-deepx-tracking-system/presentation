@@ -1,0 +1,4 @@
+<article class="content-slide" id="int8-theory"><header><h1>INT8 양자화와 보정 원리</h1></header>
+<div class="ev-flow" style="margin-top:55px"><div><strong>FP32 모델</strong><span>학습 후 실수 연산<br>ONNX 그래프 준비</span></div><i>→</i><div><strong>보정 입력</strong><span>대표 이미지를 넣어<br>연산값 범위를 관찰</span></div><i>→</i><div><strong>양자화</strong><span>관찰한 범위를 바탕으로<br>정수 연산에 맞게 변환</span></div><i>→</i><div><strong>DXNN</strong><span>M1용 그래프 생성<br>정확도 검증은 별도</span></div></div>
+<div class="visual-take">목표: 장치가 실행할 수 있는 형식과 정밀도로 변환</div>
+<p class="recent-note">일반적인 학습 후 양자화 개념도. 실제 scale·zero-point 및 세부 보정 데이터는 공개 기록에서 확인되지 않았다.</p></article>

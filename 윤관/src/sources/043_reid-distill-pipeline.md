@@ -1,0 +1,3 @@
+- Hinton et al., 증류 — arXiv:1503.02531
+- 서로 다른 구조 간 증류 — arXiv:2207.05273
+- 교사·학생 실험 기록 — model-bank 6cf676d tracking_server/models/README.md (312~346행)

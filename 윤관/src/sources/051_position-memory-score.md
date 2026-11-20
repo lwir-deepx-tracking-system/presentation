@@ -1,0 +1,2 @@
+- 장치 재생 비교 · 11-16 — model-bank 6cf676d tracking_server/models/README.md
+- 14편 IDF1 Kalman 74.1, 새 GRU 74.7(+0.6, 90% 구간 −0.8~+2.3), seq_018은 TEST 14편에 포함 — model-bank 6cf676d tracking_server/models/README.md, HANDOFF.md; 작성자 PC 기록(비공개): test_fix.json

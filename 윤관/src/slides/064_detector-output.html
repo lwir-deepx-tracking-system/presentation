@@ -1,0 +1,4 @@
+<article class="content-slide" id="detector-output"><header><h1>DXNN 출력 후처리</h1></header>
+<div class="ev-flow" style="margin-top:50px"><div><strong>M1 입력</strong><span>640×480 · UINT8<br>흑백을 3채널로 복제</span></div><i>→</i><div><strong>DXNN 출력</strong><span>box × 3 · class × 3<br>출력은 FLOAT32</span></div><i>→</i><div><strong>서버 후처리</strong><span>상자 복원 · sigmoid<br>클래스별 NMS</span></div><i>→</i><div><strong>추적</strong><span>사람 박스를<br>추적기 · ID 연결로 전달</span></div></div>
+<div class="visual-take">score &gt; 0.001 · NMS IoU 0.7 · 최대 300개</div>
+<p class="recent-note">기본 FLIR 분할 출력 모델의 서버 설정 · NMS-free 모델과 다른 경로</p></article>

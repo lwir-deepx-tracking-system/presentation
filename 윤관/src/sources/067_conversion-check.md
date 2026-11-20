@@ -1,0 +1,1 @@
+- 컴파일 메타데이터와 검증 범위 — model-bank 6cf676d tracking_server/models/detect/yolo26m/yolo26m_flir_nms_640x480_compile_metadata.json

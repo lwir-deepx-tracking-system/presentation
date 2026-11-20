@@ -1,0 +1,39 @@
+<article class="content-slide" id="m23-position-result" data-section="추적 보완 모델"><header><h1>위치 예측 결과</h1></header>
+<style>
+#m23-position-result .meta{font-size:17px;margin-top:20px}
+#m23-position-result svg{display:block;width:100%;height:auto;margin-top:14px}
+#m23-position-result svg text{font-family:Pretendard,sans-serif}
+#m23-position-result .t-h{font-size:21px;font-weight:700;fill:#263c55}
+#m23-position-result .t-s{font-size:16px;fill:#526277}
+#m23-position-result .t-l{font-size:19px;font-weight:600;fill:#263c55;text-anchor:end}
+#m23-position-result .t-v{font-size:19px;font-weight:700;fill:#193654}
+#m23-position-result .t-a{font-size:15px;fill:#526277;text-anchor:middle}
+#m23-position-result .t-d{font-size:19px;font-weight:700}
+</style>
+<p class="meta">자체 녹화 TEST 14편 · 놓침 238건 · PC 재생 · 원인 분석에 쓴 영상</p>
+<svg viewBox="0 0 1168 400" role="img" aria-label="위치 오차 Kalman 0.110, GRU 수정 전 0.336, 수정 후 0.122, Mamba 수정 전 0.361, 수정 후 0.127. IDF1 Kalman 74.1, GRU 수정 전 61.7, 수정 후 74.7, Mamba 수정 전 64.0, 수정 후 73.4">
+<text x="220" y="26" class="t-h">위치 오차 · 낮을수록 좋음</text>
+<text x="220" y="52" class="t-s">놓친 뒤 5·10·15프레임 · 사람 키 대비</text>
+<text x="730" y="26" class="t-h">IDF1 (%) · 높을수록 좋음</text>
+<text x="730" y="52" class="t-s">번호 유지 점수 · 같은 14편</text>
+<line x1="20" y1="138" x2="1148" y2="138" stroke="#dce2ea"/><line x1="20" y1="250" x2="1148" y2="250" stroke="#dce2ea"/>
+<text x="200" y="110" class="t-l">Kalman</text>
+<text x="200" y="166" class="t-l">GRU 수정 전</text><text x="200" y="222" class="t-l">GRU 수정 후</text>
+<text x="200" y="278" class="t-l">Mamba 수정 전</text><text x="200" y="334" class="t-l">Mamba 수정 후</text>
+<line x1="220" y1="72" x2="220" y2="358" stroke="#8191a6"/>
+<rect x="220" y="86" width="110" height="34" fill="#073771"/><text x="338" y="110" class="t-v">0.110</text>
+<rect x="220" y="142" width="336" height="34" fill="#a9cbc6"/><text x="564" y="166" class="t-v">0.336</text>
+<rect x="220" y="198" width="122" height="34" fill="#41817d"/><text x="350" y="222" class="t-v">0.122</text><text x="412" y="222" class="t-d" fill="#2f6b65">−64%</text>
+<rect x="220" y="254" width="361" height="34" fill="#e6c9a8"/><text x="589" y="278" class="t-v">0.361</text>
+<rect x="220" y="310" width="127" height="34" fill="#b97a3c"/><text x="355" y="334" class="t-v">0.127</text><text x="417" y="334" class="t-d" fill="#9a5b1e">−65%</text>
+<text x="220" y="382" class="t-a">0</text><text x="420" y="382" class="t-a">0.2</text><text x="620" y="382" class="t-a">0.4</text>
+<line x1="730" y1="72" x2="730" y2="358" stroke="#8191a6"/>
+<rect x="730" y="86" width="266.7" height="34" fill="#073771"/><text x="1004.7" y="110" class="t-v">74.1</text>
+<rect x="730" y="142" width="222.1" height="34" fill="#a9cbc6"/><text x="960.1" y="166" class="t-v">61.7</text>
+<rect x="730" y="198" width="268.8" height="34" fill="#41817d"/><text x="1006.8" y="222" class="t-v">74.7</text><text x="1060" y="222" class="t-d" fill="#2f6b65">+13.0%p</text>
+<rect x="730" y="254" width="230.4" height="34" fill="#e6c9a8"/><text x="968.4" y="278" class="t-v">64.0</text>
+<rect x="730" y="310" width="264.2" height="34" fill="#b97a3c"/><text x="1002.2" y="334" class="t-v">73.4</text><text x="1056" y="334" class="t-d" fill="#9a5b1e">+9.4%p</text>
+<text x="730" y="382" class="t-a">0</text><text x="910" y="382" class="t-a">50</text><text x="1090" y="382" class="t-a">100</text>
+</svg>
+<div class="visual-take">수정으로 오차 −64%, Kalman보다는 약간 큼 · IDF1은 비슷(+0.6%p) → 관절 GRU 유지</div>
+</article>

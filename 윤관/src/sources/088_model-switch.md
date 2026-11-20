@@ -1,0 +1,1 @@
+- 모델 전환과 실카메라 기록 — model-bank ccf1ea9 HANDOFF.md

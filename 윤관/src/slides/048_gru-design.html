@@ -1,0 +1,4 @@
+<article class="content-slide" id="gru-design"><header><h1>GRU 가림 위치 예측 구조</h1></header>
+<div class="ev-flow" style="margin-top:48px"><div><strong>보일 때</strong><span>최근 최대 20프레임<br>상자 · 속도 · 관절 기록</span></div><i>→</i><div><strong>가려짐</strong><span>Kalman 예측과<br>카메라 움직임 보정</span></div><i>→</i><div><strong>GRU 보정</strong><span>이전 이력으로<br>상자 중심 · 크기 보정</span></div><i>→</i><div><strong>15프레임 뒤</strong><span>Kalman 경로만 사용<br>관측 4장 미만이면 보정 안 함</span></div></div>
+<div class="visual-take">위치 기억: 놓친 동안의 박스 예측 · ID 재식별 및 박스 크기 필터와 별개</div>
+<p class="recent-note">GRU 이론 참고: Cho 외(2014, arXiv:1406.1078) · 서버는 NumPy로 순전파한다 · 운영 장치는 11/16 관절 GRU를 쓴다.</p></article>

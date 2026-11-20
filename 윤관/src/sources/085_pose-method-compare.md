@@ -1,0 +1,1 @@
+- 비교 설계와 3단계 실험 — model-bank ccf1ea9 tracking_server/research/lwir_pose_plan/README.md

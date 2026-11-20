@@ -1,0 +1,2 @@
+- FastTrackTr 학습·평가 · 11-17 — model-bank 6cf676d tracking_server/research/LWIR_PRESENTATION_KO.md
+- 기존 검출+추적 TMOT 6편 평균 IDF1 66.3 — 작성자 PC 기록(비공개): WORKLOG.md 2026-11-14; model-bank 31ac21b INFO.json status

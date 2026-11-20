@@ -1,0 +1,1 @@
+- 제어 설정·실험 방법 — model-bank b0358a0 tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md

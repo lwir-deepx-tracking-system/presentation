@@ -1,0 +1,52 @@
+<article class="content-slide" id="m21-reid" data-section="추적 보완 모델"><header><h1>외형 모델</h1></header>
+<style>
+#m21-reid .m21-wrap{display:grid;grid-template-columns:352px 1fr;gap:36px;margin-top:28px}
+#m21-reid .m21-model{display:flex;flex-direction:column;gap:0;padding-top:12px}
+#m21-reid .m21-node{background:#f3f6fa;border-left:6px solid #41817d;padding:22px 22px}
+#m21-reid .m21-node.teacher{border-left-color:#9aa7b6}
+#m21-reid .m21-node b{display:block;font-size:24px;color:#002f6d}
+#m21-reid .m21-node span{display:block;font-size:19px;color:#526277;margin-top:6px}
+#m21-reid .m21-arrow{font-size:21px;color:#477c76;font-weight:600;padding:14px 0 14px 24px}
+#m21-reid .m21-dev{margin-top:26px;padding:16px 20px;border:2px solid #41817d;border-radius:6px;font-size:20px;color:#174b56;font-weight:600}
+#m21-reid .m21-right h2{font-size:23px}
+#m21-reid .m21-right .meta{font-size:16px;margin-top:6px}
+#m21-reid svg{display:block;width:100%;height:auto;margin-top:8px}
+#m21-reid svg text{font-family:Pretendard,sans-serif}
+#m21-reid .t-h{font-size:20px;font-weight:700;fill:#263c55}
+#m21-reid .t-v{font-size:20px;font-weight:700;fill:#193654;text-anchor:middle}
+#m21-reid .t-x{font-size:18px;fill:#26364a;text-anchor:middle}
+#m21-reid .t-a{font-size:15px;fill:#526277;text-anchor:end}
+#m21-reid .t-d{font-size:20px;font-weight:700;fill:#9a5b1e;text-anchor:middle}
+</style>
+<div class="m21-wrap">
+<div class="m21-model">
+<div class="m21-node teacher"><b>SOLIDER 교사</b><span>Swin-Tiny · 768차원</span></div>
+<div class="m21-arrow">↓ 증류</div>
+<div class="m21-node"><b>RepVGG 학생</b><span>128차원 · M1 INT8</span></div>
+<p class="m21-dev">장치 사용: 검수 264장으로<br>미세조정한 RepVGG</p>
+</div>
+<div class="m21-right">
+<h2>추적기에 교사를 직접 넣은 비교</h2>
+<p class="meta">FLIR 3,749프레임 · 같은 검출·추적기 · PC FP32 · 1회</p>
+<svg viewBox="0 0 740 372" role="img" aria-label="IDF1 RepVGG 66.74, SOLIDER 66.57 퍼센트. ID 전환 RepVGG 99회, SOLIDER 100회">
+<text x="40" y="26" class="t-h">IDF1 (%) · 높을수록 좋음</text>
+<line x1="60" y1="300" x2="330" y2="300" stroke="#8191a6"/>
+<line x1="60" y1="80" x2="330" y2="80" stroke="#e3e8ef"/><line x1="60" y1="190" x2="330" y2="190" stroke="#e3e8ef"/>
+<text x="52" y="305" class="t-a">0</text><text x="52" y="195" class="t-a">50</text><text x="52" y="85" class="t-a">100</text>
+<rect x="90" y="153.2" width="80" height="146.8" fill="#41817d"/><rect x="230" y="153.5" width="80" height="146.5" fill="#9aa7b6"/>
+<text x="130" y="143" class="t-v">66.74</text><text x="270" y="143" class="t-v">66.57</text>
+<text x="130" y="326" class="t-x">RepVGG</text><text x="270" y="326" class="t-x">SOLIDER</text>
+<text x="200" y="64" class="t-d">−0.2%p</text>
+<text x="420" y="26" class="t-h">ID 전환 (회) · 낮을수록 좋음</text>
+<line x1="440" y1="300" x2="710" y2="300" stroke="#8191a6"/>
+<line x1="440" y1="80" x2="710" y2="80" stroke="#e3e8ef"/><line x1="440" y1="190" x2="710" y2="190" stroke="#e3e8ef"/>
+<text x="432" y="305" class="t-a">0</text><text x="432" y="195" class="t-a">60</text><text x="432" y="85" class="t-a">120</text>
+<rect x="470" y="118.5" width="80" height="181.5" fill="#41817d"/><rect x="610" y="116.7" width="80" height="183.3" fill="#9aa7b6"/>
+<text x="510" y="108" class="t-v">99</text><text x="650" y="106" class="t-v">100</text>
+<text x="510" y="326" class="t-x">RepVGG</text><text x="650" y="326" class="t-x">SOLIDER</text>
+<text x="580" y="64" class="t-d">+1회</text>
+</svg>
+</div>
+</div>
+<div class="visual-take">큰 교사로 바꿔도 번호 유지는 그대로 → 작은 RepVGG 유지</div>
+</article>

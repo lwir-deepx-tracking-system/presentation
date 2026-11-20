@@ -1,0 +1,54 @@
+<article class="content-slide" id="m20-branches" data-section="추적 보완 모델"><header><h1>추적 보완 세 갈래</h1></header>
+<style>
+#m20-branches .m20-q{margin-top:24px;font-size:21px;color:#26364a}
+#m20-branches .m20-q b{color:#002f6d;margin-right:10px}
+#m20-branches .m20-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:18px}
+#m20-branches .m20-card{background:#f3f6fa;border-top:5px solid #477c76;padding:20px 22px 22px;display:flex;flex-direction:column;height:384px}
+#m20-branches .m20-card.hold{border-top-color:#9aa7b6}
+#m20-branches .m20-card h2{font-size:25px}
+#m20-branches .m20-card h2 small{font-size:18px;color:#526277;font-weight:400;margin-left:8px}
+#m20-branches .m20-card svg{display:block;width:100%;height:124px;margin:14px 0 12px}
+#m20-branches .m20-card svg text{font:16px Pretendard,sans-serif;fill:#26364a;text-anchor:middle}
+#m20-branches .m20-card svg .b{font-weight:700;fill:#002f6d}
+#m20-branches .m20-do{font-size:20px;color:#202b3a;font-weight:600}
+#m20-branches .m20-badge{margin-top:auto;align-self:flex-start;padding:7px 16px;border-radius:5px;font-size:19px;font-weight:700;background:#dfeeed;color:#174b56}
+#m20-branches .hold .m20-badge{background:#e9edf2;color:#526277}
+</style>
+<p class="m20-q"><b>문제</b>가려졌다 다시 나온 사람의 번호 지키기</p>
+<div class="m20-grid">
+<section class="m20-card"><h2>외형<small>ReID</small></h2>
+<svg viewBox="0 0 320 124" role="img" aria-label="가려지기 전과 뒤의 같은 사람을 모습으로 비교">
+<defs><marker id="m20-ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#477c76"/></marker></defs>
+<g fill="#073771"><circle cx="64" cy="44" r="12"/><rect x="49" y="60" width="30" height="58" rx="11"/><circle cx="256" cy="44" r="12"/><rect x="241" y="60" width="30" height="58" rx="11"/></g>
+<text x="64" y="20" class="b">ID 3</text><text x="256" y="20" class="b">ID 3</text>
+<line x1="96" y1="84" x2="222" y2="84" stroke="#477c76" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#m20-ar1)"/>
+<text x="160" y="70">모습 비교</text>
+</svg>
+<p class="m20-do">SOLIDER 교사 → RepVGG 학생</p>
+<p class="m20-badge">장치 사용</p></section>
+<section class="m20-card"><h2>위치 예측<small>GRU · Mamba</small></h2>
+<svg viewBox="0 0 320 124" role="img" aria-label="가림 뒤로 들어간 사람의 위치를 점선 상자로 예측">
+<rect x="28" y="24" width="48" height="96" fill="none" stroke="#073771" stroke-width="2.5"/>
+<g fill="#073771"><circle cx="52" cy="42" r="10"/><rect x="40" y="56" width="24" height="58" rx="9"/></g>
+<rect x="116" y="8" width="52" height="116" fill="#c3ccd7"/><text x="142" y="72">가림</text>
+<rect x="186" y="24" width="48" height="96" fill="none" stroke="#477c76" stroke-width="2.5" stroke-dasharray="7 5"/>
+<rect x="252" y="24" width="48" height="96" fill="none" stroke="#477c76" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="243" y="16" class="b">예측</text>
+</svg>
+<p class="m20-do">Kalman 경로 + GRU 보정</p>
+<p class="m20-badge">장치 사용</p></section>
+<section class="m20-card hold"><h2>종단간<small>FastTrackTr</small></h2>
+<svg viewBox="0 0 320 124" role="img" aria-label="영상을 한 모델이 받아 상자와 번호를 함께 출력">
+<defs><marker id="m20-ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8da3bf"/></marker></defs>
+<text x="30" y="68">영상</text>
+<line x1="54" y1="62" x2="88" y2="62" stroke="#8da3bf" stroke-width="2.5" marker-end="url(#m20-ar3)"/>
+<rect x="94" y="16" width="132" height="94" rx="8" fill="#fff" stroke="#073771" stroke-width="2"/>
+<text x="160" y="56" class="b">검출 + 번호</text><text x="160" y="82">한 모델</text>
+<line x1="230" y1="62" x2="262" y2="62" stroke="#8da3bf" stroke-width="2.5" marker-end="url(#m20-ar3)"/>
+<text x="292" y="68">상자·ID</text>
+</svg>
+<p class="m20-do">기존 검출+추적보다 낮음</p>
+<p class="m20-badge">보류</p></section>
+</div>
+<div class="visual-take">외형·위치 예측은 장치에서 사용, 종단간은 보류</div>
+</article>

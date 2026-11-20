@@ -1,0 +1,4 @@
+<article class="content-slide" id="fasttrack-overview"><header><h1>FastTrackTr 구조</h1></header>
+<div class="ev-two" style="margin-top:26px"><div class="ev-panel"><h2>논문 구조 · 개념</h2><div class="ev-nodebox">현재 프레임 특징</div><div class="ev-down">↓</div><div class="ev-nodebox">Historical Decoder<br><small>과거 특징: Historical Encoder</small></div><div class="ev-down">↓</div><div class="ev-nodebox">박스 + ID 임베딩 → 연결</div><p class="recent-note">Hungarian·Kalman 등 연결 단계 사용</p></div>
+<div class="ev-panel"><h2>프로젝트의 DX-M1 구현</h2><div class="ev-nodebox">AE: 특징 추출 · 300개 질의</div><div class="ev-down">↓</div><div class="ev-nodebox">디코더 2층 B0 / B1<br><small>직전 디코더 출력을 다음 입력으로</small></div><div class="ev-down">↓</div><div class="ev-nodebox">박스 + id_words → ID 연결</div><p class="recent-note">NPU 제약으로 일반 attention 등 구조 수정</p></div></div>
+<p class="recent-note">왼쪽은 논문 설명, 오른쪽은 프로젝트 코드와 INFO 기준. 실시간 추적은 모델 출력과 연결 단계가 함께 동작한다. 논문: arXiv:2411.15811.</p></article>

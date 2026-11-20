@@ -1,0 +1,111 @@
+<article class="content-slide" id="m36-latency" data-section="짐벌 추종"><header><h1>짐벌까지 지연</h1></header>
+<style>
+#m36-latency .ev-panel{padding:12px 22px 4px}
+#m36-latency .ev-panel h2{font-size:22px;margin:0}
+#m36-latency svg{display:block;width:100%;height:auto}
+#m36-latency svg text{font-family:Pretendard,sans-serif}
+#m36-latency .t-h{font-size:19px;font-weight:700;fill:#263c55}
+#m36-latency .t-s{font-size:16px;fill:#526277}
+#m36-latency .t-l{font-size:18px;font-weight:600;fill:#263c55;text-anchor:end}
+#m36-latency .t-in{font-size:17px;font-weight:600;fill:#fff;text-anchor:middle}
+#m36-latency .t-ind{font-size:17px;font-weight:600;fill:#193654;text-anchor:middle}
+#m36-latency .t-v{font-size:19px;font-weight:700;fill:#193654}
+#m36-latency .t-d{font-size:19px;font-weight:700;fill:#2f6b65}
+#m36-latency .t-a{font-size:15px;fill:#526277;text-anchor:middle}
+#m36-latency .t-g{font-size:16px;fill:#263c55}
+#m36-latency .m36-fix{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:14px}
+#m36-latency .m36-fix .ev-panel{padding:10px 16px 2px}
+#m36-latency .visual-take{margin-top:14px}
+#m36-latency .meta{font-size:14px;margin-top:8px}
+</style>
+<section class="ev-panel" style="margin-top:20px">
+<svg viewBox="0 0 1124 262" role="img" aria-label="장면에서 짐벌 반응까지: 11/15 점검 약 200 ms(카메라 35~55 추정, 서버 30 실측, 명령 대기 15 추정, 짐벌 반응 108 실측), 고친 뒤 약 185 ms(명령 대기 0.6 실측), 7% 감소">
+<defs>
+<pattern id="m36-h1" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#e6ebf1"/><line x1="0" y1="0" x2="0" y2="9" stroke="#b4c0cd" stroke-width="3"/></pattern>
+<pattern id="m36-h2" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#f7ebde"/><line x1="0" y1="0" x2="0" y2="9" stroke="#ddb48a" stroke-width="3"/></pattern>
+
+</defs>
+<text x="0" y="22" class="t-h">장면 → 짐벌이 움직이기까지 (ms)</text>
+<rect x="740" y="8" width="18" height="18" fill="#073771"/><rect x="760" y="8" width="18" height="18" fill="#41817d"/><text x="784" y="23" class="t-g">실측</text>
+<rect x="840" y="8" width="18" height="18" fill="url(#m36-h1)" stroke="#9aa7b6"/><text x="864" y="23" class="t-g">추정</text>
+<text x="138" y="86" class="t-l">11/15 점검</text>
+<rect x="151.0" y="53" width="173.9" height="52" fill="url(#m36-h1)" stroke="#9aa7b6" stroke-width="1.5"/>
+<text x="238.0" y="86" class="t-ind">카메라 35~55</text>
+<rect x="325.9" y="52" width="120.0" height="54" fill="#073771" stroke="#fff" stroke-width="1.5"/>
+<text x="385.9" y="86" class="t-in">서버 30</text>
+<rect x="446.9" y="53" width="55.7" height="52" fill="url(#m36-h2)" stroke="#c99a6a" stroke-width="1.5"/>
+<text x="474.7" y="77" class="t-ind" style="fill:#9a5b1e">대기</text>
+<text x="474.7" y="97" class="t-ind" style="fill:#9a5b1e">15</text>
+<rect x="503.6" y="52" width="422.2" height="54" fill="#41817d" stroke="#fff" stroke-width="1.5"/>
+<text x="714.7" y="86" class="t-in">짐벌 반응 108</text>
+<text x="937.8" y="86" class="t-v">약 200</text>
+<text x="138" y="176" class="t-l">고친 뒤</text>
+<rect x="151.0" y="143" width="173.9" height="52" fill="url(#m36-h1)" stroke="#9aa7b6" stroke-width="1.5"/>
+<text x="238.0" y="176" class="t-ind">카메라 35~55</text>
+<rect x="325.9" y="142" width="120.0" height="54" fill="#073771" stroke="#fff" stroke-width="1.5"/>
+<text x="385.9" y="176" class="t-in">서버 30</text>
+<rect x="445.9" y="142" width="2.3" height="54" fill="#b97a3c" stroke="#fff" stroke-width="1.5"/>
+<line x1="447.1" y1="196" x2="447.1" y2="208" stroke="#b97a3c" stroke-width="2"/>
+<text x="447.1" y="226" class="t-ind" style="fill:#9a5b1e">대기 0.6</text>
+<rect x="448.3" y="142" width="422.2" height="54" fill="#41817d" stroke="#fff" stroke-width="1.5"/>
+<text x="659.4" y="176" class="t-in">짐벌 반응 108</text>
+<text x="882.4" y="176" class="t-v">약 185</text>
+<text x="954.4" y="176" class="t-d">−7%</text>
+<line x1="150" y1="46" x2="150" y2="202" stroke="#8191a6"/>
+<text x="150.0" y="254" class="t-a">0</text>
+<text x="345.5" y="254" class="t-a">50</text>
+<text x="540.9" y="254" class="t-a">100</text>
+<text x="736.4" y="254" class="t-a">150</text>
+<text x="931.8" y="254" class="t-a">200</text>
+</svg>
+</section>
+<div class="m36-fix">
+<section class="ev-panel"><svg viewBox="0 0 342 168" role="img" aria-label="결과에서 직렬 명령까지 평균 13.3에서 0.6 ms, 95% 감소">
+<text x="0" y="20" class="t-h">결과 오면 바로 명령</text>
+<text x="0" y="43" class="t-s">결과 → 명령 평균 (ms)</text>
+<line x1="44" y1="56" x2="44" y2="138" stroke="#8191a6"/>
+<text x="34" y="83" class="t-l">전</text>
+<text x="34" y="123" class="t-l">후</text>
+<rect x="44" y="60" width="221.7" height="32" fill="#9aa7b6"/>
+<text x="273.7" y="83" class="t-v">13.3</text>
+<rect x="44" y="100" width="10.0" height="32" fill="#41817d"/>
+<text x="62.0" y="123" class="t-v">0.6</text>
+<text x="99.4" y="123" class="t-d">−95%</text>
+<text x="44.0" y="160" class="t-a">0</text>
+<text x="127.3" y="160" class="t-a">5</text>
+<text x="210.7" y="160" class="t-a">10</text>
+<text x="294.0" y="160" class="t-a">15</text>
+</svg></section>
+<section class="ev-panel"><svg viewBox="0 0 342 168" role="img" aria-label="카메라 그림이 0.2초 안팎 멈추는 일 분당 8.4회에서 0회">
+<text x="0" y="20" class="t-h">카메라 읽기 박자 고정</text>
+<text x="0" y="43" class="t-s">0.2초 그림 멈춤 (분당)</text>
+<line x1="44" y1="56" x2="44" y2="138" stroke="#8191a6"/>
+<text x="34" y="83" class="t-l">전</text>
+<text x="34" y="123" class="t-l">후</text>
+<rect x="44" y="60" width="210.0" height="32" fill="#9aa7b6"/>
+<text x="262.0" y="83" class="t-v">8.4</text>
+<text x="54.0" y="123" class="t-v">0</text>
+<text x="75.2" y="123" class="t-d">−100%</text>
+<text x="44.0" y="160" class="t-a">0</text>
+<text x="169.0" y="160" class="t-a">5</text>
+<text x="294.0" y="160" class="t-a">10</text>
+</svg></section>
+<section class="ev-panel"><svg viewBox="0 0 342 168" role="img" aria-label="짐벌 명령 계산 p95 113에서 37 마이크로초, 67% 감소">
+<text x="0" y="20" class="t-h">명령 계산 C++로</text>
+<text x="0" y="43" class="t-s">30명 합성 p95 (µs)</text>
+<line x1="44" y1="56" x2="44" y2="138" stroke="#8191a6"/>
+<text x="34" y="83" class="t-l">전</text>
+<text x="34" y="123" class="t-l">후</text>
+<rect x="44" y="60" width="235.4" height="32" fill="#9aa7b6"/>
+<text x="287.4" y="83" class="t-v">113</text>
+<rect x="44" y="100" width="77.1" height="32" fill="#41817d"/>
+<text x="129.1" y="123" class="t-v">37</text>
+<text x="161.5" y="123" class="t-d">−67%</text>
+<text x="44.0" y="160" class="t-a">0</text>
+<text x="169.0" y="160" class="t-a">60</text>
+<text x="294.0" y="160" class="t-a">120</text>
+</svg></section>
+</div>
+<div class="visual-take">명령 대기와 카메라 멈춤은 없앰 · 남은 시간 대부분은 카메라와 짐벌 모터 반응</div>
+<p class="meta">11/15 장치 점검 · 전후는 가상 직렬·카메라 기록 · 실제 짐벌 종단 지연 미측정</p>
+</article>

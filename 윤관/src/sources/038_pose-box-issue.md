@@ -1,0 +1,2 @@
+- 오류 분석과 수정 계획 — model-bank ccf1ea9 tracking_server/research/lwir_pose_plan/README.md
+- 이후 학습에서 비율 변환 꺼짐(box_only_body 0): NF·V7 — 작성자 PC 기록(비공개): RUN_MANIFEST.json (FT16v4_NF_s0, FT16v7_FX_reviewed264_cos24_s0); 상체 E10 — 작성자 PC 기록(비공개): TRAIN_PROTOCOL.json

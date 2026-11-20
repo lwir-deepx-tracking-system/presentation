@@ -1,0 +1,51 @@
+<article class="content-slide" id="m26-fasttracktr" data-section="추적 보완 모델"><header><h1>FastTrackTr</h1></header>
+<style>
+#m26-fasttracktr .m26-grid{display:grid;grid-template-columns:400px 1fr;gap:28px;margin-top:24px}
+#m26-fasttracktr .ev-panel{padding:16px 22px 14px}
+#m26-fasttracktr .ev-panel h2{font-size:23px;margin:0 0 10px}
+#m26-fasttracktr .m26-flow{display:flex;flex-direction:column;align-items:stretch}
+#m26-fasttracktr .m26-node{background:#fff;border:2px solid #073771;border-radius:6px;padding:9px 14px;text-align:center;font-size:20px;font-weight:600;color:#002f6d}
+#m26-fasttracktr .m26-node.npu{border-color:#41817d;color:#174b56;background:#eef6f5}
+#m26-fasttracktr .m26-node.io{border:none;background:none;color:#26364a;font-weight:600;padding:4px 0}
+#m26-fasttracktr .m26-arr{text-align:center;color:#8da3bf;font-size:20px;line-height:1.1}
+#m26-fasttracktr .m26-chip{margin-top:12px;font-size:18px;color:#174b56;font-weight:600;text-align:center;background:#dfeeed;border-radius:5px;padding:7px 8px}
+#m26-fasttracktr svg{display:block;width:100%;height:auto}
+#m26-fasttracktr svg text{font-family:Pretendard,sans-serif}
+#m26-fasttracktr .t-h{font-size:20px;font-weight:700;fill:#263c55}
+#m26-fasttracktr .t-s{font-size:16px;fill:#526277}
+#m26-fasttracktr .t-l{font-size:18px;font-weight:600;fill:#263c55;text-anchor:end}
+#m26-fasttracktr .t-v{font-size:20px;font-weight:700;fill:#193654}
+#m26-fasttracktr .t-a{font-size:15px;fill:#526277;text-anchor:middle}
+#m26-fasttracktr .t-d{font-size:20px;font-weight:700;fill:#2f6b65}
+#m26-fasttracktr .t-n{font-size:18px;fill:#26364a}
+#m26-fasttracktr .meta{font-size:16px;margin-top:10px}
+</style>
+<div class="m26-grid">
+<section class="ev-panel"><h2>검출+번호 한 모델 · M1</h2>
+<div class="m26-flow">
+<div class="m26-node io">열화상 프레임</div><div class="m26-arr">↓</div>
+<div class="m26-node npu">특징 추출</div><div class="m26-arr">↓</div>
+<div class="m26-node npu">디코더 2층</div><div class="m26-arr">↓</div>
+<div class="m26-node">상자 + 번호 특징</div>
+</div>
+<p class="m26-chip">INT8 그래프 3개 · 보정 16장</p>
+</section>
+<section class="ev-panel"><h2>TMOT 6편 평균 IDF1</h2>
+<svg viewBox="0 0 676 338" role="img" aria-label="TMOT 6편 평균 IDF1: DanceTrack 학습 15.3, 열화상 추가 학습 27.1, 기존 검출과 추적 66.3">
+<text x="0" y="22" class="t-s">번호 유지 점수(%) · 높을수록 좋음</text>
+<line x1="196" y1="30" x2="196" y2="220" stroke="#8191a6"/>
+<text x="186" y="64" class="t-l">DanceTrack 학습</text>
+<rect x="196" y="42" width="61.2" height="36" fill="#9aa7b6"/><text x="265" y="67" class="t-v">15.3</text>
+<text x="186" y="122" class="t-l">+ 열화상 추가 학습</text>
+<rect x="196" y="100" width="108.4" height="36" fill="#41817d"/><text x="312" y="125" class="t-v">27.1</text><text x="368" y="125" class="t-d">+11.8%p</text>
+<text x="186" y="180" class="t-l">기존 검출+추적</text>
+<rect x="196" y="158" width="265.2" height="36" fill="#073771"/><text x="469" y="183" class="t-v">66.3</text>
+<text x="196" y="244" class="t-a">0</text><text x="296" y="244" class="t-a">25</text><text x="396" y="244" class="t-a">50</text><text x="496" y="244" class="t-a">75</text><text x="596" y="244" class="t-a">100</text>
+<line x1="0" y1="268" x2="676" y2="268" stroke="#dce2ea"/>
+<text x="0" y="300" class="t-n">녹화 11편: <tspan font-weight="700" fill="#2f6b65">9편 좋아짐</tspan> · <tspan font-weight="700" fill="#9a5b1e">실내 2편 나빠짐</tspan></text>
+</svg>
+</section>
+</div>
+<div class="visual-take">열화상 학습으로 올랐지만 기존의 절반 이하 → 11/15 학습 중단, 선택 기능으로만 유지</div>
+<p class="meta">장치에서 녹화 재생 채점 · 각 1회</p>
+</article>

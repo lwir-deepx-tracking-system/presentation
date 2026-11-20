@@ -1,0 +1,5 @@
+- 사람 AP50–95 YOLO26s 42.32% · YOLO26m 45.79%(+3.47%p), M1 호출 1회 p50 19.02 · 27.12 ms(+8.10 ms, +42.6%), 2026-11-06, FLIR 시험 영상 8편 3,749프레임, INT8 640×640 파일, NPU 코어 1개, conf 0.001, NMS IoU 0.7, 각 1회 — model-bank 31ac21b tracking_server/models/README.md (측정값)
+- 두 모델 학습 자료가 다름: YOLO26m FLIR 학습 10,491장, YOLO26s 10,742장 — model-bank 31ac21b tracking_server/models/README.md (화면 목록에 나오는 모델)
+- 처리량 46.5 → 72.5 FPS(+55.9%): 11-03 M1, 저장 FLIR 영상, 같은 계산, 검출 NPU 0·1 번갈아 + CPU 광류 + 외형 NPU 2 겹침, 출력 바이트 동일, 카메라→화면 지연과는 다른 값 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (5. M1 시간)
+- 장치 기본 검출기 YOLO26m_(FLIR) 640×480(11월 초), 이후 YOLO26m-pose 계열(상체 E10) — model-bank 31ac21b tracking_server/models/README.md, HANDOFF.md (2026-11-19 26m 시험 모델 선택 목록 정리)
+- 같은 640×480 YOLO26m 호출 시간은 p50 24.43 · p95 31.22 ms(2026-11-04, 임의 입력 300회)로 640×640 값과 다름 — model-bank 31ac21b tracking_server/models/README.md (측정값)

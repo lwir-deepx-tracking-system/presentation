@@ -1,0 +1,6 @@
+- epoch별 사람 AP50–95: 1 epoch 43.75%, 20 epoch 48.83%, 21 epoch 49.75%(+0.91%p), 27 epoch 최고 50.75%(50.7486), 30 epoch 50.62%(50.6209) — 학습로그/YOLO26m_FullFT_30epoch_validation.csv
+- 평가 방식: 학습 중 매 epoch 끝에 EMA 가중치를 공통 채점기(480×640 배치 형상)로 FLIR 검증 1,144장 평가, best.pt = 27 epoch — 작성자 PC 기록(비공개): train_full.py(validate 재정의), args.yaml(save_period −1); 학습로그/YOLO26m_FullFT_run_completed.json(best_epoch 27)
+- 11-19판의 '학습 완료 후 저장 체크포인트 평가' 설명은 틀려서 고침(체크포인트는 best·last 두 개만 저장)
+- 학습 시간 2시간 2분(시작·완료 시각 차 7,341.8초), RTX 4090을 YOLO26x 학습과 공유 — 학습로그/YOLO26m_FullFT_run_start.json, YOLO26m_FullFT_run_completed.json; 근거_30epoch.md
+- 50.72%와의 차이: 배포 YOLO26m을 같은 채점기로 다시 잰 값 50.72%(0.50719, AP50 0.8240) — 작성자 PC 기록(비공개): start_score.json(소형 사람 재학습 비교의 기준 채점); 학습 중 기록 50.75%와 0.03%p 차
+- 같은 검증셋으로 최고 epoch를 골랐으므로 독립 시험 점수가 아님

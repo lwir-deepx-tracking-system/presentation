@@ -1,0 +1,58 @@
+<article class="content-slide" id="m15-far-clean" data-section="자세·상체 모델">
+<style>
+#m15-far-clean .m15-steps{display:block;width:1168px;height:252px;margin-top:20px}
+#m15-far-clean .m15-steps .mid{text-anchor:middle}
+#m15-far-clean .m15-steps .sky{fill:#dfe4ea}
+#m15-far-clean .m15-steps .band{fill:#b9c3cd}
+#m15-far-clean .m15-steps .ground{fill:#cfd6dd}
+#m15-far-clean .m15-steps .tiny{fill:#f7f9fb}
+#m15-far-clean .m15-steps .auto{fill:none;stroke:#b4532a;stroke-width:2;stroke-dasharray:4 3}
+#m15-far-clean .m15-steps .person{fill:#f7f9fb}
+#m15-far-clean .m15-steps .gt{fill:none;stroke:#2c8180;stroke-width:3}
+#m15-far-clean .m15-steps .arrow{fill:none;stroke:#8da3bf;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+#m15-far-clean h2{font-size:21px;margin-top:20px}
+#m15-far-clean .m15-bars{display:block;width:1168px;height:96px;margin-top:8px}
+#m15-far-clean .visual-take{margin-top:16px}
+#m15-far-clean .meta{font-size:15px;margin-top:8px}
+</style>
+<header><h1>원거리 배경 정리</h1></header>
+<svg class="m15-steps" viewBox="0 0 1168 252" role="img" aria-label="개념도: 원본 프레임의 먼 줄에 정답 없는 사람이 있다. 위치마다 사람 없는 빈 배경을 만들고, 우리 정답 사람만 원본 픽셀 그대로 다시 붙인다">
+<text class="v-label mid" x="160" y="22">원본</text>
+<text class="v-label mid" x="584" y="22">빈 배경</text>
+<text class="v-label mid" x="1008" y="22">정답 사람 복원</text>
+<g>
+<rect class="sky" x="0" y="34" width="320" height="70"/><rect class="band" x="0" y="104" width="320" height="26"/><rect class="ground" x="0" y="130" width="320" height="74"/>
+<g class="tiny"><rect x="24" y="110" width="5" height="14" rx="2"/><rect x="46" y="111" width="5" height="13" rx="2"/><rect x="66" y="110" width="5" height="14" rx="2"/><rect x="150" y="111" width="5" height="13" rx="2"/><rect x="172" y="110" width="5" height="14" rx="2"/><rect x="250" y="110" width="5" height="14" rx="2"/><rect x="272" y="111" width="5" height="13" rx="2"/><rect x="296" y="110" width="5" height="14" rx="2"/></g>
+<rect class="auto" x="19" y="106" width="15" height="22"/><rect class="auto" x="61" y="106" width="15" height="22"/><rect class="auto" x="167" y="106" width="15" height="22"/><rect class="auto" x="267" y="106" width="15" height="22"/>
+<g class="person"><circle cx="101" cy="112" r="7"/><rect x="93" y="120" width="16" height="58" rx="5"/><circle cx="216" cy="116" r="6"/><rect x="209" y="123" width="14" height="48" rx="5"/></g>
+<rect class="gt" x="87" y="100" width="28" height="84"/><rect class="gt" x="203" y="105" width="26" height="72"/>
+
+</g>
+<path class="arrow" d="M340 119H396M384 107L398 119L384 131"/>
+<g>
+<rect class="sky" x="424" y="34" width="320" height="70"/><rect class="band" x="424" y="104" width="320" height="26"/><rect class="ground" x="424" y="130" width="320" height="74"/>
+<rect x="424" y="104" width="320" height="26" fill="none" stroke="#2c8180" stroke-width="2.5" stroke-dasharray="7 5"/>
+</g>
+<path class="arrow" d="M764 119H820M808 107L822 119L808 131"/>
+<g>
+<rect class="sky" x="848" y="34" width="320" height="70"/><rect class="band" x="848" y="104" width="320" height="26"/><rect class="ground" x="848" y="130" width="320" height="74"/>
+<g class="person"><circle cx="949" cy="112" r="7"/><rect x="941" y="120" width="16" height="58" rx="5"/><circle cx="1064" cy="116" r="6"/><rect x="1057" y="123" width="14" height="48" rx="5"/></g>
+<rect class="gt" x="935" y="100" width="28" height="84"/><rect class="gt" x="1051" y="105" width="26" height="72"/>
+</g>
+<text class="v-small mid" x="160" y="230" style="fill:#7a3a1c">먼 줄 자동 박스 8,049개 제외</text>
+<text class="v-small mid" x="584" y="230">위치 2곳 · 중간값 배경</text>
+<text class="v-small mid" x="1008" y="230" style="fill:#174b56">정답 박스 4,835개는 원본 그대로</text>
+</svg>
+<h2>정답 밖 사람 검출 · 학습 1,114장 (범용 F, 확신 0.5 이상)</h2>
+<svg class="m15-bars" viewBox="0 0 1168 96" role="img" aria-label="정리 전 1,806개, 정리 후 0개">
+<text class="v-label" x="0" y="31">정리 전</text>
+<line x1="109" y1="6" x2="109" y2="92" stroke="#7d92a5" stroke-width="2"/>
+<rect x="110" y="10" width="760" height="30" fill="#073771"/>
+<text class="v-value" x="882" y="33">1,806개</text>
+<text class="v-label" x="0" y="79">정리 후</text>
+<text class="v-value" x="122" y="81">0개</text>
+<text class="v-value" x="180" y="81" style="fill:#174b56">−100%</text>
+</svg>
+<div class="visual-take">정답 없는 먼 사람을 지워 배경으로 잘못 배우지 않게 함</div>
+<p class="meta">위 그림은 개념도</p>
+</article>

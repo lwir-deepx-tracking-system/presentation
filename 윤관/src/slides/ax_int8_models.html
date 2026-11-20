@@ -1,0 +1,22 @@
+<article class="content-slide" id="ax-int8-models" data-section="경량화·M1 실행"><header><h1>모델별 INT8 변환</h1></header>
+<style>
+#ax-int8-models table{width:100%;border-collapse:collapse;margin-top:26px}
+#ax-int8-models th,#ax-int8-models td{padding:11px 12px;border-bottom:1px solid #dce2ea;text-align:left;font-size:19px;color:#263c55;vertical-align:middle}
+#ax-int8-models thead th{font-size:17px;color:#526277;font-weight:600;background:none;border-bottom:2px solid #9aa9b9}
+#ax-int8-models tbody th{font-weight:700;color:#002f6d;background:none;white-space:nowrap}
+#ax-int8-models tr.now td,#ax-int8-models tr.now th{background:#edf4f5}
+#ax-int8-models .visual-take{margin-top:20px}
+#ax-int8-models .meta{margin-top:10px}
+</style>
+<table><thead><tr><th>모델</th><th>입력 → 출력</th><th>보정 자료</th><th>파일 안 CPU 부분</th><th>상태</th></tr></thead>
+<tbody>
+<tr><th>YOLO26m FLIR 검출기</th><td>640×480 → 출력 6개</td><td>FLIR 8장</td><td>없음</td><td>11월 초 기본</td></tr>
+<tr><th>실내 FT YOLO26m</th><td>640×480 → 출력 6개</td><td>FLIR 8 + 실내 8장</td><td>없음</td><td>시험용</td></tr>
+<tr><th>자세 모델 (11-14·15)</th><td>640×480 → 출력 6·9개</td><td>우리 카메라 97장</td><td>종류 칸 채우기만</td><td>선택용</td></tr>
+<tr class="now"><th>상체 E10 분할</th><td>타일 384×480 두 장 → 9개씩</td><td>검수 264장 → 타일 528개</td><td>없음</td><td>운영</td></tr>
+<tr class="now"><th>RepVGG 외형</th><td>사람 조각 64×128 → 128차원</td><td>사람 조각 256개</td><td>없음</td><td>운영</td></tr>
+<tr><th>FastTrackTr</th><td>640×480 → 그래프 3개</td><td>16장</td><td>기록 없음</td><td>시험용 · 학습 중지</td></tr>
+</tbody></table>
+<div class="visual-take">보정 자료는 모델마다 다르고, 변환 설정(EMA 보정 · opt 1)은 같다</div>
+<p class="meta">공통: ONNX opset 17 · DX-COM 2.4.1 · 같은 가중치 FP32와 INT8의 사람 검출 일치 99.2%(YOLO26s, FLIR 375장) · 정답 기준 정확도 비교는 아직</p>
+</article>

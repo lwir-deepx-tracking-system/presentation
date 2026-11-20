@@ -1,0 +1,2 @@
+- 이전 교사·학생 비교 — model-bank 6cf676d tracking_server/models/README.md (312~346행)
+- 2026-11-15 8회차, 교사 0.738 → 0.773, 증류 학생 0.660 < 기존 0.694, 올리지 않음 — model-bank 31ac21b tracking_server/models/README.md (3. 외형 비교, 올리지 않은 시도)

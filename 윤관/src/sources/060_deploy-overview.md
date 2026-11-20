@@ -1,0 +1,2 @@
+- ONNX 공식 설명 — ONNX 공식 문서(onnx.ai)
+- 프로젝트 모델 및 장치 기록 — model-bank 6cf676d tracking_server/models/README.md

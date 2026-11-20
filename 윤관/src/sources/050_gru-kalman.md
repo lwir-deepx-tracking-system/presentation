@@ -1,0 +1,2 @@
+- 위치 기억 평가 · 11-16 — model-bank 6cf676d tracking_server/models/README.md
+- 새 GRU − Kalman +0.012(90% 구간 +0.004~+0.022), 14편 중 10편에서 Kalman보다 나쁨 — model-bank 31ac21b tracking_server/models/README.md (11-16 측정), 작성자 PC 기록(비공개): test_fix.json

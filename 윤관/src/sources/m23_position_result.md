@@ -1,0 +1,7 @@
+- TEST 14편·놓친 경우 238건 위치 오차: Kalman 0.110, GRU 수정 전 0.336 → 수정 후 0.122 (−64%) — model-bank 31ac21b tracking_server/models/README.md (2. 추적, 11-16 측정), 작성자 PC 기록(비공개): test_fix.json
+- 수정 GRU 오차는 Kalman보다 약간 큼: +0.012 (90% 구간 +0.004~+0.022), 14편 중 10편에서 Kalman보다 나쁨 — model-bank 31ac21b tracking_server/models/README.md (11-16 측정), 작성자 PC 기록(비공개): test_fix.json (lost_box)
+- Mamba 0.361 → 0.127 (−65%) — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 두 파일 더), 작성자 PC 기록(비공개): table.json (11-16 위치 기억 v3 비교)
+- IDF1 14편: Kalman 74.1, GRU 수정 전 61.7 · 수정 후 74.7 (+0.6%p, 90% 구간 −0.8~+2.3), Mamba 수정 전 64.0 · 수정 후 73.4; 수정 전후 변화 GRU +13.0%p(74.66−61.68), Mamba +9.4%p(73.40−64.03) — 작성자 PC 기록(비공개): test_fix.json, table.json; GRU·Kalman 값은 model-bank 31ac21b tracking_server/models/README.md (11-16 측정)
+- 원인 분석에 TEST를 사용해 독립 시험 아님 — model-bank 31ac21b tracking_server/models/README.md (어떻게 잰 숫자인가)
+- seq_018 장치 재생 IDF1 75.36 vs 71.81, ID 전환 15 vs 17 (14편 중 1편) — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 GRU 새 파일), 작성자 PC 기록(비공개): replay_pred_seq018.json
+- 장치는 11-16 관절 GRU 사용, 후속 속도 보정 GRU는 개발 영상 ID 전환 26 = 26, HOTA 18.95 → 18.90으로 미채택 — model-bank 31ac21b HANDOFF.md (2026-11-19 추종 대상의 기존 번호 복구와 관절 모델 추가 학습)

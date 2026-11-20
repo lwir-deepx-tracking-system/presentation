@@ -1,0 +1,4 @@
+<article class="content-slide" id="onnx-export"><header><h1>ONNX 내보내기 검증</h1></header>
+<div class="ev-flow" style="margin-top:55px"><div><strong>가중치</strong><span>학습된 PyTorch<br>체크포인트</span></div><i>→</i><div><strong>내보내기</strong><span>공개 640×480 예시<br>ONNX opset 17</span></div><i>→</i><div><strong>출력 비교</strong><span>PyTorch ↔ ONNX Runtime<br>허용 오차 확인</span></div><i>→</i><div><strong>다음 단계</strong><span>동일 ONNX 그래프를<br>장치용으로 컴파일</span></div></div>
+<p class="recent-note">공개 build480.py의 절차 예시. 기존 YOLO26m의 원래 빌드 명령 전체와 동일했다고 단정할 수 없다.</p>
+<p class="recent-note">학습 640×640 · 장치용 그래프 640×480. 자료의 640×640 보정 텐서 중앙 행을 사용한 코드가 기록돼 있다.</p></article>

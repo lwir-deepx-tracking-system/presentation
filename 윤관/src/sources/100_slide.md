@@ -1,0 +1,1 @@
+- 장치 운영 화면 캡처(11-15, TMOT seq66 정지) — assets/figure-02-88dcf248.jpg

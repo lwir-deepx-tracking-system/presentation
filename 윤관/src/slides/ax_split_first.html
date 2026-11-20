@@ -1,0 +1,40 @@
+<article class="content-slide" id="ax-split-first" data-section="경량화·M1 실행"><header><h1>교대·분할 첫 비교</h1></header>
+<style>
+#ax-split-first svg text{font-family:Pretendard,sans-serif}
+#ax-split-first .yk-row{display:flex;gap:40px;margin-top:40px;align-items:flex-start}
+#ax-split-first .hd{font-size:20px;font-weight:700;fill:#263c55}
+#ax-split-first .lb{font-size:21px;font-weight:600;fill:#263c55;text-anchor:end}
+#ax-split-first .vl{font-size:22px;font-weight:700;fill:#193654}
+#ax-split-first .vl.in{fill:#fff;text-anchor:end}
+#ax-split-first .dl{font-size:22px;font-weight:700;fill:#174b56;text-anchor:end}
+#ax-split-first .ax{font-size:15px;fill:#526277;text-anchor:middle}
+#ax-split-first .tg{font-size:16px;font-weight:700;fill:#b5452f;text-anchor:middle}
+#ax-split-first .yk-modes{flex:1;display:flex;flex-direction:column;gap:18px}
+#ax-split-first .ev-panel{padding:14px 20px}
+#ax-split-first .ev-panel h2{font-size:21px;margin:0 0 6px}
+#ax-split-first .ev-panel p{font-size:19px;line-height:1.5;color:#263c55;margin:0}
+#ax-split-first .ev-panel.alt{border-top-color:#9caebe}
+#ax-split-first .visual-take{margin-top:34px}
+#ax-split-first .meta{margin-top:10px}
+</style>
+<div class="yk-row"><div class="yk-modes"><div class="ev-panel alt"><h2>프레임 교대</h2><p>1번 장은 NPU 0, 2번 장은 NPU 1 · 한 장은 NPU 하나가 전부 처리</p></div><div class="ev-panel"><h2>한 장 분할</h2><p>한 장을 좌우 타일로 나눠 NPU 0·1이 동시에 처리</p></div></div>
+<svg viewBox="0 0 700 340" width="700" height="340" role="img" aria-label="서버 수신부터 추적 완료 p95: 프레임 교대 40.47 ms, 한 장 분할 25.71 ms">
+<text x="0" y="28" class="hd">서버 수신→추적 완료 p95 (ms) · 낮을수록 좋음</text>
+<line x1="464.0" y1="56" x2="464.0" y2="276" stroke="#b5452f" stroke-width="2.5" stroke-dasharray="8 6"/><text x="464.0" y="52" class="tg">목표 33</text>
+<line x1="200.0" y1="60" x2="200.0" y2="276" stroke="#9aa9b9"/><text x="200.0" y="302" class="ax">0</text>
+<line x1="280.0" y1="60" x2="280.0" y2="276" stroke="#e3e9f0"/><text x="280.0" y="302" class="ax">10</text>
+<line x1="360.0" y1="60" x2="360.0" y2="276" stroke="#e3e9f0"/><text x="360.0" y="302" class="ax">20</text>
+<line x1="440.0" y1="60" x2="440.0" y2="276" stroke="#e3e9f0"/><text x="440.0" y="302" class="ax">30</text>
+<line x1="520.0" y1="60" x2="520.0" y2="276" stroke="#e3e9f0"/><text x="520.0" y="302" class="ax">40</text>
+<line x1="600.0" y1="60" x2="600.0" y2="276" stroke="#e3e9f0"/><text x="600.0" y="302" class="ax">50</text>
+<text x="184" y="124" class="lb">프레임 교대</text>
+<rect x="200" y="84" width="323.8" height="64" fill="#9caebe"><title>프레임 교대 40.47 ms</title></rect>
+<text x="533.8" y="124" class="vl">40.47</text>
+<text x="184" y="220" class="lb">한 장 분할</text>
+<rect x="200" y="180" width="205.7" height="64" fill="#073771"><title>한 장 분할 25.71 ms</title></rect>
+<text x="395.7" y="220" class="vl in">25.71</text>
+<text x="700" y="220" class="dl">−36%</text>
+</svg></div>
+<div class="visual-take">같은 날 같은 모델에서 분할이 p95 −36% → 운영 장치에 분할을 적용했다</div>
+<p class="meta">11-19 · E10+3 시험 모델(이후 목록에서 숨김) · 실카메라 약 30 FPS · 각 65초 · 입력 큐 버림 0장 / 1장</p>
+</article>

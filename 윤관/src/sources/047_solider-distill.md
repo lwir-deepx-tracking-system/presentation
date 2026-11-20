@@ -1,0 +1,2 @@
+- 11-17 모델뱅크 · SOLIDER 증류 — model-bank 6cf676d tracking_server/research/LWIR_PRESENTATION_KO.md
+- B = 고정 교사 증류, 교사는 배포된 사전학습 SOLIDER를 11월 10일 자체 실내 데이터로 먼저 튜닝한 ep3(이전 판의 '원교사'를 고침) — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md, HANDOFF.md (24663e4)

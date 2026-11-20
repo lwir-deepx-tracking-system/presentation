@@ -1,0 +1,2 @@
+- 제어 코드 — model-bank 31ac21b tracking_server/README.md
+- 장치 값 Kp 30 · Ki 0 · Kd 6, 불감대 0.06 · 나올 때 0.10, 자동 최고 속도 100 — model-bank 31ac21b HANDOFF.md (2절), tracking_server/src/gimbal/V27_CHANGES.md (11-15 밤 절); 작성자 PC 기록(비공개): virtual_gimbal_tmot/SPEC.md (Device arguments now)

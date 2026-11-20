@@ -1,0 +1,8 @@
+- FLIR 학습 10,491장(검증 1,144장), YOLO26m 검출기 학습 — model-bank 31ac21b tracking_server/models/README.md (YOLO26m_(FLIR) 항목); 학습로그/YOLO26m_FullFT_run_start.json (train_images 10491)
+- OTP2 학습 분할 8,846장(검증 934, 시험 2,151), 근거리 열화상·관절 17점 — 작성자 PC 기록(비공개): WORKLOG.md 2026-11-13 OpenThermalPose2 내려받기; 데이터 IS2AI OpenThermalPose2 (MIT, assets/OPENTHERMALPOSE-LICENSE.txt)
+- COCO 사람 자세 사진 30,000장을 흑백으로 바꿔 추가 — model-bank 31ac21b tracking_server/models/README.md (YOLO26m-pose OTP2+COCO+MOT17 판 학습 순서); tracking_server/research/lwir_pose_plan/scripts/coco_prep.py
+- MOT17 흑백 2,536장(사람 70,989명, 02·04·10·13편). 관절은 공개 자세 모델이 찾은 보이는 점 + 몸 틀로 채운 가려진 점(자동 라벨, 사람이 단 정답 아님) — model-bank 31ac21b tracking_server/models/README.md; tracking_server/research/lwir_pose_plan/scripts/mot17_det_prep.py; 작성자 PC 기록(비공개): WORKLOG.md 2026-11-14 MOT17 흑백 자료
+- LLVIP-Pose 학습 6,851장(사람 18,633명), 흑백 640×512, 라벨 없는 눈·귀는 무시 표시. 야간 중거리 자료이며 작은 사람 시험은 아님 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/scripts/llvip_pose_prep.py; tracking_server/research/lwir_pose_plan/README.md 7-6절; 작성자 PC 기록(비공개): WORKLOG.md 2026-11-14 LLVIP-Pose 변환
+- 자체 카메라 650장 = 검수 세트 상체 211장 + 4명 영상 439장, 운영 상체 모델(LWIR650 E10) 학습 — model-bank 31ac21b tracking_server/models/detect/yolo26m/LWIR650_E10_CLAHE_REPRO_20261120.md
+- 막대 길이는 학습에 쓴 이미지 수(0~30,000장, 같은 축). 데이터셋 전체 크기와 다름 — 위 출처들
+- 오른쪽 그림은 OTP2 제작자 공개 예시(IS2AI/OpenThermalPose 저장소 3370.png, MIT) — assets/OPENTHERMALPOSE-LICENSE.txt

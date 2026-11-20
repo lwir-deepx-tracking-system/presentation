@@ -1,0 +1,2 @@
+- 실험 출처 — Notion 팀 내부 기록(비공개)
+- 학습과 같은 촬영 시퀀스의 다른 시간 구간, 큰 오탐 10개 중 9개가 한 시퀀스 가장자리 연속 프레임 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (실제 카메라에 파인튜닝하면?)

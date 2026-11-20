@@ -1,0 +1,1 @@
+- 11/10 실제 카메라·짐벌 시험 방법 — model-bank 31ac21b tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md

@@ -1,0 +1,1 @@
+- 카메라 시험 기록 — model-bank ccf1ea9 HANDOFF.md

@@ -1,0 +1,1 @@
+- 첫 후보 시험과 판정 — model-bank ccf1ea9 tracking_server/research/lwir_pose_plan/README.md (271~287행)
