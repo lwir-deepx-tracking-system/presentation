@@ -1,0 +1,30 @@
+<article class="content-slide" id="m21b-reid-table" data-section="추적 보완 모델"><style>
+#m21b-reid-table .t{width:100%;border-collapse:collapse;margin-top:10px;font-size:17px}
+#m21b-reid-table .t th{background:#002f6d;color:#fff;padding:8px 10px;text-align:right;font-weight:600}
+#m21b-reid-table .t th:first-child,#m21b-reid-table .t td:first-child{text-align:left}
+#m21b-reid-table .t td{padding:7px 10px;border-bottom:1px solid #dce2ea;text-align:right}
+#m21b-reid-table .t tr.dev td{background:#edf4f5;font-weight:700;color:#174b56}
+#m21b-reid-table .t tr.no td{color:#7a8797}
+#m21b-reid-table h2{font-size:20px;margin-top:16px}
+#m21b-reid-table .cap{font-size:14px;color:#526277;margin-top:6px}
+#m21b-reid-table .two{display:grid;grid-template-columns:1.45fr 1fr;gap:34px}
+</style>
+<header><h1>외형 모델 비교</h1></header>
+<div class="two">
+<div><h2>교사 → 학생 증류 (11/15)</h2>
+<table class="t"><tr><th>모델</th><th>종합</th><th>OTP2</th><th>TMOT</th><th>실내</th><th>M1</th></tr>
+<tr class="no"><td>SOLIDER 교사 · 학습 후</td><td>0.773</td><td>0.843</td><td>0.552</td><td>0.925</td><td>미측정</td></tr>
+<tr class="dev"><td>RepVGG 학생 · 당시 장치</td><td>0.694</td><td>0.781</td><td>0.471</td><td>0.830</td><td>1.19 ms</td></tr>
+<tr class="no"><td>새 증류 학생</td><td>0.660</td><td>0.755</td><td>0.446</td><td>0.780</td><td>—</td></tr>
+<tr class="no"><td>직접 학습</td><td>0.704</td><td>0.829</td><td>0.472</td><td>0.811</td><td>1.43 ms</td></tr></table>
+<p class="cap">점수 = (1순위 정답률 + AUC) / 2 · 높을수록 좋음 · PC FP32 · 1회</p></div>
+<div><h2>지금 장치 모델 (검수 264장 RepVGG)</h2>
+<table class="t"><tr><th>시험</th><th>정확도</th></tr>
+<tr class="dev"><td>TMOT 1순위 정답</td><td>386 / 432 · 89.4%</td></tr>
+<tr class="dev"><td>CAMEL 1순위 정답</td><td>201 / 218 · 92.2%</td></tr>
+<tr class="dev"><td>추적 IDF1 · FLIR</td><td>66.74%</td></tr>
+<tr class="no"><td>교사 SOLIDER로 교체</td><td>66.57% (−0.2%p)</td></tr></table>
+<p class="cap">TMOT·CAMEL은 개발에 쓴 공개 자료 · 우리 카메라 독립 ID 정확도는 미측정</p></div>
+</div>
+<div class="visual-take" style="margin-top:22px">교사가 더 정확하지만 추적 결과는 같음 → M1에서 빠른 RepVGG 학생 사용</div>
+</article>

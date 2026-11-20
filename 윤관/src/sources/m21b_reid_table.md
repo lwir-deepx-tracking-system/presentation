@@ -1,0 +1,5 @@
+- 교사·학생·직접 학습 종합/OTP2/TMOT/실내 점수, M1 1.19 ms / 1.43 ms — 작성자 PC 기록(비공개): reid_r8_20261115 SUMMARY_KO.md, RESULT.json (PC float, 1회; 점수 = (1순위 정답률 + AUC)/2, 원본·잘림·가림 평균)
+- 새 증류 학생 미채택 — model-bank 31ac21b tracking_server/models/README.md (3. 외형 비교, 올리지 않은 시도)
+- 검수 264장 RepVGG TMOT 386/432, CAMEL 201/218 — 근거 장 '검수 264장 외형 학습' (ax_reid_264), 작성자 PC 기록(비공개): EXTERNAL_REID_RESULT.json
+- IDF1 66.74 → 66.57% (교사 교체) — 작성자 PC 기록(비공개): RESULT_KO.md (11-20 SOLIDER 추적기 교체 비교, FLIR 3,749프레임, PC FP32)
+- 장치 선택 모델 = 검수 264장 RepVGG — model-bank 31ac21b HANDOFF.md

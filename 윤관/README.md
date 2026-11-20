@@ -142,110 +142,116 @@ E10을 바꿀 후보를 여러 방식으로 다시 학습했지만, 모든 기�
 
 큰 교사 SOLIDER를 추적기에 직접 넣어도 번호 유지가 나아지지 않아, 장치는 작은 RepVGG를 그대로 씁니다.
 
-### 22. 가림 위치 예측
+### 22. 외형 모델 비교
 
-![가림 위치 예측](assets/readme-slides/slide-22.jpg)
+![외형 모델 비교](assets/readme-slides/slide-22.jpg)
+
+교사 SOLIDER가 외형 점수는 더 높지만, 추적 결과는 작은 RepVGG 학생과 같아서 장치에는 학생을 씁니다.
+
+### 23. 가림 위치 예측
+
+![가림 위치 예측](assets/readme-slides/slide-23.jpg)
 
 가려져 검출이 끊긴 동안 최대 15프레임까지 Kalman 예측 경로를 GRU가 보정해 사람 위치를 이어 갑니다.
 
-### 23. 위치 예측 결과
+### 24. 위치 예측 결과
 
-![위치 예측 결과](assets/readme-slides/slide-23.jpg)
+![위치 예측 결과](assets/readme-slides/slide-24.jpg)
 
 학습 입력 문제를 고친 뒤 GRU와 Mamba의 위치 오차는 약 3분의 1로 줄었지만, Kalman보다 낫지는 않았습니다.
 
-### 24. 박스 크기 안정화
+### 25. 박스 크기 안정화
 
-![박스 크기 안정화](assets/readme-slides/slide-24.jpg)
+![박스 크기 안정화](assets/readme-slides/slide-25.jpg)
 
 화면에 그리는 사람 상자가 덜 흔들리도록 크기 필터와 놓친 상자 크기 유지를 11월 16일부터 장치에서 켰습니다.
 
-### 25. 상체 박스와 전신 표시
+### 26. 상체 박스와 전신 표시
 
-![상체 박스와 전신 표시](assets/readme-slides/slide-25.jpg)
+![상체 박스와 전신 표시](assets/readme-slides/slide-26.jpg)
 
 화면에는 같은 검출의 관절로 아래쪽을 넓힌 전신 박스를 고를 수 있게 했고, 추적과 짐벌 조준은 상체 박스를 그대로 씁니다.
 
-### 26. FastTrackTr
+### 27. FastTrackTr
 
-![FastTrackTr](assets/readme-slides/slide-26.jpg)
+![FastTrackTr](assets/readme-slides/slide-27.jpg)
 
 검출과 번호 붙이기를 한 모델로 하는 FastTrackTr을 M1에서 돌게 만들고 열화상으로 더 학습했지만, 기존 검출과 추적기의 절반에도 못 미쳐 11월 15일에 학습을 멈췄습니다.
 
 ## 경량화·M1 실행
 
-### 27. INT8 변환
+### 28. INT8 변환
 
-![INT8 변환](assets/readme-slides/slide-27.jpg)
+![INT8 변환](assets/readme-slides/slide-28.jpg)
 
 DX-COM 컴파일 옵션 하나로 M1의 한 장 처리 시간을 25% 줄였고 정확도는 그대로였습니다.
 
-### 28. M1 모델 속도
+### 29. M1 모델 속도
 
-![M1 모델 속도](assets/readme-slides/slide-28.jpg)
+![M1 모델 속도](assets/readme-slides/slide-29.jpg)
 
 YOLO26m은 s보다 사람 AP가 3.47%p 높지만 M1에서 한 번 호출하는 데 43% 더 걸립니다.
 
-### 29. 두 NPU 한 장 분할
+### 30. 두 NPU 한 장 분할
 
-![두 NPU 한 장 분할](assets/readme-slides/slide-29.jpg)
+![두 NPU 한 장 분할](assets/readme-slides/slide-30.jpg)
 
 한 장을 둘로 나눠 NPU 0과 1에서 동시에 검출하니, 사람이 없는 실카메라에서 한 장 처리 p95가 23 ms로 내려왔습니다.
 
-### 30. 33 ms 꼬리 줄이기
+### 31. 33 ms 꼬리 줄이기
 
-![33 ms 꼬리 줄이기](assets/readme-slides/slide-30.jpg)
+![33 ms 꼬리 줄이기](assets/readme-slides/slide-31.jpg)
 
 느린 한 장을 만든 원인을 하나씩 찾아 고쳐 최대 지연을 줄였지만, 모든 장 33 ms 목표는 아직 못 맞췄습니다.
 
 ## 짐벌 추종
 
-### 31. 짐벌 추종 구조
+### 32. 짐벌 추종 구조
 
-![짐벌 추종 구조](assets/readme-slides/slide-31.jpg)
+![짐벌 추종 구조](assets/readme-slides/slide-32.jpg)
 
 짐벌은 고른 사람의 상체 박스 중심이 화면 가운데에 오도록, 추적 결과가 올 때마다 팬·틸트 속도를 다시 계산합니다.
 
-### 32. PD 제어와 불감대
+### 33. PD 제어와 불감대
 
-![PD 제어와 불감대](assets/readme-slides/slide-32.jpg)
+![PD 제어와 불감대](assets/readme-slides/slide-33.jpg)
 
 불감대를 0.06으로 넓혀 세로로 왔다 갔다 하는 반전을 4회에서 1회로 줄였고, 대신 가로로 따라갈 때 뒤처짐이 14.3에서 18.6픽셀로 30% 늘었습니다.
 
-### 33. 짐벌 실측 응답
+### 34. 짐벌 실측 응답
 
-![짐벌 실측 응답](assets/readme-slides/slide-33.jpg)
+![짐벌 실측 응답](assets/readme-slides/slide-34.jpg)
 
 실제 짐벌은 SPD 10에서 30 사이에서 SPD 1당 화면에서 약 31 px/s씩 빨라졌고, 명령 뒤 0.108초에 움직이기 시작해 STOP 뒤 0.064초에 멈췄습니다.
 
-### 34. 가상 카메라 시험
+### 35. 가상 카메라 시험
 
-![가상 카메라 시험](assets/readme-slides/slide-34.jpg)
+![가상 카메라 시험](assets/readme-slides/slide-35.jpg)
 
 가상 카메라 시험은 실제 짐벌을 돌리지 않고도 장치 전체를 같은 장면으로 반복 비교하고 정답으로 채점하는 방법입니다.
 
-### 35. 원거리 가속
+### 36. 원거리 가속
 
-![원거리 가속](assets/readme-slides/slide-35.jpg)
+![원거리 가속](assets/readme-slides/slide-36.jpg)
 
 실측한 짐벌 속도로 모의 시험을 다시 해서, 빠른 사람을 화면에 더 오래 두도록 속도 설정 두 가지를 바꿨습니다.
 
-### 36. 짐벌까지 지연
+### 37. 짐벌까지 지연
 
-![짐벌까지 지연](assets/readme-slides/slide-36.jpg)
+![짐벌까지 지연](assets/readme-slides/slide-37.jpg)
 
 장면이 바뀐 뒤 짐벌이 움직이기까지 약 0.2초가 걸리고, 그중 줄일 수 있는 대기와 멈춤을 없앴습니다.
 
-### 37. 놓쳤을 때 대응
+### 38. 놓쳤을 때 대응
 
-![놓쳤을 때 대응](assets/readme-slides/slide-37.jpg)
+![놓쳤을 때 대응](assets/readme-slides/slide-38.jpg)
 
 사람을 놓쳤을 때 쓰는 기능 가운데 가상 시험에서 효과가 확인된 것은 놓친 자리의 예측을 따라가는 기능 하나입니다.
 
 ## 정리
 
-### 38. 정리
+### 39. 정리
 
-![정리](assets/readme-slides/slide-38.jpg)
+![정리](assets/readme-slides/slide-39.jpg)
 
 학습한 모델과 짐벌 개선은 장치에 올렸고, 남은 일은 실제 조건에서 재는 것입니다.

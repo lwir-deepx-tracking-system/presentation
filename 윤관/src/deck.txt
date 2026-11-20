@@ -20,6 +20,7 @@ main m18_e10
 main m19_retrain
 main m20_branches
 main m21_reid
+main m21b_reid_table
 main m22_position
 main m23_position_result
 main m24_box_stab
