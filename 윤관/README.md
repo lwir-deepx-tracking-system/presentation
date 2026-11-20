@@ -146,7 +146,7 @@ E10을 바꿀 후보를 여러 방식으로 다시 학습했지만, 모든 기�
 
 ![외형 모델 비교](assets/readme-slides/slide-22.jpg)
 
-외형 모델은 ViT 계열도 시험했지만, 우리 카메라에서 RepVGG보다 낫다는 결과가 없어 장치에는 RepVGG를 씁니다.
+ViT-lite는 공개 OTP2에서 RepVGG보다 크게 낮고 M1에서 약 4배 느려서, 장치에는 RepVGG를 씁니다.
 
 ### 23. 가림 위치 예측
 

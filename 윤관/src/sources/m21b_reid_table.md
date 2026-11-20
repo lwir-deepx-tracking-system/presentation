@@ -1,3 +1,4 @@
+- ViT-lite 2종·RepVGG 2종 장치 NPU INT8 1순위 정답과 처리 시간(OTP2 60명 1,075조각 537질의, 실내 r8 시험 176질의) — 작성자 PC 기록(비공개): reid_vitlite_eval_20261120 RESULT.md, RESULT.json (2026-11-20 장치 측정)
 - RepVGG 7.45 MB 전부 NPU, ViT-lite 1.46 MB(마지막 단계만 CPU), ViT-lite 정확도 미측정·시험용 — model-bank 31ac21b tracking_server/models/reid/README.md, tracking_server/models/README.md (3. 외형 비교)
 - DeiT-Tiny ViT(11-13) M1 변환 가능(적극적 분할), RepVGG보다 모두 낮아 폐기 — 작성자 PC 기록(비공개): 작업 기록부 2026-11-13 22:57, 23:20 (수치 원본은 학습 서버에만 있어 확인하지 못함)
 - PMT ViT-Base OTP2 몸/가림 .952/.939, 우리 실내 몸/가림 .864/.657; RepVGG FT OTP2 .890/.840, 실내 .925/.837 — 작성자 PC 기록(비공개): 작업 기록부 2026-11-14 00:05 (PC, 6000 step, M1 변환 안 함)

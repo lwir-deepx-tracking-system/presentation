@@ -550,17 +550,17 @@
 #m21b-reid-table .t tr.no td{color:#7a8797}
 #m21b-reid-table h2{font-size:20px;margin-top:16px}
 #m21b-reid-table .cap{font-size:14px;color:#526277;margin-top:6px}
-#m21b-reid-table .two{display:grid;grid-template-columns:1.45fr 1fr;gap:34px}
+#m21b-reid-table .two{display:grid;grid-template-columns:1.75fr 1fr;gap:28px}
 </style>
 <header><h1>외형 모델 비교</h1></header>
 <div class="two">
-<div><h2>RepVGG vs ViT 계열 (1순위 정답 비율)</h2>
-<table class="t"><tr><th>모델</th><th>M1</th><th>OTP2 몸</th><th>OTP2 가림</th><th>실내 몸</th><th>실내 가림</th></tr>
-<tr class="dev"><td>RepVGG (11/13)</td><td>7.45 MB · 전부 NPU</td><td>0.890</td><td>0.840</td><td>0.925</td><td>0.837</td></tr>
-<tr class="no"><td>ViT-lite (11/11)</td><td>1.46 MB · 올림</td><td colspan="4" style="text-align:center">정확도 미측정 · 시험용</td></tr>
-<tr class="no"><td>ViT DeiT-Tiny (11/13)</td><td>변환 가능</td><td colspan="4" style="text-align:center">모든 시험에서 RepVGG보다 낮아 폐기</td></tr>
-<tr class="no"><td>ViT-Base PMT (11/14)</td><td>대형 · 안 올림</td><td>0.952</td><td>0.939</td><td>0.864</td><td>0.657</td></tr></table>
-<p class="cap">PC 측정 · OTP2 시험 60명 · 우리 실내 시험 · 각 1회 · 공개 근적외선 사전학습 PMT는 공개 자료만 좋음</p></div>
+<div><h2>RepVGG vs ViT-lite · M1 INT8 같은 조건</h2>
+<table class="t"><tr><th>모델</th><th>크기</th><th>NPU</th><th>OTP2 몸</th><th>OTP2 가림</th><th>실내 몸</th><th>실내 가림</th></tr>
+<tr class="no"><td>ViT-lite 미세조정</td><td>1.46 MB</td><td>5.03 ms</td><td>0.616</td><td>0.592</td><td>0.989</td><td>0.903</td></tr>
+<tr class="no"><td>ViT-lite 증류</td><td>1.46 MB</td><td>5.02 ms</td><td>0.672</td><td>0.596</td><td>0.915</td><td>0.841</td></tr>
+<tr><td>RepVGG OTP2 (11/13)</td><td>7.45 MB</td><td>1.26 ms</td><td>0.892</td><td>0.834</td><td>0.977</td><td>0.847</td></tr>
+<tr class="dev"><td>RepVGG 검수 264 · 장치</td><td>7.45 MB</td><td>1.28 ms</td><td>0.764</td><td>0.667</td><td>1.000</td><td>0.892</td></tr></table>
+<p class="cap">1순위 정답 비율 · 장치 NPU · OTP2 60명 537질의 · 실내 176질의(학습 겹침 미확인)</p></div>
 <div><h2>지금 장치 모델 (검수 264장 RepVGG)</h2>
 <table class="t"><tr><th>시험</th><th>정확도</th></tr>
 <tr class="dev"><td>TMOT 1순위 정답</td><td>386 / 432 · 89.4%</td></tr>
@@ -569,7 +569,7 @@
 <tr class="no"><td>교사 SOLIDER로 교체</td><td>66.57% (−0.2%p)</td></tr></table>
 <p class="cap">TMOT·CAMEL은 개발에 쓴 공개 자료 · 우리 카메라 독립 ID 정확도는 미측정</p></div>
 </div>
-<div class="visual-take" style="margin-top:22px">ViT 계열은 우리 실내에서 낮거나 미측정 → 전부 NPU로 도는 RepVGG 사용</div>
+<div class="visual-take" style="margin-top:22px">ViT-lite는 OTP2에서 낮고 4배 느림 → RepVGG 사용</div>
 </article><div class="team-footer"><span></span><span>22 / 39</span></div></section>
 <section class="slide" data-page="23" aria-label="가림 위치 예측"><article class="content-slide" id="m22-position" data-section="추적 보완 모델"><header><h1>가림 위치 예측</h1></header>
 <style>
