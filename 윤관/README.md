@@ -164,7 +164,7 @@ ViT-lite는 공개 OTP2에서 RepVGG보다 크게 낮고 M1에서 약 4배 느�
 
 ![박스 크기 안정화](assets/readme-slides/slide-25.jpg)
 
-화면에 그리는 사람 상자가 덜 흔들리도록 크기 필터와 놓친 상자 크기 유지를 11월 16일부터 장치에서 켰습니다.
+화면 박스가 덜 흔들리도록 박스 보정을 11월 21일 코드부터 끌 수 없게 항상 켰고, 기본은 상체 네모 방식입니다.
 
 ### 26. 상체 박스와 전신 표시
 
@@ -198,60 +198,66 @@ YOLO26m은 s보다 사람 AP가 3.47%p 높지만 M1에서 한 번 호출하는 �
 
 한 장을 둘로 나눠 NPU 0과 1에서 동시에 검출하니, 사람이 없는 실카메라에서 한 장 처리 p95가 23 ms로 내려왔습니다.
 
-### 31. 33 ms 꼬리 줄이기
+### 31. 분할 모델 만들기
 
-![33 ms 꼬리 줄이기](assets/readme-slides/slide-31.jpg)
+![분할 모델 만들기](assets/readme-slides/slide-31.jpg)
+
+분할 모델은 새로 학습하지 않고, 같은 E10 가중치를 폭 384 px 타일 입력에 맞게 다시 변환해 만들었습니다.
+
+### 32. 33 ms 꼬리 줄이기
+
+![33 ms 꼬리 줄이기](assets/readme-slides/slide-32.jpg)
 
 느린 한 장을 만든 원인을 하나씩 찾아 고쳐 최대 지연을 줄였지만, 모든 장 33 ms 목표는 아직 못 맞췄습니다.
 
 ## 짐벌 추종
 
-### 32. 짐벌 추종 구조
+### 33. 짐벌 추종 구조
 
-![짐벌 추종 구조](assets/readme-slides/slide-32.jpg)
+![짐벌 추종 구조](assets/readme-slides/slide-33.jpg)
 
 짐벌은 고른 사람의 상체 박스 중심이 화면 가운데에 오도록, 추적 결과가 올 때마다 팬·틸트 속도를 다시 계산합니다.
 
-### 33. PD 제어와 불감대
+### 34. PD 제어와 불감대
 
-![PD 제어와 불감대](assets/readme-slides/slide-33.jpg)
+![PD 제어와 불감대](assets/readme-slides/slide-34.jpg)
 
 불감대를 0.06으로 넓혀 세로로 왔다 갔다 하는 반전을 4회에서 1회로 줄였고, 대신 가로로 따라갈 때 뒤처짐이 14.3에서 18.6픽셀로 30% 늘었습니다.
 
-### 34. 짐벌 실측 응답
+### 35. 짐벌 실측 응답
 
-![짐벌 실측 응답](assets/readme-slides/slide-34.jpg)
+![짐벌 실측 응답](assets/readme-slides/slide-35.jpg)
 
 실제 짐벌은 SPD 10에서 30 사이에서 SPD 1당 화면에서 약 31 px/s씩 빨라졌고, 명령 뒤 0.108초에 움직이기 시작해 STOP 뒤 0.064초에 멈췄습니다.
 
-### 35. 가상 카메라 시험
+### 36. 가상 카메라 시험
 
-![가상 카메라 시험](assets/readme-slides/slide-35.jpg)
+![가상 카메라 시험](assets/readme-slides/slide-36.jpg)
 
 가상 카메라 시험은 실제 짐벌을 돌리지 않고도 장치 전체를 같은 장면으로 반복 비교하고 정답으로 채점하는 방법입니다.
 
-### 36. 원거리 가속
+### 37. 원거리 가속
 
-![원거리 가속](assets/readme-slides/slide-36.jpg)
+![원거리 가속](assets/readme-slides/slide-37.jpg)
 
 실측한 짐벌 속도로 모의 시험을 다시 해서, 빠른 사람을 화면에 더 오래 두도록 속도 설정 두 가지를 바꿨습니다.
 
-### 37. 짐벌까지 지연
+### 38. 짐벌까지 지연
 
-![짐벌까지 지연](assets/readme-slides/slide-37.jpg)
+![짐벌까지 지연](assets/readme-slides/slide-38.jpg)
 
 장면이 바뀐 뒤 짐벌이 움직이기까지 약 0.2초가 걸리고, 그중 줄일 수 있는 대기와 멈춤을 없앴습니다.
 
-### 38. 놓쳤을 때 대응
+### 39. 놓쳤을 때 대응
 
-![놓쳤을 때 대응](assets/readme-slides/slide-38.jpg)
+![놓쳤을 때 대응](assets/readme-slides/slide-39.jpg)
 
 사람을 놓쳤을 때 쓰는 기능 가운데 가상 시험에서 효과가 확인된 것은 놓친 자리의 예측을 따라가는 기능 하나입니다.
 
 ## 정리
 
-### 39. 정리
+### 40. 정리
 
-![정리](assets/readme-slides/slide-39.jpg)
+![정리](assets/readme-slides/slide-40.jpg)
 
 학습한 모델과 짐벌 개선은 장치에 올렸고, 남은 일은 실제 조건에서 재는 것입니다.

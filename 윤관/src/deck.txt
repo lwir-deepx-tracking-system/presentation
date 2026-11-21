@@ -29,6 +29,7 @@ main m26_fasttracktr
 main m27_int8
 main m28_m1_speed
 main m29_split
+main m29b_split_model
 main m30_tail
 main m31_gimbal_loop
 main m32_pd
