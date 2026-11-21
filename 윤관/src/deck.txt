@@ -5,8 +5,11 @@ main m18_e10
 main m27_int8
 main m29b_split_model
 main m21b_reid_table
+main k09_id_keep
 main k05_stability
+main k08_virtual_cam
 main k06_gimbal
+main k10_judgement
 main k07_close
 appendix ax_reid_table
 appendix m29_split

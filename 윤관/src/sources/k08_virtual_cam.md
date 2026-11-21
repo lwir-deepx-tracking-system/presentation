@@ -1,0 +1,6 @@
+- 가상 카메라 방법(확대 창, 장치 검출기·추적기·KeepID·짐벌 제어 코드 그대로, 가상 직렬 포트, 짐벌 모델, 정답 라벨 채점) — 이 발표 m34_virtual 근거 파일; 개인 실험 기록(virtual_gimbal_tmot/SPEC.md)
+- 제어값 비교 유효 112회: 현재 장치 값보다 나은 설정 없음, Kp 30 유지 — 개인 실험 기록(virtual_gimbal_tmot/tuning_sweep/RESULT.md (Short answer))
+- 예측 앞당김(lead) 100~400 ms: 꺼짐보다 나은 값 없음(같은 번호 복귀 끔 23/32 · 켬 25/48) — 개인 실험 기록(virtual_gimbal_tmot/lead_tuning/RESULT.md (Short answer))
+- 놓친 뒤 예측 자리 따라가기(coast, vel): 놓침당 재포착 +0.20(95% 0.07~0.32), 사전 규칙 충족; 화면 안 놓침, 가상 3장면 부분 결과 — 개인 실험 기록(virtual_gimbal_tmot/recatch/RESULT.md (Results))
+- 넓게 훑기(--seek) 1차 114회 재포착 끔 26/87 · 켬 25/108, 2차 1초 넘는 이탈 끔 7/27 · 켬 3/24, 둘 다 이득 없음 → 끔 — 개인 실험 기록(virtual_gimbal_tmot/search2/RESULT.md, search2/long_exit/RESULT.md)
+- 한계: 확대한 녹화, 실제 근거리·가림·실제 짐벌은 재현 못함 — virtual_gimbal_tmot/SPEC.md (0절)

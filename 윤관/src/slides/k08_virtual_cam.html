@@ -1,0 +1,50 @@
+<article class="content-slide" id="k08-virtual-cam" data-section="짐벌 추종"><header><h1>가상 카메라 시험</h1></header><span class="must">★ 필수</span>
+<style>
+#k08-virtual-cam .must{position:absolute;top:38px;right:200px;font-size:16px;font-weight:700;color:#8a4f14;background:#f6ecd9;padding:2px 10px;border-radius:5px}
+#k08-virtual-cam svg{display:block;width:1100px;height:auto;margin:6px auto 0}
+#k08-virtual-cam svg text{font-family:Pretendard,sans-serif;text-anchor:middle}
+#k08-virtual-cam .t-n{font-size:24px;font-weight:700;fill:#002f6d}
+#k08-virtual-cam .t-s{font-size:18px;fill:#3b4b5f}
+#k08-virtual-cam .t-p{font-size:19px;font-weight:700;fill:#174b56}
+#k08-virtual-cam .t-w{font-size:23px;font-weight:700;fill:#ffffff}
+#k08-virtual-cam .t-x{font-size:18px;fill:#dfe7ef}
+#k08-virtual-cam .t-r{font-size:19px;font-weight:600;fill:#26364a}
+#k08-virtual-cam .t-c{font-size:32px;font-weight:700;fill:#6f8299}
+#k08-virtual-cam .res{display:flex;gap:14px;margin-top:12px}
+#k08-virtual-cam .res>div{flex:1;background:#f1f6fa;border-top:3px solid #477c76;padding:8px 14px;font-size:18px;line-height:1.35;color:#26364a}
+#k08-virtual-cam .res>div.hold{border-top-color:#c47a2c;background:#fbf7f0}
+#k08-virtual-cam .res b{display:block;color:#002f6d;font-size:19px}
+#k08-virtual-cam .res em{font-style:normal;font-weight:700;color:#174b56}
+#k08-virtual-cam .hold em{color:#8a4f14}
+#k08-virtual-cam .visual-take{margin-top:14px}
+#k08-virtual-cam .meta{font-size:16px;margin-top:8px}
+</style>
+<svg viewBox="0 0 1168 360" role="img" aria-label="실제 열화상 녹화에서 사람 주변을 확대해 잘라낸 창을 가상 카메라로 쓰고, 장치의 검출기와 추적기와 KeepID, 운영 짐벌 제어 코드를 그대로 돌린다. 짐벌 명령은 가상 직렬 포트로 실측 속도와 지연을 넣은 짐벌 모델이 받아 잘라낼 창을 옮긴다. 정답 라벨로 같은 사람, 바뀜, 놓침을 채점한다.">
+<defs><marker id="k08-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6f8299"/></marker></defs>
+<g fill="#f3f6fa"><rect x="0" y="0" width="240" height="236" rx="8"/><rect x="296" y="0" width="240" height="236" rx="8"/><rect x="592" y="0" width="260" height="236" rx="8"/><rect x="908" y="0" width="260" height="236" rx="8"/></g>
+<rect x="20" y="16" width="200" height="140" fill="#1d2b3c"/>
+<g fill="#cfd9e4"><circle cx="52" cy="98" r="4.5"/><rect x="48.5" y="104" width="7" height="17" rx="2"/><circle cx="90" cy="112" r="4.5"/><rect x="86.5" y="118" width="7" height="17" rx="2"/><circle cx="153" cy="84" r="4.5"/><rect x="149.5" y="90" width="7" height="17" rx="2"/><circle cx="192" cy="118" r="4.5"/><rect x="188.5" y="124" width="7" height="17" rx="2"/></g>
+<rect x="135" y="70" width="36" height="46" fill="none" stroke="#f2c14e" stroke-width="2.5"/>
+<g stroke="#f2c14e" stroke-width="1.6" stroke-dasharray="5 4"><line x1="171" y1="70" x2="316" y2="16"/><line x1="171" y1="116" x2="316" y2="156"/></g>
+<text x="120" y="194" class="t-n">실제 열화상 녹화</text><text x="120" y="222" class="t-s">TMOT·PTB-TIR·BU-TIV</text>
+<rect x="316" y="16" width="200" height="140" fill="#1d2b3c" stroke="#f2c14e" stroke-width="3"/>
+<circle cx="416" cy="46" r="13" fill="#cfd9e4"/><rect x="402" y="62" width="28" height="56" rx="9" fill="#cfd9e4"/><rect x="404" y="114" width="10" height="36" fill="#cfd9e4"/><rect x="418" y="114" width="10" height="36" fill="#cfd9e4"/>
+<text x="416" y="194" class="t-n">확대해 잘라낸 창</text><text x="416" y="222" class="t-s">= 가상 카메라</text>
+<g fill="#ffffff" stroke="#9fb6b2" stroke-width="1.5"><rect x="622" y="22" width="200" height="38" rx="19"/><rect x="622" y="70" width="200" height="38" rx="19"/><rect x="622" y="118" width="200" height="38" rx="19"/></g>
+<text x="722" y="48" class="t-p">검출기 (NPU)</text><text x="722" y="96" class="t-p">추적기</text><text x="722" y="144" class="t-p">KeepID</text>
+<text x="722" y="204" class="t-n">장치 처리 그대로</text>
+<rect x="983" y="36" width="110" height="96" rx="8" fill="#ffffff" stroke="#9fb6b2" stroke-width="1.5"/><text x="1038" y="96" class="t-c">&lt;/&gt;</text>
+<text x="1038" y="194" class="t-n">짐벌 제어 코드</text><text x="1038" y="222" class="t-s">명령은 가상 직렬 포트로</text>
+<g stroke="#6f8299" stroke-width="2.5" marker-end="url(#k08-ar)"><line x1="540" y1="86" x2="586" y2="86"/><line x1="856" y1="86" x2="902" y2="86"/><line x1="1038" y1="238" x2="1038" y2="268"/></g>
+<rect x="908" y="272" width="260" height="84" rx="8" fill="#26364a"/>
+<text x="1038" y="306" class="t-w">짐벌 모델</text><text x="1038" y="336" class="t-x">실측 속도·지연</text>
+<path d="M906 314 H416 V242" fill="none" stroke="#6f8299" stroke-width="2.5" marker-end="url(#k08-ar)"/>
+<rect x="560" y="298" width="250" height="32" fill="#ffffff"/><text x="685" y="321" class="t-r">짐벌이 돈 만큼 창 이동</text>
+<line x1="120" y1="238" x2="120" y2="268" stroke="#6f8299" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#k08-ar)"/>
+<rect x="0" y="272" width="372" height="84" rx="8" fill="#e7f1ef"/>
+<text x="186" y="306" class="t-p" style="font-size:21px">정답 라벨로 채점</text><text x="186" y="336" class="t-s">같은 사람 · 바뀜 · 놓침</text>
+</svg>
+<div class="res"><div><b>제어값 112회 비교</b>Kp 30 유지 · 예측 앞당김은 <em>이득 없음</em></div><div><b>놓친 뒤 예측 자리 따라가기</b>재포착 <em>+0.20</em> (95% 0.07~0.32) · 채택</div><div class="hold"><b>넓게 훑기 두 차례</b>26/87 대 25/108, 7/27 대 3/24 · <em>이득 없음, 끔</em></div></div>
+<div class="visual-take">짐벌 없이 위험 없이, 같은 장면으로 반복해 정답과 비교</div>
+<p class="meta">장치에서 실행 · 11-15~16 · 확대한 녹화라 실제 근거리·실제 짐벌 검증은 남음</p>
+</article>

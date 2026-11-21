@@ -1,0 +1,30 @@
+<article class="content-slide" id="k10-judgement" data-section="정리"><header><h1>채택과 보류 기준</h1></header><span class="must">★ 필수</span>
+<style>
+#k10-judgement .must{position:absolute;top:38px;right:200px;font-size:16px;font-weight:700;color:#8a4f14;background:#f6ecd9;padding:2px 10px;border-radius:5px}
+#k10-judgement table{width:100%;border-collapse:collapse;margin-top:14px}
+#k10-judgement th{background:transparent;font-size:17px;color:#526277;text-align:left;padding:4px 14px;border-bottom:2px solid #9aa9b9;font-weight:600}
+#k10-judgement td{font-size:20px;color:#202b3a;padding:10px 14px;border-bottom:1px solid #dce2ea;line-height:1.25}
+#k10-judgement td:first-child{font-weight:700;color:#002f6d;width:27%}
+#k10-judgement td:last-child{width:11%;text-align:center}
+#k10-judgement tr.ok td:first-child{border-left:6px solid #41817d}
+#k10-judgement tr.hold td:first-child{border-left:6px solid #c47a2c}
+#k10-judgement .pill{display:inline-block;font-size:18px;font-weight:700;padding:2px 12px;border-radius:5px}
+#k10-judgement .ok .pill{background:#e1efec;color:#174b56}
+#k10-judgement .hold .pill{background:#f6ecd9;color:#8a4f14}
+#k10-judgement .visual-take{margin-top:14px}
+#k10-judgement .meta{font-size:14px;margin-top:8px}
+</style>
+<table>
+<tr><th>방법</th><th>결과</th><th>결정</th></tr>
+<tr class="ok"><td>상체 모델 E10</td><td>상체 박스 AP 36.04 → 46.28%</td><td><span class="pill">채택</span></td></tr>
+<tr class="ok"><td>INT8 컴파일 옵션</td><td>M1 한 장 29.10 → 21.92 ms (−25%), AP 그대로</td><td><span class="pill">채택</span></td></tr>
+<tr class="ok"><td>RepVGG 외형</td><td>정답 0.892 대 ViT-lite 0.616·0.672, 4배 빠름</td><td><span class="pill">채택</span></td></tr>
+<tr class="ok"><td>예측 자리 따라가기</td><td>같은 사람 재포착 +0.20 (95% 0.07~0.32)</td><td><span class="pill">채택</span></td></tr>
+<tr class="hold"><td>LoRA</td><td>Full FT 대 LoRA: 30 epoch 34.22 대 32.61, 297 epoch 29.89 대 33.96</td><td><span class="pill">보류</span></td></tr>
+<tr class="hold"><td>검출기 증류</td><td>사람 AP 44.86 → 44.23%</td><td><span class="pill">보류</span></td></tr>
+<tr class="hold"><td>SOLIDER 교체</td><td>IDF1 66.74 → 66.57%</td><td><span class="pill">보류</span></td></tr>
+<tr class="hold"><td>넓게 훑기</td><td>재포착 26/87 대 25/108</td><td><span class="pill">보류</span></td></tr>
+</table>
+<div class="visual-take">결과가 기준에 못 미친 시험도 그대로 남겨 보고함</div>
+<p class="meta">시험마다 데이터·조건이 다름 · LoRA 비교는 라벨 10% 조건</p>
+</article>

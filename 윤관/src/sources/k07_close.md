@@ -1,3 +1,4 @@
 - 이 장은 새 숫자 없이 k01_core와 앞 장의 근거 파일을 모아 정리함
 - 남은 일 세 가지: 사람 있는 구간 33 ms(m29_split 근거 파일), 실제 사람 재포착률(m37_loss), 장비 INT8 정확도 독립 시험(m27_int8: 정답 기준 FP32·INT8 비교 없음)
 - 장비 운영: 장치 배포·재시작·적용 기록 — 작성자 PC 기록(비공개): WORKLOG.md, model-bank HANDOFF.md
+- 가상 카메라 반복 시험, 번호 유지, 채택 기준 — 이 발표 k08_virtual_cam, k09_id_keep, k10_judgement 근거 파일

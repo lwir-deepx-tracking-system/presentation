@@ -1,0 +1,5 @@
+- 위치 오차(사람 키 대비, TEST 14편·놓침 238건): Kalman 0.110, GRU 수정 전 0.336 → 수정 후 0.122(−64%), Mamba 재학습 0.127(수정 전 0.361) — 이 발표 m23_position_result 근거 파일(model-bank tracking_server/models/README.md 11-16 측정, HANDOFF.md 2026-11-16)
+- 수정 GRU는 Kalman보다 약간 큼(+0.012); 원인 분석에 TEST를 사용해 독립 시험 아님 — 같은 근거 파일
+- 번호 바뀜 KeepID 끔 47 → 켬 43(IDF1 80.8 → 82.3), 라벨 녹화 9편 3,877장, PC — model-bank HANDOFF.md (2026-11-20 앞사람이 뒷사람 번호를 채가는 문제, "KeepID 끔 19 / 47 / 80.8")
+- 0.5초 넘게 번호 뺏김 20 → 17(cost_first + feat_guard 둘 다), 번호 바뀜 43 → 42, 같은 9편·PC FP32 — 같은 HANDOFF 절; 이 발표 m23_position_result 근거 파일
+- KeepID가 따라가던 사람에게 옛 번호를 돌려줌, 번호 가드는 장치 설정에서 켜짐; 장치 효과 미측정 — model-bank HANDOFF.md (2026-11-19 추종 대상의 기존 번호 복구; 2026-11-20 같은 절), 이 발표 m23_position_result 근거 파일
