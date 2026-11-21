@@ -1,4 +1,4 @@
 - SOLIDER, CVPR 2023 — arXiv:2303.17602
 - TransReID, 2021 — arXiv:2102.04378
 - 프로젝트의 SOLIDER 교사 — model-bank 6cf676d tracking_server/models/README.md (312~346행)
-- 교사 = LUPerson 사전학습 SOLIDER Swin-Tiny, 768차원, 증류 교사와 같은 SHA-256 — 개인 실험 기록(RESULT_KO.md, SOLIDER.json (11-20 SOLIDER 추적기 교체 비교))
+- 11-10·11-15 증류 교사 = 공개 열화상 재식별 가중치(ThermalTrack)의 SOLIDER Swin-Tiny, 768차원 (LUPerson 원본은 11-20 파인튜닝의 시작점) — 개인 실험 기록(RESULT_KO.md, SOLIDER.json (11-20 SOLIDER 추적기 교체 비교))

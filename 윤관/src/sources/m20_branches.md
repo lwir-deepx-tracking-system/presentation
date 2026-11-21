@@ -1,5 +1,5 @@
 - 세 갈래와 상태(외형·위치 예측 장치 사용, 종단간 보류) — model-bank 31ac21b tracking_server/models/README.md (2. 추적, 3. 외형 비교, 엔드투엔드)
 - 장치 외형 모델 = 검수 264장 직접 미세조정 RepVGG — model-bank 31ac21b HANDOFF.md (2026-11-19 실시간 카메라의 녹화 버튼과 SOLIDER 증류 모델 표시), tracking_server/models/MANIFEST.json (REPVGG_REVIEWED264_20261117)
-- 교사 = LUPerson 사전학습 SOLIDER Swin-Tiny, 증류 교사와 같은 SHA-256 — 개인 실험 기록(RESULT_KO.md, SOLIDER.json (11-20 SOLIDER 추적기 교체 비교))
+- 11-10·11-15 증류 교사 = 공개 열화상 재식별 가중치(ThermalTrack)의 SOLIDER Swin-Tiny (LUPerson 원본은 11-20 파인튜닝의 시작점) — 개인 실험 기록(RESULT_KO.md, SOLIDER.json (11-20 SOLIDER 추적기 교체 비교))
 - 장치 위치 예측 = 11-16 관절 GRU — model-bank 31ac21b HANDOFF.md (2026-11-19 추종 대상의 기존 번호 복구와 관절 모델 추가 학습)
 - FastTrackTr: 검출+추적기보다 낮음, 학습 중단(11-15), 선택 기능으로만 유지 — model-bank 31ac21b tracking_server/models/e2e/fasttracktr/INFO.json (status), tracking_server/research/LWIR_PRESENTATION_KO.md (엔드투엔드 대안), tracking_server/research/lwir_pose_plan/README.md (7-3. FastTrackTr 열화상 학습 결과와 결정, 2026-11-15: 학습 멈춤)
