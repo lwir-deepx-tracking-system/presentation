@@ -1,8 +1,8 @@
-- 가로(팬) 속도 SPD 10 / 20 / 30 = 305 / 630 / 약 930 px/s(좌우 평균, 좌우 차 약 4% 이내), SPD 1당 30.5 / 31.5 / 31.0 px/s — 작성자 PC 기록(비공개): virtual_gimbal_tmot/gimbal_speed/RESULT.md (1절 표); 공개 요약 model-bank 31ac21b tracking_server/src/gimbal/V27_CHANGES.md (11-16 절 "11-15 실측 SPD당 31 px/s")
+- 가로(팬) 속도 SPD 10 / 20 / 30 = 305 / 630 / 약 930 px/s(좌우 평균, 좌우 차 약 4% 이내), SPD 1당 30.5 / 31.5 / 31.0 px/s — 개인 실험 기록(virtual_gimbal_tmot/gimbal_speed/RESULT.md (1절 표)); 공개 요약 model-bank 31ac21b tracking_server/src/gimbal/V27_CHANGES.md (11-16 절 "11-15 실측 SPD당 31 px/s")
 - 명령 → 화면 반응 0.108 s(p10–p90 0.091–0.138), 속도 90% 도달 0.158 s, STOP 효과 0.064 s(0.053–0.078), STOP 뒤 밀림 23 / 43 / 78 px — gimbal_speed/RESULT.md (1절 Timing 표, 잘 맞은 계단 11회 중앙값)
 - 그래프 오른쪽 곡선은 위 두 중앙값(0.108 s 출발, 0.158 s에 90%)을 지나게 그린 모양이며, 출발과 STOP 사이 길이는 임의 — 발표용 그림
 - 조건: 2026-11-15 실제 짐벌·카메라, 사람 추종·추적기 없이 직접 속도 명령, SPD·방향별 2~3회; 화면 안에 움직이는 사람이 있어 12칸 위상상관 중앙값으로 배경 이동을 잼 — gimbal_speed/RESULT.md (머리말, 1절, 3절 run1)
 - 비례는 SPD 10~30 구간만: 11-10 기록에서 SPD 1~5는 모두 약 155–180 px/s로 거의 같음 — model-bank 31ac21b tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md (5절 읽는 법)
 - SPD 40~100과 세로(틸트)는 측정 못함(카메라가 균일한 회색 화면만 보여 중단) — gimbal_speed/RESULT.md (머리말, 3절)
-- 예전 시뮬레이터 가정(SPD 20 위 450 px/s 평평)은 실제보다 SPD 20에서 1.4배, SPD 30에서 2.1배 느림 → 실측값 모델로 교체 — gimbal_speed/RESULT.md (1절, 4절 plant_update_20261115.patch); 이후 가상 시험은 11-15 실측 속도 사용 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/search2/RESULT.md (Device test 조건)
+- 예전 시뮬레이터 가정(SPD 20 위 450 px/s 평평)은 실제보다 SPD 20에서 1.4배, SPD 30에서 2.1배 느림 → 실측값 모델로 교체 — gimbal_speed/RESULT.md (1절, 4절 plant_update_20261115.patch); 이후 가상 시험은 11-15 실측 속도 사용 — 개인 실험 기록(virtual_gimbal_tmot/search2/RESULT.md (Device test 조건))
 - 명령 쪽 가속(60 SPD/s) 때문에 SPD 30 명령은 출발 0.48 s 뒤, 모터는 0.16 s에 90% — gimbal_speed/RESULT.md (1절 끝)

@@ -1,4 +1,4 @@
 - RepVGG 직접 학습 · 11-17 — model-bank 6cf676d tracking_server/research/LWIR_PRESENTATION_KO.md
-- TMOT 387 → 386 / 432, CAMEL 197 → 200 / 218(맞힌 질의 수); 문서의 90.30 → 91.68%는 간격별 정답률의 평균 — 작성자 PC 기록(비공개): EXTERNAL_REID_RESULT.json; model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (RepVGG-A0 직접 적응)
+- TMOT 387 → 386 / 432, CAMEL 197 → 200 / 218(맞힌 질의 수); 문서의 90.30 → 91.68%는 간격별 정답률의 평균 — 개인 실험 기록(EXTERNAL_REID_RESULT.json); model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (RepVGG-A0 직접 적응)
 - 장치 선택 외형 모델 = 검수 264장 직접 미세조정 RepVGG(REPVGG_REVIEWED264_20261117) — model-bank 31ac21b HANDOFF.md, tracking_server/models/MANIFEST.json
 - 사전 유지력 기준: 3시드 모두 미충족, '기존 직접 가중치도 386/432와 200/218을 재현' — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (SOLIDER 교사를 검수 264장에 맞춘 뒤 RepVGG에 증류한 비교)

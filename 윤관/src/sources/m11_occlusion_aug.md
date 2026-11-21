@@ -4,5 +4,5 @@
 - 가려지거나 화면 밖인 관절은 "위치 있음·안 보임"(flag 1)으로 남기고 손실에 사용, 모자이크 0(잘린 관절 표시가 바뀌지 않는 문제) — 같은 파일 머리말; tracking_server/research/lwir_pose_plan/README.md 2-1절
 - 기하 증강 크기 ±50%, 이동 20%, 회전 5°, 좌우 반전 0.5 — tracking_server/research/lwir_pose_plan/README.md 2-1절
 - 마지막 O·C 단계는 강한 가림 비율을 학습 중 점차 높임 — tracking_server/research/lwir_pose_plan/README.md 7-5절
-- 그림 3장: OTP2 학습 이미지 600장에 위 증강을 실제로 적용한 점검 출력에서 골라 자름(노랑 = 정답 몸 박스, 하늘색 = 보이는 관절, 빨강 = 가려진 관절). 같은 점검에서 가려진 관절 정답은 증강 전 0개 → 증강 후 5,082개 — 작성자 PC 기록(비공개): partial_samples.jpg, pipeline_test.json (11-13 강한 가림·화질 증강 점검); 이미지는 OTP2(MIT, assets/OPENTHERMALPOSE-LICENSE.txt)
+- 그림 3장: OTP2 학습 이미지 600장에 위 증강을 실제로 적용한 점검 출력에서 골라 자름(노랑 = 정답 몸 박스, 하늘색 = 보이는 관절, 빨강 = 가려진 관절). 같은 점검에서 가려진 관절 정답은 증강 전 0개 → 증강 후 5,082개 — 개인 실험 기록(partial_samples.jpg, pipeline_test.json (11-13 강한 가림·화질 증강 점검)); 이미지는 OTP2(MIT, assets/OPENTHERMALPOSE-LICENSE.txt)
 - 증강을 켜고 끈 단독 비교는 없음 — tracking_server/research/lwir_pose_plan/README.md 2-3절 5번

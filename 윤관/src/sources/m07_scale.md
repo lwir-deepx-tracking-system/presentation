@@ -1,8 +1,8 @@
-- 네 규모의 6종 mAP50–95: Full FT 29.25 / 33.69 / 38.93 / 41.09%, LoRA r8 + 검출 머리 27.60 / 31.51 / 36.51 / 38.11%(262 / 1,074 / 4,196 / 10,491장) — 작성자 PC 기록(비공개): evidence.json(map_to_project_ft_debate_v1, original_seed202_validation_rows), MAIN_QUESTION.md
-- 갱신 수 148 / 606 / 2,367 / 5,921회 — 작성자 PC 기록(비공개): evidence.json(optimizer_steps)
-- 조건: YOLO26s · seed 202 · batch 4 · 30 epoch · FLIR 검증 1,144장 · 규모별 1회; 10,491장은 학습 가능한 전체 이미지(eligible_full), 앞 장 10% 묶음의 기준 10,742장과 다름 — 작성자 PC 기록(비공개): evidence.json
+- 네 규모의 6종 mAP50–95: Full FT 29.25 / 33.69 / 38.93 / 41.09%, LoRA r8 + 검출 머리 27.60 / 31.51 / 36.51 / 38.11%(262 / 1,074 / 4,196 / 10,491장) — 개인 실험 기록(evidence.json(map_to_project_ft_debate_v1, original_seed202_validation_rows), MAIN_QUESTION.md)
+- 갱신 수 148 / 606 / 2,367 / 5,921회 — 개인 실험 기록(evidence.json(optimizer_steps))
+- 조건: YOLO26s · seed 202 · batch 4 · 30 epoch · FLIR 검증 1,144장 · 규모별 1회; 10,491장은 학습 가능한 전체 이미지(eligible_full), 앞 장 10% 묶음의 기준 10,742장과 다름 — 개인 실험 기록(evidence.json)
 - Full FT − LoRA 차이 +1.7 / +2.2 / +2.4 / +3.0%p, Full FT 구간별 증가 +4.4 / +5.2 / +2.2%p — 위 값에서 계산
 - 이전 판의 빈 점(직선 보간 36.92 · 40.23 · 34.59 · 37.48)은 측정값이 아니어서 이번 판에서 뺌 — 이전 판 assets/data-scale-original.svg
 - 이후 증류와 대비(CLAHE) 실험은 4,196장에서 진행 — model-bank 6ee8022 tracking_server/research/LWIR_PRESENTATION_KO.md
-- 같은 실행의 사람 AP50–95도 네 규모 모두 Full FT가 높음(부록 ax_scale_person). 고정 ByteTrack 사람 HOTA는 262 · 1,074장에서 LoRA가 높고 4,196장은 Full FT, 10,491장은 비슷해서 추적 점수까지 Full FT가 늘 앞선 것은 아님 — 작성자 PC 기록(비공개): evidence.json, MAIN_QUESTION.md
+- 같은 실행의 사람 AP50–95도 네 규모 모두 Full FT가 높음(부록 ax_scale_person). 고정 ByteTrack 사람 HOTA는 262 · 1,074장에서 LoRA가 높고 4,196장은 Full FT, 10,491장은 비슷해서 추적 점수까지 Full FT가 늘 앞선 것은 아님 — 개인 실험 기록(evidence.json, MAIN_QUESTION.md)
 - 참고: Hestness et al., Deep Learning Scaling is Predictable, Empirically, arXiv:1712.00409(이 네 점은 갱신 수가 함께 바뀌어 스케일 법칙 검증이 아님)

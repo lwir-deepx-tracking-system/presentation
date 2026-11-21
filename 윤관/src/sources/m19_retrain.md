@@ -5,7 +5,7 @@
 - E10 학습 자료와 이미지 해시가 같은 장: 검증 63장 중 54장, 시험 62장 중 61장 — model-bank 31ac21b HANDOFF.md ('직접 출력 박스와 관절 계산 박스 비교', 기록 9785a40)
 - 추적 HOTA(두 NPU 분할 모사, BoT-SORT 등 추적기·외형 모델 고정): 실내 394장 / 실외 853장, E10 29.05 / 44.91%, Vast E05 37.50 / 41.92%, E10 + 실내 55·실외 35장 1 epoch 29.09 / 44.66% — model-bank 31ac21b HANDOFF.md (기록 d4540e8)
 - Vast E05 = V8(AUG E01)에서 55장으로 5 epoch 이어 학습한 모델. 실내 37.50%가 '일반 추가 학습' 값과 같아 같은 가중치로 판단. 실내 순위는 같은 개발 녹화에서 매김 — model-bank 31ac21b HANDOFF.md (기록 51a8482, d4540e8)
-- AUG E01 = 앞 장의 V8 증강 E01(OTP2 박스 52.09%로 일치) — model-bank 31ac21b HANDOFF.md ('박스 비교'); 작성자 PC 기록(비공개): otp_A2_E01_A2_E09.json
+- AUG E01 = 앞 장의 V8 증강 E01(OTP2 박스 52.09%로 일치) — model-bank 31ac21b HANDOFF.md ('박스 비교'); 개인 실험 기록(otp_A2_E01_A2_E09.json)
 - Vast 낮은 학습률 E30, 관절만 학습 E08, 박스·관절 가중 E01은 OTP2 기록 없이 현장 시험 62장 단계에서 멈춤 — model-bank 31ac21b HANDOFF.md (기록 65870e6, e8b723a, 7cb9b01)
 - 결정: 장치는 기존 E10 유지 — model-bank 31ac21b HANDOFF.md ('8090은 기존 YOLO26m E10을 사용합니다', '운영은 이전 선택을 사용합니다')
 - 관절로 E10 박스를 보정하는 후처리도 HOTA 26.88 / 26.49%로 E10 29.05%보다 낮아 적용하지 않음 — model-bank 31ac21b HANDOFF.md (기록 e37c81b)

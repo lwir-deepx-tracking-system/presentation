@@ -1,5 +1,5 @@
-- SOLIDER 교사 Swin-Tiny · 768차원, RepVGG 학생 128차원 · M1 INT8 — model-bank 31ac21b tracking_server/models/README.md (3. 외형 비교), 작성자 PC 기록(비공개): SOLIDER.json (dimensions 768)
-- IDF1 66.74 → 66.57% (−0.2%p), ID 전환 99 → 100회, FLIR 3,749프레임, 같은 검출·GMC·C++ BoT-SORT, 외형 요청 3,147개, PC FP32, 1회 — 작성자 PC 기록(비공개): RESULT_KO.md, BASELINE.json, SOLIDER.json (11-20 SOLIDER 추적기 교체 비교)
+- SOLIDER 교사 Swin-Tiny · 768차원, RepVGG 학생 128차원 · M1 INT8 — model-bank 31ac21b tracking_server/models/README.md (3. 외형 비교), 개인 실험 기록(SOLIDER.json (dimensions 768))
+- IDF1 66.74 → 66.57% (−0.2%p), ID 전환 99 → 100회, FLIR 3,749프레임, 같은 검출·GMC·C++ BoT-SORT, 외형 요청 3,147개, PC FP32, 1회 — 개인 실험 기록(RESULT_KO.md, BASELINE.json, SOLIDER.json (11-20 SOLIDER 추적기 교체 비교))
 - 비교 기준 RepVGG = 검수 264장 미세조정판(FP32), KeepID는 양쪽 같은 RepVGG 특징 — 같은 RESULT_KO.md
 - 장치 선택 모델 = 검수 264장 직접 미세조정 RepVGG(11-17) — model-bank 31ac21b HANDOFF.md (2026-11-19 실시간 카메라의 녹화 버튼과 SOLIDER 증류 모델 표시; 2026-11-20 새 clone 전환 시 기존 현장 ReID 등록 보존)
 - 11-15 교사 추가 학습 0.738 → 0.773, 증류 학생 0.660 < 기존 0.694 (미채택) — model-bank 31ac21b tracking_server/models/README.md (3. 외형 비교, 올리지 않은 시도)

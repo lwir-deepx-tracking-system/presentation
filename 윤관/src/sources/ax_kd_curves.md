@@ -1,4 +1,4 @@
 - 6종 검증 mAP50–95 매 epoch 곡선, 60 epoch 값 직접 학습 37.97% · 증류 38.29%(+0.32%p) — 학습로그/YOLO26s_FT_60epoch_seed202.csv, 학습로그/YOLO26s_KD_60epoch_seed202.csv의 monitor_primary6/mAP50_95를 이 장에서 다시 그림
 - 증류 손실 1 epoch 8.78 → 60 epoch 1.45(학습 중 손실, 검증 성능이 아님) — 학습로그/YOLO26s_KD_60epoch_seed202.csv의 train/dis_loss
 - 사람 AP −0.62%p(44.8575 → 44.2334%) — model-bank 6ee8022 tracking_server/research/LWIR_PRESENTATION_KO.md
-- 두 CSV는 작성자 PC의 두 사본과 SHA-256이 같음 — 작성자 PC 기록(비공개): local_execution_v12 · retrieved_local_v12 실행 기록
+- 두 CSV는 작성자 PC의 두 사본과 SHA-256이 같음 — 개인 실험 기록(local_execution_v12) · retrieved_local_v12 실행 기록

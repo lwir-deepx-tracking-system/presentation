@@ -1,2 +1,2 @@
 - 11/12 SPD 1·7 명령 응답 — model-bank 31ac21b tracking_server/src/gimbal/hil_test/FIXED_PULSE_RESULT_20261112_KO.md
-- 11-15 실측: SPD 10/20/30 = 305/630/약 930 px/s, 명령→화면 0.108 s, SPD 40~100과 틸트 미측정 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/gimbal_speed/RESULT.md
+- 11-15 실측: SPD 10/20/30 = 305/630/약 930 px/s, 명령→화면 0.108 s, SPD 40~100과 틸트 미측정 — 개인 실험 기록(virtual_gimbal_tmot/gimbal_speed/RESULT.md)

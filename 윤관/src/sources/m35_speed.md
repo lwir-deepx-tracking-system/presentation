@@ -1,11 +1,11 @@
-- 모의 시험에 넣은 짐벌 실측값: 팬 SPD 10/20/30 = 305/630/약 930 px/s(SPD당 약 31 px/s), 명령→화면 0.108 s, 정지 명령 0.064 s 뒤 멈춤, SPD 30 초과와 상하는 미측정(11-15 실제 짐벌·카메라, 사람 없음) — 작성자 PC 기록(비공개): RESULT.md (gimbal_speed, 1절)
-- 가속 한도(`--speed-rate`) 기존 60 SPD/초: SPD 30까지 0.48 s, 150이면 약 0.19 s — 작성자 PC 기록(비공개): SPEC.md (virtual_gimbal_tmot 2절), RESULT.md (gimbal_speed 1절); 150 SPD/초 경사는 장치 가상 직렬 시험에서 SPD 26까지 168 ms로 확인 — 작성자 PC 기록(비공개): deploy.txt (arrival_20261115/device)
-- 가속 150: 처음부터 빠르게 걷는 사람(가운데에서 출발해 옆으로 2초 걷고 멈춤)의 놓치지 않는 최고 속도 750 → 900 px/s(+20%), 600 px/s에서 멈출 때 지나침 40.7 → 21.9 px(−46%), 직선·SPD 30 위 평탄 두 모형 같음 — 작성자 PC 기록(비공개): sim_far_result.json, RESULT.md (gimbal_speed 2절). RESULT 표와 기록부는 기존 값을 "700~750"으로 적음(씨앗 3개), json의 max_kept는 750이라 막대는 750
-- 원거리 이득 1.6배(오차 240 px부터 키워 320 px에서 1.6배, 제동 없음): 0.5초 동안 빨라지는 사람 900 → 1,150 px/s(+28%, 직선 모형), SPD 30 위가 평탄하면 900 → 950; 900 px/s에서 급정지 지나침 10.84 → 35.46 px(표시값 11 → 35, +218%); 지연 0.11 s, 씨앗 6개 중 가장 나쁜 값 — 작성자 PC 기록(비공개): final.txt, sim_far2_final.json (far_gain_tune)
-- 가속 150의 대가(같은 모의 시험): 초당 150 px로 느리게 걷는 사람에서 멈출 때 지나침 21 → 25 px, 방향 바꿈 0 → 2번(불감대 이탈 32 px 안) — 작성자 PC 기록(비공개): RESULT.md (gimbal_speed 2절), sim_far_result.json (v150)
-- 원거리 이득의 대가(지연 0.15 s 모형): 280 px 옆걸음 지나침 79 → 93 px, 900 px/s 부드러운 정지 33 → 49 px — 작성자 PC 기록(비공개): RESULT.md (gimbal_speed 7절), final.txt (far_gain_tune)
+- 모의 시험에 넣은 짐벌 실측값: 팬 SPD 10/20/30 = 305/630/약 930 px/s(SPD당 약 31 px/s), 명령→화면 0.108 s, 정지 명령 0.064 s 뒤 멈춤, SPD 30 초과와 상하는 미측정(11-15 실제 짐벌·카메라, 사람 없음) — 개인 실험 기록(RESULT.md (gimbal_speed, 1절))
+- 가속 한도(`--speed-rate`) 기존 60 SPD/초: SPD 30까지 0.48 s, 150이면 약 0.19 s — 개인 실험 기록(SPEC.md (virtual_gimbal_tmot 2절), RESULT.md (gimbal_speed 1절)); 150 SPD/초 경사는 장치 가상 직렬 시험에서 SPD 26까지 168 ms로 확인 — 개인 실험 기록(deploy.txt (arrival_20261115/device))
+- 가속 150: 처음부터 빠르게 걷는 사람(가운데에서 출발해 옆으로 2초 걷고 멈춤)의 놓치지 않는 최고 속도 750 → 900 px/s(+20%), 600 px/s에서 멈출 때 지나침 40.7 → 21.9 px(−46%), 직선·SPD 30 위 평탄 두 모형 같음 — 개인 실험 기록(sim_far_result.json, RESULT.md (gimbal_speed 2절)). RESULT 표와 기록부는 기존 값을 "700~750"으로 적음(씨앗 3개), json의 max_kept는 750이라 막대는 750
+- 원거리 이득 1.6배(오차 240 px부터 키워 320 px에서 1.6배, 제동 없음): 0.5초 동안 빨라지는 사람 900 → 1,150 px/s(+28%, 직선 모형), SPD 30 위가 평탄하면 900 → 950; 900 px/s에서 급정지 지나침 10.84 → 35.46 px(표시값 11 → 35, +218%); 지연 0.11 s, 씨앗 6개 중 가장 나쁜 값 — 개인 실험 기록(final.txt, sim_far2_final.json (far_gain_tune))
+- 가속 150의 대가(같은 모의 시험): 초당 150 px로 느리게 걷는 사람에서 멈출 때 지나침 21 → 25 px, 방향 바꿈 0 → 2번(불감대 이탈 32 px 안) — 개인 실험 기록(RESULT.md (gimbal_speed 2절), sim_far_result.json (v150))
+- 원거리 이득의 대가(지연 0.15 s 모형): 280 px 옆걸음 지나침 79 → 93 px, 900 px/s 부드러운 정지 33 → 49 px — 개인 실험 기록(RESULT.md (gimbal_speed 7절), final.txt (far_gain_tune))
 - 원거리 이득은 오차 240 px까지는 이전과 같고 화면 가장자리 쪽에서만 최대 1.6배; `--axis-reversal 1`과 함께 쓰면 효과가 없던 문제를 고친 뒤 고른 값 — model-bank 31ac21b tracking_server/src/gimbal/V27_CHANGES.md (`--far-gain` 항목), 고친 커밋 966c3b0
-- 장치 적용: 가속 150은 11-15 17:56, 원거리 이득 1.6/240/320은 11-15 21:13, 둘 다 실제 짐벌로 사람 추종 확인 없음 — 작성자 PC 기록(비공개): WORKLOG.md (2026-11-15 17:56:49, 21:13:48)
-- 11-20 장치 짐벌 인자에 `--speed-rate 150 --far-gain 1.6 --far-start-px 240 --far-full-px 320` 그대로 있음 — 작성자 PC 기록(비공개): rules_20261120.txt (id_rules_audit_20261120)
-- 반대 근거(단일 실행): 11-15 새벽 가상 카메라 조정(옛 450 px/s 평탄 모형, TMOT 5 fps)에서는 가속 150이 클릭 뒤 첫 중심 맞추기를 늦춤(정착 1.4~2.3 s 대 0.54~0.77 s) — 작성자 PC 기록(비공개): RESULT.md (tuning_sweep)
-- 결과 도착 즉시 제어를 켠 뒤에도 놓치지 않는 속도 900/1,150 px/s는 같음(씨앗 24개) — 작성자 PC 기록(비공개): sim_arrival.txt (arrival_20261115/sim)
+- 장치 적용: 가속 150은 11-15 17:56, 원거리 이득 1.6/240/320은 11-15 21:13, 둘 다 실제 짐벌로 사람 추종 확인 없음 — 개인 실험 기록(WORKLOG.md (2026-11-15 17:56:49, 21:13:48))
+- 11-20 장치 짐벌 인자에 `--speed-rate 150 --far-gain 1.6 --far-start-px 240 --far-full-px 320` 그대로 있음 — 개인 실험 기록(rules_20261120.txt (id_rules_audit_20261120))
+- 반대 근거(단일 실행): 11-15 새벽 가상 카메라 조정(옛 450 px/s 평탄 모형, TMOT 5 fps)에서는 가속 150이 클릭 뒤 첫 중심 맞추기를 늦춤(정착 1.4~2.3 s 대 0.54~0.77 s) — 개인 실험 기록(RESULT.md (tuning_sweep))
+- 결과 도착 즉시 제어를 켠 뒤에도 놓치지 않는 속도 900/1,150 px/s는 같음(씨앗 24개) — 개인 실험 기록(sim_arrival.txt (arrival_20261115/sim))

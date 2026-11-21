@@ -1,11 +1,11 @@
-- TEST 14편·놓친 경우 238건 위치 오차: Kalman 0.110, GRU 수정 전 0.336 → 수정 후 0.122 (−64%) — model-bank 31ac21b tracking_server/models/README.md (2. 추적, 11-16 측정), 작성자 PC 기록(비공개): test_fix.json
-- 수정 GRU 오차는 Kalman보다 약간 큼: +0.012 (90% 구간 +0.004~+0.022), 14편 중 10편에서 Kalman보다 나쁨 — model-bank 31ac21b tracking_server/models/README.md (11-16 측정), 작성자 PC 기록(비공개): test_fix.json (lost_box)
-- Mamba 0.361 → 0.127 (−65%) — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 두 파일 더), 작성자 PC 기록(비공개): table.json (11-16 위치 기억 v3 비교)
-- IDF1 14편: Kalman 74.1, GRU 수정 전 61.7 · 수정 후 74.7 (+0.6%p, 90% 구간 −0.8~+2.3), Mamba 수정 전 64.0 · 수정 후 73.4; 수정 전후 변화 GRU +13.0%p(74.66−61.68), Mamba +9.4%p(73.40−64.03) — 작성자 PC 기록(비공개): test_fix.json, table.json; GRU·Kalman 값은 model-bank 31ac21b tracking_server/models/README.md (11-16 측정)
+- TEST 14편·놓친 경우 238건 위치 오차: Kalman 0.110, GRU 수정 전 0.336 → 수정 후 0.122 (−64%) — model-bank 31ac21b tracking_server/models/README.md (2. 추적, 11-16 측정), 개인 실험 기록(test_fix.json)
+- 수정 GRU 오차는 Kalman보다 약간 큼: +0.012 (90% 구간 +0.004~+0.022), 14편 중 10편에서 Kalman보다 나쁨 — model-bank 31ac21b tracking_server/models/README.md (11-16 측정), 개인 실험 기록(test_fix.json (lost_box))
+- Mamba 0.361 → 0.127 (−65%) — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 두 파일 더), 개인 실험 기록(table.json (11-16 위치 기억 v3 비교))
+- IDF1 14편: Kalman 74.1, GRU 수정 전 61.7 · 수정 후 74.7 (+0.6%p, 90% 구간 −0.8~+2.3), Mamba 수정 전 64.0 · 수정 후 73.4; 수정 전후 변화 GRU +13.0%p(74.66−61.68), Mamba +9.4%p(73.40−64.03) — 개인 실험 기록(test_fix.json, table.json); GRU·Kalman 값은 model-bank 31ac21b tracking_server/models/README.md (11-16 측정)
 - 원인 분석에 TEST를 사용해 독립 시험 아님 — model-bank 31ac21b tracking_server/models/README.md (어떻게 잰 숫자인가)
-- seq_018 장치 재생 IDF1 75.36 vs 71.81, ID 전환 15 vs 17 (14편 중 1편) — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 GRU 새 파일), 작성자 PC 기록(비공개): replay_pred_seq018.json
+- seq_018 장치 재생 IDF1 75.36 vs 71.81, ID 전환 15 vs 17 (14편 중 1편) — model-bank 31ac21b HANDOFF.md (8. 바뀐 것 기록, 2026-11-16 위치 기억 GRU 새 파일), 개인 실험 기록(replay_pred_seq018.json)
 - 장치는 11-16 관절 GRU 사용, 후속 속도 보정 GRU는 개발 영상 ID 전환 26 = 26, HOTA 18.95 → 18.90으로 미채택 — model-bank 31ac21b HANDOFF.md (2026-11-19 추종 대상의 기존 번호 복구와 관절 모델 추가 학습)
 - 번호 지킴 스위치 cost_first(전체 비용이 낮을 때만 짝짓기, Python·C++ 같음)와 feat_guard(겹친 동안 그 번호에 외형 특징 저장 안 함), 코드 기본 꺼짐 — model-bank 152fbda, 239be8d, 2d06361 HANDOFF.md (2026-11-20 앞사람이 뒷사람 번호를 채가는 문제)
-- 효과(PC FP32, 라벨 녹화 9편 3,877장, 0.5초 넘게 간 뺏김 / 번호 바뀜 / IDF1): 끔 20 / 43 / 82.3, cost_first 18 / 41 / 83.2, 둘 다 17 / 42 / 82.3; feat_guard는 판정기 기억의 다른 사람 특징 8.9% → 3.9~4.8%만 줄임; 장치 CPU 비용·장치 재생 효과는 미측정 — 같은 HANDOFF 절, 작성자 PC 기록(비공개): ID_STEAL_REPORT_KO.md, table_final2_main.txt
-- 장치 상태: 11-20 17:56 서버 재시작 뒤 cost_first·feat_guard 켜짐 유지 — 작성자 PC 기록(비공개): WORKLOG.md 2026-11-20 18:57; 추천 기준 문구도 "장치 설정 cost_first+feat_guard" — model-bank 901255a tracking_server/models/RECOMMENDED.json
+- 효과(PC FP32, 라벨 녹화 9편 3,877장, 0.5초 넘게 간 뺏김 / 번호 바뀜 / IDF1): 끔 20 / 43 / 82.3, cost_first 18 / 41 / 83.2, 둘 다 17 / 42 / 82.3; feat_guard는 판정기 기억의 다른 사람 특징 8.9% → 3.9~4.8%만 줄임; 장치 CPU 비용·장치 재생 효과는 미측정 — 같은 HANDOFF 절, 개인 실험 기록(ID_STEAL_REPORT_KO.md, table_final2_main.txt)
+- 장치 상태: 11-20 17:56 서버 재시작 뒤 cost_first·feat_guard 켜짐 유지 — 개인 실험 기록(WORKLOG.md 2026-11-20 18:57); 추천 기준 문구도 "장치 설정 cost_first+feat_guard" — model-bank 901255a tracking_server/models/RECOMMENDED.json
 - 깊이 순서(depth_order)·겹친 두 사람 묶기(merge_split)·pre_capture 스위치는 PC 시험에서 번호 바뀜이 늘거나 같아 기본 꺼짐·켜지 않음 — model-bank a260f42, c5b6783 HANDOFF.md (2026-11-20 깊이 순서 규칙; 겹친 두 사람 묶어 두기 시험)

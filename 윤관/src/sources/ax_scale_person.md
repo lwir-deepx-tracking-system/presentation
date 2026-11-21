@@ -1,3 +1,3 @@
-- 사람 AP50–95: Full FT 40.81 / 44.32 / 46.54 / 48.08%, LoRA r8 + 검출 머리 39.34 / 42.42 / 44.21 / 45.53%(262 / 1,074 / 4,196 / 10,491장), 차이 +1.5 / +1.9 / +2.3 / +2.6%p — 작성자 PC 기록(비공개): evidence.json(map_to_project_ft_debate_v1, validation_person_AP50_95_percent), MAIN_QUESTION.md
-- 조건: YOLO26s · seed 202 · batch 4 · 30 epoch · FLIR 검증 1,144장 · 규모별 1회(데이터 규모 장과 같은 실행) — 작성자 PC 기록(비공개): evidence.json
-- 고정 ByteTrack 사람 HOTA는 Full FT 55.12 / 60.85 / 64.70 / 62.17%, LoRA 57.72 / 62.12 / 62.87 / 62.19%로 작은 규모에서는 LoRA가 높았음 — 작성자 PC 기록(비공개): evidence.json
+- 사람 AP50–95: Full FT 40.81 / 44.32 / 46.54 / 48.08%, LoRA r8 + 검출 머리 39.34 / 42.42 / 44.21 / 45.53%(262 / 1,074 / 4,196 / 10,491장), 차이 +1.5 / +1.9 / +2.3 / +2.6%p — 개인 실험 기록(evidence.json(map_to_project_ft_debate_v1, validation_person_AP50_95_percent), MAIN_QUESTION.md)
+- 조건: YOLO26s · seed 202 · batch 4 · 30 epoch · FLIR 검증 1,144장 · 규모별 1회(데이터 규모 장과 같은 실행) — 개인 실험 기록(evidence.json)
+- 고정 ByteTrack 사람 HOTA는 Full FT 55.12 / 60.85 / 64.70 / 62.17%, LoRA 57.72 / 62.12 / 62.87 / 62.19%로 작은 규모에서는 LoRA가 높았음 — 개인 실험 기록(evidence.json)

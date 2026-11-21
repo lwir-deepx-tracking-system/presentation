@@ -1,6 +1,6 @@
 - 운영 설정과 시험 범위 — model-bank ccf1ea9 HANDOFF.md
-- 예측 따라가기 vel 방식 재포착 +0.20(95% 0.07~0.32), fused +0.06(−0.11~0.21), guard v2 유효 2회 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/recatch/RESULT.md
-- 11-15 17:20 운영 적용 `--coast 1 --coast-ms 800`, `LWIR_COAST_MODE=fused`, `LWIR_FOLLOW_GUARD=2` — 작성자 PC 기록(비공개): WORKLOG.md; model-bank bd57707
-- 실카메라 켬/끔 비교 14분에 중단 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/live_coast/RESULT.md
-- `--seek 1` 가상 1차 114회(26/87 대 25/108), 2차 79회(나간 지 1초 넘은 경우 7/27 대 3/24) → 끔 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/search2/RESULT.md, search2/long_exit/RESULT.md
+- 예측 따라가기 vel 방식 재포착 +0.20(95% 0.07~0.32), fused +0.06(−0.11~0.21), guard v2 유효 2회 — 개인 실험 기록(virtual_gimbal_tmot/recatch/RESULT.md)
+- 11-15 17:20 운영 적용 `--coast 1 --coast-ms 800`, `LWIR_COAST_MODE=fused`, `LWIR_FOLLOW_GUARD=2` — 개인 실험 기록(WORKLOG.md); model-bank bd57707
+- 실카메라 켬/끔 비교 14분에 중단 — 개인 실험 기록(virtual_gimbal_tmot/live_coast/RESULT.md)
+- `--seek 1` 가상 1차 114회(26/87 대 25/108), 2차 79회(나간 지 1초 넘은 경우 7/27 대 3/24) → 끔 — 개인 실험 기록(virtual_gimbal_tmot/search2/RESULT.md, search2/long_exit/RESULT.md)
 - 11-19 예측 주변 탐색(0.8초 예측 따라감 뒤 마지막 이동 방향 → 반대쪽 → 복귀, SPD 2, 브리지 3.6 s) 운영 적용, 효과 미측정 — model-bank a6a6a07, 31ac21b HANDOFF.md (짐벌의 예측 탐색)

@@ -1,6 +1,6 @@
 - 배치 16 × 누적 4 = 64, 32는 메모리 부족 — model-bank 31ac21b tracking_server/research/lwir_pose_plan/README.md 2-1절
-- 학습률: 가림·화질 단계부터 R0·R1까지 2e-4(첫 OTP2 단계는 5e-4), O·C부터 1e-4(다듬은 모델을 2e-4로 다시 시작하면 첫 epoch 점수 하락) — 같은 README 2-1절; 작성자 PC 기록(비공개): expB_v1_last.pt·expC_v4_last.pt·expE_v1_best.pt·C_control_v1_epoch2.pt 안의 학습 인자(lr0 0.0005 / 0.0002 / 0.0002 / 0.0001)
-- 조기 멈춤: 박스 점수가 섞인 기준이 흔들려 E는 최대 12 epoch 중 10 epoch에서 멈추고 4 epoch 판(best.pt)이 골라짐(OTP2 관절 0.81 vs 마지막 0.85). R0까지 patience 4, R1(재시작판)·O·C는 patience 0 — 같은 README 2절·2-2절; 작성자 PC 기록(비공개): expE_v1_best.pt, R0_E_cont_v1_last.pt, R1_llvippose_v2_last.pt 학습 인자, WORKLOG.md 2026-11-15 R1 patience 0 재시작
+- 학습률: 가림·화질 단계부터 R0·R1까지 2e-4(첫 OTP2 단계는 5e-4), O·C부터 1e-4(다듬은 모델을 2e-4로 다시 시작하면 첫 epoch 점수 하락) — 같은 README 2-1절; 개인 실험 기록(expB_v1_last.pt·expC_v4_last.pt·expE_v1_best.pt·C_control_v1_epoch2.pt 안의 학습 인자(lr0 0.0005 / 0.0002 / 0.0002 / 0.0001))
+- 조기 멈춤: 박스 점수가 섞인 기준이 흔들려 E는 최대 12 epoch 중 10 epoch에서 멈추고 4 epoch 판(best.pt)이 골라짐(OTP2 관절 0.81 vs 마지막 0.85). R0까지 patience 4, R1(재시작판)·O·C는 patience 0 — 같은 README 2절·2-2절; 개인 실험 기록(expE_v1_best.pt, R0_E_cont_v1_last.pt, R1_llvippose_v2_last.pt 학습 인자, WORKLOG.md 2026-11-15 R1 patience 0 재시작)
 - 모자이크 0: 모자이크가 사람을 잘라도 관절 보임 표시가 바뀌지 않음 — 같은 README 2-1절; scripts/pose_partial.py 머리말
 - 입력 640: 960은 놓침이 늘어 미채택 — 같은 README 2-1절(노션 학습법 통합 해석 v3)
 - 크기 ±50%·이동 20%·회전 5°: 크기는 OTP2 원 학습과 같고 이동·회전은 비교 안 함 — 같은 README 2-1절

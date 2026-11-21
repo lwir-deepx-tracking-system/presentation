@@ -1,9 +1,9 @@
 - YOLO26m FLIR 640×480: 출력 6개, 보정 8장, NPU 그래프 하나뿐(CPU 그래프 없음), DX-COM 2.4.1-rc.1, EMA — model-bank 31ac21b tracking_server/models/README.md, tracking_server/models/detect/yolo26m/yolo26m_flir_nms_640x480_compile_metadata.json
 - 실내 FT YOLO26m: 보정 16장(FLIR 8 + 실내 8), NPU 그래프 하나뿐 — model-bank 31ac21b tracking_server/models/README.md, tracking_server/models/detect/yolo26m/yolo26m_flir_inside_20261110_2020_640x480_compile_metadata.json
 - 자세 모델(11-14 근거리, 11-15 범용): 출력 6개 또는 관절 포함 9개, 보정 97장(우리 카메라), EMA, opt 1, 종류 16칸을 채우는 작은 부분만 CPU — model-bank 31ac21b tracking_server/models/README.md, tracking_server/LATENCY.md
-- 상체 E10 분할 타일: 입력 [1,3,480,384], 타일당 출력 9개, 검수 264장 → 타일 528개, EMA, opt 1, aggressive_partitioning 끔, "1 NPU groups, 0 CPU groups" — 작성자 PC 기록(비공개): COMPILE.json, COMPILE.log, GRAPH_VERIFY.json (LWIR650 E10 split)
+- 상체 E10 분할 타일: 입력 [1,3,480,384], 타일당 출력 9개, 검수 264장 → 타일 528개, EMA, opt 1, aggressive_partitioning 끔, "1 NPU groups, 0 CPU groups" — 개인 실험 기록(COMPILE.json, COMPILE.log, GRAPH_VERIFY.json (LWIR650 E10 split))
 - RepVGG 외형: 입력 [1,128,64,3](높이 128, 너비 64), 출력 128차원, 보정 256장, EMA, opt 1; CPU 그래프 없음은 같은 구조 TMOT·CAMEL 판 파일 기준 — model-bank 31ac21b tracking_server/models/README.md (3. 외형 비교), tracking_server/models/reid/build_scripts/repvgg_ft_otp2_build/build_reid.py, tracking_server/models/reid/repvgg_tmot_camel_reid_compile_metadata.json
 - 장치 외형 모델 = 검수 264장 직접 미세조정 RepVGG(11-17) — model-bank 31ac21b HANDOFF.md (2026-11-20 새 clone 전환 시 기존 현장 ReID 등록 보존)
 - FastTrackTr: AE · B0 · B1 그래프 3개, 17장을 읽고 앞 16장으로 보정, EMA, opt 1, 학습 중지 — model-bank 31ac21b tracking_server/models/e2e/fasttracktr/build_scripts/ftt_trained_export.py, ftt_compile.py, INFO.json
 - ONNX opset 17 — model-bank 31ac21b build480.py, build_bodybox_kpt.py, build_reid.py
-- FP32 ONNX 대 M1 INT8 사람 검출 일치(신뢰도 0.25 이상): ONNX 검출 1,090개 중 1,081개를 M1이 찾음(99.2%), M1 검출은 1,194개, YOLO26s FLIR 시험 375장 — 작성자 PC 기록(비공개): onnx_vs_m1_test.txt
+- FP32 ONNX 대 M1 INT8 사람 검출 일치(신뢰도 0.25 이상): ONNX 검출 1,090개 중 1,081개를 M1이 찾음(99.2%), M1 검출은 1,194개, YOLO26s FLIR 시험 375장 — 개인 실험 기록(onnx_vs_m1_test.txt)

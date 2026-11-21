@@ -1,4 +1,4 @@
-- 타일 구조: 화면 480×640, 타일 폭 384, 오른쪽 타일 시작 256(겹침 128 px), 타일당 출력 9개(두 타일 18개), 상체 E10 사람 전용 — model-bank 31ac21b tracking_server/src/detect/dual_tile.py; 작성자 PC 기록(비공개): GRAPH_VERIFY.json (LWIR650 E10 split)
+- 타일 구조: 화면 480×640, 타일 폭 384, 오른쪽 타일 시작 256(겹침 128 px), 타일당 출력 9개(두 타일 18개), 상체 E10 사람 전용 — model-bank 31ac21b tracking_server/src/detect/dual_tile.py; 개인 실험 기록(GRAPH_VERIFY.json (LWIR650 E10 split))
 - NPU 제출·회수를 DX-RT C API(C++)로 옮김, 실카메라 4장에서 두 타일 원시 텐서 18개가 Python SDK와 비트 단위로 같음을 확인한 뒤 전환 — model-bank 31ac21b HANDOFF.md (2026-11-19 한 장 분할의 DX-RT C++ 실행)
 - 좌표 복원·사람 NMS·관절 복원 C++ — model-bank 31ac21b HANDOFF.md (2026-11-20 NPU 분할 출력과 관절 후처리 C++ 적용)
 - 실카메라 · 사람 없음: 1,800장, 서버 수신→추적 완료 p95 23.25 ms, 최대 39.262 ms, 33 ms 초과 1장, 30 FPS, 입력 버림 0 · 순서 오류 0, 병렬 회수 — model-bank 31ac21b HANDOFF.md (2026-11-20 분할 입력 준비와 출력 버퍼 재사용, 5c1b189); 11-19 밤~11-20 C++ 경로의 다른 1,800장 창은 p95 23.25~24.86 ms, 최대 28.5~42.8 ms (같은 HANDOFF 11-19·11-20 절들, 077ef23·c3e8aca·1247d9f·1cb5998·830b978·215e4b8)

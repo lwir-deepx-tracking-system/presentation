@@ -1,4 +1,4 @@
 - 11-17 모델뱅크 · 검수 학습 — model-bank 6cf676d tracking_server/research/LWIR_PRESENTATION_KO.md
-- 사전 기준: V7 E24·V8 증강 E01은 OTP2 관절 기준만 미통과 — 작성자 PC 기록(비공개): RESULT.json (gates), COMPACT_RESULTS.json
+- 사전 기준: V7 E24·V8 증강 E01은 OTP2 관절 기준만 미통과 — 개인 실험 기록(RESULT.json (gates), COMPACT_RESULTS.json)
 - V7 E24는 장치의 임시 선택 모델, 11-19 선택 목록에서 숨김 — model-bank 31ac21b HANDOFF.md ('2026-11-19 26m 시험 모델 선택 목록 정리')
-- 시작 가중치 C_control_v1_epoch2.pt(= F) — 작성자 PC 기록(비공개): args.yaml, RUN_MANIFEST.json (V7 검수264 학습)
+- 시작 가중치 C_control_v1_epoch2.pt(= F) — 개인 실험 기록(args.yaml, RUN_MANIFEST.json (V7 검수264 학습))

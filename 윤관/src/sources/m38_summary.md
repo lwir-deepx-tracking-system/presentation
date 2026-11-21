@@ -4,7 +4,7 @@
 - 채택 · RepVGG: 장치 외형 모델 = 검수 264장 미세조정 RepVGG, SOLIDER 교사를 직접 넣어도 IDF1 −0.2%p로 이득 없음 — 이 발표 m20_branches, m21_reid
 - 채택 · 관절 GRU: 장치는 11-16 관절 GRU 유지(수정 GRU 위치 오차 0.122, Kalman 0.110, IDF1 +0.6%p로 차이 없는 수준) — 이 발표 m22_position, m23_position_result
 - 채택 · 짐벌 PD: Kp 30 · Ki 0 · Kd 6, 불감대 0.06, 최고 SPD 100 — 이 발표 m31_gimbal_loop, m32_pd (model-bank 31ac21b HANDOFF.md 2절, tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md)
-- 채택 · 원거리 가속: 가속 한도 150 SPD/초 · 화면 가장자리 이득 1.6배, 11-15 장치 적용, 11-20 장치 인자에 그대로 있음 — 이 발표 m35_speed (작성자 PC 기록(비공개): WORKLOG.md, rules_20261120.txt)
+- 채택 · 원거리 가속: 가속 한도 150 SPD/초 · 화면 가장자리 이득 1.6배, 11-15 장치 적용, 11-20 장치 인자에 그대로 있음 — 이 발표 m35_speed (개인 실험 기록(WORKLOG.md, rules_20261120.txt))
 - 채택 · 예측 따라가기: 놓친 뒤 0.8초 예측 자리 따라가기 켬; 가상 비교에서 속도 예측 방식은 재포착 +20%p, 장치에 켠 fused 방식은 +6%p로 근거가 약함 — 이 발표 m37_loss
 - 장치에 켰지만 장에서 뺀 것: 결과 도착 즉시 명령 · 카메라 읽기 박자 고정 · 명령 계산 C++(m36_latency), 상자 크기 필터 · 놓친 상자 크기 유지(m24_box_stab, 11-20 재설치 뒤 상태 기록 없음), 외형으로 다른 사람 막기 · 예측 주변 좁게 보기 · 가려지면 아래로 안 내림(m37_loss, 효과 미측정)
 - 보류 · LoRA: 전체 라벨 30 epoch에서는 Full FT가 높아, 라벨이 적을 때의 후보로 보류 — 이 발표 m06_ft_lora

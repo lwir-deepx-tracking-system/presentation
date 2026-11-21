@@ -1,7 +1,7 @@
-- 직접 미세조정: 마지막 128차원 투영만, 260장·672 크롭, 8 epoch·304 업데이트 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (6. RepVGG-A0 직접 적응), 작성자 PC 기록(비공개): RUN_MANIFEST.json, TRAIN_RESULT.json (RepVGG 검수 264장 직접 학습)
-- TMOT 387 → 386 / 432, CAMEL 197 → 200 / 218 (맞힌 질의 수; 문서의 90.30 → 91.68%는 30·60·90프레임 간격별 정답률의 평균이라 개수 비율과 다름) — 작성자 PC 기록(비공개): EXTERNAL_REID_RESULT.json
-- 증류 B·C와 직접 A 3시드: TMOT 386 ×3, CAMEL A 200 ×3 · B 201·201·200 · C 201 ×3, 기존 직접 가중치 386 / 200 재현 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (SOLIDER 교사를 검수 264장에 맞춘 뒤 RepVGG에 증류한 비교), 작성자 PC 기록(비공개): FIXED_EVAL_RESULT.json, REPORT_KO.md (SOLIDER 264장 증류 탐색 비교)
+- 직접 미세조정: 마지막 128차원 투영만, 260장·672 크롭, 8 epoch·304 업데이트 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (6. RepVGG-A0 직접 적응), 개인 실험 기록(RUN_MANIFEST.json, TRAIN_RESULT.json (RepVGG 검수 264장 직접 학습))
+- TMOT 387 → 386 / 432, CAMEL 197 → 200 / 218 (맞힌 질의 수; 문서의 90.30 → 91.68%는 30·60·90프레임 간격별 정답률의 평균이라 개수 비율과 다름) — 개인 실험 기록(EXTERNAL_REID_RESULT.json)
+- 증류 B·C와 직접 A 3시드: TMOT 386 ×3, CAMEL A 200 ×3 · B 201·201·200 · C 201 ×3, 기존 직접 가중치 386 / 200 재현 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (SOLIDER 교사를 검수 264장에 맞춘 뒤 RepVGG에 증류한 비교), 개인 실험 기록(FIXED_EVAL_RESULT.json, REPORT_KO.md (SOLIDER 264장 증류 탐색 비교))
 - B의 고정 교사 = 11-10 실내 튜닝 SOLIDER ep3 (문서 표의 '원교사'는 이 교사) — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (같은 절), HANDOFF.md (2026-11-19 실시간 카메라의 녹화 버튼과 SOLIDER 증류 모델 표시)
-- C의 교사 변화(코사인 변화 중앙값 0.001007 < 사전 기준 0.003), 사전 비교 기준 충족 시드 0/3 — 같은 문서, 작성자 PC 기록(비공개): REPORT_KO.md
+- C의 교사 변화(코사인 변화 중앙값 0.001007 < 사전 기준 0.003), 사전 비교 기준 충족 시드 0/3 — 같은 문서, 개인 실험 기록(REPORT_KO.md)
 - B 학생은 8090 모델로 등록하지 않음, 장치는 직접 미세조정판 선택 — model-bank 31ac21b HANDOFF.md (같은 절)
 - TMOT·CAMEL은 이전 실험에도 쓴 평가 자료 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (같은 절)

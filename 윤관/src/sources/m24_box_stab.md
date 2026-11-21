@@ -1,10 +1,10 @@
 - 크기 필터(크기만 부드럽게): 짐벌 조준점·가로 중심은 추적기 상자 그대로, log 가로·세로만 One Euro(5 Hz, beta 3) — model-bank 31ac21b tracking_server/README.md (상자 다듬기, 크기만 부드럽게)
-- 프레임 간 키 변화 상위 1% 0.071 → 0.054(−24%), 조준점 떨림 0.0195 = 0.0195, 장치 속도(23~24 fps)로 찍은 실내 녹화 3편을 PC에서 같은 검출기로 계산·정답 없음·이미 여러 번 쓴 녹화 — model-bank 31ac21b tracking_server/README.md (측정 v2: "PC 에서 같은 검출기"); model-bank 31ac21b tracking_server/models/README.md (2. 추적, 상체 네모 변환표 2판 → 측정 2); 작성자 PC 기록(비공개): tables_device.md (표에서 다시 읽어 같음)
+- 프레임 간 키 변화 상위 1% 0.071 → 0.054(−24%), 조준점 떨림 0.0195 = 0.0195, 장치 속도(23~24 fps)로 찍은 실내 녹화 3편을 PC에서 같은 검출기로 계산·정답 없음·이미 여러 번 쓴 녹화 — model-bank 31ac21b tracking_server/README.md (측정 v2: "PC 에서 같은 검출기"); model-bank 31ac21b tracking_server/models/README.md (2. 추적, 상체 네모 변환표 2판 → 측정 2); 개인 실험 기록(tables_device.md (표에서 다시 읽어 같음))
 - 모델 전환 19번의 평균 키 변화 0.051 → 0.030 — 같은 models/README.md 측정 2, tables_device.md
 - 상체 네모 2판(body) 0.043은 공개 val-B 규칙 14개 중 1개(TMOT 100 px 이상 조준 떨림)를 못 맞춰 11-16 당시 장치에 켜지 않음(11-20 이후 기본값이 됨, 아래) — 같은 models/README.md 측정 1; model-bank 31ac21b HANDOFF.md (2026-11-16 상체 네모로 통일 2판, 장치는 size 그대로)
 - 전체 좌표 One Euro는 TMOT val-B 조준점 떨림 +20%로 제외, 상자 보정 GRU 1·2판은 단순 방법을 못 이겨 제외 — 같은 models/README.md (뺀 것: 상자 다듬기 One Euro·학습 GRU 1판·2판)
 - 놓친 상자 = 보일 때 상자(lost_same): 11-16 장치에서 켬, 코드 기본은 꺼짐, 표시만 바꿈 — model-bank 31ac21b HANDOFF.md (4절 lost_same 장치 확인; 8절 2026-11-16 lost_same main 에 올림), tracking_server/README.md (놓친 상자 = 보일 때 상자)
-- 자체 녹화 17편, 놓침 562번(PC, 파이썬 BoT-SORT, KeepID 없음): 빈 첫 장 562 → 0, 가까운 사람(7번) 둘째 장 상자 크기 0.70배 → 1.00배, 먼 사람은 끔도 1.01배 — 작성자 PC 기록(비공개): summary.json, steps.csv (lost_same_20261116 eye_sheet; steps.csv에서 다시 계산해 같음)
+- 자체 녹화 17편, 놓침 562번(PC, 파이썬 BoT-SORT, KeepID 없음): 빈 첫 장 562 → 0, 가까운 사람(7번) 둘째 장 상자 크기 0.70배 → 1.00배, 먼 사람은 끔도 1.01배 — 개인 실험 기록(summary.json, steps.csv (lost_same_20261116 eye_sheet); steps.csv에서 다시 계산해 같음)
 - 같은 녹화 seq_018 재생 끔/켬 네 번 IDF1 66.35, 번호 바뀜 14로 모두 같음, 장치 CPU +0.03~0.29 ms — model-bank 31ac21b HANDOFF.md (4절 lost_same 장치 확인)
 - 단점: 가까운 사람은 위치 기억이 상자를 띄울 때 머리 위로 더 나옴(0.35 대 0.18 키) — 같은 HANDOFF.md 4절
 - 상체 네모 2판(body): 같은 실내 녹화 3편 프레임 간 키 변화 상위 1% 0.043, 조준점 떨림 0.0195(추적기 상자와 같음) — model-bank 8c62f8f tracking_server/models/README.md (상체 네모 변환표 2판, 측정 2)

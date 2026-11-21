@@ -1,2 +1,2 @@
 - FastTrackTr 공개 export 코드 — model-bank 6cf676d tracking_server/models/e2e/fasttracktr/build_scripts/ftt_trained_export.py
-- 보정 파일 16장(image 16×3×480×640), EXPORT.json frames 17, DXNN SHA-256(35344ef6…, 231fa6c3…, 0ed722a5…)이 INFO의 장치 파일 해시와 같음 — 작성자 PC 기록(비공개): calib_ae.npz, calib_b0.npz, calib_b1.npz, EXPORT.json; model-bank 31ac21b tracking_server/models/e2e/fasttracktr/INFO.json
+- 보정 파일 16장(image 16×3×480×640), EXPORT.json frames 17, DXNN SHA-256(35344ef6…, 231fa6c3…, 0ed722a5…)이 INFO의 장치 파일 해시와 같음 — 개인 실험 기록(calib_ae.npz, calib_b0.npz, calib_b1.npz, EXPORT.json); model-bank 31ac21b tracking_server/models/e2e/fasttracktr/INFO.json

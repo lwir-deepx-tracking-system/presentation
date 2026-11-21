@@ -5,5 +5,5 @@
 - 가로 등속 표적(60 px/s) 뒤처짐 14.3 → 18.6 px(+30%), 끝 오차 −6.4 → +17.3 px — PID_TUNING_RECORD_20261110.md 6절 등속 표, 8절 한계
 - 불감대 0.04 = 세로 ±9.6 px, 0.06 = 세로 ±14.4 px(그래프 음영) — PID_TUNING_RECORD_20261110.md 1절 표
 - 시험 조건: 실제 짐벌·카메라 + 가상 표적(실제 사람을 따라간 시험 아님, 화면에는 앉아 있는 사람이 있었음), 자동 추종 최고 속도 10, 등속 시험은 설정당 1회 — PID_TUNING_RECORD_20261110.md 1절, 3.1절, 8절
-- 운영 최고 속도는 100, 지금 장치는 불감대 0.06에 다시 움직이는 기준 0.10(`--deadband-exit 0.10`)을 더함 — model-bank 31ac21b HANDOFF.md (2절 "최신 11-13 적용" 줄); 작성자 PC 기록(비공개): virtual_gimbal_tmot/SPEC.md (1절 Device arguments now, 11-15)
-- 11-15 가상 카메라 시험(최고 속도 100, 유효 112회): 현재 값보다 나은 설정 없음, 시험한 Kp(20·30·45·60) 중 30이 가장 나음 — 작성자 PC 기록(비공개): virtual_gimbal_tmot/tuning_sweep/RESULT.md
+- 운영 최고 속도는 100, 지금 장치는 불감대 0.06에 다시 움직이는 기준 0.10(`--deadband-exit 0.10`)을 더함 — model-bank 31ac21b HANDOFF.md (2절 "최신 11-13 적용" 줄); 개인 실험 기록(virtual_gimbal_tmot/SPEC.md (1절 Device arguments now, 11-15))
+- 11-15 가상 카메라 시험(최고 속도 100, 유효 112회): 현재 값보다 나은 설정 없음, 시험한 Kp(20·30·45·60) 중 30이 가장 나음 — 개인 실험 기록(virtual_gimbal_tmot/tuning_sweep/RESULT.md)

@@ -1,5 +1,5 @@
 - V7/V8 평가 · 11-17 — model-bank 6cf676d tracking_server/research/LWIR_PRESENTATION_KO.md
 - 중복 320 → 154, OTP2 관절 AP 0.7306 → 0.7194 — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md (YOLO26m-pose V7/V8)
-- 정정: 문서의 "20–32px 누락 24→12"는 32px 이상 놓침(actor_fn_ge32), "20px 미만 누락 88→104"는 20px 이상 전체 놓침(actor_fn_ge20)이다. 20~32px 놓침 64 → 92는 둘의 차(88−24, 104−12) — 작성자 PC 기록(비공개): exact_A2_E01.json, COMPACT_RESULTS.json (발표 흐름 검수 264장 학습 장 출처와 같음)
+- 정정: 문서의 "20–32px 누락 24→12"는 32px 이상 놓침(actor_fn_ge32), "20px 미만 누락 88→104"는 20px 이상 전체 놓침(actor_fn_ge20)이다. 20~32px 놓침 64 → 92는 둘의 차(88−24, 104−12) — 개인 실험 기록(exact_A2_E01.json, COMPACT_RESULTS.json (발표 흐름 검수 264장 학습 장 출처와 같음))
 - 같은 OTP2 934장 상체 박스 AP: V8 증강 E01 52.09%, 상체 E10 46.28% — model-bank 31ac21b HANDOFF.md ('박스 비교'); 학습로그/20261119_E10_OTP2_validation.csv
 - 130개 학습 프레임 쌍 중심오차 p95 10.991 → 9.587 px — model-bank 31ac21b tracking_server/research/LWIR_PRESENTATION_KO.md
