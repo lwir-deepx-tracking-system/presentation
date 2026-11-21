@@ -1,0 +1,6 @@
+- 시도 순서·결정: 학습기록_상체검출기.md 0절
+- FLIR 30 epoch: 학습로그/YOLO26m_FullFT_30epoch_validation.csv — 개인 실험 기록(START.json, COMPLETED.json)
+- 공개 자료 단계 E·F: model-bank b20d481 research/lwir_pose_plan/README.md 7-5·7-6절
+- 650장 E10: model-bank b20d481 models/detect/yolo26m/LWIR650_E10_CLAHE_REPRO_20261120.md, 개인 실험 기록(OTP2 고정 평가)
+- E13·V7·V8·578장 후보·HOTA 비교: model-bank b20d481 HANDOFF.md 2026-11-19 절
+- CLAHE 대조: 개인 실험 기록(eval_otp2_val_raw.json 외 4개, 11-20 Vast)

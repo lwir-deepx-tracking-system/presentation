@@ -1,0 +1,3 @@
+- 학습로그/위치예측_학습곡선.csv — 개인 실험 기록(11-15 runs/pos_gru_kpt_a.jsonl, pos_mamba_kpt_a.jsonl, 11-16 pf_gru_kpt.jsonl, pf_mamba_kpt.jsonl)
+- 학습 손실 열도 같은 CSV에 있음(0.82 → 0.70)
+- 해석: 학습기록_위치예측.md 2절

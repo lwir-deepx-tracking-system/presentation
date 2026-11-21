@@ -31,6 +31,8 @@ appendix m15_far_clean
 appendix m16_mixed
 appendix m17_v7v8
 appendix m19_retrain
+appendix ax_e10_history
+appendix ax_e10_loss
 appendix m20_branches
 appendix m21_reid
 appendix m22_position
@@ -84,6 +86,8 @@ appendix 049_position-memory-training
 appendix 050_gru-kalman
 appendix 051_position-memory-score
 appendix 052_position-memory-mamba
+appendix ax_posmem_recipe
+appendix ax_posmem_loss
 appendix 054_box-size-result
 appendix 055_box-switch-result
 appendix 056_box-rejected
@@ -93,6 +97,7 @@ appendix 088_model-switch
 appendix 057_fasttrack-overview
 appendix 058_fasttrack-method
 appendix 059_fasttrack-current
+appendix ax_ftt_history
 appendix 060_deploy-overview
 appendix 061_onnx-export
 appendix 062_int8-theory

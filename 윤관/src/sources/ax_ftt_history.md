@@ -1,0 +1,4 @@
+- 학습로그/FastTrackTr_학습손실_100step마다.csv — 개인 실험 기록(Vast 학습 로그 4개에서 100 step마다 읽음)
+- 번호 맞힘: 개인 실험 기록(ftt_id_check 결과 JSON 6개)
+- 열화상 점수: model-bank b20d481 models/e2e/fasttracktr/INFO.json, research/lwir_pose_plan/README.md 7-3절
+- 설정과 이유: 학습기록_FastTrackTr.md

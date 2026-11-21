@@ -1,0 +1,4 @@
+- 11-15 학습 설정·분할: 개인 실험 기록(PREREG_POS_REFINE_20261115.json, SUMMARY_KO.md)
+- 11-16 원인·고침: model-bank b20d481 models/README.md 위치 기억 항목, 개인 실험 기록(PREREG_FIX.json)
+- Mamba·GRU v3: model-bank b20d481 HANDOFF.md 2026-11-16 줄, 개인 실험 기록(gru_v3 PREREG.json)
+- 자세한 이유·설정: 학습기록_위치예측.md
