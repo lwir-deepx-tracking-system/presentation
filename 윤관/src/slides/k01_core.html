@@ -1,20 +1,25 @@
 <article class="content-slide" id="k01-core" data-section="소개"><header><h1>핵심 성과</h1></header>
 <style>
-#k01-core .k-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
-#k01-core .k-card{background:#f3f6fa;border-top:6px solid #41817d;padding:22px 20px 20px;height:250px}
+#k01-core .k-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:30px}
+#k01-core .k-card{background:#f3f6fa;border-top:6px solid #41817d;padding:22px 20px 20px;height:262px}
 #k01-core .k-card b{display:block;font-size:56px;line-height:1.05;color:#002f6d;letter-spacing:-2px}
 #k01-core .k-card b small{font-size:30px;letter-spacing:-1px}
 #k01-core .k-card span{display:block;margin-top:16px;font-size:21px;font-weight:600;color:#202b3a;line-height:1.35}
 #k01-core .k-card i{display:block;margin-top:10px;font-style:normal;font-size:16px;color:#526277;line-height:1.35}
 #k01-core .k-strip{margin-top:22px;background:#e9f1f0;border-left:6px solid #41817d;padding:12px 18px;font-size:19px;font-weight:600;color:#174b56}
 #k01-core .visual-take{margin-top:18px}
+#k01-core .k-flow{display:flex;align-items:stretch;gap:12px;margin-top:22px}
+#k01-core .k-flow>div{flex:1;background:#fff;border:2px solid #dce2ea;border-top:5px solid #002f6d;padding:12px 10px;text-align:center;font-size:20px;color:#526277;line-height:1.3}
+#k01-core .k-flow b{display:block;font-size:26px;color:#002f6d;letter-spacing:-.5px;margin-bottom:2px}
+#k01-core .k-flow i{font-style:normal;color:#8da3bf;font-size:30px;align-self:center}
 </style>
 <div class="k-grid">
 <div class="k-card"><b>46.28<small>%</small></b><span>상체 박스 AP, 36.04에서 상승</span><i>E10 · OTP2 934장</i></div>
 <div class="k-card"><b>−25<small>%</small></b><span>M1 한 장 처리 29.10 → 21.92 ms</span><i>DX-COM 옵션 · AP 그대로</i></div>
-<div class="k-card"><b>23<small> ms</small></b><span>두 NPU 분할, 한 장 p95</span><i>사람 없는 실카메라 1,800장</i></div>
+<div class="k-card"><b>4<small>배</small></b><span>ViT-lite 대비 RepVGG 처리 시간<br>OTP2 0.89 대 0.62~0.67</span><i>외형 모델 · M1 INT8 같은 조건</i></div>
 <div class="k-card"><b>305<small> px/s</small></b><span>짐벌 SPD 10당 속도, 지연 0.108 s</span><i>추종 없이 직접 명령한 실측</i></div>
 </div>
+<div class="k-flow"><div><b>학습</b>현장 650장 검출기</div><i>→</i><div><b>변환</b>INT8 · M1 컴파일</div><i>→</i><div><b>비교</b>최신 외형 모델</div><i>→</i><div><b>짐벌</b>실측과 놓침 대응</div></div>
 <div class="k-strip">모델 학습 · 경량화 · 장비 운영 · 짐벌 · 카메라 안정화 · 화면(GUI) · 라벨링 도구까지 함께 맡음</div>
 <div class="visual-take">측정 조건이 각각 다름 · 근거는 이어지는 장</div>
 </article>

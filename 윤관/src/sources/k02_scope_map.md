@@ -1,0 +1,5 @@
+- 학습 +10.2%p, 경량화 −25%, 305 px/s — 이 발표 m18_e10, m27_int8, m29b_split_model, k06_gimbal 근거 파일
+- 카메라 멈춤 8.4 → 0, 추적 지연 p95 42.52 → 30.45 ms, 자동 복구 — 이 발표 k05_stability 근거 파일
+- 최신 모델 조사 4가지 — 이 발표 m21b_reid_table, m20_branches, m23_position_result, m26_fasttracktr 근거 파일
+- 번호 지키기: 라벨 녹화 9편 번호 바뀜 KeepID 끔 47 → 켬 43, IDF1 80.8 → 82.3(PC) — model-bank HANDOFF.md (2026-11-19 KeepID 문단, "KeepID 끔 19 / 47 / 80.8")
+- 라벨 편집기 COCO 17개 키포인트(2026-11-19), 메뉴·표시 이름 정리 — model-bank HANDOFF.md

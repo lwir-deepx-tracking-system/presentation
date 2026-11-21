@@ -1,7 +1,5 @@
 - 상체 박스 AP 36.04 → 46.28%(OTP2 934장, 현장 E10) — 이 발표 m18_e10 근거 파일
-- M1 한 장 처리 29.10 → 21.92 ms(−25%), 사람 AP 43.71 → 43.69% — 이 발표 m27_int8 근거 파일, 개인 실험 기록(1채널·옵션 시험 README.md)
-- 두 NPU 분할 p95 23.25 ms(사람 없는 실카메라 1,800장) — 이 발표 m29_split 근거 파일, model-bank 31ac21b HANDOFF.md (2026-11-20)
-- 짐벌 SPD 10 = 305 px/s, 출발 지연 0.108 s(직접 속도 명령, 추종 없음, 11-15 실제 짐벌) — 이 발표 m33_plant 근거 파일, 개인 실험 기록(gimbal_speed/RESULT.md)
-- 커밋 수: 공개 model-bank origin/main 467개 중 Yun Kwan 320개(git shortlog -sn). 보드가 남긴 'orangepi' 108개는 포함하지 않음 — model-bank origin/main git 기록
-- 가로줄 "모델 학습 · 경량화 · 장비 운영 · 짐벌 · 카메라 안정화 · 화면(GUI) · 라벨링 도구" — 위 커밋 기록과 이 발표 각 장 근거 파일
-- 짐벌 PD 기본 제어는 윤오름 작업, 윤관은 튜닝·실측·지연 개선 — 팀 역할표(대본에만 적음)
+- M1 한 장 처리 29.10 → 21.92 ms(−25%, 3,749프레임, AP 그대로) — 이 발표 m27_int8 근거 파일
+- RepVGG 처리 시간 1.26 ms 대 ViT-lite 5.03 ms(약 4배), OTP2 몸 1순위 정답 0.892 대 0.616/0.672 — 이 발표 m21b_reid_table 근거 파일(reid_vitlite_eval_20261120)
+- 305 px/s(SPD 10), 지연 0.108 s — 개인 실험 기록(gimbal_speed/RESULT.md), 이 발표 k06_gimbal 근거 파일
+- 장비 운영 범위 — 팀 역할표, 작성자 PC 기록(비공개): WORKLOG.md

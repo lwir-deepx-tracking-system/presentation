@@ -1,5 +1,5 @@
-- 305 px/s(SPD 10), 지연 0.108 s — 개인 실험 기록(gimbal_speed/RESULT.md), 이 발표 m33_plant 근거 파일
-- 놓치지 않는 최고 속도 750 → 900 px/s(+20%), 급정지 지나침 11 → 35 px(900 px/s에서, 원거리 이득 1.6배 쪽), PC 모의 시험, 11-15 장치 적용 — 개인 실험 기록(sim_far_result.json, final.txt), 이 발표 m35_speed 근거 파일
-- 카메라 그림 멈춤 분당 8.4 → 0회(cam_pipe v2.14), 장면→짐벌 약 190~210 ms(추정, 구간 합) — model-bank 15ac16f, 개인 실험 기록(AUDIT_20261115.md), 이 발표 m36_latency 근거 파일
-- 예측 자리 따라가기 재포착 +20%p(속도 방식, 가상), 장치에 켠 fused 방식 +6%p(차이 불분명), 넓게 훑기(--seek) −7%p·−13%p라 끔 — 개인 실험 기록(recatch/RESULT.md, search2/RESULT.md), 이 발표 m37_loss 근거 파일
+- SPD 10/20/30 속도 305/630/~930 px/s(실제 짐벌·카메라, 사람 없이 직접 명령), 출발 지연 0.108 s — 개인 실험 기록(close_range 20261113 gimbal_speed/RESULT.md 1절)
+- 놓치지 않는 최고 속도 750 → 900 px/s(+20%), 급정지 지나침 11 → 35 px, PC 모의, 11-15 장치 적용 — 개인 실험 기록(sim_far_result.json, final.txt), 이 발표 m35_speed 근거 파일
+- 예측 자리 따라가기 재포착 +20%p(속도 방식, 가상), 넓게 훑기 −7%p·−13%p라 끔, --seek 효과 없음 — 개인 실험 기록(recatch/RESULT.md, search2/RESULT.md), 이 발표 m37_loss 근거 파일
 - 짐벌 PD 기본 제어는 윤오름 작업 — 팀 역할표
+- 좌우로 훑기(--search 1) 다른 사람으로 넘어감 24% → 36%(+11%p), 기본 꺼짐·장치 미적용 — model-bank 31ac21b V27_CHANGES.md; 이 발표 m37_loss 근거 파일. (예측 쪽 넓게 훑기 = --seek)

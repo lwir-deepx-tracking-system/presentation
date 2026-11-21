@@ -7,3 +7,4 @@
 - SOLIDER 증류 E(시험 선택지, 기본 모델은 그대로, 11-20 추가): 라벨 녹화 9편, 모델 9 검출, 장치 설정, PC FP32. 오래 가는 번호 뺏김 / 번호 바뀜 / IDF1: 기본 RVGGA0 12 / 33 / 83.0, 검수 264장 RepVGG 13 / 37 / 83.0, 증류 E 15 / 42 / 82.4; E는 실내 근거리 4명 녹화(IDF1 51.1 → 61.2)와 화면 가장자리에서만 나음 — model-bank 28a1d04·281cf3a HANDOFF.md (2026-11-21 SOLIDER 증류 E 이름 고침; 2026-11-20 외형 모델 추가), 개인 실험 기록(ID_JUDGE_VERDICT_APPEARANCE.json)
 - 증류 E 조각 검색(PC FP32, 검수 264장 판 대비): 새 날 실내 0.504 → 0.680, 잘림·가림 0.568 → 0.627, BU-TIV 0.754 → 0.827, 옥상 0.700 → 0.663; INT8 양자화 진단 출력 코사인 0.982; 장치 NPU 정확도·속도 미측정 — model-bank 281cf3a HANDOFF.md (2026-11-20 외형 모델 추가: SOLIDER 증류 E)
 - 화면 추천 표시: 외형 RVGGA0_REID2C256, 검출기 검수 264장 E10(녹화 9편 ID 추적 비교, 장치 설정 cost_first+feat_guard) — model-bank 901255a tracking_server/models/RECOMMENDED.json
+- 이 장은 그림 판. 표 판(실내 몸·가림, TMOT·CAMEL, IDF1)은 부록 ax_reid_table 장

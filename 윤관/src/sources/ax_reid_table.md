@@ -1,0 +1,10 @@
+- 이 장은 m21b_reid_table 장의 표 판(부록)
+- ViT-lite 2종·RepVGG 2종 장치 NPU INT8 1순위 정답과 처리 시간(OTP2 60명 1,075조각 537질의, 실내 r8 시험 176질의) — 개인 실험 기록(reid_vitlite_eval_20261120 RESULT.md, RESULT.json (2026-11-20 장치 측정))
+- RepVGG 7.45 MB 전부 NPU, ViT-lite 1.46 MB(마지막 단계만 CPU), ViT-lite 정확도 미측정·시험용 — model-bank 31ac21b tracking_server/models/reid/README.md, tracking_server/models/README.md (3. 외형 비교)
+- DeiT-Tiny ViT(11-13) M1 변환 가능(적극적 분할), RepVGG보다 모두 낮아 폐기 — 개인 실험 기록(작업 기록부 2026-11-13 22:57, 23:20 (수치 원본은 학습 서버에만 있어 확인하지 못함))
+- PMT ViT-Base OTP2 몸/가림 .952/.939, 우리 실내 몸/가림 .864/.657; RepVGG FT OTP2 .890/.840, 실내 .925/.837 — 개인 실험 기록(작업 기록부 2026-11-14 00:05 (PC, 6000 step, M1 변환 안 함))
+- 검수 264장 RepVGG TMOT 386/432, CAMEL 201/218 — 근거 장 '검수 264장 외형 학습' (ax_reid_264)
+- IDF1 66.74 → 66.57% (SOLIDER 교체) — 개인 실험 기록(RESULT_KO.md (11-20, FLIR 3,749프레임, PC FP32))
+- SOLIDER 증류 E(시험 선택지, 기본 모델은 그대로, 11-20 추가): 라벨 녹화 9편, 모델 9 검출, 장치 설정, PC FP32. 오래 가는 번호 뺏김 / 번호 바뀜 / IDF1: 기본 RVGGA0 12 / 33 / 83.0, 검수 264장 RepVGG 13 / 37 / 83.0, 증류 E 15 / 42 / 82.4; E는 실내 근거리 4명 녹화(IDF1 51.1 → 61.2)와 화면 가장자리에서만 나음 — model-bank 28a1d04·281cf3a HANDOFF.md (2026-11-21 SOLIDER 증류 E 이름 고침; 2026-11-20 외형 모델 추가), 개인 실험 기록(ID_JUDGE_VERDICT_APPEARANCE.json)
+- 증류 E 조각 검색(PC FP32, 검수 264장 판 대비): 새 날 실내 0.504 → 0.680, 잘림·가림 0.568 → 0.627, BU-TIV 0.754 → 0.827, 옥상 0.700 → 0.663; INT8 양자화 진단 출력 코사인 0.982; 장치 NPU 정확도·속도 미측정 — model-bank 281cf3a HANDOFF.md (2026-11-20 외형 모델 추가: SOLIDER 증류 E)
+- 화면 추천 표시: 외형 RVGGA0_REID2C256, 검출기 검수 264장 E10(녹화 9편 ID 추적 비교, 장치 설정 cost_first+feat_guard) — model-bank 901255a tracking_server/models/RECOMMENDED.json

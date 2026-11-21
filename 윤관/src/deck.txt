@@ -1,11 +1,15 @@
 # Order of the slides. "main" = index.html (발표 흐름), "appendix" = only in all-slides.html (근거 자료).
 main k01_core
+main k02_scope_map
 main m18_e10
 main m27_int8
-main m29_split
+main m29b_split_model
 main m21b_reid_table
+main k05_stability
 main k06_gimbal
 main k07_close
+appendix ax_reid_table
+appendix m29_split
 appendix m01_scope
 appendix m02_problem
 appendix m03_det_compare
@@ -32,7 +36,6 @@ appendix m24_box_stab
 appendix m25_fullbody
 appendix m26_fasttracktr
 appendix m28_m1_speed
-appendix m29b_split_model
 appendix m30_tail
 appendix m31_gimbal_loop
 appendix m32_pd

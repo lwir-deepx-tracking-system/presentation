@@ -1,32 +1,50 @@
-<article class="content-slide" id="m21b-reid-table" data-section="추적 보완 모델"><style>
-#m21b-reid-table .t{width:100%;border-collapse:collapse;margin-top:10px;font-size:17px}
-#m21b-reid-table .t th{background:#002f6d;color:#fff;padding:8px 10px;text-align:right;font-weight:600}
-#m21b-reid-table .t th:first-child,#m21b-reid-table .t td:first-child{text-align:left}
-#m21b-reid-table .t td{padding:7px 10px;border-bottom:1px solid #dce2ea;text-align:right}
-#m21b-reid-table .t tr.dev td{background:#edf4f5;font-weight:700;color:#174b56}
-#m21b-reid-table .t tr.no td{color:#7a8797}
-#m21b-reid-table h2{font-size:20px;margin-top:16px}
-#m21b-reid-table .cap{font-size:14px;color:#526277;margin-top:6px}
-#m21b-reid-table .two{display:grid;grid-template-columns:1.75fr 1fr;gap:28px}
+<article class="content-slide" id="m21b-reid-table" data-section="추적 보완 모델"><header><h1>외형 모델 비교</h1></header>
+<style>
+#m21b-reid-table svg text{font-family:Pretendard,sans-serif}
+#m21b-reid-table .tt{font-size:21px;font-weight:700;fill:#002f6d}
+#m21b-reid-table .lb{font-size:18px;font-weight:600;fill:#263c55}
+#m21b-reid-table .vl{font-size:20px;font-weight:700;fill:#193654}
+#m21b-reid-table .ax{font-size:15px;fill:#526277}
+#m21b-reid-table .dl{font-size:19px;font-weight:700;fill:#174b56}
+#m21b-reid-table .diff{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:2px}
+#m21b-reid-table .diff div{background:#e9f1f0;border-left:6px solid #41817d;padding:10px 16px;font-size:20px;font-weight:700;color:#174b56}
+#m21b-reid-table .visual-take{margin-top:14px}
+#m21b-reid-table .meta{margin-top:6px}
 </style>
-<header><h1>외형 모델 비교</h1></header>
-<div class="two">
-<div><h2>RepVGG vs ViT-lite · M1 INT8 같은 조건</h2>
-<table class="t"><tr><th>모델</th><th>크기</th><th>NPU</th><th>OTP2 몸</th><th>OTP2 가림</th><th>실내 몸</th><th>실내 가림</th></tr>
-<tr class="no"><td>ViT-lite 미세조정</td><td>1.46 MB</td><td>5.03 ms</td><td>0.616</td><td>0.592</td><td>0.989</td><td>0.903</td></tr>
-<tr class="no"><td>ViT-lite 증류</td><td>1.46 MB</td><td>5.02 ms</td><td>0.672</td><td>0.596</td><td>0.915</td><td>0.841</td></tr>
-<tr><td>RepVGG OTP2 (11/13)</td><td>7.45 MB</td><td>1.26 ms</td><td>0.892</td><td>0.834</td><td>0.977</td><td>0.847</td></tr>
-<tr class="dev"><td>RepVGG 검수 264 · 장치</td><td>7.45 MB</td><td>1.28 ms</td><td>0.764</td><td>0.667</td><td>1.000</td><td>0.892</td></tr></table>
-<p class="cap">1순위 정답 비율 · 실내 176질의(참고값)</p></div>
-<div><h2>지금 장치 모델 (검수 264장 RepVGG)</h2>
-<table class="t"><tr><th>시험</th><th>정확도</th></tr>
-<tr class="dev"><td>TMOT 1순위 정답</td><td>386 / 432 · 89.4%</td></tr>
-<tr class="dev"><td>CAMEL 1순위 정답</td><td>201 / 218 · 92.2%</td></tr>
-<tr class="dev"><td>추적 IDF1 · FLIR</td><td>66.74%</td></tr>
-<tr class="no"><td>교사 SOLIDER로 교체</td><td>66.57% (−0.2%p)</td></tr>
-<tr class="dev"><td>추적 IDF1 · 자체 녹화 9편</td><td>83.0%</td></tr>
-<tr class="no"><td>SOLIDER 증류 E · 시험 선택지</td><td>82.4% (−0.6%p)</td></tr></table>
-<p class="cap">TMOT·CAMEL은 개발에 쓴 공개 자료 · 추적은 PC FP32 · 녹화 9편은 라벨 있는 자체 녹화</p></div>
-</div>
-<div class="visual-take" style="margin-top:22px">ViT-lite는 OTP2에서 낮고 4배 느림 → RepVGG 사용</div>
+<div style="margin-top:14px"><svg viewBox="0 0 1168 410" width="1168" height="410" role="img" aria-label="OTP2 몸 1순위 정답 0.616 0.672 0.892 0.764, NPU 처리 시간 5.03 5.02 1.26 1.28 ms"><text x="0" y="26" class="tt">OTP2 몸 1순위 정답 (높을수록 좋음)</text>
+<line x1="200.0" y1="44" x2="200.0" y2="372" stroke="#9aa9b9"/><text x="200.0" y="394" text-anchor="middle" class="ax">0</text>
+<line x1="350.0" y1="44" x2="350.0" y2="372" stroke="#e3e9f0"/><text x="350.0" y="394" text-anchor="middle" class="ax">0.5</text>
+<line x1="500.0" y1="44" x2="500.0" y2="372" stroke="#e3e9f0"/><text x="500.0" y="394" text-anchor="middle" class="ax">1.0</text>
+<text x="190" y="90" text-anchor="end" class="lb">ViT-lite 미세조정</text>
+<rect x="200" y="56" width="184.8" height="50" rx="3" fill="#9caebe"><title>ViT-lite 미세조정 0.616</title></rect>
+<text x="392.8" y="90" class="vl">0.616</text>
+<text x="190" y="170" text-anchor="end" class="lb">ViT-lite 증류</text>
+<rect x="200" y="136" width="201.6" height="50" rx="3" fill="#9caebe"><title>ViT-lite 증류 0.672</title></rect>
+<text x="409.6" y="170" class="vl">0.672</text>
+<text x="190" y="250" text-anchor="end" class="lb">RepVGG OTP2</text>
+<rect x="200" y="216" width="267.6" height="50" rx="3" fill="#073771"><title>RepVGG OTP2 0.892</title></rect>
+<text x="475.6" y="250" class="vl">0.892</text>
+<text x="190" y="330" text-anchor="end" class="lb">RepVGG 검수 264</text>
+<rect x="200" y="296" width="229.2" height="50" rx="3" fill="#41817d"><title>RepVGG 검수 264 0.764</title></rect>
+<text x="437.2" y="330" class="vl">0.764</text>
+<text x="600" y="26" class="tt">NPU 처리 시간 ms (낮을수록 좋음)</text>
+<line x1="800.0" y1="44" x2="800.0" y2="372" stroke="#9aa9b9"/><text x="800.0" y="394" text-anchor="middle" class="ax">0</text>
+<line x1="900.0" y1="44" x2="900.0" y2="372" stroke="#e3e9f0"/><text x="900.0" y="394" text-anchor="middle" class="ax">2</text>
+<line x1="1000.0" y1="44" x2="1000.0" y2="372" stroke="#e3e9f0"/><text x="1000.0" y="394" text-anchor="middle" class="ax">4</text>
+<line x1="1100.0" y1="44" x2="1100.0" y2="372" stroke="#e3e9f0"/><text x="1100.0" y="394" text-anchor="middle" class="ax">6</text>
+<text x="790" y="90" text-anchor="end" class="lb">ViT-lite 미세조정</text>
+<rect x="800" y="56" width="251.5" height="50" rx="3" fill="#9caebe"><title>ViT-lite 미세조정 5.03</title></rect>
+<text x="1059.5" y="90" class="vl">5.03</text>
+<text x="790" y="170" text-anchor="end" class="lb">ViT-lite 증류</text>
+<rect x="800" y="136" width="251.0" height="50" rx="3" fill="#9caebe"><title>ViT-lite 증류 5.02</title></rect>
+<text x="1059.0" y="170" class="vl">5.02</text>
+<text x="790" y="250" text-anchor="end" class="lb">RepVGG OTP2</text>
+<rect x="800" y="216" width="63.0" height="50" rx="3" fill="#073771"><title>RepVGG OTP2 1.26</title></rect>
+<text x="871.0" y="250" class="vl">1.26</text>
+<text x="790" y="330" text-anchor="end" class="lb">RepVGG 검수 264</text>
+<rect x="800" y="296" width="64.0" height="50" rx="3" fill="#41817d"><title>RepVGG 검수 264 1.28</title></rect>
+<text x="872.0" y="330" class="vl">1.28</text></svg></div>
+<div class="diff"><div>RepVGG(OTP2)는 ViT-lite 증류보다 +0.220 높음</div><div>RepVGG는 ViT-lite보다 −3.77 ms, 약 4배 빠름</div></div>
+<div class="visual-take">ViT-lite는 OTP2에서 낮고 4배 느림 → RepVGG 사용</div>
+<p class="meta">M1 INT8 같은 조건 · 실내 시험은 질의 176개라 참고값 · 장치에는 RepVGG 검수 264(초록)</p>
 </article>

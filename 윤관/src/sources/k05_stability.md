@@ -1,0 +1,7 @@
+- 카메라 그림 멈춤 REPEAT_RUN 분당 8.4 → 0회, 새 그림 초당 28.5 → 30.0(cam_pipe v2.14, 장치 적용, 11-15) — model-bank HANDOFF.md (2026-11-15 밤 카메라 그림 주기적 멈춤 고침)
+- 추적 지연 서버 수신→추적 p95 42.52 → 30.45 ms(고밀도 녹화 592장, 기존 E10 분할 → 512×384 입력 분할, 최대 66.87 → 63.09 ms) — model-bank HANDOFF.md (E10 512×384 입력 분할 표). 요청에 있던 "63 → 30"은 63.09가 최대값이고 p95 쌍이 아니라 쓰지 않음
+- 장면→짐벌 약 190~210 ms는 구간 합 추정 — 작성자 PC 기록(비공개): AUDIT_20261115.md
+- 멈춤 알아보기(CAMERA_FROZEN, 서버 안내, 다시 꽂으면 자동 열기, cam_pipe v2.12) — model-bank HANDOFF.md (2026-11-15 카메라 USB 칩 멈춤 대응)
+- 장면 없음 20초 → 카메라 엔진 재시작 1회(SCENE_LOST, cam_pipe v2.13) — model-bank HANDOFF.md (2026-11-15 카메라가 덜 죽게)
+- 재시작 뒤 설정 유지(nested_dup·track_thr 2026-11-21, close_aim) — model-bank HANDOFF.md
+- 확인 못 함: 요청의 커밋 8e7a543(lead 복원)은 HANDOFF.md에서 찾지 못해 쓰지 않음; keepalive 감시는 적용 절차에만 나와 슬라이드에 넣지 않음
