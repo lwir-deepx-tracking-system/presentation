@@ -46,7 +46,7 @@
 
 ![Full FT와 LoRA](assets/readme-slides/slide-06.jpg)
 
-Full FT는 모든 가중치를 학습하고, LoRA는 원래 가중치는 고정한 채 작은 보정 행렬과 검출 머리만 학습합니다.
+이 비교는 YOLO26s로 했습니다.
 
 ### 07. 데이터 규모
 
