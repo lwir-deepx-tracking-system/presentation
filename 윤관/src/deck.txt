@@ -76,6 +76,9 @@ appendix 045_repvgg-real
 appendix 046_reid-direct
 appendix 047_solider-distill
 appendix ax_reid_264
+appendix ax_reid_history
+appendix ax_distill_recipe
+appendix ax_reid_loss
 appendix 048_gru-design
 appendix 049_position-memory-training
 appendix 050_gru-kalman

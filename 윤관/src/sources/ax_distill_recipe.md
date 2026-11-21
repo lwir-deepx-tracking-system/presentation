@@ -1,0 +1,6 @@
+- 11-10: 선생 6설정·학생 D·S 각 8설정, 8 epoch × 50 step, 선생 SGD, 학생 AdamW wd 0.05, 손실 triplet 0.3·선생 맞추기·RKD 1.0·anchor 0 또는 2, 학습 1,847조각 — 개인 실험 기록(PREREG_REID_FT7.json)
+- 11-15: 선생 4설정, 학생 S·D 각 4설정, 8 epoch × 150 step, 시작 = 장치 11-13판, 종합 S 0.660 · D 0.704 · 기준 0.694 — 개인 실험 기록(PREREG_REID_R8.json, SUMMARY_KO.md)
+- 11-20: 학생 4,000 step, lr 1e-4, 손실 1 − cos + RKD 1.0 + triplet 0.3, 장치 검출기 조각 4,751장 — 개인 실험 기록(PREREG_SOLIDER_FT.json 수정 11·13, STUDENT_SELECTION.json)
+- 시험 결과 e 새 날 실내 0.680, 옥상 0.663, 기준(검수 264장) 0.504 · 0.700 — 개인 실험 기록(STUDENT_TEST_VERDICT.json)
+- 11-10·11-15 선생은 열화상 재식별 공개 가중치이고 11-20 시작은 LUPerson 자기지도 원본 — 개인 실험 기록(PREREG_SOLIDER_FT.json 시작 모델·참조 행)
+- 자세한 이유·설정: 학습기록_외형모델.md

@@ -1,0 +1,9 @@
+- 11-10 실내 시험 0.949 → 0.996(S) / 1.000(D), 같은 방 학습 직후 구간이라 새 환경 점수가 아님 — 개인 실험 기록(TEST_RESULT.json, PREREG_REID_FT7.json (11-10 실내 교사·학생 학습))
+- ViT-lite 실내 2종(11-11)의 학습 이유·설정은 기록 없음, 장치 NPU 몸 0.616 / 0.672, 약 5.0 ms — 개인 실험 기록(reid_vitlite_eval_20261120 RESULT.md); model-bank b20d481 tracking_server/models/README.md (3. 외형 비교)
+- 11-13 RepVGG 1차 자기증류 실내 검증 몸 0.787 → 0.716, OTP2 신원 학습 OTP2 몸 0.724 → 0.890 — 개인 실험 기록(TRAIN_LOG reid_partial_v1, reid_otp2_v1, 작업 기록부 2026-11-13 21:27)
+- DeiT-Tiny 실내 시험 몸 0.783(RepVGG 0.918), 새 ViT-Lite 2,500 / 15,000 step 중단, PMT OTP2 몸 0.952 · 실내 몸 0.862 — 개인 실험 기록(TRAIN_LOG vit_ft_otp2_v1, vitlite_ft_otp2_v1_stopped_by_user, vit_pmt_ft_otp2_v1; 학습로그/외형_11-13_근거리_학습곡선.csv)
+- OTP2판 11-20 삭제(서로 다른 사람 유사도 약 0.99) — model-bank b20d481 tracking_server/models/README.md
+- 11-15 종합 0.660 < 0.694, 직접 0.704 — model-bank b20d481 tracking_server/models/README.md (올리지 않은 시도); 개인 실험 기록(SUMMARY_KO.md)
+- 11-17 TMOT 387 → 386, CAMEL 197 → 200 — 장 'ax_reid_264' 근거
+- 11-20 SOLIDER 교사 판단 불가, 학생 모두 더 좋지 않음 — 개인 실험 기록(RESULT.json, STUDENT_TEST_VERDICT.json)
+- 자세한 이유·설정·손실: 학습기록_외형모델.md
