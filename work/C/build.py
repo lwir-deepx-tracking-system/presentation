@@ -9,7 +9,7 @@ import html
 import json
 import re
 import shutil
-from editorial import polish
+from editorial import polish, polish_dates
 from visual_layouts import enrich
 from tracking_story import finalize_tracking
 from revision_20261122 import apply_revision
@@ -282,6 +282,8 @@ polish(backup,appendix=True)
 slides,visual_usage=enrich(slides,backup)
 slides=finalize_tracking(slides,backup)
 slides=apply_revision(slides,backup)
+polish_dates(slides)
+polish_dates(backup)
 assert len(slides)==43
 spoken=[s for s in slides if s['base_number']!=28 and s is not toc]
 weights=[s['seconds'] for s in spoken]

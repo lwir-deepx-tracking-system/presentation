@@ -170,6 +170,32 @@ def plain(text):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', text))).strip()
 
 
+def polish_dates(slides):
+    """Use experiment stages on screen; preserve dates in source records."""
+    edits={
+        '2026-11-04 · FLIR FT 검출기':'FLIR FT 검출기',
+        '2026-11-09 · 모델당 약 20초':'모델당 약 20초',
+        '11/10·11/15 교사':'증류 교사',
+        '11/20 파인튜닝 시작':'파인튜닝 시작점',
+        '11/10 실내 튜닝 SOLIDER ep3 고정 교사':'실내 튜닝 SOLIDER ep3 고정 교사',
+        '11/20 증류E':'증류E',
+        '11/19 시험':'동시 타일 시험',
+        '11/20 재설치':'환경 재설치',
+        '11/20~21 추가':'재연결·설정 보완',
+    }
+    narration={
+        '11월22일 추천 검출기는':'추가 학습한 검출기는',
+        '현장650장 E10의11월19일 적용 결과입니다.':'현장 650장으로 학습한 E10의 평가 결과입니다.',
+        '다음 장은11월22일에 추가된 추천 검출기의 비교입니다.':'다음 장에서는 추가 학습한 검출기의 장치 재생 결과를 비교하겠습니다.',
+        '11월22일 추천 외형은기본RVGGA0입니다.':'추적 비교를 거쳐 선정한 외형 모델은 기본 RVGGA0입니다.',
+    }
+    for slide in slides:
+        for before,after in edits.items():
+            slide['body']=slide['body'].replace(before,after)
+        for before,after in narration.items():
+            slide['spoken']=slide['spoken'].replace(before,after)
+
+
 def polish(items, appendix=False):
     """Move footer prose to notes, then apply explicit copy edits to visible text."""
     edits = APPENDIX_EDITS if appendix else MAIN_EDITS
