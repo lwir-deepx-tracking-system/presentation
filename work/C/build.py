@@ -1,4 +1,4 @@
-"""Build C from its frozen B seed and the team evidence through 4836142.
+"""Build C from its frozen B seed and the team evidence through 8a195d7.
 
 All inputs are local to C. B and the team originals are never written.
 """
@@ -12,6 +12,7 @@ import shutil
 from editorial import polish
 from visual_layouts import enrich
 from tracking_story import finalize_tracking
+from revision_20261122 import apply_revision
 
 BASE = Path(__file__).resolve().parent
 PICTURES = BASE.parents[1]/'reference/picture'
@@ -27,6 +28,8 @@ for name in ['hardware.png','윤오름.png','김재남.png','윤관.png','정하
 SEED = json.loads((BASE/'seed.json').read_text(encoding='utf-8'))
 SOURCES = copy.deepcopy(SEED['sources'])
 SOURCES['S25']=dict(title='그림·실측 그래프 재구성 원자료',url='sources/visual-reference/manifest.json')
+SOURCES['S26']=dict(title='11/22 비교 결과·절충 정정',url='sources/revision-20261122/manifest.json')
+SOURCES['S27']=dict(title='11/22 모델뱅크 추천 원문',url='sources/revision-20261122/model-bank-recommended.json')
 SNAP = 'sources/latest-20261121/'
 for key, title, path in [
     ('S17', '11/20–21 추가 실험·장치 상태', '윤관/근거_최신_20261120.md'),
@@ -278,7 +281,8 @@ polish(slides)
 polish(backup,appendix=True)
 slides,visual_usage=enrich(slides,backup)
 slides=finalize_tracking(slides,backup)
-assert len(slides)==42
+slides=apply_revision(slides,backup)
+assert len(slides)==43
 spoken=[s for s in slides if s['base_number']!=28 and s is not toc]
 weights=[s['seconds'] for s in spoken]
 speech_budget=1020-toc['seconds']
@@ -313,11 +317,11 @@ if (BASE/'assets/rooftop-demo.mp4').exists():
 
 (BASE/'index.html').write_text(document(slides,'LWIR 표적 추적 · C안'),encoding='utf-8')
 (BASE/'appendix.html').write_text(document(backup,'LWIR 표적 추적 · C안 예비자료',True),encoding='utf-8')
-manifest=dict(title='LWIR 표적 추적 · C안',date='2026-11-22',source_commit='4836142',base_commit='9819922',total_seconds=1200,demo_seconds=180,spoken_target_seconds=1020,slides=[{k:v for k,v in s.items() if k!='body'} for s in slides],appendix_count=len(backup),sources=SOURCES)
+manifest=dict(title='LWIR 표적 추적 · C안',date='2026-11-22',source_commit='8a195d7',base_commit='9819922',total_seconds=1200,demo_seconds=180,spoken_target_seconds=1020,slides=[{k:v for k,v in s.items() if k!='body'} for s in slides],appendix_count=len(backup),sources=SOURCES)
 (BASE/'deck.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 def clock(t):return f'{t//60:02d}:{t%60:02d}'
-md=['# C안 발표 대본','',f'2026-11-22 개정 · 자료 기준4836142(11/21) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','']
+md=['# C안 발표 대본','',f'2026-11-22 개정 · 자료 기준8a195d7(11/22) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','']
 cue=['# C안 큐시트','','설명17분+데모3분 목표 · 실제 리허설 후 재배분.','']
 note_html=[]
 elapsed=0
@@ -337,7 +341,7 @@ apnotes=['# C안 예비자료 설명','']
 for n,s in enumerate(backup,1):apnotes += [f'## {n:02d}. {s["title"]}','',s['spoken'] or '원표·조건은 해당 장과 아래 출처를 함께 확인한다.','',s.get('condition',''),'',source_links(s['refs']),'']
 (BASE/'appendix-notes.md').write_text('\n'.join(apnotes),encoding='utf-8')
 
-src=['# C안 출처·수치 추적표','','기준: 로컬 presentation4836142(2026-11-21 23:13 KST). B 기준9819922에서 갱신. 장치·학습·성능 시험은 재실행하지 않았다.','','## 출처','']
+src=['# C안 출처·수치 추적표','','기준: 로컬 presentation8a195d7(2026-11-22 21:13 KST). B 기준9819922에서 갱신. 장치·학습·성능 시험은 재실행하지 않았다.','','## 출처','']
 src += [f'- **{k}** [{v["title"]}]({v["url"]})' for k,v in SOURCES.items()]
 src += ['','## C안 장별 출처','','| 장 | 제목 | 근거 |','|---|---|---|']
 src += [f'| {s["number"]} | {s["title"]} | {", ".join(s["refs"])} |' for s in slides]
@@ -346,10 +350,12 @@ src += [f'| {title} | {", ".join(files)} |' for title,files in visual_usage]
 src += ['', '원본 HTML의 SVG·실제 라벨링·장치 재생 이미지를 선택해 C안의 장별 설명 구조로 재배치했다. 그림별 SHA256과 원본 경로는 S25에 보존했다. 소스 PDF 전체 페이지를 슬라이드 이미지로 복사하지 않았다. 짐벌 응답 곡선은 실측 요약값 기반의 모형으로 표시하고, 실측 시계열은 불감대 시험 파형에만 사용한다.']
 src += ['','## 최신 수치와 조건','','| 항목 | 값 | 조건 | 한계 | 출처 |','|---|---|---|---|---|']
 src += ['| '+' | '.join([v['title'],v['values'],v['condition'],v['limit'],','.join(v['refs'])])+' |' for v in evidence]
+src += ['', '## 11/22 추가 반영 — 기존 기록보다 우선', '', '- 검출 추천은 own9e 시드 1. 모델9 대비 장치 INT8·분할 녹화18편 IDF1 +4.50%p(보고 구간 +1.26~+10.26), 번호 변경 차이0회(−9~+10). 구간의 신뢰 수준은 원문 미기재. 어깨 신뢰도 기준 충족률은92→9%.', '- 외형 추천은 기본 RVGGA0_REID2C256. 과거 OTP2 학습판의 검색 정답률0.892와 속도를 현재 추천 모델의 성능으로 대입하지 않는다.', '- 위치 예측: Kalman0.110, 수정GRU0.122이며14편 중10편에서 Kalman 오차가 낮음. IDF1 GRU74.7/Kalman74.1%, 차이90%구간−0.8~+2.3%p.', '- KeepID: 번호 변경47→43, 장기 뺏김19→20. 두 가드 추가 시 뺏김20→17, IDF1 82.3% 동일.', '- 학습264장 FP32 타일 진단: 누락230→218, 일부 관절 위치 오차 증가. 독립 INT8 정확도 평가와 구별.', '- 박스 보정은 기본 body, 변환표 부재 시 size이며 오류 시 자동 비활성화 가능. 장치 적용은 별도 확인.', '- 시각자료19개 HTML을 최신 원본에서 동기화했다. 하드웨어·팀원 사진6개 및 라벨링 등 이미지8개는 기존 원본과 동일하다.', '- sources/revision-20261122는 두 커밋의 근거22개와 모델뱅크 원문2개를 SHA256으로 보존한다.']
 src += ['','## 보존한 근거와 해석','','- 25.71ms는11/19 E10+3·재설치 전·모드별65초의 서버 p95. 큐버림1; 전프레임·종단 통과 아님.','- 11/20 재설치 뒤 전체화면 기록에서33ms초과14803/21579=68.6%. 이 시점 수치를 후속 분할 상태로 확대하지 않는다.','- 추적기 CMC:11/20 새 대본은 일반 기능을 설명하지만 동일PC 비교 원표는 CMC·ReID 미사용. 효과를 입증했다고 서술하지 않는다.','- SOLIDER 직접교체 원본 RESULT_KO는11/21 학습기록 조사에서 재확인 못함. 기존66.74→66.57은 예비자료의 잠정 참고로만 보존.','- 가상 재포착 vel+0.20의95%구간0.07~0.32, fused+0.06의−0.11~0.21을 구분한다.','- RepVGG 시간 비교:5.02/1.28≈3.92배; 검수264와OTP2판 정확도를 서로 대입하지 않는다.','- 출처 스냅샷 SHA256은 sources/latest-20261121/manifest.json에 보존. 비공개 개인실험 파일은 팀원이 기록한 주장으로 인용하며 원본을 새로 확인한 것으로 표시하지 않는다.','', '## 이전 B안 수치 원표','', '아래는 B안 원문 보존이며 장 번호는 B 기준이다. C안 장별 매핑과 최신 해석을 우선한다.','',SEED['base_sources_text']]
 (BASE/'sources.md').write_text('\n'.join(src),encoding='utf-8')
 
 questions = [
+    ('최신 추천 검출기와 외형 모델은 무엇인가요?', '11/22 모델뱅크 추천은 own9e 시드1과 기본 RVGGA0_REID2C256입니다. own9e는 장치 재생18편에서 IDF1 +4.50%p였으나 어깨 신뢰도 기준 충족률은92→9%였습니다. E10 AP46.28%는 앞선 별도 평가 결과입니다.', 'S26, S27'),
     ('최종 추적 알고리즘은 무엇인가요?', '최종 알고리즘은 BoT-SORT입니다. ByteTrack과 OC-SORT는 구현·평가한 비교 후보로 설명합니다. 동일 PC에서 HOTA 60.7, IDF1 67.5%, MOTA 74.7%를 확인하고, 최종 파라미터 조합을 선정했습니다. OC-SORT의 ID 변경531회와 재현율87.7%는 후보 장점으로 남깁니다.', 'S24'),
     ('30 Hz 목표를 달성했나요?', '일부 시험의 p95는 33 ms 아래지만 모든 프레임 기준은 통과하지 못했습니다. 장시간 18,497장 중 5장이 초과했고 최대 44.582 ms입니다. 최종 시스템 종단 30 Hz 성능을 입증하지 않았습니다.', 'S17'),
     ('현재 장치도 25.71 ms인가요?', '11/19 E10+3 모델로 재설치 전에 잰 65초 서버 시험입니다. 재설치 뒤에는 전체 화면 실행과 높은 초과율이 기록됐고, 이후에도 복구·변경이 있어 최종 실행을 별도로 확인해야 합니다.', 'S17'),
@@ -362,7 +368,7 @@ questions = [
     ('예측 추종이 재포착을 20%p 높였나요?', '가상 비교의 vel 결과입니다. 장치 기록의 fused는 +6%p이고 95% 구간이 0을 포함합니다. 실제 사람·실제 짐벌의 재포착 개선은 입증하지 않았습니다.', 'S17'),
     ('짐벌 지연이 약 200 ms인가요?', '약 190~210 ms는 과거 일부 실측과 추정을 합친 값입니다. 명령부터 화면 반응까지 108 ms는 직접 실측이지만 장면부터 짐벌까지의 최종 종단 실측은 없습니다.', 'S17'),
     ('INT8 aggressive 옵션을 분할 모델에도 썼나요?', '아닙니다. 29.10→21.92 ms는 과거 FLIR YOLO26s 시험이고 분할 파일은 CPU 부분 0, aggressive 미사용입니다.', 'S17'),
-    ('박스 보정으로 조준도 좋아졌나요?', '키 변화는 0.071→0.043이지만 조준 떨림은 0.0195로 같았습니다. 코드 상시 켬과 장치 반영 기록도 구분해야 합니다.', 'S17'),
+    ('박스 보정으로 조준도 좋아졌나요?', '키 변화는 0.071→0.043이지만 조준 떨림은 0.0195로 같았습니다. 기본 body이며 변환표가 없으면 size, 오류 시 자동 비활성화가 가능합니다. 장치 적용과 현장 효과는 별도 확인 대상입니다.', 'S26'),
     ('FastTrackTr를 최종 추적기로 썼나요?', '열화상 이어 학습으로 TMOT 6편 IDF1이 15.3→27.1%로 올랐지만 성능 부족으로 중단해 시험 선택지로만 유지했습니다.', 'S21'),
     ('기본 PD와 새 짐벌 개선의 담당은 누구인가요?', '팀 역할 원문을 따릅니다. 기본 PD·GUI·짐벌 제어는 윤오름, 윤관 자료는 그 위의 모델 학습·튜닝·실측·가상 시험 근거입니다.', 'S13'),
 ]
@@ -375,12 +381,13 @@ for block in re.split(r'(?=^## )',SEED['base_qa'],flags=re.M):
 (BASE/'qa.md').write_text('\n'.join(qmd),encoding='utf-8')
 
 demo_number=next(s['number'] for s in slides if s['base_number']==28)
-integration=['# C안 통합 인계','','2026-11-22 · 현재 작업본 C. A·B와 팀원 원본은 보존. 자료 기준 4836142. 장치 실행은 조회·재시험하지 않았다.','','## 구성','',f'- 본문 {len(slides)}장·예비 {len(backup)}장. 목표 설명 17분+데모 3분. 실제 리허설 미실시.','- seed.json은 B의 본문·예비·출처 동결본, build.py는 C의 최신 해석과 추가 장 생성기.','- sources/latest-20261121은 팀 자료 37개와 SHA256. 과거 B의 sources도 복사 보존.','- A·B의 빌더·소스 폴더를 참조하지 않고 C 내부 입력으로 재생성한다.','- plot_training.py는 동결 CSV를 사용해 학습 곡선 6개를 출력한다. 생성된 PNG가 포함되어 있어 일반 재생성에는 matplotlib가 필요 없다.','','## 변경 장 매핑','','| B장 | C장 | 제목 |','|---|---|---|']
+integration=['# C안 통합 인계','','2026-11-22 · 현재 작업본 C. A·B와 팀원 원본은 보존. 자료 기준 8a195d7. 장치 실행은 조회·재시험하지 않았다.','','## 구성','',f'- 본문 {len(slides)}장·예비 {len(backup)}장. 목표 설명 17분+데모 3분. 실제 리허설 미실시.','- seed.json은 B의 본문·예비·출처 동결본, build.py는 C의 최신 해석과 추가 장 생성기.','- sources/latest-20261121은 팀 자료 37개와 SHA256. 과거 B의 sources도 복사 보존.','- A·B의 빌더·소스 폴더를 참조하지 않고 C 내부 입력으로 재생성한다.','- plot_training.py는 동결 CSV를 사용해 학습 곡선 6개를 출력한다. 생성된 PNG가 포함되어 있어 일반 재생성에는 matplotlib가 필요 없다.','','## 변경 장 매핑','','| B장 | C장 | 제목 |','|---|---|---|']
 integration += [f'| {s["base_number"] or "추가"} | {s["number"]} | {s["title"]} |' for s in slides]
 integration += ['', '## 발표 흐름 개정', '', '- 표지 → 목차 → 팀 소개 → 프로젝트 소개 순서. 목차는 6개 항목이며 15초 배정.', '- 마지막 목차 항목은 통합 시연과 주요 성과. 마무리 장은 현재 구현·측정 성과로 구성한다.', '- 이전 본문의 거리 검증 계획·현장 ID 검증 계획은 예비자료 36·37장으로 이동. 측정 조건과 실제 입력 관리 항목은 대본·출처·인계에 보존한다.']
 integration += ['', '## 화면 문구', '', '- editorial.py에서 발표용 문구를 관리한다. 작성자·자료 버전·편집 이력과 긴 하단 캡션을 화면에서 제외한다.', '- 기존 하단 주석은 condition·editorial_notes와 대본·출처에 보존한다. 핵심 평가 조건은 그래프·표 제목에 표시한다.', '- 발표 대본은 구현과 측정 결과를 직접 설명하는 문장으로 정리한다.']
 integration += ['', '## 그림 중심 재구성', '', f'- visual_layouts.py가 {len(visual_usage)}개 본문 장을 재구성한다. 추가 장은 학습 데이터 구성·상체 박스 기준·가림·잘림 증강이다.', '- sources/visual-reference/slides의 선택 원자료와 assets/visuals 이미지를 사용한다. prepare_visuals.py는 원자료를 의도적으로 갱신할 때만 실행한다.', '- 그림을 단순 장식으로 추가하지 않고 라벨링→박스 기준→학습→실제 증강→평가, 관측 이력→위치 예측, 장치 영상→타일→병합, 짐벌 실측→제어 파형→가상 반복 시험 순서로 구성한다.', '- 원자료에서 후보명·시험 조건이 혼재한 HOTA 그래프와 모형 응답의 실측 표기는 확인된 조건에 맞춰 조정했다.']
 integration += ['', '## 최종 추적기와 운영 이력', '', '- 사용자 확인에 따라 최종 추적 알고리즘은 BoT-SORT로 명시한다. ByteTrack·OC-SORT 비교 → BoT-SORT 선정 → 파라미터 조정의 순서로 설명한다.', '- 비교 후보의 IDSW·재현율 장점은 측정 결과로 유지하고, 장면별 운용 추천으로 표현하지 않는다. 3종 선택·교체 기능은 구현 기능으로 보존한다.', '- tracking_story.py에서 선정 서사·GUI·성과 요약을 맞춘다. 장치 상태 이력은 예비자료 38장으로 이동했다.']
+integration += ['', '## 11/22 추가 반영', '', '- revision_20261122.py가 own9e 비교 장과 예비 조건표를 추가하고 GRU·KeepID 그래프, 외형 추천, 타일 진단, 박스 보정 해석을 갱신한다.', '- S26은 팀원 두 커밋의 근거, S27은 모델뱅크 추천 원문이다. 과거 E10 성과와 최신 own9e 추천을 별도로 설명한다.', '- 사진 원본은 기존과 동일하다. 바뀐 원자료 HTML과 그래프를 새로 가져왔으며 기본 빌드는 동결본만 사용한다.']
 integration += ['','## 남은 실제 입력','','- 표지 하드웨어 사진: assets/hardware-photo.jpg.','- 실제 GUI 앱 캡처: 기존 재생 이미지는 앱 캡처가 아님.',f'- C {demo_number}장 실제 시연: assets/rooftop-demo.mp4 (180초 이내).','- 최종 검출기·외형 모델 파일 해시, 분할 여부, Runtime/모델뱅크 서버 경로, 추적기, KeepID·가드·lead·보정·제어 인자.','- 거리별 누락·오검출, 가림 뒤 ID 정답·허용 끊김 기준과 현장 반복 결과.','- 사람 있는 최종 장치 경로의 장시간 최대·초과·드롭·순서 오류와 화면·물리 짐벌 종단 측정.','','## 자료 충돌 처리','','- CMC는 일반 기능 설명과 비교 시 미사용 설정을 분리.','- 최신 개인 요약의 vel/fused 혼용, 512 입력 채택 요약, 추천과 장치 선택을 추가 근거의 조건으로 제한.','- SOLIDER 직접 교체 원본 미확인은 예비자료로 한정.','- 반전 4→1은 Ki0·Kd6 고정의 불감대 비교로 유지.','','## 재생성','','```powershell','python work/C/build.py','python work/C/render.py','```','', 'render.py는 PDF·미리보기·레이아웃·글꼴·이미지·페이지 수·키보드 이동을 검증한다. validation.json은 실제 하드웨어 검증을 대신하지 않는다.']
 integration_text='\n'.join(integration)
 if photo:
@@ -389,7 +396,7 @@ integration_text+='\n\n## 공통 사진 경로\n\n현재 공통 사진은 refere
 (BASE/'integration.md').write_text(integration_text,encoding='utf-8')
 (BASE/'README.md').write_text(f'''# C안 · 최신 통합 발표
 
-2026-11-22 작성. 자료 기준 presentation `4836142`(11/21 23:13 KST). B안 `9819922` 이후의 검출·외형·ID·서버·짐벌 근거를 반영했습니다. A·B와 팀원 원본은 보존합니다.
+2026-11-22 작성. 자료 기준 presentation `8a195d7`(11/22 21:13 KST). B안 `9819922` 이후의 검출·외형·ID·서버·짐벌 근거를 반영했습니다. A·B와 팀원 원본은 보존합니다.
 
 본문 **{len(slides)}장**, 예비 **{len(backup)}장**. 설명 17분+실제 데모 3분의 **목표**이며 낭독 리허설은 하지 않았습니다.
 

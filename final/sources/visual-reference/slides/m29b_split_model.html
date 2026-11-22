@@ -1,0 +1,44 @@
+<article class="content-slide" id="m29b-split-model" data-section="경량화·M1 실행"><header><h1>분할 모델 만들기</h1></header>
+<style>
+#m29b-split-model svg text{font-family:Pretendard,sans-serif}
+#m29b-split-model .yk-flow{display:flex;align-items:stretch;gap:12px;margin-top:22px}
+#m29b-split-model .yk-flow>div{flex:1;background:#f3f6fa;border-top:4px solid #477c76;padding:14px 10px 16px;text-align:center}
+#m29b-split-model .yk-flow b{display:block;color:#002f6d;font-size:23px}
+#m29b-split-model .yk-flow span{display:block;color:#526277;font-size:18px;margin-top:4px;line-height:1.3}
+#m29b-split-model .yk-flow i{font-style:normal;color:#8da3bf;font-size:28px;align-self:center}
+#m29b-split-model .yk-chart{margin-top:24px}
+#m29b-split-model .hd{font-size:20px;font-weight:700;fill:#263c55}
+#m29b-split-model .lg{font-size:17px;fill:#263c55}
+#m29b-split-model .lb{font-size:20px;font-weight:600;fill:#263c55;text-anchor:end}
+#m29b-split-model .vl{font-size:19px;font-weight:700;fill:#193654}
+#m29b-split-model .dl{font-size:19px;font-weight:700;fill:#174b56;text-anchor:end}
+#m29b-split-model .ax{font-size:15px;fill:#526277;text-anchor:middle}
+#m29b-split-model .visual-take{margin-top:14px}
+#m29b-split-model .meta{margin-top:8px}
+</style>
+<div class="yk-flow"><div><b>타일 그래프</b><span>ONNX 입력 480×384<br>가중치 그대로</span></div><i>→</i><div><b>INT8 보정</b><span>검수 264장 × 좌·우<br>= 528조각</span></div><i>→</i><div><b>DX-COM</b><span>전부 NPU<br>CPU 부분 0</span></div><i>→</i><div><b>출력 합치기</b><span>오른쪽 +256 px<br>중심 320 기준 한쪽 → NMS</span></div></div>
+<div class="yk-chart"><svg viewBox="0 0 1168 300" width="1168" height="300" role="img" aria-label="학습에 쓴 264장 FP32 진단, 전체 화면 대 분할: 맞힌 사람 445 대 457, 놓친 사람 230 대 218, 오탐 251 대 242">
+<text x="200" y="22" class="hd">전체 화면과 분할의 사람 수 · 같은 E10 가중치</text>
+<rect x="830" y="7" width="18" height="18" fill="#9caebe"/><text x="856" y="22" class="lg">전체 화면</text><rect x="966" y="7" width="18" height="18" fill="#073771"/><text x="992" y="22" class="lg">두 타일 분할</text>
+<line x1="200.0" y1="40" x2="200.0" y2="272" stroke="#9aa9b9"/><text x="200.0" y="292" class="ax">0</text>
+<line x1="340.0" y1="40" x2="340.0" y2="272" stroke="#e3e9f0"/><text x="340.0" y="292" class="ax">100</text>
+<line x1="480.0" y1="40" x2="480.0" y2="272" stroke="#e3e9f0"/><text x="480.0" y="292" class="ax">200</text>
+<line x1="620.0" y1="40" x2="620.0" y2="272" stroke="#e3e9f0"/><text x="620.0" y="292" class="ax">300</text>
+<line x1="760.0" y1="40" x2="760.0" y2="272" stroke="#e3e9f0"/><text x="760.0" y="292" class="ax">400</text>
+<line x1="900.0" y1="40" x2="900.0" y2="272" stroke="#e3e9f0"/><text x="900.0" y="292" class="ax">500</text>
+<text x="184" y="84" class="lb">맞힌 사람</text>
+<rect x="200" y="46" width="623.0" height="30" fill="#9caebe"><title>맞힌 사람 전체 화면 445</title></rect><text x="831.0" y="68" class="vl">445</text>
+<rect x="200" y="79" width="639.8" height="30" fill="#073771"><title>맞힌 사람 분할 457</title></rect><text x="847.8" y="101" class="vl">457</text>
+<text x="1050" y="101" class="dl">+3%</text>
+<text x="184" y="160" class="lb">놓친 사람</text>
+<rect x="200" y="122" width="322.0" height="30" fill="#9caebe"><title>놓친 사람 전체 화면 230</title></rect><text x="530.0" y="144" class="vl">230</text>
+<rect x="200" y="155" width="305.2" height="30" fill="#073771"><title>놓친 사람 분할 218</title></rect><text x="513.2" y="177" class="vl">218</text>
+<text x="1050" y="177" class="dl">−5%</text>
+<text x="184" y="236" class="lb">오탐</text>
+<rect x="200" y="198" width="351.4" height="30" fill="#9caebe"><title>오탐 전체 화면 251</title></rect><text x="559.4" y="220" class="vl">251</text>
+<rect x="200" y="231" width="338.8" height="30" fill="#073771"><title>오탐 분할 242</title></rect><text x="546.8" y="253" class="vl">242</text>
+<text x="1050" y="253" class="dl">−4%</text>
+</svg></div>
+<div class="visual-take">검출 진단에서 누락 230 → 218 · 일부 관절 오차 증가 · 독립 INT8 검증 필요</div>
+<p class="meta">검수 264장 판 E10 · 학습에 사용한 같은 264장 FP32 비교</p>
+</article>

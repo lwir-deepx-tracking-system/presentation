@@ -10,12 +10,15 @@ REFERENCE=BASE/'sources/visual-reference/slides'
 def svg(name,index=0,edits=None):
     source=(REFERENCE/(name+'.html')).read_text(encoding='utf-8')
     root=re.search(r'<article[^>]+id="([^"]+)"',source).group(1)
+    original_root=root
+    if name=='k09_id_keep':root+=f'-figure-{index}'
     drawing=re.findall(r'<svg\b.*?</svg>',source,re.S)[index]
     for before,after in (edits or {}).items():
         assert before in drawing,(name,before)
         drawing=drawing.replace(before,after)
     drawing=drawing.replace('assets/','assets/visuals/')
     styles='\n'.join(re.findall(r'<style>(.*?)</style>',source,re.S))
+    if root!=original_root:styles=styles.replace('#'+original_root,'#'+root)
     shared=f'#{root} .v-label{{font:600 20px Pretendard;fill:#263c55}}#{root} .v-small{{font:16px Pretendard;fill:#526277}}#{root} .v-value{{font:600 22px Pretendard;fill:#002f6d}}'
     return f'<div class="v-drawing" id="{root}"><style>{styles}{shared}</style>{drawing}</div>'
 

@@ -1,0 +1,18 @@
+{
+  "presentation_commit": "7249d7b",
+  "files": [
+    {
+      "path": "정하건/정하건_v3/README.md",
+      "sha256": "816b5711994d00bf1451884464731c740836e798e90a758ba180968cecaf73a4"
+    },
+    {
+      "path": "정하건/정하건_v3/발표노트.md",
+      "sha256": "c5c7226a71fae7c7f3a632da89295bad78bffc25b6c3347a21227397ec290066"
+    },
+    {
+      "path": "정하건/정하건_v3/근거_비교표.md",
+      "sha256": "09eb873dedd91cb8b7bda4f575be18f60adbcae03447dd0751d5bf3f9fddd832"
+    }
+  ],
+  "verification": "Team-provided documents, not rerun hardware tests"
+}

@@ -1,0 +1,129 @@
+{
+  "commits": [
+    "4a93594",
+    "8a195d7"
+  ],
+  "model_bank_commit": "0e3dd540ff8a9953a6e7725f59393c782a3d9d5a",
+  "files": [
+    {
+      "source": "윤관/README.md",
+      "file": "sources/revision-20261122/윤관/README.md",
+      "sha256": "1a9cfa57a98e6403807fb5541a50c28a03c5951170892b4fde8f343c24cb840c"
+    },
+    {
+      "source": "윤관/notes.md",
+      "file": "sources/revision-20261122/윤관/notes.md",
+      "sha256": "eab45cbe8682ad913171aea92089b0b608a83fcde85c489ab1022f7d986fd80a"
+    },
+    {
+      "source": "윤관/근거_슬라이드별.md",
+      "file": "sources/revision-20261122/윤관/근거_슬라이드별.md",
+      "sha256": "3686ad57da171e601c76e260b76bdf48dc913d7b1ca76dfa15e636fb2f8b1860"
+    },
+    {
+      "source": "윤관/평가자_검토.md",
+      "file": "sources/revision-20261122/윤관/평가자_검토.md",
+      "sha256": "e4d3fabff6831a8bf68bc3ebd180b177fd585c5d2e114d0952f1dc4fd792c0fa"
+    },
+    {
+      "source": "윤관/src/notes/k09_id_keep.md",
+      "file": "sources/revision-20261122/윤관/src/notes/k09_id_keep.md",
+      "sha256": "0a114786e2062948810ceba9d23eff50c298b6554555efc5586983e4f3c58c83"
+    },
+    {
+      "source": "윤관/src/notes/k10_judgement.md",
+      "file": "sources/revision-20261122/윤관/src/notes/k10_judgement.md",
+      "sha256": "d3e7fdcff9f490dcee9b33e198d3bba8a46e674926b6bf4a55c5e86d224c2867"
+    },
+    {
+      "source": "윤관/src/notes/m18_e10.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m18_e10.md",
+      "sha256": "2501b762aee85688d22fc250d868745e49cbe6655a06fb458a7d33a1ab864835"
+    },
+    {
+      "source": "윤관/src/notes/m21b_reid_table.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m21b_reid_table.md",
+      "sha256": "a24c13a84000d2260c3c71ffbc4b76efa6ef42cde258e4b23addf0fd202af44f"
+    },
+    {
+      "source": "윤관/src/notes/m23_position_result.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m23_position_result.md",
+      "sha256": "835f43248a1190e281e228aeefe3cb845029924625831aa427761ecc42e4cd12"
+    },
+    {
+      "source": "윤관/src/notes/m24_box_stab.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m24_box_stab.md",
+      "sha256": "56968757bc326d5c14ea90b807a4b66a581629708f23fd6c2ab3a1545bf8d1bf"
+    },
+    {
+      "source": "윤관/src/notes/m29b_split_model.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m29b_split_model.md",
+      "sha256": "8fe86f16b8732f59ac7680437623742f844ec4ae0a9cf9d4b83002b12a9e5933"
+    },
+    {
+      "source": "윤관/src/notes/k08_virtual_cam.md",
+      "file": "sources/revision-20261122/윤관/src/notes/k08_virtual_cam.md",
+      "sha256": "2340d31decab8699fe1ca4e1a158b793d4406c5a9920764a6b7042eeb0f3bdeb"
+    },
+    {
+      "source": "윤관/src/notes/k06_gimbal.md",
+      "file": "sources/revision-20261122/윤관/src/notes/k06_gimbal.md",
+      "sha256": "51ae73e43ea9ef230b3f605c10df7b3705a6e513fab9fe486cff91b5473815da"
+    },
+    {
+      "source": "윤관/src/notes/m35_speed.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m35_speed.md",
+      "sha256": "fa3a092502e78663bf610fd888401b87e8f3331bbd8567e26e9968786dcdb09a"
+    },
+    {
+      "source": "윤관/src/notes/m38_summary.md",
+      "file": "sources/revision-20261122/윤관/src/notes/m38_summary.md",
+      "sha256": "c93b854400ae536877a8fab5008a83190c6c34edc5389adafda1f11e9ccd3c08"
+    },
+    {
+      "source": "윤관/src/notes/k05_stability.md",
+      "file": "sources/revision-20261122/윤관/src/notes/k05_stability.md",
+      "sha256": "f2fcb7e9e69b8b7b593769f90ae5409387cee9c71b4dc1724ec833aa37547222"
+    },
+    {
+      "source": "윤관/src/sources/k09_id_keep.md",
+      "file": "sources/revision-20261122/윤관/src/sources/k09_id_keep.md",
+      "sha256": "4ad8cb1d742d5b3eb622ddeb396eb407a98ccf93235554e4c945fe3261328d7f"
+    },
+    {
+      "source": "윤관/src/sources/k10_judgement.md",
+      "file": "sources/revision-20261122/윤관/src/sources/k10_judgement.md",
+      "sha256": "c0d17cf7e93b1f66d97be856fd0bd9421b5af7551aa722e75ac2879707c93ef0"
+    },
+    {
+      "source": "윤관/src/sources/m18_e10.md",
+      "file": "sources/revision-20261122/윤관/src/sources/m18_e10.md",
+      "sha256": "3883e5cabffaba35fe033120aa2f9f0c01cecdc1625d7b3817b0f664da582077"
+    },
+    {
+      "source": "윤관/src/sources/m21b_reid_table.md",
+      "file": "sources/revision-20261122/윤관/src/sources/m21b_reid_table.md",
+      "sha256": "d8b23ae3a421597b6e09f5d38b43241a08b8799bdebb05191f451b6a7a8a39d3"
+    },
+    {
+      "source": "윤관/src/sources/m38_summary.md",
+      "file": "sources/revision-20261122/윤관/src/sources/m38_summary.md",
+      "sha256": "d24262029d8286da0a55c3b0d21a4896624cd4aa3b6eddc69aa7c5c179bf524c"
+    },
+    {
+      "source": "윤관/src/slides/k10_judgement.html",
+      "file": "sources/revision-20261122/윤관/src/slides/k10_judgement.html",
+      "sha256": "3f3a75028e71eb369c75b50aa3e9ccaf58d4938e9334995867ff8650e1073a5b"
+    },
+    {
+      "source": "model-bank@0e3dd540/model-bank-handoff-own9e.md",
+      "file": "sources/revision-20261122/model-bank-handoff-own9e.md",
+      "sha256": "2a4e7edecc6192e0eb924524041f9eeb0a3ee9c66d77329216245a82ab37ae55"
+    },
+    {
+      "source": "model-bank@0e3dd540/model-bank-recommended.json",
+      "file": "sources/revision-20261122/model-bank-recommended.json",
+      "sha256": "52d88ba0c315c98440c176568af74fbc66a4f9988d5b8921d4e52df6f018b992"
+    }
+  ]
+}

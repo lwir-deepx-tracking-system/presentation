@@ -1,0 +1,9 @@
+- 상체 박스 AP 36.04 → 46.28%, 재현율 71.70 → 69.09%(OTP2 934장), 과거 장치 적용 — 이 발표 m18_e10 근거 파일
+- INT8 컴파일 옵션 29.10 → 21.92 ms(−25%), 사람 AP 43.71 → 43.69, 3,749프레임; 현재 상체 분할 모델은 이 옵션을 쓰지 않음(COMPILE.json) — 이 발표 m27_int8 근거 파일
+- RepVGG OTP2 몸 1순위 정답 0.892, ViT-lite 0.616·0.672, 처리 1.26 대 5.03 ms — 이 발표 m21b_reid_table 근거 파일
+- 가상 재포착 속도 방식 +20%p(95% +7~+32%p), 장치 적용 혼합 방식 +6%p(95% −11~+21%p) — 이 발표 k08_virtual_cam 근거 파일
+- LoRA 라벨 10% Full FT 대 LoRA: 30 epoch 34.22 대 32.61, 297 epoch 29.89 대 33.96, 보류(기각 아님) — 이 발표 m06 근거 파일(appendix m06_ft_lora)
+- 검출기 증류 사람 AP 44.8575 → 44.2334% 미채택 — 이 발표 m08_distill 근거 파일
+- SOLIDER 교체 IDF1 66.74 → 66.57%, 보류 — 이 발표 m21b_reid_table 근거 파일
+- 넓게 훑기(--seek) 26/87 대 25/108, 사전 규칙(+0.15 재포착) 미충족, 끔 — 이 발표 k08_virtual_cam 근거 파일
+- 11/22 추천 own9e와 모델 9의 장치 녹화 18편 재생 비교. IDF1 +4.50%p, 번호 변경 차이 0회(구간 −9~+10), 양쪽 어깨 신뢰도 0.5 이상 92% → 9%. 인수인계는 관절 라벨 없는 사람의 신뢰도를 0으로 학습한 점을 원인으로 기록. 실제 보행 짐벌 시험은 남아 있다. [인수인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/HANDOFF.md#L55-L58) · [추천 설정](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/tracking_server/models/RECOMMENDED.json)

@@ -1,0 +1,46 @@
+<article class="content-slide" id="m22-position" data-section="추적 보완 모델"><header><h1>가림 위치 예측</h1></header>
+<style>
+#m22-position svg{display:block;width:100%;height:auto;margin-top:22px}
+#m22-position svg text{font-family:Pretendard,sans-serif;text-anchor:middle}
+#m22-position .t-h{font-size:22px;font-weight:700}
+#m22-position .t-s{font-size:18px;fill:#526277}
+#m22-position .t-r{font-size:20px;font-weight:700;fill:#26364a}
+#m22-position .meta{font-size:16px;margin-top:4px}
+</style>
+<svg viewBox="0 0 1168 420" role="img" aria-label="보일 때 최근 20프레임을 기록하고, 가려진 뒤 15프레임까지 Kalman 예측을 GRU가 보정하며, 그 뒤에는 Kalman만 쓴다">
+<defs><marker id="m22-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8191a6"/></marker></defs>
+<rect x="0" y="0" width="452" height="350" fill="#eef3f9"/>
+<rect x="460" y="0" width="420" height="350" fill="#e7f1ef"/>
+<rect x="888" y="0" width="280" height="350" fill="#f3f4f6"/>
+<text x="226" y="38" class="t-h" fill="#002f6d">최근 20프레임 기록</text>
+<text x="226" y="68" class="t-s">상자 · 속도 · 관절 17개</text>
+<text x="670" y="38" class="t-h" fill="#174b56">Kalman 예측 + GRU 보정</text>
+<text x="670" y="68" class="t-s">중심·크기 조정 · 카메라 움직임 반영</text>
+<text x="1028" y="38" class="t-h" fill="#526277">Kalman만</text>
+<text x="1028" y="68" class="t-s">보정 끝</text>
+<g fill="#073771">
+<circle cx="80" cy="136" r="13"/><rect x="64" y="153" width="32" height="104" rx="12"/>
+<circle cx="182" cy="140" r="13"/><rect x="166" y="157" width="32" height="104" rx="12"/>
+<circle cx="284" cy="144" r="13"/><rect x="268" y="161" width="32" height="104" rx="12"/>
+<circle cx="386" cy="148" r="13"/><rect x="370" y="165" width="32" height="104" rx="12"/>
+</g>
+<g fill="none" stroke="#073771" stroke-width="2.5">
+<rect x="50" y="114" width="60" height="150"/><rect x="152" y="118" width="60" height="150"/><rect x="254" y="122" width="60" height="150"/><rect x="356" y="126" width="60" height="150"/>
+</g>
+<rect x="470" y="96" width="78" height="240" fill="#9aa7b6"/>
+<text x="509" y="222" class="t-r" fill="#fff" style="fill:#fff">가림</text>
+<g fill="none" stroke="#41817d" stroke-width="3" stroke-dasharray="9 6">
+<rect x="566" y="134" width="58" height="146"/><rect x="666" y="139" width="56" height="140"/><rect x="766" y="144" width="54" height="134"/>
+</g>
+<g fill="none" stroke="#8191a6" stroke-width="2.5" stroke-dasharray="3 5">
+<rect x="914" y="150" width="54" height="134"/><rect x="1004" y="156" width="54" height="134"/><rect x="1094" y="162" width="54" height="134"/>
+</g>
+<line x1="10" y1="372" x2="1158" y2="372" stroke="#8191a6" stroke-width="2" marker-end="url(#m22-ar)"/>
+<line x1="456" y1="360" x2="456" y2="384" stroke="#8191a6" stroke-width="2"/><line x1="884" y1="360" x2="884" y2="384" stroke="#8191a6" stroke-width="2"/>
+<text x="226" y="408" class="t-r">보일 때</text>
+<text x="670" y="408" class="t-r">가림 1~15프레임</text>
+<text x="1028" y="408" class="t-r">16프레임부터</text>
+</svg>
+<div class="visual-take">가려진 동안 최대 15프레임, Kalman 경로를 움직임·관절 이력으로 보정</div>
+<p class="meta">학습: TMOT 24편 + DanceTrack의 검출 결과 · 같은 자리에 Mamba도 시험</p>
+</article>

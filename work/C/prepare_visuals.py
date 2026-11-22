@@ -8,7 +8,7 @@ BASE=Path(__file__).resolve().parent
 ROOT=BASE.parents[1]
 SOURCE=ROOT/'윤관'
 DEST=BASE/'sources/visual-reference'
-slides=['m09_data','m13_labeling','m11_occlusion_aug','m14_body_box','m10_pose_lineage','m18_e10','m19_retrain','m21b_reid_table',
+slides=['k09_id_keep','m09_data','m13_labeling','m11_occlusion_aug','m14_body_box','m10_pose_lineage','m18_e10','m19_retrain','m21b_reid_table',
         'm22_position','m29_split','m29b_split_model','m30_tail','m31_gimbal_loop',
         'm32_pd','m33_plant','k08_virtual_cam','m25_fullbody','m27_int8']
 assets=['실제_라벨링_실내.png','실제_라벨링_야외.png','m11-occlusion-aug.jpg',

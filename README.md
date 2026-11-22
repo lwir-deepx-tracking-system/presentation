@@ -4,6 +4,8 @@
 
 5팀 **올빼미**의 발표자료 저장소입니다. 각자 담당 폴더에 HTML·CSS·에셋·발표 노트를 직접 업로드하고, 최종 발표는 `final/`에서 취합합니다.
 
+최신 취합본: [발표 PDF](final/presentation.pdf) · [예비 PDF](final/appendix.pdf) · [발표 HTML](final/index.html) · [대본·자료 안내](final/README.md)
+
 - 팀원: 윤오름 · 김재남 · 윤관 · 정하건 · 홍정호
 - 멘토: 천준호 선임연구원
 - 발표: 데모 영상 3분을 포함해 총 20분

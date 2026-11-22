@@ -1,0 +1,42 @@
+<article class="content-slide" id="m25-fullbody" data-section="추적 보완 모델"><header><h1>상체 박스와 전신 표시</h1></header>
+<style>
+#m25-fullbody .m25-pics{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:22px}
+#m25-fullbody .m25-pics h2{font-size:22px;margin:0 0 6px}
+#m25-fullbody .m25-pics h2 small{font-size:18px;color:#526277;font-weight:500;margin-left:8px}
+#m25-fullbody .m25-pics img{display:block;width:100%;height:252px;object-fit:cover;object-position:50% 88%;background:#16212f}
+#m25-fullbody .m25-low{display:grid;grid-template-columns:500px 1fr;gap:24px;margin-top:16px;align-items:start}
+#m25-fullbody .m25-rule h3{font-size:20px;color:#002f6d;margin:0 0 10px}
+#m25-fullbody .m25-steps{display:flex;align-items:center;gap:10px}
+#m25-fullbody .m25-steps div{flex:1;background:#f3f6fa;border-top:4px solid #477c76;padding:10px 8px;text-align:center;font-size:20px;font-weight:600;color:#26364a}
+#m25-fullbody .m25-steps i{font-style:normal;color:#8da3bf;font-size:22px}
+#m25-fullbody svg{display:block;width:100%;height:auto}
+#m25-fullbody svg text{font-family:Pretendard,sans-serif}
+#m25-fullbody .t-h{font-size:20px;font-weight:700;fill:#263c55}
+#m25-fullbody .t-l{font-size:18px;font-weight:600;fill:#263c55;text-anchor:end}
+#m25-fullbody .t-v{font-size:19px;font-weight:700;fill:#193654}
+#m25-fullbody .t-a{font-size:15px;fill:#526277;text-anchor:middle}
+#m25-fullbody .t-d{font-size:19px;font-weight:700;fill:#2f6b65}
+#m25-fullbody .visual-take{margin-top:12px}
+#m25-fullbody .meta{font-size:16px;margin-top:8px}
+</style>
+<div class="m25-pics">
+<div><h2>상체 · 머리~골반<small>추적·짐벌에 사용</small></h2><img src="assets/20261119-real-upper-replay.jpg" alt="장치 재생 화면의 상체 박스"></div>
+<div><h2>전신 표시 · 머리~발<small>화면 표시만</small></h2><img src="assets/20261119-real-full-replay.jpg" alt="장치 재생 화면의 전신 표시 박스"></div>
+</div>
+<div class="m25-low">
+<div class="m25-rule"><h3>발 위치 정하는 순서</h3>
+<div class="m25-steps"><div>① 발목</div><i>→</i><div>② 무릎</div><i>→</i><div>③ 키 비율</div></div>
+</div>
+<svg viewBox="0 0 644 150" role="img" aria-label="전신 정답과 겹침 IoU: 상체 박스 0.43, 전신 표시 0.74">
+<text x="0" y="20" class="t-h">전신 정답과 겹침 (IoU 중앙값)</text>
+<line x1="120" y1="32" x2="120" y2="128" stroke="#8191a6"/>
+<text x="110" y="60" class="t-l">상체 박스</text>
+<rect x="120" y="38" width="171" height="32" fill="#9aa7b6"/><text x="299" y="61" class="t-v">0.43</text>
+<text x="110" y="106" class="t-l">전신 표시</text>
+<rect x="120" y="84" width="297" height="32" fill="#41817d"/><text x="425" y="107" class="t-v">0.74</text><text x="475" y="107" class="t-d">+0.32</text>
+<text x="120" y="147" class="t-a">0</text><text x="320" y="147" class="t-a">0.5</text><text x="520" y="147" class="t-a">1</text>
+</svg>
+</div>
+<div class="visual-take">관절로 넓힌 전신 표시는 정답과 잘 맞음 · 추적·짐벌은 상체 박스 그대로</div>
+<p class="meta">사진: 같은 녹화의 다른 프레임 · IoU: 56장 190명, 모두 발목이 보인 경우</p>
+</article>

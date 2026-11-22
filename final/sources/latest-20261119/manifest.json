@@ -1,0 +1,23 @@
+{
+  "commit": "afa734f399a2c2e53171abd3131fffddc64351b3",
+  "date": "2026-11-19",
+  "scope": "Team-provided measurements; not rerun by this edit",
+  "files": [
+    {
+      "path": "윤관/근거_최신_20261119.md",
+      "sha256": "51f09c3d68a2767baaa485622241bcfac6eb048edc89218d555786a9fe4bae2f"
+    },
+    {
+      "path": "윤관/학습로그/20261119_E10_OTP2_validation.csv",
+      "sha256": "552351cfb9a72a0729063213f08131a1768d8b8cfa6b9044bf905c8024756658"
+    },
+    {
+      "path": "윤관/assets/20261119-real-upper-replay.jpg",
+      "sha256": "90bdedc7c4958e920ad30d6d9d0ca206a1e7e14200d5dd8354a15320ebd713fb"
+    },
+    {
+      "path": "윤관/assets/20261119-real-full-replay.jpg",
+      "sha256": "39e05cc3d473a5eeccb9ff11a0b90d704346cb26f570a41eb891b3e3ecc9fbdd"
+    }
+  ]
+}

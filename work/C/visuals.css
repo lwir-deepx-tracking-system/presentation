@@ -92,3 +92,16 @@
 .v-tracker-config{display:grid;grid-template-columns:1100px 1fr;gap:50px;align-items:center}
 .v-tracker-config>div:first-child{height:465px}
 .v-tracker-config svg{width:100%;height:100%}
+.v-own-header{display:flex;justify-content:space-between;align-items:center;margin:8px 0 24px;font-size:26px;color:#334e68}
+.v-own-header b{font-size:34px;color:#002f6d}
+.v-own-grid{display:grid;grid-template-columns:570px 1fr;gap:55px;align-items:center}
+.v-own-grid>div:last-child{height:350px}
+.v-own-grid svg{width:100%;height:100%}
+.v-own-gains{display:flex;flex-direction:column;gap:15px}
+.v-own-gains>div{background:#edf4f6;border-left:4px solid #477c76;padding:16px 24px}
+.v-own-gains small{font-size:24px;color:#334e68}
+.v-own-gains strong{display:block;font-size:48px;line-height:1.3;color:#002f6d;margin:4px 0}
+.v-own-gains p{font-size:21px;margin:0;line-height:1.4;color:#334e68}
+.v-id-compare{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.v-id-compare h3{font-size:27px;margin:0 0 8px}
+.v-id-compare .v-drawing{height:405px}

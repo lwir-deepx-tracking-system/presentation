@@ -1,6 +1,11 @@
 {
   "files": [
     {
+      "source": "윤관/src/slides/k09_id_keep.html",
+      "file": "sources/visual-reference/slides/k09_id_keep.html",
+      "sha256": "a6d902551d105555d43abafc98270a7e91051e738e36653fefb7fb622fb5d03d"
+    },
+    {
       "source": "윤관/src/slides/m09_data.html",
       "file": "sources/visual-reference/slides/m09_data.html",
       "sha256": "b85178c974825b40b2a1b71519cb2e4e33d3bd15eb26c564631444adaa91f388"
@@ -18,7 +23,7 @@
     {
       "source": "윤관/src/slides/m14_body_box.html",
       "file": "sources/visual-reference/slides/m14_body_box.html",
-      "sha256": "9bdf2ba7793c38e62279d660e68964155a26573d0275e94c8faf3002220861f9"
+      "sha256": "2d2d51b5f305b24db3d889ffadd1678be979c495e0f592fe99a74a2a2f83ae31"
     },
     {
       "source": "윤관/src/slides/m10_pose_lineage.html",
@@ -28,7 +33,7 @@
     {
       "source": "윤관/src/slides/m18_e10.html",
       "file": "sources/visual-reference/slides/m18_e10.html",
-      "sha256": "4762b2eb9aa2f599a2493305a3146e6f26cebe6bb95b5729ca1c79dcf1d6baad"
+      "sha256": "2fb9a9ca5dcd3a1282d0fcb922389ef59dfe3e10de179909409f9c659c2675b2"
     },
     {
       "source": "윤관/src/slides/m19_retrain.html",
@@ -38,7 +43,7 @@
     {
       "source": "윤관/src/slides/m21b_reid_table.html",
       "file": "sources/visual-reference/slides/m21b_reid_table.html",
-      "sha256": "3a47f588a0905b5f9b33c60d3efee859f6cd1f2537ef385f4fef30c0c6ac172d"
+      "sha256": "f6007cea091eb109b3f8955386e82a302c4beb3347b3963f7fd4fd74cd6b6c0a"
     },
     {
       "source": "윤관/src/slides/m22_position.html",
@@ -53,7 +58,7 @@
     {
       "source": "윤관/src/slides/m29b_split_model.html",
       "file": "sources/visual-reference/slides/m29b_split_model.html",
-      "sha256": "85a9b37db97196e7a11d868926ed6ad395e574f1f8bd405e2b4bcb5a31f1d42b"
+      "sha256": "f30f8a64e188be28b8cfeac138d45dab46573adb7ff633aaba25f8c52d854bbd"
     },
     {
       "source": "윤관/src/slides/m30_tail.html",
@@ -78,7 +83,7 @@
     {
       "source": "윤관/src/slides/k08_virtual_cam.html",
       "file": "sources/visual-reference/slides/k08_virtual_cam.html",
-      "sha256": "9cc78325506880af115c10bbcd37b7093dc0195e72cb9ff27c67afc32d6986e7"
+      "sha256": "41930a9c52d9c3512eb03243e10c419894ad8b7da74679aa7e1b6f960047a5a1"
     },
     {
       "source": "윤관/src/slides/m25_fullbody.html",
@@ -88,7 +93,7 @@
     {
       "source": "윤관/src/slides/m27_int8.html",
       "file": "sources/visual-reference/slides/m27_int8.html",
-      "sha256": "ac7152da617c02c5ef28cd2fca23b963115de3d1a7bdf96259f7139243e49989"
+      "sha256": "55a4d22169bc3abd08d34339d357be6c524c87afd7215614903d68623a576e41"
     },
     {
       "source": "윤관/assets/실제_라벨링_실내.png",

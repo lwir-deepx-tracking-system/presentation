@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "file": "hardware.png",
+      "source": "reference/picture/hardware.png",
+      "sha256": "e9600477e795e06431aa92a5f6ed8c02cb77102f09f1192e2603e18ecfa0787b"
+    },
+    {
+      "file": "윤오름.png",
+      "source": "reference/picture/윤오름.png",
+      "sha256": "a48981b9ebd526e6869daf06e45c405320f75f7af02f51b0aa38c232956a57cb"
+    },
+    {
+      "file": "김재남.png",
+      "source": "reference/picture/김재남.png",
+      "sha256": "f712c52548b1fa1efba29f1261b16d1f2d88740f15d12872149e4321707800f5"
+    },
+    {
+      "file": "윤관.png",
+      "source": "reference/picture/윤관.png",
+      "sha256": "fcf06a030e266df1e9177ddd9565b9b02cdfa432dfd66304e07e8db5c0a98671"
+    },
+    {
+      "file": "정하건.png",
+      "source": "reference/picture/정하건.png",
+      "sha256": "4aa2e881a5f6a7920562c927f4309d988035703aa72db02201a3ca812a22189a"
+    },
+    {
+      "file": "홍정호.png",
+      "source": "reference/picture/홍정호.png",
+      "sha256": "88fd58b38d1c1c1ae3f1b139f44af9a74c46f19a520a2e397fe591f5f6e27929"
+    }
+  ]
+}
