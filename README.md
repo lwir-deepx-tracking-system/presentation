@@ -15,7 +15,7 @@
 presentation/
 ├── README.md
 ├── reference/          # 공통 디자인 안내·예시·로고·폰트
-│   └── assets/
+│   └── picture/          # 하드웨어·팀원 사진
 ├── 윤오름/             # 각자 담당 HTML·CSS·자료
 │   └── assets/
 ├── 김재남/

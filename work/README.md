@@ -10,8 +10,16 @@
 |---|---|---|
 | [A안](A/README.md) | 본문 14장 + 예비 18장 | 큰 장면을 두고 길게 설명 |
 | [B안](B/README.md) | 본문 32장 + 예비 20장 | 문제·방법·결과를 나눠 화면 순서로 설명 |
+| [C안](C/README.md) | 본문 40장 + 예비 35장 | 11/21까지 최신 근거·장치 상태·검증 한계 반영 |
 
-현재 요청에 맞춘 B안:
+현재 작업본 C안:
+
+- [발표 PDF](C/presentation.pdf) / [발표 HTML](C/index.html)
+- [전체 미리보기](C/previews/slide-overview.png)
+- [큐시트](C/cue-sheet.md) / [대본](C/speaker-notes.html)
+- [예비 PDF](C/appendix.pdf) / [출처](C/sources.md) / [남은 입력·인계](C/integration.md)
+
+이전 B안:
 
 - [발표 PDF](B/presentation.pdf) / [발표 HTML](B/index.html)
 - [전체 미리보기](B/previews/slide-overview.png)
@@ -25,4 +33,4 @@ A안 기존 작업본:
 - [예비자료](A/appendix.html) / [예비 PDF](A/appendix.pdf)
 - [작업 안내](A/README.md) / [확정할 항목](A/integration.md)
 
-두 안 모두 목표 발표17분+데모3분이며 실제 낭독 리허설과 최종 현장 결과·데모 영상은 미완료입니다. B안의 실제 데모 영상 삽입 위치는 28번입니다.
+세 안 모두 목표 발표17분+데모3분이며 실제 낭독 리허설과 최종 현장 결과·데모 영상은 미완료입니다. 현재 C안의 데모 영상 삽입 위치는 36번입니다. A·B와 팀원 원본은 보존합니다.
