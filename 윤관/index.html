@@ -192,8 +192,8 @@
 <rect x="800" y="296" width="64.0" height="50" rx="3" fill="#41817d"><title>RepVGG 검수 264 1.28</title></rect>
 <text x="872.0" y="330" class="vl">1.28</text></svg></div>
 <div class="diff"><div>이전 OTP2 학습판 0.892 · 검수 264장 판 0.764</div><div>OTP2 학습판 1.26 ms · ViT-lite 5.02~5.03 ms</div></div>
-<div class="visual-take">OTP2 조각 시험에서는 RepVGG 두 판이 ViT-lite 두 판보다 높은 점수와 짧은 처리 시간</div>
-<p class="meta">M1 INT8 · 실내 176질의 · OTP2 학습판은 ID 연결 문제로 장치 목록에서 제외</p>
+<div class="visual-take">OTP2 537질의에서 RepVGG 우세 · M1 NPU 시간 1.26~1.28ms vs 5.02~5.03ms</div>
+<p class="meta">M1 INT8 · 0.892의 OTP2 학습판은 ID 연결 문제로 장치 목록에서 제외 · 실내 176질의 결과는 부록</p>
 </article><div class="team-footer"><span></span><span>06 / 12</span></div></section>
 <section class="slide" data-page="07" aria-label="번호 유지"><article class="content-slide" id="k09-id-keep" data-section="추적 보완 모델"><header><h1>번호 유지</h1></header><span class="must">★ 필수</span>
 <style>
@@ -221,22 +221,23 @@
 <text x="140" y="127" class="lb">GRU 수정 전</text><rect x="150" y="104" width="269" height="34" fill="#c9d3dd"/><text x="427" y="128" class="vl">0.336</text>
 <text x="140" y="179" class="lb">GRU 수정 후</text><rect x="150" y="156" width="98" height="34" fill="#c49b70"/><text x="256" y="180" class="vl">0.122</text><text x="318" y="180" class="dg" style="fill:#8a4f14">Kalman 대비 +0.012</text>
 <text x="140" y="231" class="lb">Mamba 재학습</text><rect x="150" y="208" width="102" height="34" fill="#c49b70"/><text x="260" y="232" class="vl">0.127</text>
-<text x="150" y="272" class="ax">0</text><text x="285" y="272" class="ax">0.2</text><text x="420" y="272" class="ax">0.4</text>
+<text x="150" y="272" class="ax">0</text><text x="310" y="272" class="ax">0.2</text><text x="470" y="272" class="ax">0.4</text>
 </svg></section>
 <section class="col"><h2>② KeepID · ③ 번호 가드</h2><p class="d">② 따라가던 사람에게 옛 번호를 돌려줌 · ③ 앞사람이 가려진 사람의 번호를 채가지 못하게 함</p>
-<svg viewBox="0 0 500 300" role="img" aria-label="라벨 녹화 9편 PC 시험. 번호 바뀜: KeepID 끔 47회, 켬 43회. 다른 사람에게 번호를 뺏긴 횟수: 번호 가드 끔 20회, 켬 17회">
+<svg viewBox="0 0 500 300" role="img" aria-label="라벨 녹화 9편 PC 시험. 번호 바뀜: KeepID 끔 47회, 켬 43회. 0.5초 넘는 번호 뺏김: KeepID 끔 19회, KeepID 켬 20회, 가드까지 켬 17회. 가드 적용 전후 IDF1 82.3%로 동일">
 <text x="0" y="22" class="tt">번호 바뀜 (횟수, 9편 합계)</text>
 <line x1="110" y1="34" x2="110" y2="120" stroke="#9aa9b9"/>
 <text x="100" y="62" class="lb">KeepID 끔</text><rect x="110" y="42" width="282" height="26" fill="#c9d3dd"/><text x="400" y="62" class="vl">47</text>
 <text x="100" y="98" class="lb">KeepID 켬</text><rect x="110" y="78" width="258" height="26" fill="#073771"/><text x="376" y="98" class="vl">43</text><text x="410" y="98" class="dg">−4</text>
 <text x="0" y="152" class="tt">0.5초 넘게 번호 뺏김 (횟수, 9편 합계)</text>
 <line x1="110" y1="164" x2="110" y2="250" stroke="#9aa9b9"/>
-<text x="100" y="192" class="lb">가드 끔</text><rect x="110" y="172" width="120" height="26" fill="#c9d3dd"/><text x="238" y="192" class="vl">20</text>
-<text x="100" y="228" class="lb">가드 켬</text><rect x="110" y="208" width="102" height="26" fill="#41817d"/><text x="220" y="228" class="vl">17</text><text x="256" y="228" class="dg">−3</text>
+<text x="100" y="184" class="lb">KeepID 끔</text><rect x="110" y="167" width="114" height="22" fill="#c9d3dd"/><text x="232" y="184" class="vl">19</text>
+<text x="100" y="211" class="lb">KeepID 켬</text><rect x="110" y="194" width="120" height="22" fill="#c49b70"/><text x="238" y="211" class="vl">20</text><text x="269" y="211" class="dg" style="fill:#8a4f14">+1</text>
+<text x="100" y="238" class="lb">+ 가드 2개</text><rect x="110" y="221" width="102" height="22" fill="#41817d"/><text x="220" y="238" class="vl">17</text><text x="269" y="238" class="dg">−3</text>
 <text x="110" y="272" class="ax">0</text><text x="260" y="272" class="ax">25</text><text x="410" y="272" class="ax">50</text>
 </svg></section>
 </div>
-<div class="visual-take">GRU는 14편 중 10편에서 Kalman보다 오차가 큼 · KeepID 장기 빼앗김 19 → 20</div>
+<div class="visual-take">GRU는 14편 중 10편에서 Kalman보다 오차가 큼 · 가드 추가 전후 IDF1 82.3%</div>
 <p class="meta">위치: 녹화 14편·놓침 238건 · 번호: 녹화 9편 3,877장, PC · 개발에 사용한 자료 · 장치 효과 미측정</p>
 </article><div class="team-footer"><span></span><span>07 / 12</span></div></section>
 <section class="slide" data-page="08" aria-label="장비 안정화"><article class="content-slide" id="k05-stability" data-section="짐벌 추종"><header><h1>장비 안정화</h1></header>

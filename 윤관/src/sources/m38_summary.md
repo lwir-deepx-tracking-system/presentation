@@ -1,8 +1,8 @@
 - 이 장은 새 숫자 없이 앞 장(m01~m37)과 그 근거 파일(src/sources 폴더의 같은 이름 파일)을 모아 정리함. 장치 상태는 각 장이 적은 11-19~11-20 기록 기준
-- 채택 · 상체 E10 검출기: 현장 650장(새 439 + 검수 211)으로 F에서 10 epoch, 장치 기본 검출기 — 이 발표 m18_e10 (model-bank 31ac21b HANDOFF.md '8090 후속 적용', model-bank 7e4ed20 tracking_server/models/detect/yolo26m/LWIR650_E10_CLAHE_REPRO_20261120.md)
+- 적용 이력 · 현장 상체 E10 검출기: 현장 650장(새 439 + 검수 211)으로 F에서 10 epoch, 11-19 장치 적용 — 이 발표 m18_e10 (model-bank 31ac21b HANDOFF.md '8090 후속 적용', model-bank 7e4ed20 tracking_server/models/detect/yolo26m/LWIR650_E10_CLAHE_REPRO_20261120.md)
 - 채택 · INT8 · NPU 분할: DX-COM INT8 DXNN, 화면을 384 px 타일 두 개로 나눠 NPU 0·1 동시 검출, 제출·회수와 좌표·관절 후처리 C++ — 이 발표 m27_int8, m29_split, m30_tail (model-bank 31ac21b HANDOFF.md 2026-11-19·11-20 절)
-- 채택 · RepVGG: 장치 외형 모델 = 검수 264장 미세조정 RepVGG, SOLIDER 교사를 직접 넣어도 IDF1 −0.2%p로 이득 없음 — 이 발표 m20_branches, m21_reid
-- 채택 · 관절 GRU: 장치는 11-16 관절 GRU 유지(수정 GRU 위치 오차 0.122, Kalman 0.110, IDF1 +0.6%p로 차이 없는 수준) — 이 발표 m22_position, m23_position_result
+- 외형 · 검수 264장 미세조정 RepVGG는 과거 장치 적용 이력. SOLIDER 교사로 직접 교체 시 IDF1 −0.17%p. 모델뱅크 추천은 기본 RVGGA0 — 이 발표 m20_branches, m21_reid
+- 11-16 장치 기록 · 관절 GRU 유지. 14편 비교는 Kalman 위치 오차 0.110, 수정 GRU 0.122. IDF1 차이 +0.6%p의 90% 구간은 −0.8~+2.3%p — 이 발표 m22_position, m23_position_result
 - 채택 · 짐벌 PD: Kp 30 · Ki 0 · Kd 6, 불감대 0.06, 최고 SPD 100 — 이 발표 m31_gimbal_loop, m32_pd (model-bank 31ac21b HANDOFF.md 2절, tracking_server/src/gimbal/PID_TUNING_RECORD_20261110.md)
 - 채택 · 원거리 가속: 가속 한도 150 SPD/초 · 화면 가장자리 이득 1.6배, 11-15 장치 적용, 11-20 장치 인자에 그대로 있음 — 이 발표 m35_speed (개인 실험 기록(WORKLOG.md, rules_20261120.txt))
 - 채택 · 예측 따라가기: 놓친 뒤 0.8초 예측 자리 따라가기 켬; 가상 비교에서 속도 예측 방식은 재포착 +20%p, 장치에 켠 fused 방식은 +6%p로 근거가 약함 — 이 발표 m37_loss
@@ -18,10 +18,10 @@
 - 남은 측정 · 사람 있을 때 33 ms: 사람이 있는 실카메라 지연은 C++ 이식 뒤 아직 안 잼, 사람이 많은 녹화는 최대 57~67 ms, 사람 없는 장시간 18,497장도 5장이 33 ms 초과 — 이 발표 m29_split, m30_tail
 - 남은 측정 · 실제 재포착률: 켠 놓침 대응 기능의 실제 사람 재포착률 미측정 — 이 발표 m37_loss
 - 남은 측정 · 짐벌 세로 · 고속: 세로(틸트)와 SPD 40 이상 응답 미측정, 원거리 가속 모의 시험에는 SPD 30 위 미측정 구간이 들어감 — 이 발표 m33_plant, m35_speed
-- 노트에만 넣은 남은 일: FP32와 INT8의 정답 기준 정확도 비교 없음 — 이 발표 m27_int8 근거; E10의 OTP2 별도 시험 2,151장 평가와 CLAHE 대조 학습 안 함 — 이 발표 m18_e10 근거(model-bank 7e4ed20 같은 문서)
+- 노트에만 넣은 남은 일: FP32와 INT8의 정답 기준 정확도 비교 없음 — 이 발표 m27_int8 근거; E10의 OTP2 별도 시험 2,151장 평가와 CLAHE 대조 학습까지 실행. CLAHE 효과는 재현 오차와 분리하기 어려웠음 — 이 발표 m18_e10 근거(model-bank 7e4ed20 같은 문서)
 - 그 밖의 남은 측정(장·노트 생략): 실제 짐벌 종단 지연(m36_latency), 우리 카메라의 독립 ID 정확도(m21_reid), 무릎·키 비율로 정한 전신 표시 정확도(m25_fullbody)
 - 11-20~11-21 추가 · 번호 지킴: cost_first·feat_guard 장치에서 켜짐(11-20 17:56 재시작 뒤 유지), PC 9편 뺏김 20 → 17 — 이 발표 m23_position_result 근거
-- 11-20~11-21 추가 · 박스 보정: 11-21 코드부터 항상 켬, 기본 상체 네모(body); 장치 반영 기록 없음 — 이 발표 m24_box_stab 근거 (model-bank 2ce0f94, 8c62f8f)
+- 11-20~11-21 추가 · 박스 보정: 11-21 코드의 시작 기본은 body(변환표 없으면 size). 오류 시 자동 해제 가능. 장치 반영 기록 없음 — 이 발표 m24_box_stab 근거 (model-bank 2ce0f94, 8c62f8f)
 - 11-20 추가 · 보류: 깊이 순서(depth_order)·겹친 두 사람 묶기(merge_split) 기본 꺼짐, 켜지 말 것 — model-bank a260f42, c5b6783 HANDOFF.md
 - 11-20 추가 · 시험 선택지(채택 아님): SOLIDER 증류 E 외형 모델, 녹화 9편 IDF1 82.4 vs 장치 모델 83.0 — 이 발표 m21b_reid_table 근거
-- 장치 검출기: 11-20 오전 기록에 검수 264장 E10으로 바뀐 기록이 있고, 화면 추천 표시도 검수 264장 E10에 붙음(녹화 9편 비교) → 노트에서는 "상체 E10"으로만 말함 — model-bank 901255a tracking_server/models/RECOMMENDED.json; 근거_최신_20261120.md 5절
+- 검출기 선택 이력: 11-20 오전에 검수 264장 E10으로 변경. 11-22 모델뱅크 추천은 own9e이며 실제 장치 선택은 별도 기록으로 확인 — 이 발표 k10_judgement; 근거_최신_20261120.md 5절

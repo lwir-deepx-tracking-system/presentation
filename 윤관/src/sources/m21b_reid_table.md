@@ -8,3 +8,4 @@
 - 증류 E 조각 검색(PC FP32, 검수 264장 판 대비): 새 날 실내 0.504 → 0.680, 잘림·가림 0.568 → 0.627, BU-TIV 0.754 → 0.827, 옥상 0.700 → 0.663; INT8 양자화 진단 출력 코사인 0.982; 장치 NPU 정확도·속도 미측정 — model-bank 281cf3a HANDOFF.md (2026-11-20 외형 모델 추가: SOLIDER 증류 E)
 - 화면 추천 표시: 외형 RVGGA0_REID2C256, 검출기 검수 264장 E10(녹화 9편 ID 추적 비교, 장치 설정 cost_first+feat_guard) — model-bank 901255a tracking_server/models/RECOMMENDED.json
 - 이 장은 그림 판. 표 판(실내 몸·가림, TMOT·CAMEL, IDF1)은 부록 ax_reid_table 장
+- 표의 OTP2 몸 1순위 값은 같은 537질의에서 비교. 실내 176질의 결과는 별도 표. 11/22 모델뱅크에서도 추천 외형은 RVGGA0_REID2C256이다. [추천 설정](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/tracking_server/models/RECOMMENDED.json)

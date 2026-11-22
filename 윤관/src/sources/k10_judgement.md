@@ -6,4 +6,4 @@
 - 검출기 증류 사람 AP 44.8575 → 44.2334% 미채택 — 이 발표 m08_distill 근거 파일
 - SOLIDER 교체 IDF1 66.74 → 66.57%, 보류 — 이 발표 m21b_reid_table 근거 파일
 - 넓게 훑기(--seek) 26/87 대 25/108, 사전 규칙(+0.15 재포착) 미충족, 끔 — 이 발표 k08_virtual_cam 근거 파일
-- 11/22 추천 own9e와 모델 9의 장치 녹화 18편 재생 비교. IDF1 +4.50%p, 번호 변경 차이 0회(구간 −9~+10), 양쪽 어깨 신뢰도 0.5 이상 92% → 9%. 실제 보행 짐벌 시험은 남아 있다. [인수인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/HANDOFF.md#L55-L58) · [추천 설정](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/tracking_server/models/RECOMMENDED.json)
+- 11/22 추천 own9e와 모델 9의 장치 녹화 18편 재생 비교. IDF1 +4.50%p, 번호 변경 차이 0회(구간 −9~+10), 양쪽 어깨 신뢰도 0.5 이상 92% → 9%. 인수인계는 관절 라벨 없는 사람의 신뢰도를 0으로 학습한 점을 원인으로 기록. 실제 보행 짐벌 시험은 남아 있다. [인수인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/HANDOFF.md#L55-L58) · [추천 설정](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/tracking_server/models/RECOMMENDED.json)

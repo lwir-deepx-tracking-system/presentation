@@ -16,9 +16,9 @@
 <tr class="no"><td>ViT-lite 미세조정</td><td>1.46 MB</td><td>5.03 ms</td><td>0.616</td><td>0.592</td><td>0.989</td><td>0.903</td></tr>
 <tr class="no"><td>ViT-lite 증류</td><td>1.46 MB</td><td>5.02 ms</td><td>0.672</td><td>0.596</td><td>0.915</td><td>0.841</td></tr>
 <tr><td>RepVGG OTP2 (11/13)</td><td>7.45 MB</td><td>1.26 ms</td><td>0.892</td><td>0.834</td><td>0.977</td><td>0.847</td></tr>
-<tr class="dev"><td>RepVGG 검수 264 · 장치</td><td>7.45 MB</td><td>1.28 ms</td><td>0.764</td><td>0.667</td><td>1.000</td><td>0.892</td></tr></table>
-<p class="cap">1순위 정답 비율 · 실내 176질의(참고값)</p></div>
-<div><h2>지금 장치 모델 (검수 264장 RepVGG)</h2>
+<tr class="dev"><td>RepVGG 검수 264</td><td>7.45 MB</td><td>1.28 ms</td><td>0.764</td><td>0.667</td><td>1.000</td><td>0.892</td></tr></table>
+<p class="cap">1순위 정답 비율 · OTP2 537질의 · 실내 176질의(별도 시험)</p></div>
+<div><h2>검수 264장 RepVGG · 별도 시험</h2>
 <table class="t"><tr><th>시험</th><th>정확도</th></tr>
 <tr class="dev"><td>TMOT 1순위 정답</td><td>386 / 432 · 89.4%</td></tr>
 <tr class="dev"><td>CAMEL 1순위 정답</td><td>201 / 218 · 92.2%</td></tr>
@@ -26,7 +26,7 @@
 <tr class="no"><td>교사 SOLIDER로 교체</td><td>66.57% (−0.2%p)</td></tr>
 <tr class="dev"><td>추적 IDF1 · 자체 녹화 9편</td><td>83.0%</td></tr>
 <tr class="no"><td>SOLIDER 증류 E · 시험 선택지</td><td>82.4% (−0.6%p)</td></tr></table>
-<p class="cap">TMOT·CAMEL은 개발에 쓴 공개 자료 · 추적은 PC FP32 · 녹화 9편은 라벨 있는 자체 녹화</p></div>
+<p class="cap">TMOT·CAMEL은 개발에 쓴 공개 자료 · 추적은 PC FP32 · 9편 비교에서 기본 RVGGA0도 83.0%</p></div>
 </div>
-<div class="visual-take" style="margin-top:22px">ViT-lite는 OTP2에서 낮고 4배 느림 → RepVGG 사용</div>
+<div class="visual-take" style="margin-top:22px">OTP2 조각 검색과 NPU 시간 비교 · 실제 ID 추적 결과는 별도 평가</div>
 </article>
