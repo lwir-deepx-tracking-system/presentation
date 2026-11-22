@@ -213,9 +213,9 @@
 #k09-id-keep .meta{font-size:14px;margin-top:8px}
 </style>
 <div class="cols">
-<section class="col"><h2>① 가려진 동안 위치 예측</h2><p class="d">가려진 사람이 어디 있을지 미리 계산해 둠</p>
+<section class="col"><h2>① 가려진 동안 위치 예측</h2><p class="d">공개 검증에서 GRU의 위치 오차가 낮아 적용<br>TMOT 0.352 → 0.223 · DanceTrack 0.295 → 0.213</p>
 <svg viewBox="0 0 560 300" role="img" aria-label="가려진 사람 위치 오차, 사람 키 대비: Kalman 0.110, 수정 전 GRU 0.336, 수정 후 GRU 0.122, 재학습 Mamba 0.127">
-<text x="0" y="22" class="tt">위치 오차 (사람 키 대비, 낮을수록 좋음)</text>
+<text x="0" y="22" class="tt">자체 녹화 14편 · 위치 오차 (사람 키 대비, 낮을수록 좋음)</text>
 <line x1="150" y1="40" x2="150" y2="250" stroke="#9aa9b9"/>
 <text x="140" y="75" class="lb">Kalman</text><rect x="150" y="52" width="88" height="34" fill="#073771"/><text x="246" y="76" class="vl">0.110</text>
 <text x="140" y="127" class="lb">GRU 수정 전</text><rect x="150" y="104" width="269" height="34" fill="#c9d3dd"/><text x="427" y="128" class="vl">0.336</text>
@@ -237,8 +237,8 @@
 <text x="110" y="272" class="ax">0</text><text x="260" y="272" class="ax">25</text><text x="410" y="272" class="ax">50</text>
 </svg></section>
 </div>
-<div class="visual-take">GRU는 14편 중 10편에서 Kalman보다 오차가 큼 · 가드 추가 전후 IDF1 82.3%</div>
-<p class="meta">위치: 녹화 14편·놓침 238건 · 번호: 녹화 9편 3,877장, PC · 개발에 사용한 자료 · 장치 효과 미측정</p>
+<div class="visual-take">자체 14편 위치 오차는 Kalman 우세 · 장치 재생 1편 IDF1은 Kalman 71.81%, GRU 75.36%</div>
+<p class="meta">위치 오차: 자체 녹화 놓침 238건 · 가드: 별도 녹화 9편 PC 평가, 전후 IDF1 82.3%</p>
 </article><div class="team-footer"><span></span><span>07 / 135</span></div></section>
 <section class="slide" data-page="08" aria-label="장비 안정화"><article class="content-slide" id="k05-stability" data-section="짐벌 추종"><header><h1>장비 안정화</h1></header>
 <style>
