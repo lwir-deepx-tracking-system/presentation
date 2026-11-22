@@ -3,3 +3,5 @@
 - 번호 바뀜 KeepID 끔 47 → 켬 43(IDF1 80.8 → 82.3), 라벨 녹화 9편 3,877장, PC — model-bank HANDOFF.md (2026-11-20 앞사람이 뒷사람 번호를 채가는 문제, "KeepID 끔 19 / 47 / 80.8")
 - 0.5초 넘게 번호 뺏김 20 → 17(cost_first + feat_guard 둘 다), 번호 바뀜 43 → 42, 같은 9편·PC FP32 — 같은 HANDOFF 절; 이 발표 m23_position_result 근거 파일
 - KeepID가 따라가던 사람에게 옛 번호를 돌려줌, 번호 가드는 장치 설정에서 켜짐; 장치 효과 미측정 — model-bank HANDOFF.md (2026-11-19 추종 대상의 기존 번호 복구; 2026-11-20 같은 절), 이 발표 m23_position_result 근거 파일
+- KeepID 단독 비교의 장기 빼앗김 19 → 20 역시 기록했다. 20 → 17은 두 가드 추가 비교다. [모델뱅크 인수인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/HANDOFF.md#L159)
+- 14편 중 10편에서 Kalman 오차가 낮았다. 화면 가장자리 입력의 데이터 편향과 학습 라벨 처리 오류는 초기 GRU의 큰 오차를 설명하며 수정 후 남은 오차 차이의 원인은 확인되지 않았다. [모델뱅크 GRU 기록](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/tracking_server/models/README.md#L240-L250)

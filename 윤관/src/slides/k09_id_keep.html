@@ -20,10 +20,10 @@
 <svg viewBox="0 0 560 300" role="img" aria-label="가려진 사람 위치 오차, 사람 키 대비: Kalman 0.110, 수정 전 GRU 0.336, 수정 후 GRU 0.122, 재학습 Mamba 0.127">
 <text x="0" y="22" class="tt">위치 오차 (사람 키 대비, 낮을수록 좋음)</text>
 <line x1="150" y1="40" x2="150" y2="250" stroke="#9aa9b9"/>
-<text x="140" y="75" class="lb">Kalman</text><rect x="150" y="52" width="88" height="34" fill="#9caebe"/><text x="246" y="76" class="vl">0.110</text>
+<text x="140" y="75" class="lb">Kalman</text><rect x="150" y="52" width="88" height="34" fill="#073771"/><text x="246" y="76" class="vl">0.110</text>
 <text x="140" y="127" class="lb">GRU 수정 전</text><rect x="150" y="104" width="269" height="34" fill="#c9d3dd"/><text x="427" y="128" class="vl">0.336</text>
-<text x="140" y="179" class="lb">GRU 수정 후</text><rect x="150" y="156" width="98" height="34" fill="#073771"/><text x="256" y="180" class="vl">0.122</text><text x="318" y="180" class="dg">−64%</text>
-<text x="140" y="231" class="lb">Mamba 재학습</text><rect x="150" y="208" width="102" height="34" fill="#41817d"/><text x="260" y="232" class="vl">0.127</text>
+<text x="140" y="179" class="lb">GRU 수정 후</text><rect x="150" y="156" width="98" height="34" fill="#c49b70"/><text x="256" y="180" class="vl">0.122</text><text x="318" y="180" class="dg" style="fill:#8a4f14">Kalman 대비 +0.012</text>
+<text x="140" y="231" class="lb">Mamba 재학습</text><rect x="150" y="208" width="102" height="34" fill="#c49b70"/><text x="260" y="232" class="vl">0.127</text>
 <text x="150" y="272" class="ax">0</text><text x="285" y="272" class="ax">0.2</text><text x="420" y="272" class="ax">0.4</text>
 </svg></section>
 <section class="col"><h2>② KeepID · ③ 번호 가드</h2><p class="d">② 따라가던 사람에게 옛 번호를 돌려줌 · ③ 앞사람이 가려진 사람의 번호를 채가지 못하게 함</p>
@@ -39,6 +39,6 @@
 <text x="110" y="272" class="ax">0</text><text x="260" y="272" class="ax">25</text><text x="410" y="272" class="ax">50</text>
 </svg></section>
 </div>
-<div class="visual-take">고친 GRU는 Kalman 수준으로 회복 · 번호 바뀜은 KeepID와 가드로 조금 감소</div>
-<p class="meta">위치: 자체 녹화 14편·놓침 238건 · 번호: 라벨 녹화 9편 3,877장, PC · 원인 분석에 같은 녹화를 써서 독립 시험 아님 · 장치 효과 미측정</p>
+<div class="visual-take">GRU는 14편 중 10편에서 Kalman보다 오차가 큼 · KeepID 장기 빼앗김 19 → 20</div>
+<p class="meta">위치: 녹화 14편·놓침 238건 · 번호: 녹화 9편 3,877장, PC · 개발에 사용한 자료 · 장치 효과 미측정</p>
 </article>

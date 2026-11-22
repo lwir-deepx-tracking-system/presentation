@@ -16,15 +16,15 @@
 </style>
 <table>
 <tr><th>방법</th><th>결과</th><th>결정</th></tr>
-<tr class="ok"><td>상체 모델 E10</td><td>상체 박스 AP 36.04 → 46.28%</td><td><span class="pill">채택</span></td></tr>
-<tr class="ok"><td>INT8 컴파일 옵션</td><td>M1 한 장 29.10 → 21.92 ms (−25%), AP 그대로</td><td><span class="pill">채택</span></td></tr>
-<tr class="ok"><td>RepVGG 외형</td><td>정답 0.892 대 ViT-lite 0.616·0.672, 4배 빠름</td><td><span class="pill">채택</span></td></tr>
-<tr class="ok"><td>예측 자리 따라가기</td><td>같은 사람 재포착 +0.20 (95% 0.07~0.32)</td><td><span class="pill">채택</span></td></tr>
+<tr class="ok"><td>상체 모델 E10</td><td>OTP2 박스 AP +10.24%p · 박스 재현율 −2.61%p</td><td><span class="pill">이전 적용</span></td></tr>
+<tr class="hold"><td>YOLO26s 컴파일 옵션</td><td>평균 29.10 → 21.92 ms · 사람 AP −0.02%p</td><td><span class="pill">시험</span></td></tr>
+<tr class="ok"><td>RepVGG 외형</td><td>검수 264장 학습판 조각 검색 0.764 · NPU 1.28 ms</td><td><span class="pill">비교</span></td></tr>
+<tr class="hold"><td>예측 자리 따라가기</td><td>가상 재포착률: 속도 방식 +20%p · 적용 혼합 방식 +6%p</td><td><span class="pill">효과 미확정</span></td></tr>
 <tr class="hold"><td>LoRA</td><td>Full FT 대 LoRA: 30 epoch 34.22 대 32.61, 297 epoch 29.89 대 33.96</td><td><span class="pill">보류</span></td></tr>
 <tr class="hold"><td>검출기 증류</td><td>사람 AP 44.86 → 44.23%</td><td><span class="pill">보류</span></td></tr>
 <tr class="hold"><td>SOLIDER 교체</td><td>IDF1 66.74 → 66.57%</td><td><span class="pill">보류</span></td></tr>
 <tr class="hold"><td>넓게 훑기</td><td>재포착 26/87 대 25/108</td><td><span class="pill">보류</span></td></tr>
 </table>
-<div class="visual-take">결과가 기준에 못 미친 시험도 그대로 남겨 보고함</div>
-<p class="meta">시험마다 데이터·조건이 다름 · LoRA 비교는 라벨 10% 조건</p>
+<div class="visual-take">11/22 추천 own9e · IDF1은 상승, 양쪽 어깨 신뢰도 기준 충족률은 92% → 9%</div>
+<p class="meta">모델 9와 장치 재생 18편 비교 · IDF1 +4.50%p · 번호 변경 차이 미확인</p>
 </article>

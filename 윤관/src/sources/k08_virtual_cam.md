@@ -4,3 +4,4 @@
 - 놓친 뒤 예측 자리 따라가기(coast, vel): 놓침당 재포착 +0.20(95% 0.07~0.32), 사전 규칙 충족; 화면 안 놓침, 가상 3장면 부분 결과 — 개인 실험 기록(virtual_gimbal_tmot/recatch/RESULT.md (Results))
 - 넓게 훑기(--seek) 1차 114회 재포착 끔 26/87 · 켬 25/108, 2차 1초 넘는 이탈 끔 7/27 · 켬 3/24, 둘 다 이득 없음 → 끔 — 개인 실험 기록(virtual_gimbal_tmot/search2/RESULT.md, search2/long_exit/RESULT.md)
 - 한계: 확대한 녹화, 실제 근거리·가림·실제 짐벌은 재현 못함 — virtual_gimbal_tmot/SPEC.md (0절)
+- 11/15 장치 적용 기록은 혼합(fused)과 guard v2다. 혼합의 가상 시험 이득은 +6%p(95% 구간 −11~+21%p). [11월 20일 추가 근거](근거_최신_20261120.md)

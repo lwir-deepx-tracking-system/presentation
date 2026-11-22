@@ -18,21 +18,21 @@
 <div class="st-wrap">
 <div><svg viewBox="0 0 690 470" width="690" height="470" role="img" aria-label="카메라 그림 멈춤 분당 8.4에서 0회, 추적 지연 p95 42.5에서 30.5 ms">
 <text x="0" y="26" class="tt">카메라 그림 멈춤 (분당 횟수)</text>
-<text x="360" y="26" class="tt">추적 지연 p95 (ms)</text>
+<text x="360" y="26" class="tt">입력 축소 시험 p95 (ms)</text>
 <line x1="20" y1="50" x2="20" y2="400" stroke="#9aa9b9"/><line x1="360" y1="50" x2="360" y2="400" stroke="#9aa9b9"/>
 <line x1="20" y1="400" x2="300" y2="400" stroke="#9aa9b9"/><text x="20" y="424" class="ax">0</text><text x="300" y="424" text-anchor="end" class="ax">10</text>
 <rect x="21" y="64" width="235" height="74" rx="3" fill="#9caebe"/><text x="266" y="110" class="vl">8.4</text><text x="21" y="162" class="lb">고치기 전</text>
 <rect x="21" y="190" width="3" height="74" fill="#073771"/><text x="36" y="236" class="vl">0</text><text x="21" y="288" class="lb">고친 뒤</text><text x="21" y="340" class="dl">−8.4회</text>
 <line x1="360" y1="400" x2="640" y2="400" stroke="#9aa9b9"/><text x="360" y="424" class="ax">0</text><text x="640" y="424" text-anchor="end" class="ax">50</text>
-<rect x="361" y="64" width="238" height="74" rx="3" fill="#9caebe"/><text x="608" y="110" class="vl">42.5</text><text x="361" y="162" class="lb">고치기 전</text>
-<rect x="361" y="190" width="171" height="74" rx="3" fill="#073771"/><text x="542" y="236" class="vl">30.5</text><text x="361" y="288" class="lb">고친 뒤</text><text x="361" y="340" class="dl">−12.0 ms (−28%)</text>
-<text x="0" y="458" class="ax">왼쪽 실제 장치 · 오른쪽 고밀도 녹화 592장 · 장면에서 짐벌 반응까지 약 200 ms(추정)</text>
+<rect x="361" y="64" width="238" height="74" rx="3" fill="#9caebe"/><text x="608" y="110" class="vl">42.5</text><text x="361" y="162" class="lb">기존 분할</text>
+<rect x="361" y="190" width="171" height="74" rx="3" fill="#073771"/><text x="542" y="236" class="vl">30.5</text><text x="361" y="288" class="lb">512×384 후보</text><text x="361" y="340" class="dl" style="fill:#8a4f14">최대 63.09 ms · 보류</text>
+<text x="0" y="458" class="ax">왼쪽 실제 장치 · 오른쪽 고밀도 녹화 592장</text>
 </svg></div>
 <div class="st-box"><h2>스스로 복구</h2>
 <div class="row"><em>켬</em><span>카메라 멈춤을 알아보고 화면에 안내, 다시 꽂으면 자동으로 열기</span></div>
 <div class="row"><em>켬</em><span>장면 없음이 20초 가면 카메라 엔진 한 번 다시 시작</span></div>
 <div class="row"><em>켬</em><span>재시작 뒤에도 고른 설정이 그대로 유지</span></div></div>
 </div>
-<div class="visual-take">멈춤 8.4 → 0회/분 · 추적 지연 −28% · 복구는 자동</div>
-<p class="meta">멈춤: 카메라 읽는 박자를 고정 격자로 · 지연: 입력 512×384 분할</p>
+<div class="visual-take">주기적 화면 반복 8.4 → 0회/분 · 입력 축소 후보는 33 ms 초과 16장</div>
+<p class="meta">입력 축소 후보는 최대 지연 기준 미달로 되돌림 · INT8 정확도 미측정</p>
 </article>

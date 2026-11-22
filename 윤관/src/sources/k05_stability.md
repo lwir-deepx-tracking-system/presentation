@@ -5,3 +5,4 @@
 - 장면 없음 20초 → 카메라 엔진 재시작 1회(SCENE_LOST, cam_pipe v2.13) — model-bank HANDOFF.md (2026-11-15 카메라가 덜 죽게)
 - 재시작 뒤 설정 유지(nested_dup·track_thr 2026-11-21, close_aim) — model-bank HANDOFF.md
 - 확인 못 함: 요청의 커밋 8e7a543(lead 복원)은 HANDOFF.md에서 찾지 못해 쓰지 않음; keepalive 감시는 적용 절차에만 나와 슬라이드에 넣지 않음
+- 512×384는 최대 63.09 ms·33 ms 초과 16장·INT8 정확도 미측정으로 기존 모드로 되돌렸다. [모델뱅크 인수인계](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/HANDOFF.md#L476-L488)
