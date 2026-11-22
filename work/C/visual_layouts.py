@@ -173,7 +173,7 @@ def enrich(slides,backup):
         '가로 속도·출발 지연·정지 지연을 실측해 가상 시험 모형에 반영'),
         ['m33_plant.html'],condition='왼쪽은 직접 속도 명령 실측값. 오른쪽 곡선은 원자료가 지연·속도 요약값으로 구성한 응답 모형이며 원시 시계열 실측 곡선으로 제시하지 않는다.')
     replace('가상 카메라 시험',scene('<div class="v-virtual-diagram">'+svg('k08_virtual_cam')+'</div>'
-        +mini([('제어값 비교','112회 · Kp30 유지'),('정답으로 채점','같은 사람 · 바뀜 · 놓침'),('반복 시험','같은 장면·조건 재현')]),
+        +mini([('제어값 비교','112회 시험 · 기존 Kp 30 유지'),('비교 기준','같은 녹화에서 설정만 변경'),('움직임 재현','실측 속도·지연을 모형에 반영')]),
         '실제 녹화 → 가상 카메라 → 장치 처리 → 짐벌 모형의 닫힌 시험 구조'),
         ['k08_virtual_cam.html'])
     replace('상체 추적과 전신 표시',scene(
@@ -181,9 +181,11 @@ def enrich(slides,backup):
         +'<div class="v-fullbody-low"><div class="v-explain"><h3>발 위치 계산</h3><div class="v-foot-rule">발목 → 무릎 → 신체 비율</div><p>상체 관측은 ID 연결·조준에 사용</p></div><div>'+svg('m25_fullbody')+'</div></div>',
         '관절 위치를 이용해 상체 추적 박스에서 전신 표시 범위 계산'),
         ['m25_fullbody.html','20261119-real-upper-replay.jpg','20261119-real-full-replay.jpg'],
-        condition='사진은 같은 녹화의 서로 다른 프레임. 전신 표시 IoU 중앙값은 반올림0.43/0.74이며 증가량은 반올림차이0.31로 제시. 56장190개 상자·모두 발목관측 표본.')
-    # Fix the rounded delta in the reused source chart instead of copying +0.32.
-    by_title['상체 추적과 전신 표시']['body']=by_title['상체 추적과 전신 표시']['body'].replace('+0.32','+0.31')
+        condition='사진은 같은 녹화의 서로 다른 프레임. 전신 정답과의 IoU 중앙값 0.427→0.744(+0.317). 56장190개 상자·모두 발목관측 표본.')
+    # Keep the measured medians at the same precision.
+    display=by_title['상체 추적과 전신 표시']
+    display['body']=display['body'].replace('0.43','0.427').replace('0.74','0.744')
+    display['body']=re.sub(r'<text[^>]*>\+0\.32</text>','',display['body'])
 
     # Three additional explanation steps; keep the established beginning and close.
     result=[]
