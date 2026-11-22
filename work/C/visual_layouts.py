@@ -127,7 +127,7 @@ def enrich(slides,backup):
 
     replace('모델 배포 과정',scene(
         '<div class="v-deploy-flow"><div><h3>PyTorch</h3><p>학습 가중치</p><div class="v-matrix fp">0.31　−0.72<br>0.18　 0.54</div></div><b>→</b><div><h3>ONNX</h3><p>그래프 내보내기</p><svg viewBox="0 0 250 125" aria-label="연산 그래프 개념도"><path d="M28 62H220 M80 62L142 22 M80 62L142 102" fill="none" stroke="#7d9bb5" stroke-width="3"/><g fill="#e1edf5" stroke="#002f6d" stroke-width="2"><rect x="10" y="42" width="45" height="40" rx="5"/><rect x="75" y="42" width="45" height="40" rx="5"/><rect x="140" y="3" width="45" height="40" rx="5"/><rect x="140" y="82" width="45" height="40" rx="5"/><rect x="200" y="42" width="45" height="40" rx="5"/></g></svg></div><b>→</b><div><h3>DX-COM</h3><p>대표 영상으로 INT8 보정</p>'+photo('openthermalpose2-official-example.png','INT8 보정용 대표 영상의 예시')+'</div><b>→</b><div><h3>DXNN · M1</h3><p>NPU에서 실행</p><div class="v-chip">INT8</div></div></div>'
-        +mini([('변환 전후 출력','좌표·관절·특징 확인'),('장치 실행','처리 시간과 정확도 확인'),('보정 자료','모델별 대표 입력 사용')]),
+        +mini([('변환 전후 출력','좌표·관절·특징 확인'),('장치 실행','처리 시간 측정'),('보정 자료','모델별 대표 입력 사용')]),
         '입력 해상도·출력 형식·보정 자료를 맞춰 장치 모델로 변환'),
         ['m27_int8.html','openthermalpose2-official-example.png'],condition='행렬·연산 그래프는 개념도이며 실제 가중치 수치를 나타내지 않는다. 보정 예시는 설명용.')
     replace('외형 모델 비교',scene('<div class="v-reid-plot">'+svg('m21b_reid_table')+'</div>'
@@ -181,7 +181,7 @@ def enrich(slides,backup):
         +'<div class="v-fullbody-low"><div class="v-explain"><h3>발 위치 계산</h3><div class="v-foot-rule">발목 → 무릎 → 신체 비율</div><p>상체 관측은 ID 연결·조준에 사용</p></div><div>'+svg('m25_fullbody')+'</div></div>',
         '관절 위치를 이용해 상체 추적 박스에서 전신 표시 범위 계산'),
         ['m25_fullbody.html','20261119-real-upper-replay.jpg','20261119-real-full-replay.jpg'],
-        condition='사진은 같은 녹화의 서로 다른 프레임. 전신 표시 IoU 중앙값은 반올림0.43/0.74이며 증가량은 반올림차이0.31로 제시. 56장190명·모두 발목관측 표본.')
+        condition='사진은 같은 녹화의 서로 다른 프레임. 전신 표시 IoU 중앙값은 반올림0.43/0.74이며 증가량은 반올림차이0.31로 제시. 56장190개 상자·모두 발목관측 표본.')
     # Fix the rounded delta in the reused source chart instead of copying +0.32.
     by_title['상체 추적과 전신 표시']['body']=by_title['상체 추적과 전신 표시']['body'].replace('+0.32','+0.31')
 
