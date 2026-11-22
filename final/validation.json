@@ -1,7 +1,7 @@
 {
   "target_seconds": 1200,
   "demo_slot_seconds": 180,
-  "spoken_hangul_chars": 4353,
+  "spoken_hangul_chars": 4197,
   "actual_rehearsal_performed": false,
   "reports": [
     {
@@ -1122,7 +1122,7 @@
           "slide": 8,
           "width": 1920,
           "height": 1080,
-          "title": "과거 F·NF 후보 비교",
+          "title": "공개·혼합 학습 비교",
           "problems": []
         },
         {
@@ -1150,7 +1150,7 @@
           "slide": 12,
           "width": 1920,
           "height": 1080,
-          "title": "FT·KD 비교",
+          "title": "전체 학습과 증류 비교",
           "problems": []
         },
         {
@@ -1234,7 +1234,7 @@
           "slide": 24,
           "width": 1920,
           "height": 1080,
-          "title": "외형 학습과 시험용 E",
+          "title": "외형 모델 학습 비교",
           "problems": []
         },
         {
@@ -1339,7 +1339,7 @@
           "slide": 39,
           "width": 1920,
           "height": 1080,
-          "title": "own9e 비교 조건",
+          "title": "추가 검출 모델 비교 조건",
           "problems": []
         }
       ],
