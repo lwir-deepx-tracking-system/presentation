@@ -1,6 +1,6 @@
 # 최종 취합본
 
-2026-11-22 갱신. 최신 `work/C` 결과물과 동일한 발표본입니다. 본문 43장·예비 39장, 목표 설명 17분+데모 3분입니다. own9e 비교와 GRU·KeepID 최신 그래프를 반영했으며 최종 추적기는 BoT-SORT입니다.
+2026-11-22 갱신. 최신 `work/C` 결과물과 동일한 발표본입니다. 본문 43장·예비 39장, 목표 설명 17분+데모 3분입니다. own9e 비교와 GRU 적용 근거와 KeepID 비교를 반영했으며 최종 추적기는 BoT-SORT입니다.
 
 - [발표 PDF](presentation.pdf) / [발표 HTML](index.html)
 - [예비 PDF](appendix.pdf) / [예비 HTML](appendix.html)
