@@ -105,3 +105,13 @@
 .v-id-compare{display:grid;grid-template-columns:1fr 1fr;gap:45px}
 .v-id-compare h3{font-size:27px;margin:0 0 8px}
 .v-id-compare .v-drawing{height:405px}
+.n-outcomes{width:100%;border-collapse:collapse;margin:14px 0 24px;table-layout:fixed}
+.n-outcomes th,.n-outcomes td{text-align:left;padding:22px 20px;border-bottom:2px solid #dce4ed;vertical-align:middle;font-size:27px;line-height:1.4}
+.n-outcomes thead th{background:#002f6d;color:#fff;font-size:25px}
+.n-outcomes th:first-child{width:12%}
+.n-outcomes th:nth-child(2){width:24%}
+.n-outcomes th:nth-child(3){width:27%}
+.n-outcomes th:nth-child(4){width:37%}
+.n-outcomes tbody th{background:#fff;color:#002f6d;font-size:28px}
+.n-outcomes td b{display:block;color:#002f6d;font-size:30px}
+.n-outcomes td span{display:block;margin-top:7px;font-size:22px;color:#3e5267}

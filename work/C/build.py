@@ -13,6 +13,7 @@ from editorial import polish, polish_dates
 from visual_layouts import enrich
 from tracking_story import finalize_tracking
 from revision_20261122 import apply_revision
+from narrative import refine_narrative
 
 BASE = Path(__file__).resolve().parent
 PICTURES = BASE.parents[1]/'reference/picture'
@@ -282,6 +283,7 @@ polish(backup,appendix=True)
 slides,visual_usage=enrich(slides,backup)
 slides=finalize_tracking(slides,backup)
 slides=apply_revision(slides,backup)
+slides=refine_narrative(slides)
 polish_dates(slides)
 polish_dates(backup)
 assert len(slides)==43
@@ -386,6 +388,7 @@ demo_number=next(s['number'] for s in slides if s['base_number']==28)
 integration=['# C안 통합 인계','','2026-11-22 · 현재 작업본 C. A·B와 팀원 원본은 보존. 자료 기준 8a195d7. 장치 실행은 조회·재시험하지 않았다.','','## 구성','',f'- 본문 {len(slides)}장·예비 {len(backup)}장. 목표 설명 17분+데모 3분. 실제 리허설 미실시.','- seed.json은 B의 본문·예비·출처 동결본, build.py는 C의 최신 해석과 추가 장 생성기.','- sources/latest-20261121은 팀 자료 37개와 SHA256. 과거 B의 sources도 복사 보존.','- A·B의 빌더·소스 폴더를 참조하지 않고 C 내부 입력으로 재생성한다.','- plot_training.py는 동결 CSV를 사용해 학습 곡선 6개를 출력한다. 생성된 PNG가 포함되어 있어 일반 재생성에는 matplotlib가 필요 없다.','','## 변경 장 매핑','','| B장 | C장 | 제목 |','|---|---|---|']
 integration += [f'| {s["base_number"] or "추가"} | {s["number"]} | {s["title"]} |' for s in slides]
 integration += ['', '## 발표 흐름 개정', '', '- 표지 → 목차 → 팀 소개 → 프로젝트 소개 순서. 목차는 6개 항목이며 15초 배정.', '- 마지막 목차 항목은 통합 시연과 주요 성과. 마무리 장은 현재 구현·측정 성과로 구성한다.', '- 이전 본문의 거리 검증 계획·현장 ID 검증 계획은 예비자료 36·37장으로 이동. 측정 조건과 실제 입력 관리 항목은 대본·출처·인계에 보존한다.']
+integration += ['', '## 설계 선택과 성과의 연결', '', '- narrative.py가 라벨 혼재→상체 기준 통일, 증강 후보 비교→E10 유지, 장치 ID 연결 비교→own9e 추천을 연결한다.', '- 추적기 선정·최종 설정 다음에 가림 위치 예측과 번호 유지 평가를 연속 배치한다. GRU의 Kalman 대비 우위나 세 보완 기능의 최종 동시 적용을 단정하지 않는다.', '- 마지막 성과 장은 검출·추적·NPU·짐벌의 문제 / 선택한 설계 / 측정 성과를 같은 행에서 연결한다. 각 행의 비교 환경을 유지한다.', '- 출처 문서의 그림 활용 목록은 장 제목 기준이며, 현재 순서는 deck.json과 장별 매핑을 따른다.']
 integration += ['', '## 화면 문구', '', '- editorial.py에서 발표용 문구를 관리한다. 작성자·자료 버전·편집 이력과 긴 하단 캡션을 화면에서 제외한다.', '- 기존 하단 주석은 condition·editorial_notes와 대본·출처에 보존한다. 핵심 평가 조건은 그래프·표 제목에 표시한다.', '- 발표 대본은 구현과 측정 결과를 직접 설명하는 문장으로 정리한다.']
 integration += ['', '## 그림 중심 재구성', '', f'- visual_layouts.py가 {len(visual_usage)}개 본문 장을 재구성한다. 추가 장은 학습 데이터 구성·상체 박스 기준·가림·잘림 증강이다.', '- sources/visual-reference/slides의 선택 원자료와 assets/visuals 이미지를 사용한다. prepare_visuals.py는 원자료를 의도적으로 갱신할 때만 실행한다.', '- 그림을 단순 장식으로 추가하지 않고 라벨링→박스 기준→학습→실제 증강→평가, 관측 이력→위치 예측, 장치 영상→타일→병합, 짐벌 실측→제어 파형→가상 반복 시험 순서로 구성한다.', '- 원자료에서 후보명·시험 조건이 혼재한 HOTA 그래프와 모형 응답의 실측 표기는 확인된 조건에 맞춰 조정했다.']
 integration += ['', '## 최종 추적기와 운영 이력', '', '- 사용자 확인에 따라 최종 추적 알고리즘은 BoT-SORT로 명시한다. ByteTrack·OC-SORT 비교 → BoT-SORT 선정 → 파라미터 조정의 순서로 설명한다.', '- 비교 후보의 IDSW·재현율 장점은 측정 결과로 유지하고, 장면별 운용 추천으로 표현하지 않는다. 3종 선택·교체 기능은 구현 기능으로 보존한다.', '- tracking_story.py에서 선정 서사·GUI·성과 요약을 맞춘다. 장치 상태 이력은 예비자료 38장으로 이동했다.']
