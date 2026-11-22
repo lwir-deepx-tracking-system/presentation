@@ -1,0 +1,48 @@
+<article class="content-slide" id="m27-int8" data-section="경량화·M1 실행"><header><h1>INT8 변환</h1></header>
+<style>
+#m27-int8 svg text{font-family:Pretendard,sans-serif}
+#m27-int8 .yk-flow{display:flex;align-items:stretch;gap:12px;margin-top:24px}
+#m27-int8 .yk-flow>div{flex:1;background:#f3f6fa;border-top:4px solid #477c76;padding:18px 12px 20px;text-align:center}
+#m27-int8 .yk-flow b{display:block;color:#002f6d;font-size:24px}
+#m27-int8 .yk-flow span{display:block;color:#526277;font-size:19px;margin-top:4px}
+#m27-int8 .yk-flow i{font-style:normal;color:#8da3bf;font-size:28px;align-self:center}
+#m27-int8 .yk-chart{margin-top:30px}
+#m27-int8 .hd{font-size:20px;font-weight:700;fill:#263c55}
+#m27-int8 .lb{font-size:20px;font-weight:600;fill:#263c55;text-anchor:end}
+#m27-int8 .vl{font-size:20px;font-weight:700;fill:#193654}
+#m27-int8 .dl{font-size:19px;font-weight:700;fill:#174b56;text-anchor:end}
+#m27-int8 .ax{font-size:15px;fill:#526277;text-anchor:middle}
+#m27-int8 .visual-take{margin-top:20px}
+#m27-int8 .meta{margin-top:10px}
+</style>
+<div class="yk-flow"><div><b>PyTorch</b><span>학습 가중치</span></div><i>→</i><div><b>ONNX</b><span>opset 17</span></div><i>→</i><div><b>DX-COM</b><span>INT8 · 보정 8~264장</span></div><i>→</i><div><b>DXNN</b><span>M1 NPU 실행</span></div></div>
+<div class="yk-chart"><svg viewBox="0 0 1168 272" width="1168" height="272" role="img" aria-label="M1 한 장 처리 시간: 기본 29.10 ms, aggressive 옵션 21.92 ms, 1채널 입력 28.02 ms. 사람 AP50–95: 43.71%, 43.69%, 43.58%">
+<text x="230" y="26" class="hd">M1 한 장 처리 시간 (ms) · 낮을수록 좋음</text>
+<text x="790" y="26" class="hd">사람 AP50–95 (%) · 높을수록 좋음</text>
+<line x1="230.0" y1="44" x2="230.0" y2="236" stroke="#9aa9b9"/><text x="230.0" y="262" class="ax">0</text>
+<line x1="343.3" y1="44" x2="343.3" y2="236" stroke="#e3e9f0"/><text x="343.3" y="262" class="ax">10</text>
+<line x1="456.7" y1="44" x2="456.7" y2="236" stroke="#e3e9f0"/><text x="456.7" y="262" class="ax">20</text>
+<line x1="570.0" y1="44" x2="570.0" y2="236" stroke="#e3e9f0"/><text x="570.0" y="262" class="ax">30</text>
+<line x1="790.0" y1="44" x2="790.0" y2="236" stroke="#9aa9b9"/><text x="790.0" y="262" class="ax">0</text>
+<line x1="840.0" y1="44" x2="840.0" y2="236" stroke="#e3e9f0"/><text x="840.0" y="262" class="ax">10</text>
+<line x1="890.0" y1="44" x2="890.0" y2="236" stroke="#e3e9f0"/><text x="890.0" y="262" class="ax">20</text>
+<line x1="940.0" y1="44" x2="940.0" y2="236" stroke="#e3e9f0"/><text x="940.0" y="262" class="ax">30</text>
+<line x1="990.0" y1="44" x2="990.0" y2="236" stroke="#e3e9f0"/><text x="990.0" y="262" class="ax">40</text>
+<line x1="1040.0" y1="44" x2="1040.0" y2="236" stroke="#e3e9f0"/><text x="1040.0" y="262" class="ax">50</text>
+<text x="212" y="87" class="lb">기본 컴파일</text>
+<rect x="230" y="58" width="329.8" height="44" fill="#9caebe"><title>기본 컴파일 · 29.10 ms</title></rect><text x="569.8" y="87" class="vl">29.10</text>
+<rect x="790" y="58" width="218.5" height="44" fill="#9caebe"><title>기본 컴파일 · 43.71%</title></rect><text x="1018.5" y="87" class="vl">43.71</text>
+<text x="212" y="147" class="lb">aggressive 옵션</text>
+<rect x="230" y="118" width="248.4" height="44" fill="#073771"><title>aggressive 옵션 · 21.92 ms</title></rect><text x="488.4" y="147" class="vl">21.92</text>
+<rect x="790" y="118" width="218.5" height="44" fill="#073771"><title>aggressive 옵션 · 43.69%</title></rect><text x="1018.5" y="147" class="vl">43.69</text>
+<text x="712" y="147" class="dl">−25%</text>
+<text x="1168" y="147" class="dl">−0.02%p</text>
+<text x="212" y="207" class="lb">1채널 입력</text>
+<rect x="230" y="178" width="317.5" height="44" fill="#a9cbc6"><title>1채널 입력 · 28.02 ms</title></rect><text x="557.5" y="207" class="vl">28.02</text>
+<rect x="790" y="178" width="217.9" height="44" fill="#a9cbc6"><title>1채널 입력 · 43.58%</title></rect><text x="1017.9" y="207" class="vl">43.58</text>
+<text x="712" y="207" class="dl">−4%</text>
+<text x="1168" y="207" class="dl">−0.13%p</text>
+</svg></div>
+<div class="visual-take">옵션으로 M1 시간 −25%, 정확도 그대로 · 장치 E10 분할 모델은 원래 CPU 부분 없음</div>
+<p class="meta">YOLO26s · 같은 보정</p>
+</article>

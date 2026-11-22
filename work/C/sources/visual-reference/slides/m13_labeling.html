@@ -1,0 +1,47 @@
+<article class="content-slide" id="m13-labeling" data-section="자세·상체 모델">
+<style>
+#m13-labeling .m13-grid{display:grid;grid-template-columns:816px 1fr;gap:32px;margin-top:22px;align-items:start}
+#m13-labeling .m13-shots{display:grid;grid-template-columns:400px 400px;gap:16px}
+#m13-labeling figure{margin:0}
+#m13-labeling .m13-pane{position:relative;width:400px;height:299px;overflow:hidden;background:#101720}
+#m13-labeling .m13-pane img{position:absolute;display:block;max-width:none;height:auto}
+#m13-labeling figcaption{font-size:17px;color:#29435a;margin-top:6px;text-align:center}
+#m13-labeling .m13-note{font-size:15px;color:#526277;margin-top:6px}
+#m13-labeling h2{font-size:21px;margin:0 0 6px}
+#m13-labeling .m13-feat{list-style:none;margin:0 0 20px;padding:0}
+#m13-labeling .m13-feat li{display:flex;align-items:center;gap:10px;font-size:18px;color:#202b3a;padding:7px 0;border-bottom:1px solid #e3e9f0}
+#m13-labeling .m13-feat b{display:inline-grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:#477c76;color:#fff;font-size:15px}
+#m13-labeling .m13-bars{display:block;width:100%;height:auto}
+#m13-labeling .visual-take{margin-top:20px}
+</style>
+<header><h1>자체 영상 라벨링</h1></header>
+<div class="m13-grid">
+<div>
+<div class="m13-shots">
+<figure><div class="m13-pane"><img src="assets/실제_라벨링_실내.png" style="width:604.4px;left:-15.8px;top:-16.6px" alt="실내 라벨 편집 화면: 노트북 뒤에 앉은 사람들의 박스·ID와 머리·몸통 박스, 관절 점"></div><figcaption>실내 · 가림</figcaption></figure>
+<figure><div class="m13-pane"><img src="assets/실제_라벨링_야외.png" style="width:678.3px;left:-82.8px;top:-26px" alt="야외 라벨 편집 화면: 거리가 다른 사람 다섯 명의 박스와 ID, 가까운 사람의 머리 박스와 관절"></div><figcaption>야외 · 거리 차이</figcaption></figure>
+</div>
+<p class="m13-note">실제 편집 화면</p>
+</div>
+<div>
+<h2>편집기 개선 (11/19)</h2>
+<ul class="m13-feat"><li><b>1</b>COCO 17관절 편집</li><li><b>2</b>구간을 나눠 함께 라벨링</li><li><b>3</b>지정 구간만 번호 변경</li></ul>
+<h2>라벨 서버 검수 · 녹화 61편</h2>
+<svg class="m13-bars" viewBox="0 0 320 184" role="img" aria-label="박스 검수 20,824장, 박스 수정 2,402장, 관절 검수 140장">
+<text class="v-small" x="0" y="20">박스 검수</text>
+<line x1="1" y1="28" x2="1" y2="60" stroke="#7d92a5" stroke-width="2"/>
+<rect x="2" y="30" width="200" height="28" fill="#073771"/>
+<text class="v-value" x="210" y="51">20,824장</text>
+<text class="v-small" x="0" y="82">박스 수정</text>
+<line x1="1" y1="90" x2="1" y2="122" stroke="#7d92a5" stroke-width="2"/>
+<rect x="2" y="92" width="23.1" height="28" fill="#073771"/>
+<text class="v-value" x="34" y="113">2,402장</text>
+<text class="v-small" x="0" y="144">관절 검수</text>
+<line x1="1" y1="152" x2="1" y2="184" stroke="#7d92a5" stroke-width="2"/>
+<rect x="2" y="154" width="2" height="28" fill="#b4532a"/>
+<text class="v-value" x="12" y="175" style="fill:#b4532a">140장</text>
+</svg>
+</div>
+</div>
+<div class="visual-take">박스는 2만 장 넘게 검수, 관절은 140장뿐 → 관절 정답 부족</div>
+</article>

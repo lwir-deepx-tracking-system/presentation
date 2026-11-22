@@ -1,0 +1,135 @@
+{
+  "files": [
+    {
+      "source": "윤관/src/slides/m09_data.html",
+      "file": "sources/visual-reference/slides/m09_data.html",
+      "sha256": "b85178c974825b40b2a1b71519cb2e4e33d3bd15eb26c564631444adaa91f388"
+    },
+    {
+      "source": "윤관/src/slides/m13_labeling.html",
+      "file": "sources/visual-reference/slides/m13_labeling.html",
+      "sha256": "a6366fda3700d687ab946c38a2aba407d636fae5e2e8fb46867d5a8c7a3e96fc"
+    },
+    {
+      "source": "윤관/src/slides/m11_occlusion_aug.html",
+      "file": "sources/visual-reference/slides/m11_occlusion_aug.html",
+      "sha256": "5fa62d3b2b378965e7c7ac6ad5c8d69226ff2776416fd48558fafafa39392c55"
+    },
+    {
+      "source": "윤관/src/slides/m14_body_box.html",
+      "file": "sources/visual-reference/slides/m14_body_box.html",
+      "sha256": "9bdf2ba7793c38e62279d660e68964155a26573d0275e94c8faf3002220861f9"
+    },
+    {
+      "source": "윤관/src/slides/m10_pose_lineage.html",
+      "file": "sources/visual-reference/slides/m10_pose_lineage.html",
+      "sha256": "f5adbaf794425a0e9a7789f2f60a2926e0c3829b5e76ad2475d2ff3a540f4ed4"
+    },
+    {
+      "source": "윤관/src/slides/m18_e10.html",
+      "file": "sources/visual-reference/slides/m18_e10.html",
+      "sha256": "4762b2eb9aa2f599a2493305a3146e6f26cebe6bb95b5729ca1c79dcf1d6baad"
+    },
+    {
+      "source": "윤관/src/slides/m19_retrain.html",
+      "file": "sources/visual-reference/slides/m19_retrain.html",
+      "sha256": "82e21bd6fb2c42b3fc084190986aeb1a1810a825d00f29a5013d5acae7f59aa3"
+    },
+    {
+      "source": "윤관/src/slides/m21b_reid_table.html",
+      "file": "sources/visual-reference/slides/m21b_reid_table.html",
+      "sha256": "3a47f588a0905b5f9b33c60d3efee859f6cd1f2537ef385f4fef30c0c6ac172d"
+    },
+    {
+      "source": "윤관/src/slides/m22_position.html",
+      "file": "sources/visual-reference/slides/m22_position.html",
+      "sha256": "d6b4e8f3dccbe7677f43ea7a18d6b561fe1109c0cc4bb49502c42b1e05ddd607"
+    },
+    {
+      "source": "윤관/src/slides/m29_split.html",
+      "file": "sources/visual-reference/slides/m29_split.html",
+      "sha256": "a5db6167972ace4786cd2465e07273a8801ffda9765b9654accbf98ff62ea7d4"
+    },
+    {
+      "source": "윤관/src/slides/m29b_split_model.html",
+      "file": "sources/visual-reference/slides/m29b_split_model.html",
+      "sha256": "85a9b37db97196e7a11d868926ed6ad395e574f1f8bd405e2b4bcb5a31f1d42b"
+    },
+    {
+      "source": "윤관/src/slides/m30_tail.html",
+      "file": "sources/visual-reference/slides/m30_tail.html",
+      "sha256": "618a460533c6edc5fb10ef575e7021c73147c68ed7724abbcf43672e05a40e7a"
+    },
+    {
+      "source": "윤관/src/slides/m31_gimbal_loop.html",
+      "file": "sources/visual-reference/slides/m31_gimbal_loop.html",
+      "sha256": "ccc736a264430b01b5ebcdfb54ad7d7451b25ada55093f6fb7317a29d556e314"
+    },
+    {
+      "source": "윤관/src/slides/m32_pd.html",
+      "file": "sources/visual-reference/slides/m32_pd.html",
+      "sha256": "c0bc04cb8a389f5f8d11803fe710147a73c5dadbf4166422fa38253c31d15df4"
+    },
+    {
+      "source": "윤관/src/slides/m33_plant.html",
+      "file": "sources/visual-reference/slides/m33_plant.html",
+      "sha256": "5c7b37dfcf64ea4404c68ba346bb6227a609e24295b0317f9b03e6dc2eec50f2"
+    },
+    {
+      "source": "윤관/src/slides/k08_virtual_cam.html",
+      "file": "sources/visual-reference/slides/k08_virtual_cam.html",
+      "sha256": "9cc78325506880af115c10bbcd37b7093dc0195e72cb9ff27c67afc32d6986e7"
+    },
+    {
+      "source": "윤관/src/slides/m25_fullbody.html",
+      "file": "sources/visual-reference/slides/m25_fullbody.html",
+      "sha256": "471ab7d49b3fb7467dda76edc1d554d51434e13c3e35f5752f5b194894e3c0ee"
+    },
+    {
+      "source": "윤관/src/slides/m27_int8.html",
+      "file": "sources/visual-reference/slides/m27_int8.html",
+      "sha256": "ac7152da617c02c5ef28cd2fca23b963115de3d1a7bdf96259f7139243e49989"
+    },
+    {
+      "source": "윤관/assets/실제_라벨링_실내.png",
+      "file": "assets/visuals/실제_라벨링_실내.png",
+      "sha256": "6b6a64acdbfa0b3f36af3b6c358d78853263e0d5de513f958917e0d4541c284c"
+    },
+    {
+      "source": "윤관/assets/실제_라벨링_야외.png",
+      "file": "assets/visuals/실제_라벨링_야외.png",
+      "sha256": "423378102747368d67bceb8eda1a7991b3335d15f167fe00fc81406b80b3bf89"
+    },
+    {
+      "source": "윤관/assets/m11-occlusion-aug.jpg",
+      "file": "assets/visuals/m11-occlusion-aug.jpg",
+      "sha256": "7dbf0888c5fdf8b374cdfe88bffd2e5dcc84a528fa08398c684d4daf7ae6e0e0"
+    },
+    {
+      "source": "윤관/assets/openthermalpose2-official-example.png",
+      "file": "assets/visuals/openthermalpose2-official-example.png",
+      "sha256": "9b78a3ff0fd27f6341413cdacbc9d004d4bbd090c42df58a6d5e21f67b8c1031"
+    },
+    {
+      "source": "윤관/assets/OPENTHERMALPOSE-LICENSE.txt",
+      "file": "assets/visuals/OPENTHERMALPOSE-LICENSE.txt",
+      "sha256": "585d59b591beee0b2cbc49cd5333f05b42d9c92c0670532f2d906e256d8b967a"
+    },
+    {
+      "source": "윤관/assets/20261119-real-upper-replay.jpg",
+      "file": "assets/visuals/20261119-real-upper-replay.jpg",
+      "sha256": "90bdedc7c4958e920ad30d6d9d0ca206a1e7e14200d5dd8354a15320ebd713fb"
+    },
+    {
+      "source": "윤관/assets/20261119-real-full-replay.jpg",
+      "file": "assets/visuals/20261119-real-full-replay.jpg",
+      "sha256": "39e05cc3d473a5eeccb9ff11a0b90d704346cb26f570a41eb891b3e3ecc9fbdd"
+    },
+    {
+      "source": "윤관/assets/gimbal-s7-actual.svg",
+      "file": "assets/visuals/gimbal-s7-actual.svg",
+      "sha256": "9a563fbc072ad491bec741e51b45cbda26f430f79577327eee56ce86a27c5ac7"
+    }
+  ],
+  "method": "Selected source SVGs and photographs adapted into C layouts."
+}
