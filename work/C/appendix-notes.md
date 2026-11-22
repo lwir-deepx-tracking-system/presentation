@@ -209,3 +209,15 @@ A~E는 서로 다른 파인튜닝 구성이다. 선택용 점수의 이른 정�
 왼쪽은 원본 CSV에 기록된 첫 세 실행을 각자 epoch 기준으로 비교한다. val-A는 선택용이며 다른 자료의 최종 위치 오차와 섞지 않는다. 오른쪽은 DanceTrack의 손실 수정 뒤 단계만 따로 그렸으며 로그의 누적 평균이다. 서로 다른 단계와 재시작 로그를 이어 가상의 연속 곡선을 만들지 않았다.
 
 <a href="sources/latest-20261121/윤관/학습기록_위치예측.md">S20 위치 예측 학습 기록</a> · <a href="sources/latest-20261121/윤관/학습기록_FastTrackTr.md">S21 FastTrackTr 학습 기록</a>
+
+## 36. 검출 거리 검증
+
+현장에서는 먼저 거리별 검출을 확인합니다. 모델과 해상도, 장소를 고정하고 사람이 얼마나 작아지는지와 누락, 오검출을 함께 기록합니다. 몇 미터부터 몇 미터까지를 요구할지와 통과 기준은 아직 확정 전입니다. 기존 AP 점수를 거리 성능으로 대신 적지 않고 같은 현장에서 측정해야 합니다.
+
+<a href="https://github.com/lwir-deepx-tracking-system/presentation/blob/4c38a4e400c3d805b410707d49dc4d3ffa772459/윤오름/notes.md">S2 윤오름 · 시스템·제어·GUI 대본</a> · <a href="https://github.com/lwir-deepx-tracking-system/presentation/blob/7ade544b92ebda3a715ffd09bcf2f044136ff52f/윤관/sources.md">S11 11-18 검출 학습·평가 원본 대조</a>
+
+## 37. ID 유지 검증
+
+PC 녹화의 ID 변경과 가드 결과는 확보했지만 최종 장치의 현장 ID 유지 검증은 남았습니다. 같은 사람을 잇는지, 다른 사람으로 넘어가는지, 얼마나 끊겼는지를 정답과 비교해야 합니다. 유지시간과 허용 끊김 기준도 아직 없습니다. PC의 47에서43을 현장 유지율로 바꾸어 말하지 않습니다.
+
+<a href="sources/latest-20261121/윤관/근거_최신_20261120.md">S17 11/20–21 추가 실험·장치 상태</a> · <a href="sources/latest-20261121/윤관/학습기록_위치예측.md">S20 위치 예측 학습 기록</a> · <a href="sources/latest-20261121/윤관/근거_슬라이드별.md">S22 11/21 슬라이드·장치 비교 근거</a>

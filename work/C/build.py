@@ -220,17 +220,62 @@ aux('SOLIDER 선택 곡선',plot_pair('교사 파인튜닝 · 선택 점수','tr
 aux('위치·통합 모델 학습 곡선',plot_pair('위치 예측 · val-A 선택 점수','training-position.png','FastTrackTr · ID 손실 수정 뒤','training-fasttrack.png'),
     '왼쪽은 원본 CSV에 기록된 첫 세 실행을 각자 epoch 기준으로 비교한다. val-A는 선택용이며 다른 자료의 최종 위치 오차와 섞지 않는다. 오른쪽은 DanceTrack의 손실 수정 뒤 단계만 따로 그렸으며 로그의 누적 평균이다. 서로 다른 단계와 재시작 로그를 이어 가상의 연속 곡선을 만들지 않았다.', ['S20','S21'], '위치 val-A: 선택용 · FastTrackTr: dance_ep3-5_idfix 기록만')
 
+# Opening roadmap and an achievement-focused close.
+toc_items = [
+    '팀 및 프로젝트 소개',
+    '열화상 검출과 모델 선정',
+    '추적 알고리즘과 ID 유지',
+    'NPU 처리와 지연 개선',
+    '짐벌 제어와 운용',
+    '통합 시연과 주요 성과',
+]
+toc = insert(1, '목차',
+    scene('<div class="c-agenda">'+''.join(
+        f'<div><span>{n:02d}</span><h2>{title}</h2></div>'
+        for n, title in enumerate(toc_items, 1))+'</div>'),
+    '팀과 프로젝트를 소개한 뒤, 열화상 검출 모델과 추적 알고리즘을 설명하겠습니다. 이어 NPU 처리와 지연 개선, 짐벌 제어와 운용을 보여드리고, 통합 시연과 주요 성과로 마무리하겠습니다.',
+    ['S1'], ['소개', '검출·추적', '처리·제어', '시연·성과'])
+toc['section'] = '발표 안내'
+toc['seconds'] = 15
+by[1]['spoken'] = by[1]['spoken'].replace('먼저 팀원 역할을 소개하겠습니다.', '발표 순서부터 안내하겠습니다.')
+
+# Keep measurement plans for Q&A instead of ending the talk with future tasks.
+for base_number in [29, 30]:
+    item = copy.deepcopy(by[base_number])
+    item.update(number=len(backup)+1, seconds=0, section='예비자료')
+    backup.append(item)
+
+update(31, title='처리 성능 정리', body=scene(cards([
+    ('동시 타일 · p95','25.71 ms','프레임 교대 40.47 ms 대비<br>실카메라 · 각 65초'),
+    ('DX-RT C API · p95','24.86 ms','기존 호출 26.33 ms 대비<br>무인 실카메라 · 별도 시험'),
+    ('장시간 실행','18,497장','입력 버림·순서 오류 0<br>33 ms 초과 5장'),
+]), '분할 처리와 C++ 보완으로 서버 처리 지연 개선',
+    '세 수치는 별도 시험 · 서버 수신→추적 완료 기준 · 화면·물리 짐벌 종단 성능과 구분'),
+    spoken='처리 성과를 정리하겠습니다. 같은 프레임을 나누는 동시 타일 시험에서는 p95가 40.47에서 25.71밀리초로 줄었습니다. 별도 C API 비교에서도 26.33에서 24.86밀리초로 낮아졌습니다. 장시간 18,497장을 처리하는 동안 입력 버림과 순서 오류는 없었습니다. 다만 33밀리초 초과는 다섯 장이 있었고, 각 수치는 서로 다른 서버 시험 결과입니다.',
+    refs=['S15','S17'], cues=['동시 타일', 'C API 보완', '장시간 실행'])
+update(32, title='주요 성과', body=scene(cards([
+    ('검출 모델','현장 650장','상체 기준 정리·E10 학습<br>OTP2 박스 AP 46.28%'),
+    ('추적·운용','3종 C++ 추적기','BoT-SORT HOTA 60.7<br>PC에서 추적기 선택·변경'),
+    ('처리·제어','분할 처리·실측','동시 타일 서버 p95 25.71 ms<br>짐벌 응답 실측·가상 시험'),
+]), '열화상 검출부터 ID 유지·NPU 처리·짐벌 운용까지 구현과 비교 근거 확보',
+    '검출: OTP2 검증 · 추적: 동일 PC 비교 · 지연: 별도 서버 시험 · 각 지표의 평가 조건은 다름'),
+    spoken='현장650장의 상체 기준을 정리하고 E10을 학습해 OTP2 박스 AP46.28퍼센트를 확보했습니다. 세 가지 추적기를 C++로 구현하고 PC에서 선택·변경할 수 있게 했으며, 같은 PC 비교에서 BoT-SORT HOTA60.7을 얻었습니다. 처리에서는 동시 타일과 C++ 보완을 적용했고, 짐벌은 실제 응답을 측정해 가상 시험의 근거로 사용했습니다. 검출부터 추적, 처리와 제어까지 구현하고 비교한 것이 이번 프로젝트의 성과입니다. 감사합니다.',
+    refs=['S14','S15','S17','S19'], cues=['현장 모델', '추적·운용 구현', '처리·제어 성과'])
+
 # Main ordering and exact target budget (17 minutes speech plus 3 minute demo).
 ordered=[]
 for s in slides:
+    if s['base_number'] in [29, 30]:
+        continue
     ordered.append(s)
     ordered.extend(insertions.get(s['base_number'],[]))
 slides=ordered
-assert len(slides)==40
-spoken=[s for s in slides if s['base_number']!=28]
+assert len(slides)==39
+spoken=[s for s in slides if s['base_number']!=28 and s is not toc]
 weights=[s['seconds'] for s in spoken]
-allocation=[int(1020*w/sum(weights)) for w in weights]
-for i in sorted(range(len(weights)), key=lambda i:1020*weights[i]/sum(weights)-allocation[i], reverse=True)[:1020-sum(allocation)]: allocation[i]+=1
+speech_budget=1020-toc['seconds']
+allocation=[int(speech_budget*w/sum(weights)) for w in weights]
+for i in sorted(range(len(weights)), key=lambda i:speech_budget*weights[i]/sum(weights)-allocation[i], reverse=True)[:speech_budget-sum(allocation)]: allocation[i]+=1
 for s,t in zip(spoken,allocation):s['seconds']=t
 for i,s in enumerate(slides,1):
     s['number']=i
@@ -264,7 +309,7 @@ manifest=dict(title='LWIR 표적 추적 · C안',date='2026-11-22',source_commit
 (BASE/'deck.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 def clock(t):return f'{t//60:02d}:{t%60:02d}'
-md=['# C안 발표 대본','','2026-11-22 개정 · 자료 기준4836142(11/21) · 본문40장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','']
+md=['# C안 발표 대본','',f'2026-11-22 개정 · 자료 기준4836142(11/21) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','']
 cue=['# C안 큐시트','','설명17분+데모3분 목표 · 실제 리허설 후 재배분.','']
 note_html=[]
 elapsed=0
@@ -279,7 +324,7 @@ for s in slides:
     elapsed+=s['seconds']
 (BASE/'speaker-notes.md').write_text('\n'.join(md),encoding='utf-8')
 (BASE/'cue-sheet.md').write_text('\n'.join(cue),encoding='utf-8')
-(BASE/'speaker-notes.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><title>C안 대본</title><style>@font-face{font-family:P;src:url(assets/Pretendard-Regular.woff2)}body{font:21px/1.8 P,sans-serif;max-width:1000px;margin:50px auto;color:#202b3a}article{border-top:1px solid #ccd6e0;padding:25px 0}h1,h2,a{color:#002f6d}small{font-size:16px}</style><h1>C안 발표 대본</h1><p>40장 · 목표20분(데모3분 포함) · 실제 낭독 미측정</p>'+''.join(note_html)+'</html>',encoding='utf-8')
+(BASE/'speaker-notes.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><title>C안 대본</title><style>@font-face{font-family:P;src:url(assets/Pretendard-Regular.woff2)}body{font:21px/1.8 P,sans-serif;max-width:1000px;margin:50px auto;color:#202b3a}article{border-top:1px solid #ccd6e0;padding:25px 0}h1,h2,a{color:#002f6d}small{font-size:16px}</style><h1>C안 발표 대본</h1>'+f'<p>{len(slides)}장 · 목표20분(데모3분 포함) · 실제 낭독 미측정</p>'+''.join(note_html)+'</html>',encoding='utf-8')
 apnotes=['# C안 예비자료 설명','']
 for n,s in enumerate(backup,1):apnotes += [f'## {n:02d}. {s["title"]}','',s['spoken'] or '원표·조건은 해당 장과 아래 출처를 함께 확인한다.','',source_links(s['refs']),'']
 (BASE/'appendix-notes.md').write_text('\n'.join(apnotes),encoding='utf-8')
@@ -320,6 +365,7 @@ for block in re.split(r'(?=^## )',SEED['base_qa'],flags=re.M):
 demo_number=next(s['number'] for s in slides if s['base_number']==28)
 integration=['# C안 통합 인계','','2026-11-22 · 현재 작업본 C. A·B와 팀원 원본은 보존. 자료 기준 4836142. 장치 실행은 조회·재시험하지 않았다.','','## 구성','',f'- 본문 {len(slides)}장·예비 {len(backup)}장. 목표 설명 17분+데모 3분. 실제 리허설 미실시.','- seed.json은 B의 본문·예비·출처 동결본, build.py는 C의 최신 해석과 추가 장 생성기.','- sources/latest-20261121은 팀 자료 37개와 SHA256. 과거 B의 sources도 복사 보존.','- A·B의 빌더·소스 폴더를 참조하지 않고 C 내부 입력으로 재생성한다.','- plot_training.py는 동결 CSV를 사용해 학습 곡선 6개를 출력한다. 생성된 PNG가 포함되어 있어 일반 재생성에는 matplotlib가 필요 없다.','','## 변경 장 매핑','','| B장 | C장 | 제목 |','|---|---|---|']
 integration += [f'| {s["base_number"] or "추가"} | {s["number"]} | {s["title"]} |' for s in slides]
+integration += ['', '## 발표 흐름 개정', '', '- 표지 → 목차 → 팀 소개 → 프로젝트 소개 순서. 목차는 6개 항목이며 15초 배정.', '- 마지막 목차 항목은 통합 시연과 주요 성과. 마무리 장은 현재 구현·측정 성과로 구성한다.', '- 이전 본문의 거리 검증 계획·현장 ID 검증 계획은 예비자료 36·37장으로 이동. 측정 조건과 실제 입력 관리 항목은 대본·출처·인계에 보존한다.']
 integration += ['','## 남은 실제 입력','','- 표지 하드웨어 사진: assets/hardware-photo.jpg.','- 실제 GUI 앱 캡처: 기존 재생 이미지는 앱 캡처가 아님.',f'- C {demo_number}장 실제 시연: assets/rooftop-demo.mp4 (180초 이내).','- 최종 검출기·외형 모델 파일 해시, 분할 여부, Runtime/모델뱅크 서버 경로, 추적기, KeepID·가드·lead·보정·제어 인자.','- 거리별 누락·오검출, 가림 뒤 ID 정답·허용 끊김 기준과 현장 반복 결과.','- 사람 있는 최종 장치 경로의 장시간 최대·초과·드롭·순서 오류와 화면·물리 짐벌 종단 측정.','','## 자료 충돌 처리','','- CMC는 일반 기능 설명과 비교 시 미사용 설정을 분리.','- 최신 개인 요약의 vel/fused 혼용, 512 입력 채택 요약, 추천과 장치 선택을 추가 근거의 조건으로 제한.','- SOLIDER 직접 교체 원본 미확인은 예비자료로 한정.','- 반전 4→1은 Ki0·Kd6 고정의 불감대 비교로 유지.','','## 재생성','','```powershell','python work/C/build.py','python work/C/render.py','```','', 'render.py는 PDF·미리보기·레이아웃·글꼴·이미지·페이지 수·키보드 이동을 검증한다. validation.json은 실제 하드웨어 검증을 대신하지 않는다.']
 integration_text='\n'.join(integration)
 if photo:
@@ -331,6 +377,8 @@ integration_text+='\n\n## 공통 사진 경로\n\n현재 공통 사진은 refere
 2026-11-22 작성. 자료 기준 presentation `4836142`(11/21 23:13 KST). B안 `9819922` 이후의 검출·외형·ID·서버·짐벌 근거를 반영했습니다. A·B와 팀원 원본은 보존합니다.
 
 본문 **{len(slides)}장**, 예비 **{len(backup)}장**. 설명 17분+실제 데모 3분의 **목표**이며 낭독 리허설은 하지 않았습니다.
+
+시작은 **표지 → 목차 → 팀 소개 → 프로젝트 소개** 순서입니다. 목차는 소개·검출·추적·NPU 처리·짐벌 운용·통합 시연과 주요 성과의 6개 항목입니다. 마무리는 현재 성과 중심이며, 거리·현장 ID 검증 계획은 예비자료에 보존했습니다.
 
 - [발표 PDF](presentation.pdf) / [발표 HTML](index.html)
 - [전체 미리보기](previews/slide-overview.png)

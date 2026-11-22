@@ -15,6 +15,8 @@ OUT=BASE/'previews'
 OUT.mkdir(exist_ok=True)
 
 def render(name, pdfname, prefix):
+ suffix=os.environ.get('LWIR_PDF_SUFFIX','')
+ if suffix:pdfname=Path(pdfname).stem+suffix+'.pdf'
  errors=[]
  with sync_playwright() as p:
   kwargs={'headless':True,'args':['--no-sandbox','--disable-dev-shm-usage']}
@@ -46,6 +48,8 @@ def render(name, pdfname, prefix):
   # PDF를 다시 이미지로 만들어 실제 출력 산출물을 확인한다.
   for i,pdfpage in enumerate(doc):
    pdfpage.get_pixmap(matrix=pymupdf.Matrix(0.8,0.8),alpha=False).save(OUT/f'{prefix}-{i+1:02d}.png')
+  for previous in OUT.glob(prefix+'-[0-9][0-9].png'):
+   if int(previous.stem.rsplit('-',1)[1])>len(doc):previous.unlink()
   cols=3; cellw=480; cellh=300; rows=(len(doc)+cols-1)//cols
   contact=pymupdf.open(); sheet=contact.new_page(width=cols*cellw,height=rows*cellh)
   for i,pdfpage in enumerate(doc):
@@ -83,3 +87,14 @@ for r in reports:
  assert not any(x['problems'] for x in r['layout']), 'Layout problems recorded in validation.json'
  assert all(w==1440 and h==810 for w,h in r['page_points'])
 assert reports[0]['keyboard_navigation']
+
+# Keep entry-point links on the actual exported PDFs when an open viewer locks
+# the canonical filename and the caller supplies LWIR_PDF_SUFFIX.
+for readme in [BASE/'README.md',BASE.parent/'README.md']:
+ content=readme.read_text(encoding='utf-8')
+ for r in reports:
+  stem='presentation' if r['html']=='index.html' else 'appendix'
+  prefix='' if readme.parent==BASE else 'C/'
+  pattern=r'\('+re.escape(prefix+stem)+r'(?:-updated)?\.pdf\)'
+  content=re.sub(pattern,'('+prefix+r['pdf']+')',content)
+ readme.write_text(content,encoding='utf-8')
