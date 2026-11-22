@@ -9,6 +9,7 @@ import html
 import json
 import re
 import shutil
+from editorial import polish
 
 BASE = Path(__file__).resolve().parent
 PICTURES = BASE.parents[1]/'reference/picture'
@@ -282,13 +283,15 @@ for i,s in enumerate(slides,1):
     s['transition']='다음: '+slides[i]['title'] if i<len(slides) else '감사합니다.'
     s['presenter_cue']=' → '.join(s['quick_cues'])
 assert sum(s['seconds'] for s in slides)==1200
+polish(slides)
+polish(backup,appendix=True)
 
 def source_links(refs):
     return ' · '.join(f'<a href="{esc(SOURCES[k]["url"])}">{k} {esc(SOURCES[k]["title"])}</a>' for k in refs)
 
 def slide_html(s,n,total,cover=False):
     heading='' if cover else f'<h1>{esc(s["title"])}</h1>'
-    return f'<section class="slide{" cover-slide" if cover else ""}" id="slide-{n:02d}" data-number="{n}" data-seconds="{s["seconds"]}" aria-label="{esc(s["title"])}"><header>{heading}<img class="logo" src="assets/lig-logo.png" alt="LIG D&A"></header><main>{s["body"]}</main><div class="slide-source">{source_links(s["refs"])}</div><footer><span>{n:02d} / {total}</span></footer></section>'
+    return f'<section class="slide{" cover-slide" if cover else ""}" id="slide-{n:02d}" data-number="{n}" data-seconds="{s["seconds"]}" aria-label="{esc(s["title"])}"><header>{heading}<img class="logo" src="assets/lig-logo.png" alt="LIG D&A"></header><main>{s["body"]}</main><div class="slide-source"></div><footer><span>{n:02d} / {total}</span></footer></section>'
 
 def document(items,title,appendix=False):
     nav='<nav class="toolbar"><button id="prev" aria-label="이전 장">←</button><span id="page"></span><button id="next" aria-label="다음 장">→</button><span id="clock">00:00 / 20:00</span><button id="timer">타이머 시작</button><button id="overview">모아보기</button><a href="speaker-notes.html">대본</a><a href="index.html">본문</a><a href="appendix.html">예비자료</a></nav>'
@@ -326,7 +329,7 @@ for s in slides:
 (BASE/'cue-sheet.md').write_text('\n'.join(cue),encoding='utf-8')
 (BASE/'speaker-notes.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><title>C안 대본</title><style>@font-face{font-family:P;src:url(assets/Pretendard-Regular.woff2)}body{font:21px/1.8 P,sans-serif;max-width:1000px;margin:50px auto;color:#202b3a}article{border-top:1px solid #ccd6e0;padding:25px 0}h1,h2,a{color:#002f6d}small{font-size:16px}</style><h1>C안 발표 대본</h1>'+f'<p>{len(slides)}장 · 목표20분(데모3분 포함) · 실제 낭독 미측정</p>'+''.join(note_html)+'</html>',encoding='utf-8')
 apnotes=['# C안 예비자료 설명','']
-for n,s in enumerate(backup,1):apnotes += [f'## {n:02d}. {s["title"]}','',s['spoken'] or '원표·조건은 해당 장과 아래 출처를 함께 확인한다.','',source_links(s['refs']),'']
+for n,s in enumerate(backup,1):apnotes += [f'## {n:02d}. {s["title"]}','',s['spoken'] or '원표·조건은 해당 장과 아래 출처를 함께 확인한다.','',s.get('condition',''),'',source_links(s['refs']),'']
 (BASE/'appendix-notes.md').write_text('\n'.join(apnotes),encoding='utf-8')
 
 src=['# C안 출처·수치 추적표','','기준: 로컬 presentation4836142(2026-11-21 23:13 KST). B 기준9819922에서 갱신. 장치·학습·성능 시험은 재실행하지 않았다.','','## 출처','']
@@ -366,6 +369,7 @@ demo_number=next(s['number'] for s in slides if s['base_number']==28)
 integration=['# C안 통합 인계','','2026-11-22 · 현재 작업본 C. A·B와 팀원 원본은 보존. 자료 기준 4836142. 장치 실행은 조회·재시험하지 않았다.','','## 구성','',f'- 본문 {len(slides)}장·예비 {len(backup)}장. 목표 설명 17분+데모 3분. 실제 리허설 미실시.','- seed.json은 B의 본문·예비·출처 동결본, build.py는 C의 최신 해석과 추가 장 생성기.','- sources/latest-20261121은 팀 자료 37개와 SHA256. 과거 B의 sources도 복사 보존.','- A·B의 빌더·소스 폴더를 참조하지 않고 C 내부 입력으로 재생성한다.','- plot_training.py는 동결 CSV를 사용해 학습 곡선 6개를 출력한다. 생성된 PNG가 포함되어 있어 일반 재생성에는 matplotlib가 필요 없다.','','## 변경 장 매핑','','| B장 | C장 | 제목 |','|---|---|---|']
 integration += [f'| {s["base_number"] or "추가"} | {s["number"]} | {s["title"]} |' for s in slides]
 integration += ['', '## 발표 흐름 개정', '', '- 표지 → 목차 → 팀 소개 → 프로젝트 소개 순서. 목차는 6개 항목이며 15초 배정.', '- 마지막 목차 항목은 통합 시연과 주요 성과. 마무리 장은 현재 구현·측정 성과로 구성한다.', '- 이전 본문의 거리 검증 계획·현장 ID 검증 계획은 예비자료 36·37장으로 이동. 측정 조건과 실제 입력 관리 항목은 대본·출처·인계에 보존한다.']
+integration += ['', '## 화면 문구', '', '- editorial.py에서 발표용 문구를 관리한다. 작성자·자료 버전·편집 이력과 긴 하단 캡션을 화면에서 제외한다.', '- 기존 하단 주석은 condition·editorial_notes와 대본·출처에 보존한다. 핵심 평가 조건은 그래프·표 제목에 표시한다.', '- 발표 대본은 구현과 측정 결과를 직접 설명하는 문장으로 정리한다.']
 integration += ['','## 남은 실제 입력','','- 표지 하드웨어 사진: assets/hardware-photo.jpg.','- 실제 GUI 앱 캡처: 기존 재생 이미지는 앱 캡처가 아님.',f'- C {demo_number}장 실제 시연: assets/rooftop-demo.mp4 (180초 이내).','- 최종 검출기·외형 모델 파일 해시, 분할 여부, Runtime/모델뱅크 서버 경로, 추적기, KeepID·가드·lead·보정·제어 인자.','- 거리별 누락·오검출, 가림 뒤 ID 정답·허용 끊김 기준과 현장 반복 결과.','- 사람 있는 최종 장치 경로의 장시간 최대·초과·드롭·순서 오류와 화면·물리 짐벌 종단 측정.','','## 자료 충돌 처리','','- CMC는 일반 기능 설명과 비교 시 미사용 설정을 분리.','- 최신 개인 요약의 vel/fused 혼용, 512 입력 채택 요약, 추천과 장치 선택을 추가 근거의 조건으로 제한.','- SOLIDER 직접 교체 원본 미확인은 예비자료로 한정.','- 반전 4→1은 Ki0·Kd6 고정의 불감대 비교로 유지.','','## 재생성','','```powershell','python work/C/build.py','python work/C/render.py','```','', 'render.py는 PDF·미리보기·레이아웃·글꼴·이미지·페이지 수·키보드 이동을 검증한다. validation.json은 실제 하드웨어 검증을 대신하지 않는다.']
 integration_text='\n'.join(integration)
 if photo:
@@ -379,6 +383,8 @@ integration_text+='\n\n## 공통 사진 경로\n\n현재 공통 사진은 refere
 본문 **{len(slides)}장**, 예비 **{len(backup)}장**. 설명 17분+실제 데모 3분의 **목표**이며 낭독 리허설은 하지 않았습니다.
 
 시작은 **표지 → 목차 → 팀 소개 → 프로젝트 소개** 순서입니다. 목차는 소개·검출·추적·NPU 처리·짐벌 운용·통합 시연과 주요 성과의 6개 항목입니다. 마무리는 현재 성과 중심이며, 거리·현장 ID 검증 계획은 예비자료에 보존했습니다.
+
+화면 문구는 `editorial.py`에서 다듬습니다. 작성자·버전 표기와 긴 하단 주석은 대본·출처에 보존하고, 슬라이드는 구현·결과 중심으로 구성했습니다.
 
 - [발표 PDF](presentation.pdf) / [발표 HTML](index.html)
 - [전체 미리보기](previews/slide-overview.png)

@@ -6,6 +6,8 @@
 
 시작은 **표지 → 목차 → 팀 소개 → 프로젝트 소개** 순서입니다. 목차는 소개·검출·추적·NPU 처리·짐벌 운용·통합 시연과 주요 성과의 6개 항목입니다. 마무리는 현재 성과 중심이며, 거리·현장 ID 검증 계획은 예비자료에 보존했습니다.
 
+화면 문구는 `editorial.py`에서 다듬습니다. 작성자·버전 표기와 긴 하단 주석은 대본·출처에 보존하고, 슬라이드는 구현·결과 중심으로 구성했습니다.
+
 - [발표 PDF](presentation.pdf) / [발표 HTML](index.html)
 - [전체 미리보기](previews/slide-overview.png)
 - [발표 대본](speaker-notes.html) / [Markdown 대본](speaker-notes.md) / [큐시트](cue-sheet.md)
