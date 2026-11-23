@@ -14,6 +14,7 @@ from visual_layouts import enrich
 from tracking_story import finalize_tracking
 from revision_20261122 import apply_revision
 from narrative import refine_narrative
+from spoken_script import refine_script, notes_guide
 
 BASE = Path(__file__).resolve().parent
 PICTURES = BASE.parents[1]/'reference/picture'
@@ -298,6 +299,7 @@ for i,s in enumerate(slides,1):
     s['number']=i
     s['transition']='다음: '+slides[i]['title'] if i<len(slides) else '감사합니다.'
     s['presenter_cue']=' → '.join(s['quick_cues'])
+refine_script(slides)
 assert sum(s['seconds'] for s in slides)==1200
 
 def source_links(refs):
@@ -322,26 +324,32 @@ if (BASE/'assets/rooftop-demo.mp4').exists():
 
 (BASE/'index.html').write_text(document(slides,'LWIR 표적 추적 · C안'),encoding='utf-8')
 (BASE/'appendix.html').write_text(document(backup,'LWIR 표적 추적 · C안 예비자료',True),encoding='utf-8')
-manifest=dict(title='LWIR 표적 추적 · C안',date='2026-11-22',source_commit='8a195d7',base_commit='9819922',total_seconds=1200,demo_seconds=180,spoken_target_seconds=1020,slides=[{k:v for k,v in s.items() if k!='body'} for s in slides],appendix_count=len(backup),sources=SOURCES)
+manifest=dict(title='LWIR 표적 추적 · C안',date='2026-11-23',source_commit='8a195d7',base_commit='9819922',total_seconds=1200,demo_seconds=180,spoken_target_seconds=1020,slides=[{k:v for k,v in s.items() if k!='body'} for s in slides],appendix_count=len(backup),sources=SOURCES)
 (BASE/'deck.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 def clock(t):return f'{t//60:02d}:{t%60:02d}'
-md=['# C안 발표 대본','',f'2026-11-22 개정 · 자료 기준8a195d7(11/22) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','']
+md=['# C안 발표 대본','',f'대본 개정 2026-11-23 · 근거 기준8a195d7(11/22) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','',notes_guide()]
 cue=['# C안 큐시트','','설명17분+데모3분 목표 · 실제 리허설 후 재배분.','']
 note_html=[]
 elapsed=0
 for s in slides:
     interval=f'{clock(elapsed)}–{clock(elapsed+s["seconds"])} / {s["seconds"]}초'
     md += [f'## {s["number"]:02d}. {s["title"]}','',interval,'',s['spoken'],'','진행: '+s['presenter_cue'],'','근거: '+', '.join(s['refs'])]
+    if s['transition']:md += ['', '넘김(선택): '+s['transition']]
+    if s.get('delivery_note'):md += ['', '리허설 메모: '+s['delivery_note']]
     if s['condition']:md += ['','조건: '+s['condition']]
     if s['pending']:md += ['','남은 입력: '+' / '.join(s['pending'])]
     md += ['']
     cue += [f'## {s["number"]:02d}. {s["title"]}',interval,s['presenter_cue'],s['transition'],'']
-    note_html.append(f'<article><small>{interval}</small><h2>{s["number"]:02d}. {esc(s["title"])}</h2><p>{esc(s["spoken"])}</p><p>{esc(s["presenter_cue"])}</p><small>{source_links(s["refs"])}</small></article>')
+    bridge='<p class="bridge"><b>넘김(선택)</b> '+esc(s['transition'])+'</p>' if s['transition'] else ''
+    condition='<p>'+esc(s.get('condition',''))+'</p>' if s.get('condition') else ''
+    remaining='<p>입력 대기: '+esc(' / '.join(s['pending']))+'</p>' if s['pending'] else ''
+    rehearsal='<p>'+esc(s['delivery_note'])+'</p>' if s.get('delivery_note') else ''
+    note_html.append(f'<article id="note-{s["number"]:02d}"><small>{interval}</small><h2>{s["number"]:02d}. {esc(s["title"])}</h2><p class="spoken">{esc(s["spoken"]).replace(chr(10),"<br>")}</p><p class="cue"><b>화면 진행</b> {esc(s["presenter_cue"])}</p>'+bridge+rehearsal+'<details><summary>조건·근거</summary>'+condition+remaining+'<small>'+source_links(s['refs'])+'</small></details></article>')
     elapsed+=s['seconds']
 (BASE/'speaker-notes.md').write_text('\n'.join(md),encoding='utf-8')
-(BASE/'cue-sheet.md').write_text('\n'.join(cue),encoding='utf-8')
-(BASE/'speaker-notes.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><title>C안 대본</title><style>@font-face{font-family:P;src:url(assets/Pretendard-Regular.woff2)}body{font:21px/1.8 P,sans-serif;max-width:1000px;margin:50px auto;color:#202b3a}article{border-top:1px solid #ccd6e0;padding:25px 0}h1,h2,a{color:#002f6d}small{font-size:16px}</style><h1>C안 발표 대본</h1>'+f'<p>{len(slides)}장 · 목표20분(데모3분 포함) · 실제 낭독 미측정</p>'+''.join(note_html)+'</html>',encoding='utf-8')
+(BASE/'cue-sheet.md').write_text('\n'.join(cue).rstrip()+'\n',encoding='utf-8')
+(BASE/'speaker-notes.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C안 발표 대본</title><style>@font-face{font-family:P;src:url(assets/Pretendard-Regular.woff2)}body{font:22px/1.9 P,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;color:#202b3a}article{border-top:1px solid #ccd6e0;padding:30px 0;scroll-margin-top:20px}h1,h2,a{color:#002f6d}small,details{font-size:16px;color:#667085}.cue{font-size:18px;color:#477ba9}.bridge{font-size:19px;padding:14px 20px;background:#f1f5f9;border-left:3px solid #477ba9}.guide{font-size:18px;color:#52687d}summary{cursor:pointer}nav{font-size:16px;line-height:2.1;margin:25px 0}nav a{display:inline-block;margin-right:18px}@media print{details{display:block}article{break-inside:avoid}}</style><h1>C안 발표 대본</h1>'+f'<p class="guide">대본 개정 2026-11-23 · {len(slides)}장 · 목표20분(데모3분 포함) · 실제 낭독 미측정</p><p class="guide">말할 내용과 화면 진행을 먼저 보고 연습합니다. 넘김 문장은 선택해서 붙이고, 조건·근거는 접힌 부분에서 확인합니다. 검출 거리 XX~XX m와 실제 시연은 입력 대기입니다.</p>'+'<nav>'+''.join(f'<a href="#note-{s["number"]:02d}">{s["number"]:02d} {esc(s["title"])}</a>' for s in slides)+'</nav>'+''.join(note_html)+'</html>',encoding='utf-8')
 apnotes=['# C안 예비자료 설명','']
 for n,s in enumerate(backup,1):apnotes += [f'## {n:02d}. {s["title"]}','',s['spoken'] or '원표·조건은 해당 장과 아래 출처를 함께 확인한다.','',s.get('condition',''),'',source_links(s['refs']),'']
 (BASE/'appendix-notes.md').write_text('\n'.join(apnotes),encoding='utf-8')
@@ -403,10 +411,13 @@ integration_text='\n'.join(integration)
 if photo:
     integration_text=integration_text.replace('- 표지 하드웨어 사진: assets/hardware-photo.jpg.','- 표지 하드웨어 사진 반영 완료: reference/picture/hardware.png → C/assets/hardware.png. 팀원 사진 5개도 같은 공통 폴더에서 동기화한다.')
 integration_text+='\n\n## 공통 사진 경로\n\n현재 공통 사진은 reference/picture/이다. build.py는 해당 폴더가 있으면 사진을 C/assets로 복사하고, 없으면 C에 포함된 사진을 사용한다. 사진 해시는 picture-manifest.json에 기록한다.\n'
+integration_text+='\n## 11/23 대본 1차 정리\n\nspoken_script.py가 최종 화면 순서에 맞춰 말할 내용·화면 진행·선택 전환 문장을 관리한다. speaker-notes.md/html과 cue-sheet.md를 함께 생성하며 근거·수치·장 순서·시간 배정은 유지한다. 실제 낭독은 아직 하지 않았다.\n\n5장 요구사항에는 사용자 요청에 따라 검출 거리 XX~XX m 입력 자리를 유지한다. 실측 범위를 채우기 전에는 목표 또는 달성 거리로 읽지 않는다. 거리 기준을 자료에서 완전히 빼지 않는다.\n\n일정표는 선택 항목이다. 포함하면 실제 개발 기록을 바탕으로 설계·환경 구축 / 검출·추적 / 통신·제어 통합 / 장치 시험의 병렬 진행을 한 장으로 요약한다. 확인되지 않은 날짜·주차를 만들지 않으며, 이번 편집에서는 일정 장을 추가하지 않았다.\n'
 (BASE/'integration.md').write_text(integration_text,encoding='utf-8')
 (BASE/'README.md').write_text(f'''# C안 · 최신 통합 발표
 
 2026-11-22 작성. 자료 기준 presentation `8a195d7`(11/22 21:13 KST). B안 `9819922` 이후의 검출·외형·ID·서버·짐벌 근거를 반영했습니다. A·B와 팀원 원본은 보존합니다.
+
+**11/23 대본 1차 정리:** [읽기용 대본](speaker-notes.html)의 말할 내용·화면 진행·선택 전환 문장을 구분했습니다. 시험 조건과 출처는 접어서 확인할 수 있습니다. 대본은 `spoken_script.py`에서 최종 적용하며, 실제 낭독 시간은 미측정입니다. 5장 검출 거리는 `XX~XX m`로 자리를 유지하고 추후 실측 범위를 넣습니다.
 
 본문 **{len(slides)}장**, 예비 **{len(backup)}장**. 설명 17분+실제 데모 3분의 **목표**이며 낭독 리허설은 하지 않았습니다.
 

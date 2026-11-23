@@ -29,3 +29,4 @@
 .c-agenda>div{display:flex;align-items:center;gap:25px;min-height:110px}
 .c-agenda span{font-size:46px;color:#5f88ad;font-weight:600;min-width:70px}
 .c-agenda h2{font-size:38px;line-height:1.35;letter-spacing:-1px;margin:0;color:#002f6d}
+.requirements-four{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;padding-top:25px}.requirements-four>div{padding:22px 28px;border-top:3px solid #002f6d;background:#f3f6fa;min-height:220px}.requirements-four span{font-size:24px;color:#477ba9}.requirements-four h2{font-size:51px;margin:15px 0;color:#002f6d;line-height:1.25}.requirements-four p{font-size:27px;line-height:1.5;margin:0;color:#52687d}
