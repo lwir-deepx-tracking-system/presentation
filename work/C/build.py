@@ -15,6 +15,7 @@ from tracking_story import finalize_tracking
 from revision_20261122 import apply_revision
 from narrative import refine_narrative
 from spoken_script import refine_script, notes_guide
+from pipeline_story import pipeline_slides
 
 BASE = Path(__file__).resolve().parent
 PICTURES = BASE.parents[1]/'reference/picture'
@@ -32,6 +33,8 @@ SOURCES = copy.deepcopy(SEED['sources'])
 SOURCES['S25']=dict(title='그림·실측 그래프 재구성 원자료',url='sources/visual-reference/manifest.json')
 SOURCES['S26']=dict(title='11/22 비교 결과·절충 정정',url='sources/revision-20261122/manifest.json')
 SOURCES['S27']=dict(title='11/22 모델뱅크 추천 원문',url='sources/revision-20261122/model-bank-recommended.json')
+SOURCES['S28']=dict(title='모델뱅크 스레드·큐 코드 동결본',url='sources/pipeline-20261123/manifest.json')
+SOURCES['S29']=dict(title='김재남 Runtime·모델뱅크 파이프라인 대조',url='sources/pipeline-20261123/comparison.md')
 SNAP = 'sources/latest-20261121/'
 for key, title, path in [
     ('S17', '11/20–21 추가 실험·장치 상태', '윤관/근거_최신_20261120.md'),
@@ -300,6 +303,7 @@ for i,s in enumerate(slides,1):
     s['transition']='다음: '+slides[i]['title'] if i<len(slides) else '감사합니다.'
     s['presenter_cue']=' → '.join(s['quick_cues'])
 refine_script(slides)
+slides=pipeline_slides(slides)
 assert sum(s['seconds'] for s in slides)==1200
 
 def source_links(refs):
@@ -328,7 +332,7 @@ manifest=dict(title='LWIR 표적 추적 · C안',date='2026-11-23',source_commit
 (BASE/'deck.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 def clock(t):return f'{t//60:02d}:{t%60:02d}'
-md=['# C안 발표 대본','',f'대본 개정 2026-11-23 · 근거 기준8a195d7(11/22) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','',notes_guide()]
+md=['# C안 발표 대본','',f'대본 개정 2026-11-23 · 실험 근거8a195d7(11/22) · 스레드 코드549324c(11/23) · 본문{len(slides)}장 · 설명17분+데모3분 목표. 실제 낭독 리허설 미실시.','',notes_guide()]
 cue=['# C안 큐시트','','설명17분+데모3분 목표 · 실제 리허설 후 재배분.','']
 note_html=[]
 elapsed=0
@@ -363,6 +367,7 @@ src += [f'| {title} | {", ".join(files)} |' for title,files in visual_usage]
 src += ['', '원본 HTML의 SVG·실제 라벨링·장치 재생 이미지를 선택해 C안의 장별 설명 구조로 재배치했다. 그림별 SHA256과 원본 경로는 S25에 보존했다. 소스 PDF 전체 페이지를 슬라이드 이미지로 복사하지 않았다. 짐벌 응답 곡선은 실측 요약값 기반의 모형으로 표시하고, 실측 시계열은 불감대 시험 파형에만 사용한다.']
 src += ['','## 최신 수치와 조건','','| 항목 | 값 | 조건 | 한계 | 출처 |','|---|---|---|---|---|']
 src += ['| '+' | '.join([v['title'],v['values'],v['condition'],v['limit'],','.join(v['refs'])])+' |' for v in evidence]
+src += ['', '## 11/23 스레드·큐 대조', '', '- 신규8·9장은 모델뱅크549324c 실카메라 Feed 경로의 코드 구조다. 김재남의 팀 C++ Runtime 도식을 참고하고 실제 스레드·큐 정책으로 재구성했다.', '- 입력대기 최대3·밀리면 최신1, 제출결과 순서 소비, 짐벌 미전송 관측 슬롯1을 구별한다. lossless 재생·신원전환 증거 경로는 예외다.', '- S28은 코드 동결·SHA256, S29는 Runtime과 모델뱅크 대조표다. 실제 데모 활성 설정과 성능은 새로 검증하지 않았다.']
 src += ['', '## 11/22 추가 반영 — 기존 기록보다 우선', '', '- 검출 추천은 own9e 시드 1. 모델9 대비 장치 INT8·분할 녹화18편 IDF1 +4.50%p(보고 구간 +1.26~+10.26), 번호 변경 차이0회(−9~+10). 구간의 신뢰 수준은 원문 미기재. 어깨 신뢰도 기준 충족률은92→9%.', '- 외형 추천은 기본 RVGGA0_REID2C256. 과거 OTP2 학습판의 검색 정답률0.892와 속도를 현재 추천 모델의 성능으로 대입하지 않는다.', '- 최초 GRU 적용 근거: 공개 val-B 위치 오차 TMOT 0.352→0.223, DanceTrack 0.295→0.213(Kalman→GRU). 자체 14편 위치 오차는 Kalman 0.110, 수정 GRU 0.122, 칼만 전환 규칙 포함 0.118. 자체 14편의 IDF1 차이는 +0.6%p(90% 구간 −0.8~+2.3%p). 장치 seq_018 한 편의 IDF1은 Kalman 71.81%, GRU 75.36%. [장치 재생 근거](https://github.com/lwir-deepx-tracking-system/model-bank/blob/0e3dd540ff8a9953a6e7725f59393c782a3d9d5a/HANDOFF.md#L1261).', '- KeepID: 번호 변경47→43, 장기 뺏김19→20. 두 가드 추가 시 뺏김20→17, IDF1 82.3% 동일.', '- 학습264장 FP32 타일 진단: 누락230→218, 일부 관절 위치 오차 증가. 독립 INT8 정확도 평가와 구별.', '- 박스 보정은 기본 body, 변환표 부재 시 size이며 오류 시 자동 비활성화 가능. 장치 적용은 별도 확인.', '- 시각자료19개 HTML을 최신 원본에서 동기화했다. 하드웨어·팀원 사진6개 및 라벨링 등 이미지8개는 기존 원본과 동일하다.', '- sources/revision-20261122는 두 커밋의 근거22개와 모델뱅크 원문2개를 SHA256으로 보존한다.']
 src += ['','## 보존한 근거와 해석','','- 25.71ms는11/19 E10+3·재설치 전·모드별65초의 서버 p95. 큐버림1; 전프레임·종단 통과 아님.','- 11/20 재설치 뒤 전체화면 기록에서33ms초과14803/21579=68.6%. 이 시점 수치를 후속 분할 상태로 확대하지 않는다.','- 추적기 CMC:11/20 새 대본은 일반 기능을 설명하지만 동일PC 비교 원표는 CMC·ReID 미사용. 효과를 입증했다고 서술하지 않는다.','- SOLIDER 직접교체 원본 RESULT_KO는11/21 학습기록 조사에서 재확인 못함. 기존66.74→66.57은 예비자료의 잠정 참고로만 보존.','- 가상 재포착 vel+0.20의95%구간0.07~0.32, fused+0.06의−0.11~0.21을 구분한다.','- RepVGG 시간 비교:5.02/1.28≈3.92배; 검수264와OTP2판 정확도를 서로 대입하지 않는다.','- 출처 스냅샷 SHA256은 sources/latest-20261121/manifest.json에 보존. 비공개 개인실험 파일은 팀원이 기록한 주장으로 인용하며 원본을 새로 확인한 것으로 표시하지 않는다.','', '## 이전 B안 수치 원표','', '아래는 B안 원문 보존이며 장 번호는 B 기준이다. C안 장별 매핑과 최신 해석을 우선한다.','',SEED['base_sources_text']]
 src += ['', '## 발표용 모델 이름', '',
@@ -395,6 +400,7 @@ qmd += ['## 기존 설계·운용 질문','']
 for block in re.split(r'(?=^## )',SEED['base_qa'],flags=re.M):
     if block.startswith('## ') and any(word in block.splitlines()[0] for word in ['PD','PID','적분','I항','D항','GUI에서 추적기 변경','전신 박스']):
         qmd += [block.strip(),'']
+qmd += ['', '## 멀티스레드와 두 NPU 병렬 처리는 같은 것인가요?', '', '멀티스레드는 입력·추적·짐벌 통신 등 소프트웨어 작업을 겹쳐 수행하는 구조입니다. 두 NPU의 타일 추론은 장치 간 병렬 실행입니다. 모델뱅크의 C++ 결과 병렬 회수 작업 스레드는 추가 설정으로 켜며, 이 두 장은 그 옵션이 항상 켜졌다고 가정하지 않습니다.', '', '## 왜 프레임을 버리나요?', '', '실시간 경로에서 오래된 입력이 쌓이는 것을 줄이기 위한 정책입니다. 버림 수는 별도로 계측하며 입력 버림0 요구사항을 만족했다는 뜻은 아닙니다. 손실 없는 재생 평가는 별도 정책을 사용합니다.', '', '## 김재남 자료의 큐 개수와 왜 다른가요?', '', '김재남 자료는 팀 C++ Runtime, 추가한 두 장은 모델뱅크 서버의 코드 구조를 설명합니다. 입력 대기 Runtime2와 모델뱅크3을 섞지 않았고, 모델뱅크 짐벌 슬롯1은 전체 제어 경로 최대1을 뜻하지 않습니다. 세부 대조는 S29를 참고합니다.', '']
 (BASE/'qa.md').write_text('\n'.join(qmd),encoding='utf-8')
 
 demo_number=next(s['number'] for s in slides if s['base_number']==28)
@@ -412,10 +418,13 @@ if photo:
     integration_text=integration_text.replace('- 표지 하드웨어 사진: assets/hardware-photo.jpg.','- 표지 하드웨어 사진 반영 완료: reference/picture/hardware.png → C/assets/hardware.png. 팀원 사진 5개도 같은 공통 폴더에서 동기화한다.')
 integration_text+='\n\n## 공통 사진 경로\n\n현재 공통 사진은 reference/picture/이다. build.py는 해당 폴더가 있으면 사진을 C/assets로 복사하고, 없으면 C에 포함된 사진을 사용한다. 사진 해시는 picture-manifest.json에 기록한다.\n'
 integration_text+='\n## 11/23 대본 1차 정리\n\nspoken_script.py가 최종 화면 순서에 맞춰 말할 내용·화면 진행·선택 전환 문장을 관리한다. speaker-notes.md/html과 cue-sheet.md를 함께 생성하며 근거·수치·장 순서·시간 배정은 유지한다. 실제 낭독은 아직 하지 않았다.\n\n5장 요구사항에는 사용자 요청에 따라 검출 거리 XX~XX m 입력 자리를 유지한다. 실측 범위를 채우기 전에는 목표 또는 달성 거리로 읽지 않는다. 거리 기준을 자료에서 완전히 빼지 않는다.\n\n일정표는 선택 항목이다. 포함하면 실제 개발 기록을 바탕으로 설계·환경 구축 / 검출·추적 / 통신·제어 통합 / 장치 시험의 병렬 진행을 한 장으로 요약한다. 확인되지 않은 날짜·주차를 만들지 않으며, 이번 편집에서는 일정 장을 추가하지 않았다.\n'
+integration_text+='\n## 스레드·큐 설명 보충\n\n8장 멀티스레드 파이프라인, 9장 큐와 전달 정책을 추가했다. pipeline_story.py에서 김재남 자료의 설명 흐름을 모델뱅크549324c 코드 구조로 재작성한다. 본문45장·예비39장, 신규70초를 포함해 설명17분+데모3분을 재배분했다. 실카메라 Feed 경로의 코드 확인이며 장치 실행은 하지 않았다. Runtime 입력2·모델뱅크 입력3을 혼용하지 않는다. 상세 대조와 SHA256은 S28/S29에 보존한다. 기존8장 이후는2장씩 이동하며 시연은43장이다.\n'
 (BASE/'integration.md').write_text(integration_text,encoding='utf-8')
 (BASE/'README.md').write_text(f'''# C안 · 최신 통합 발표
 
 2026-11-22 작성. 자료 기준 presentation `8a195d7`(11/22 21:13 KST). B안 `9819922` 이후의 검출·외형·ID·서버·짐벌 근거를 반영했습니다. A·B와 팀원 원본은 보존합니다.
+
+**11/23 스레드·큐 보충:** 소프트웨어 구성 다음에 멀티스레드 파이프라인과 큐 정책 2장을 추가했습니다. 김재남 자료를 모델뱅크 코드549324c와 대조했으며 [차이·적용 범위](sources/pipeline-20261123/comparison.md)를 보존합니다. `pipeline_story.py`가 장 삽입·최종 번호·시간 재배분을 담당합니다.
 
 **11/23 대본 1차 정리:** [읽기용 대본](speaker-notes.html)의 말할 내용·화면 진행·선택 전환 문장을 구분했습니다. 시험 조건과 출처는 접어서 확인할 수 있습니다. 대본은 `spoken_script.py`에서 최종 적용하며, 실제 낭독 시간은 미측정입니다. 5장 검출 거리는 `XX~XX m`로 자리를 유지하고 추후 실측 범위를 넣습니다.
 

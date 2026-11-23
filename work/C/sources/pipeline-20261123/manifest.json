@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-23",
+  "model_bank_commit": "549324ca4218f9bdd504e6b6218a28278e1c585a",
+  "presentation_commit": "2a34969",
+  "validation": "code inspection only; no hardware execution",
+  "files": [
+    {
+      "file": "comparison.md",
+      "sha256": "2a041467bf8ab88032ffb025205097aebf787ea22f64d1eefd62da90c9ae4e1d",
+      "url": "local synthesis"
+    },
+    {
+      "file": "team-runtime/README.md",
+      "sha256": "c10b12e58144efd7149daf9241cfca503a2acb0dcff19c859e47702e411880d8",
+      "url": "presentation/김재남"
+    },
+    {
+      "file": "team-runtime/sources.md",
+      "sha256": "de3fe458619080f8bdca7642a01da0b810834bde96fd71aa0fd4fe6970557960",
+      "url": "presentation/김재남"
+    },
+    {
+      "file": "team-runtime/speaker-notes.md",
+      "sha256": "c5046af9425c78ee356e80fdd22333a198a549190a02f4aebb3a9cce1f6153ac",
+      "url": "presentation/김재남"
+    },
+    {
+      "file": "tracking_server/src/app.py",
+      "sha256": "77f23f20efbe677672c080f25666c3667e9ee62fff02529b6352b85107f8d8a9",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/app.py"
+    },
+    {
+      "file": "tracking_server/src/camera/camera_link.py",
+      "sha256": "3becb18030f868a02bb89879a60e79e2b67d7128da0a6687f869950d4a9e2f28",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/camera/camera_link.py"
+    },
+    {
+      "file": "tracking_server/src/detect/frame_feed.py",
+      "sha256": "264046ac3e55a41f6a00ef0b8a9efa2cde89ff8955344717c426b3721832d035",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/detect/frame_feed.py"
+    },
+    {
+      "file": "tracking_server/src/detect/split_native.py",
+      "sha256": "464aba7783d46e0f0f669cd67e178afb6869a490ef287de40a17dfd3944fbb49",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/detect/split_native.py"
+    },
+    {
+      "file": "tracking_server/src/detect/split_sdk.cpp",
+      "sha256": "f53aa6661c22cb37695f45aee7b1f219ee94132ce26af2bc73ff274d71bad8e0",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/detect/split_sdk.cpp"
+    },
+    {
+      "file": "tracking_server/src/gimbal/gimbal_link.py",
+      "sha256": "22a27000fcb307b0755c972cd7bc18891741d01d45d10a26623885bae6c9f209",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/gimbal/gimbal_link.py"
+    },
+    {
+      "file": "tracking_server/src/gimbal/live_tracks.py",
+      "sha256": "a625151b40c19760bc86e5c140a24694c13dd59251d97809102cefcdcf1efc87",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/gimbal/live_tracks.py"
+    },
+    {
+      "file": "tracking_server/src/web/preview_worker.py",
+      "sha256": "c42867e2c4ab00f8f178cac0133ef919635fb64aaee3e08c650bcebcb9332c41",
+      "url": "https://github.com/lwir-deepx-tracking-system/model-bank/blob/549324ca4218f9bdd504e6b6218a28278e1c585a/tracking_server/src/web/preview_worker.py"
+    }
+  ]
+}
