@@ -86,3 +86,14 @@
 .geometry-tile-detail td:last-child{background:#e3eefb;color:var(--blue);font-weight:600}
 .tile-source-detail{font-size:14px;color:#45617d;margin-top:9px}
 .tile-source-detail summary{color:var(--blue);cursor:pointer}
+
+/* Give the three-row p50 comparison enough visual weight for projection. */
+.geometry-metrics .geometry-metric-pair{top:190px;grid-template-columns:730px 1fr;gap:24px}
+.geometry-metrics .geometry-metric-pair table{font-size:20px;width:100%}
+.geometry-metrics .geometry-metric-pair th,.geometry-metrics .geometry-metric-pair td{padding:24px 12px;line-height:28px}
+.geometry-metrics .geometry-metric-pair th{font-size:17px}
+.geometry-metrics .geometry-metric-pair td:last-child{background:#e3eefb;color:var(--blue);font-weight:700}
+.geometry-metrics .geometry-gain{padding:18px}
+.geometry-metrics .geometry-gain strong{font-size:44px}
+.geometry-metrics .geometry-gain>div{padding:14px 0}
+.geometry-metrics .geometry-gain .total-gain{background:#d6e7f8;margin:0 -10px;padding:14px 10px}
