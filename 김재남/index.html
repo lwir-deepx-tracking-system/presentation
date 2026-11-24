@@ -77,16 +77,12 @@
   <p class="lead">입력 크기와 투입 방식을 바꿔 지연을 줄인 두 시험을 비교합니다.</p>
   <div class="geometry-metric-pair">
     <section>
-      <h2>측정 항목과 입력 형상</h2>
-      <table><thead><tr><th>측정 항목</th><th>640×640</th><th>640×480</th></tr></thead><tbody>
-        <tr><td>입력 픽셀 수</td><td>409,600</td><td>307,200</td></tr>
-        <tr><td>전처리 평균 (ms)</td><td>1.653</td><td>1.328</td></tr>
-        <tr><td>NPU 평균 (ms)</td><td>13.035</td><td>9.675</td></tr>
-        <tr><td>E2E p95 (ms)¹</td><td>23.67</td><td>17.96</td></tr>
-        <tr><td>E2E 최대 (ms)¹</td><td>40.50</td><td>29.56</td></tr>
-        <tr><td>호스트 RSS 피크 (MiB)²</td><td>112.1</td><td>107.4</td></tr>
+      <h2>p50 지표 비교</h2>
+      <table><thead><tr><th>p50 지표</th><th>640×640</th><th>640×480</th><th>384×480 타일 2개</th></tr></thead><tbody>
+        <tr><td>NPU 실행시간</td><td>21.199 ms</td><td>16.559 ms</td><td>12.116 ms</td></tr>
+        <tr><td>SDK 전체 시간</td><td>23.966 ms</td><td>19.205 ms</td><td>16.187 ms</td></tr>
+        <tr><td>호출 대기시간</td><td>26.687 ms</td><td>21.621 ms</td><td>18.021 ms</td></tr>
       </tbody></table>
-      <p class="geometry-context">¹ 입력 형상 시험 · YOLO26s · inflight 6 · 가속 ON/ON<br>² 반복별 호스트 RSS 피크의 평균</p>
     </section>
     <aside class="geometry-gain" aria-label="시험별 전체 지연 개선">
       <h2>두 시험의 전체 지연 개선</h2>
