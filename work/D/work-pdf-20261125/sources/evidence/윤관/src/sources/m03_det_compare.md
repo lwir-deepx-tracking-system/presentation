@@ -1,0 +1,6 @@
+- 사람 AP50–95 YOLOX-s 39.96%(39.9558), YOLOv8s 42.28%(42.2804), YOLO26s 44.93%(44.9255), 차이 −5.0 · −2.6%p(소수 넷째 자리 값에서 계산) — 개인 실험 기록(common_score_comparison_full6_v2_20261019.csv(yolo_family_screen_20261019_v1))
+- 조건: FLIR 학습 10,742장 · batch 16 · seed 101 · 640 · 30 epoch, FLIR 검증 1,144장, PC float, 공통 채점기 v3, 모델별 1회 — Notion 팀 내부 기록 「LWIR 연구 통합」 3막; 같은 CSV의 training_epochs 30, scope seed101_final_epoch30_exposed_sourceVAL; 개인 실험 기록(INTERPRETATION_FULL6_v2_20261019.md(common-evaluator v3, 이미 노출된 검증셋))
+- 놓친 사람(conf 0.05) YOLOX-s 1,057 · YOLOv8s 959 · YOLO26s 818 — 같은 CSV person_FN_conf005
+- 한계: 시드 1개, 이미 노출된 검증셋. M1 INT8 시험 영상에서는 사람 정답의 74%가 영상 1편에 있어 그 영상을 빼면 YOLOX-s·YOLOv8s가 1.1~1.3%p 높았음 → 계열 우위로 단정하지 않음 — Notion 팀 내부 기록 「LWIR 연구 통합」 3막
+- m 크기는 YOLO26만 시험했고 크기를 m으로 옮긴 이유를 따로 적은 문서는 없음. 기록된 목표는 '30 fps 안에서 가장 정확한 모델' — 같은 기록 3막 '빈 고리'
+- 11-19판의 막대 이름 YOLOX·YOLOv8 → 실제 크기 YOLOX-s·YOLOv8s로 고침

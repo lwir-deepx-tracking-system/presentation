@@ -1,0 +1,20 @@
+{
+  "main_pages": 35,
+  "excluded_appendix_pages": 15,
+  "target_seconds": 900,
+  "hangul_characters": 3840,
+  "max_hangul_per_target_second": 4.43,
+  "actual_rehearsal_performed": false,
+  "canonical_md_sha256": "32067e3ad9c0bc331cfa3c8fe76ef380b97b0a940aa2acfce2591f1415ff2098",
+  "source_pdf_sha256": "5b6417ffdd060644786adadcb7764099a2d35ba68b879cdcf5b52decd07432c9",
+  "browser": {
+    "articles": 35,
+    "images": 35,
+    "fonts_loaded": true,
+    "broken_links": 0,
+    "javascript_errors": []
+  },
+  "canonical_md_preserved": true,
+  "pptx_notes_payload_count": 35,
+  "pptx_modified": false
+}

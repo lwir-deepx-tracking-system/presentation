@@ -1,0 +1,12 @@
+- 학습 파라미터 Full FT 9,960,248개 · LoRA r8 + 검출 머리 1,379,320개(약 1/7) — 개인 실험 기록(evidence.json(map_to_project_ft_debate_v1), LAB-004-professor-decision-memo.md)
+- LoRA는 원 가중치를 고정하고 저랭크(r8) 보정 행렬과 검출 머리를 학습함(순수 LoRA가 아님) — 개인 실험 기록(FINAL_COMPARISON.json("lora_r8_head"), REPORT.md(label-budget-synthesis_20261005))
+- 전체 라벨 30 epoch 곡선과 30 epoch 값 Full FT 41.33% · LoRA 학습률 10배 37.66% · LoRA 36.42%(Full FT 최고점은 18 epoch 41.80%) — 학습로그/YOLO26s_FT_seed101.csv, 학습로그/YOLO26s_LoRA_seed101.csv, 학습로그/YOLO26s_LoRA_lr1e-3_seed101.csv의 monitor_primary6/mAP50_95를 이 장에서 다시 그림
+- 곡선 조건: FLIR 학습셋 전체(fraction 1.0) · batch 4 · seed 101 · AdamW lr0 1e-4(학습률 10배 = 1e-3) · 30 epoch · 매 epoch 6종 검증 — 개인 실험 기록(plan_seed101_batch4_lora_lr1e3.json)
+- 라벨 10% · 30 epoch: Full FT 34.22%(A 33.38 · B 34.96 · C 34.31), LoRA 32.61%(32.50 · 32.46 · 32.87), Full FT +1.6%p — model-bank 6ee8022 tracking_server/research/LWIR_PRESENTATION_KO.md; 개인 실험 기록(REPORT.md(label-budget-synthesis_20261005))
+- 라벨 10% · 297 epoch: Full FT 29.89%(29.20 · 30.68 · 29.79), LoRA 33.96%(32.27 · 34.64 · 34.96), LoRA +4.1%p; 30→297 epoch 변화 Full FT −4.33%p, LoRA +1.35%p — model-bank 6ee8022 tracking_server/research/LWIR_PRESENTATION_KO.md; 개인 실험 기록(FINAL_COMPARISON.json(이전 판의 "통합 기록 기반, 재대조 못 함"은 원본과 일치 확인으로 바꿈))
+- 갱신 10배: 계획 갱신 수 510회 → 5,049회(Ultralytics 누적 규칙으로 다시 세면 558 → 5,530회, 전체 라벨 30 epoch는 5,040 / 5,516회), batch 16 · nbs 64 — 개인 실험 기록(UPDATE_COUNT_AUDIT.json)
+- 10% 묶음: 10,742장에서 장면 기준으로 고른 1,074장 묶음 A/B/C, seed 101, batch 16 · AdamW lr0 3e-4(두 방법 같음, 왼쪽 곡선의 batch 4 · lr0 1e-4와 다른 설정), 같은 검증셋에서 30번째 epoch 체크포인트로 채점(묶음 간 차이는 seed 분산이 아님) — 개인 실험 기록(REPORT.md, args.yaml(label_budget_minimal_20261005_remaining3, n1074_A))
+- FLIR 검증 1,144장은 개발 중 이미 본 검증셋이며 독립 시험이 아님 — 개인 실험 기록(FINAL_COMPARISON.json)
+- 다음 장 1,074장 값(Full FT 33.69 / LoRA 31.51)은 seed 202 · batch 4 · 묶음 1개 · 1회로 다른 실행 — 개인 실험 기록(evidence.json)
+- 결정: 검출기 YOLO26m은 Full FT로 학습, LoRA는 기각이 아닌 보류("YOLO26m Full FT는 작업 기준이며 모든 조건의 우승자가 아니다") — model-bank 6ee8022 tracking_server/research/LWIR_PRESENTATION_KO.md; 개인 실험 기록(MAIN_QUESTION.md(map_to_project_ft_debate_v1))
+- 원리 참고: Hu et al., LoRA, arXiv:2106.09685(언어 모델 논문, 이 결과는 프로젝트 실험)
