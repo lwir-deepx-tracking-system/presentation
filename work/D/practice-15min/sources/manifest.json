@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-24",
+  "source_pdf": "input.pdf",
+  "source_sha256": "001482e283fa5128a7d759fd2b764b59712c693dce7082705676b1f6e5d44037",
+  "source_pages": 47,
+  "main_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "excluded_appendix_pages": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "scope": "user PDF and frozen local team notes; no hardware run or private experiment access",
+  "evidence": [
+    {
+      "origin": "윤관/src/sources/m03_det_compare.md",
+      "path": "sources/evidence/윤관/src/sources/m03_det_compare.md",
+      "sha256": "6303e9be7fcc089668641857239df3feb885f6bcb118913309b37875df22caed"
+    },
+    {
+      "origin": "윤관/src/sources/m06_ft_lora.md",
+      "path": "sources/evidence/윤관/src/sources/m06_ft_lora.md",
+      "sha256": "b632ae4f27682fd25dbb63cfbfe5b151194e3db77b7dbc8f5bb96dac382b5332"
+    },
+    {
+      "origin": "윤관/src/sources/m07_scale.md",
+      "path": "sources/evidence/윤관/src/sources/m07_scale.md",
+      "sha256": "5227ee0c0ac2b1fe3660b45320f2af6e969e85237609043e28d7a740db8a8fef"
+    },
+    {
+      "origin": "윤관/src/sources/m09_data.md",
+      "path": "sources/evidence/윤관/src/sources/m09_data.md",
+      "sha256": "debfba8ef0542afe66acad721a1ab3c8ce8d5deb78c9a6950ea13a76d961260b"
+    },
+    {
+      "origin": "윤관/src/sources/m10_pose_lineage.md",
+      "path": "sources/evidence/윤관/src/sources/m10_pose_lineage.md",
+      "sha256": "cae6ddf32e0f9fa3965750d2395a044f9703e70c235e8bd28ca1795af21d39c3"
+    },
+    {
+      "origin": "윤관/src/sources/m18_e10.md",
+      "path": "sources/evidence/윤관/src/sources/m18_e10.md",
+      "sha256": "3883e5cabffaba35fe033120aa2f9f0c01cecdc1625d7b3817b0f664da582077"
+    },
+    {
+      "origin": "윤관/학습기록_외형모델.md",
+      "path": "sources/evidence/윤관/학습기록_외형모델.md",
+      "sha256": "c9f191f6d8c4437c563c5f8ae9b246b63e0842c7c59342fe9c0acc6f306ea8b3"
+    },
+    {
+      "origin": "윤관/src/sources/m21b_reid_table.md",
+      "path": "sources/evidence/윤관/src/sources/m21b_reid_table.md",
+      "sha256": "d8b23ae3a421597b6e09f5d38b43241a08b8799bdebb05191f451b6a7a8a39d3"
+    },
+    {
+      "origin": "윤관/src/sources/k09_id_keep.md",
+      "path": "sources/evidence/윤관/src/sources/k09_id_keep.md",
+      "sha256": "a194049f56de5698f501522e8ac9d08a1aabf10f1806fc62be7289b8d3b698e4"
+    },
+    {
+      "origin": "윤관/src/sources/m29_split.md",
+      "path": "sources/evidence/윤관/src/sources/m29_split.md",
+      "sha256": "3a50905df8c761b795a16b00d591a887f3e67b286585c9bedc6db7becc0c9075"
+    },
+    {
+      "origin": "윤관/src/sources/m31_gimbal_loop.md",
+      "path": "sources/evidence/윤관/src/sources/m31_gimbal_loop.md",
+      "sha256": "cbe2f5de6ac3f167012dacb5519357d3df821edc3a3bbc84c22c69632ab269d0"
+    },
+    {
+      "origin": "윤관/src/sources/m32_pd.md",
+      "path": "sources/evidence/윤관/src/sources/m32_pd.md",
+      "sha256": "069d669e8b62b2b2506652cb76d1e0a2e4abac3594d2185d77ccd2d72dd7bacb"
+    },
+    {
+      "origin": "윤관/src/sources/m33_plant.md",
+      "path": "sources/evidence/윤관/src/sources/m33_plant.md",
+      "sha256": "5ce4ba565549d1b0bd9676c675e28bfc55639e2975da6d421c22c6331c4fe08e"
+    },
+    {
+      "origin": "김재남/speaker-notes.md",
+      "path": "sources/evidence/김재남/speaker-notes.md",
+      "sha256": "c5046af9425c78ee356e80fdd22333a198a549190a02f4aebb3a9cce1f6153ac"
+    },
+    {
+      "origin": "정하건/정하건_v3/발표노트.md",
+      "path": "sources/evidence/정하건/정하건_v3/발표노트.md",
+      "sha256": "5aed91c5f514e9c2d35f0079f5669daec215486e7cea966b9ce5fa6070052f37"
+    },
+    {
+      "origin": "정하건/정하건_v3/근거_비교표.md",
+      "path": "sources/evidence/정하건/정하건_v3/근거_비교표.md",
+      "sha256": "09eb873dedd91cb8b7bda4f575be18f60adbcae03447dd0751d5bf3f9fddd832"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "main_pages": 32,
+  "excluded_appendix_pages": 15,
+  "target_seconds": 900,
+  "actual_rehearsal_performed": false,
+  "hangul_characters": 3769,
+  "max_hangul_per_target_second": 4.38,
+  "source_sha256": "001482e283fa5128a7d759fd2b764b59712c693dce7082705676b1f6e5d44037",
+  "browser": {
+    "articles": 32,
+    "images": 32,
+    "details": 32,
+    "local_links": 132,
+    "javascript_errors": [],
+    "fonts_loaded": true,
+    "desktop_and_mobile_horizontal_overflow": false
+  },
+  "printed_script_pdf_pages": 11,
+  "printed_script_excludes_review_notes": true
+}

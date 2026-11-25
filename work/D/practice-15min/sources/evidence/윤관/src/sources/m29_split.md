@@ -1,0 +1,10 @@
+- 타일 구조: 화면 480×640, 타일 폭 384, 오른쪽 타일 시작 256(겹침 128 px), 타일당 출력 9개(두 타일 18개), 상체 E10 사람 전용 — model-bank 31ac21b tracking_server/src/detect/dual_tile.py; 개인 실험 기록(GRAPH_VERIFY.json (LWIR650 E10 split))
+- NPU 제출·회수를 DX-RT C API(C++)로 옮김, 실카메라 4장에서 두 타일 원시 텐서 18개가 Python SDK와 비트 단위로 같음을 확인한 뒤 전환 — model-bank 31ac21b HANDOFF.md (2026-11-19 한 장 분할의 DX-RT C++ 실행)
+- 좌표 복원·사람 NMS·관절 복원 C++ — model-bank 31ac21b HANDOFF.md (2026-11-20 NPU 분할 출력과 관절 후처리 C++ 적용)
+- 실카메라 · 사람 없음: 1,800장, 서버 수신→추적 완료 p95 23.25 ms, 최대 39.262 ms, 33 ms 초과 1장, 30 FPS, 입력 버림 0 · 순서 오류 0, 병렬 회수 — model-bank 31ac21b HANDOFF.md (2026-11-20 분할 입력 준비와 출력 버퍼 재사용, 5c1b189); 11-19 밤~11-20 C++ 경로의 다른 1,800장 창은 p95 23.25~24.86 ms, 최대 28.5~42.8 ms (같은 HANDOFF 11-19·11-20 절들, 077ef23·c3e8aca·1247d9f·1cb5998·830b978·215e4b8)
+- 녹화 재생 · 4명(RAW16, 30 FPS) 805장: p95 27.16 ms, 최대 57.19 ms, 초과 4장; ID 최대 17개 고밀도 녹화 592장: p95 42.52 ms, 최대 66.87 ms, 초과 217장; 입력 버림 0 — model-bank 31ac21b HANDOFF.md (2026-11-19 한 장 분할의 중복 박스 비교 단축, 4848fb2, C++ 이식 전)
+- 첫 비교(교대 40.47 → 분할 25.71 ms, −36%)는 E10+3 시험 모델, 실카메라 약 30 FPS, 각 65초 — model-bank 31ac21b tracking_server/docs/box-display-2026-11-19.md (E10+3 실카메라 지연), 부록 ax_split_first
+- 사람이 있는 실카메라(자동 추종 중, C++ 이식 전): 1분 p95 31.08~31.23 → 29.19~30.16 ms(선제 회수 후); 68.00 ms·큐 버림 14장 구간은 녹화 목록 동시 조회 8건과 겹쳐 수정 — model-bank 31ac21b HANDOFF.md (2026-11-19 선제 회수 운영 확인, 녹화 목록 조회와 실시간 지연); 그 전 11-19 10:41 재시작 직후 1,347장(세부 계측 꺼짐, 인원 기록 없음) p95 52.31 ms, 10:42 추종 켬 1,800장 p95 31.01 ms — 같은 HANDOFF (8090 후속 적용)
+- 운영 장치는 LWIR650 상체 E10 분할 모델로 구동, 공개 main에는 검수 264장 E10 타일 파일만 등록, 11-20 오전 새 clone 재설치 뒤 지연 기록은 아직 없음 — model-bank 31ac21b HANDOFF.md (2026-11-20 NPU 분할 출력과 관절 후처리 C++ 적용; 새 clone 전환 시 기존 현장 ReID 등록 보존), tracking_server/src/detect/dual_tile.py
+- 엄격 기준(모든 장 33 ms 이내, 입력 버림·순서 오류 0)은 11-19부터 적용 — model-bank 31ac21b HANDOFF.md (2026-11-19 한 장 분할 최대 33 ms 추가 시험)
+- 그림 배경: 11-19 실제 녹화 재생 프레임(상체 박스 표시) — assets/20261119-real-upper-replay.jpg
