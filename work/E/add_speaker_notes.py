@@ -14,6 +14,7 @@ ROOT=BASE.parents[1]
 SOURCE=BASE/'E.pptx'
 OUTPUT=BASE/'E_발표자노트.pptx'
 SCRIPT=ROOT/'work/D/work-pdf-20261125'
+CANONICAL_MD=BASE/'speaker-notes.md'
 NS_P='http://schemas.openxmlformats.org/presentationml/2006/main'
 NS_A='http://schemas.openxmlformats.org/drawingml/2006/main'
 NS_R='http://schemas.openxmlformats.org/officeDocument/2006/relationships'
@@ -80,9 +81,19 @@ def main():
  assert Path(args.output).name==args.output and args.output.lower().endswith('.pptx')
  OUTPUT=BASE/args.output
  assert OUTPUT.resolve()!=SOURCE.resolve(),'The original E.pptx must not be overwritten.'
- payload=json.loads((SCRIPT/'notes-map.json').read_text(encoding='utf-8'))
- assert hashlib.sha256((SCRIPT/'speaker-notes.md').read_bytes()).hexdigest()==payload['canonical_sha256'],'Regenerate notes-map.json from the latest Markdown first.'
- assert len(payload['slides'])==35 and payload['total_pdf_pages']==50
+ md_bytes=CANONICAL_MD.read_bytes()
+ blocks=re.split(r'^## (\d{2})\. (.+)\n',md_bytes.decode('utf-8-sig').replace('\r\n','\n'),flags=re.M)
+ entries=[]
+ for i in range(1,len(blocks),3):
+  number=int(blocks[i]);title=blocks[i+1].strip();text=blocks[i+2]
+  spoken=re.split(r'^화면 단서:',text,maxsplit=1,flags=re.M)[0].strip()
+  spoken=re.sub(r'^###\s*말할\s*내용\s*\n','',spoken).strip()
+  bridge=re.search(r'^넘김: (.+)$',text,re.M)
+  spoken=re.sub(r'^넘김: .+$','',spoken,flags=re.M).strip()
+  assert spoken,f'Empty narration for page {number}'
+  entries.append(dict(pdf_page=number,title=title,pptx_notes=spoken+('\n\n'+bridge.group(1).strip() if bridge else '')))
+ assert [e['pdf_page'] for e in entries]==list(range(1,36)),'Expected exactly pages 01 through 35.'
+ payload=dict(slides=entries,canonical_sha256=hashlib.sha256(md_bytes).hexdigest())
  source_pdf=json.loads((SCRIPT/'sources/pdf-pages.json').read_text(encoding='utf-8'))
  original_hash=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
  with zipfile.ZipFile(SOURCE) as source:
@@ -156,7 +167,8 @@ def main():
     assert resolve(record['note_part'],r.getAttribute('Target')) in out.namelist()
   assert all(name in out.namelist() for name in original)
  assert hashlib.sha256(SOURCE.read_bytes()).hexdigest()==original_hash
- report=dict(source=SOURCE.name,output=OUTPUT.name,source_sha256=original_hash,output_sha256=hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),canonical_md=str((SCRIPT/'speaker-notes.md').relative_to(ROOT)),canonical_md_sha256=payload['canonical_sha256'],total_slides=50,main_notes_written=35,new_notes_parts=sum(r['created'] for r in note_records),appendix_slides_preserved=15,all_slide_xml_bytes_unchanged=True,all_untouched_parts_bytes_unchanged=True,original_file_unchanged=True,notes_roundtrip_exact=True,powerpoint_app_open_tested=False,alignment=alignment,notes=note_records)
+ assert CANONICAL_MD.read_bytes()==md_bytes,'Markdown changed during generation; rerun with the latest file.'
+ report=dict(source=SOURCE.name,output=OUTPUT.name,source_sha256=original_hash,output_sha256=hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),canonical_md=str(CANONICAL_MD.relative_to(ROOT)),canonical_md_sha256=payload['canonical_sha256'],total_slides=50,main_notes_written=35,new_notes_parts=sum(r['created'] for r in note_records),appendix_slides_preserved=15,all_slide_xml_bytes_unchanged=True,all_untouched_parts_bytes_unchanged=True,original_file_unchanged=True,notes_roundtrip_exact=True,powerpoint_app_open_tested=False,alignment=alignment,notes=note_records)
  (BASE/'notes-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(f'Created {OUTPUT.name}:35 notes; {report["new_notes_parts"]} new note parts;50 slides preserved; original unchanged.')
 

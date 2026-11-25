@@ -2,9 +2,9 @@
   "source": "E.pptx",
   "output": "E_발표자노트_피드백반영.pptx",
   "source_sha256": "45044bb2696e8b2da339db12cffa6df8cbd22e1e19b6edf4a1ba1d7f002d9a8c",
-  "output_sha256": "b522a7090ab97203329c8e92be1130ff9f39d2fee902455ec3184fbc4d5cf5c0",
-  "canonical_md": "work\\D\\work-pdf-20261125\\speaker-notes.md",
-  "canonical_md_sha256": "32067e3ad9c0bc331cfa3c8fe76ef380b97b0a940aa2acfce2591f1415ff2098",
+  "output_sha256": "a6f72e4be9b156b8acf151398d9b895f14350b67aeff64cc315251a287cc5384",
+  "canonical_md": "work\\E\\speaker-notes.md",
+  "canonical_md_sha256": "7cac1aaf4ab2484804b6c4e8cd2d804fcc514c7ae0294640e5a9e382dd15d46e",
   "total_slides": 50,
   "main_notes_written": 35,
   "new_notes_parts": 16,
@@ -231,79 +231,79 @@
       "page": 1,
       "note_part": "ppt/notesSlides/notesSlide1.xml",
       "created": false,
-      "characters": 92
+      "characters": 68
     },
     {
       "page": 2,
       "note_part": "ppt/notesSlides/notesSlide2.xml",
       "created": false,
-      "characters": 107
+      "characters": 102
     },
     {
       "page": 3,
       "note_part": "ppt/notesSlides/notesSlide3.xml",
       "created": false,
-      "characters": 161
+      "characters": 38
     },
     {
       "page": 4,
       "note_part": "ppt/notesSlides/notesSlide4.xml",
       "created": false,
-      "characters": 157
+      "characters": 161
     },
     {
       "page": 5,
       "note_part": "ppt/notesSlides/notesSlide5.xml",
       "created": false,
-      "characters": 157
+      "characters": 162
     },
     {
       "page": 6,
       "note_part": "ppt/notesSlides/notesSlide20.xml",
       "created": true,
-      "characters": 168
+      "characters": 156
     },
     {
       "page": 7,
       "note_part": "ppt/notesSlides/notesSlide6.xml",
       "created": false,
-      "characters": 196
+      "characters": 137
     },
     {
       "page": 8,
       "note_part": "ppt/notesSlides/notesSlide21.xml",
       "created": true,
-      "characters": 180
+      "characters": 135
     },
     {
       "page": 9,
       "note_part": "ppt/notesSlides/notesSlide7.xml",
       "created": false,
-      "characters": 188
+      "characters": 322
     },
     {
       "page": 10,
       "note_part": "ppt/notesSlides/notesSlide8.xml",
       "created": false,
-      "characters": 146
+      "characters": 98
     },
     {
       "page": 11,
       "note_part": "ppt/notesSlides/notesSlide22.xml",
       "created": true,
-      "characters": 144
+      "characters": 189
     },
     {
       "page": 12,
       "note_part": "ppt/notesSlides/notesSlide9.xml",
       "created": false,
-      "characters": 156
+      "characters": 155
     },
     {
       "page": 13,
       "note_part": "ppt/notesSlides/notesSlide23.xml",
       "created": true,
-      "characters": 182
+      "characters": 215
     },
     {
       "page": 14,
@@ -315,25 +315,25 @@
       "page": 15,
       "note_part": "ppt/notesSlides/notesSlide24.xml",
       "created": true,
-      "characters": 189
+      "characters": 207
     },
     {
       "page": 16,
       "note_part": "ppt/notesSlides/notesSlide25.xml",
       "created": true,
-      "characters": 213
+      "characters": 203
     },
     {
       "page": 17,
       "note_part": "ppt/notesSlides/notesSlide26.xml",
       "created": true,
-      "characters": 185
+      "characters": 228
     },
     {
       "page": 18,
       "note_part": "ppt/notesSlides/notesSlide27.xml",
       "created": true,
-      "characters": 187
+      "characters": 188
     },
     {
       "page": 19,
@@ -345,97 +345,97 @@
       "page": 20,
       "note_part": "ppt/notesSlides/notesSlide29.xml",
       "created": true,
-      "characters": 203
+      "characters": 195
     },
     {
       "page": 21,
       "note_part": "ppt/notesSlides/notesSlide11.xml",
       "created": false,
-      "characters": 131
+      "characters": 208
     },
     {
       "page": 22,
       "note_part": "ppt/notesSlides/notesSlide30.xml",
       "created": true,
-      "characters": 179
+      "characters": 217
     },
     {
       "page": 23,
       "note_part": "ppt/notesSlides/notesSlide12.xml",
       "created": false,
-      "characters": 180
+      "characters": 215
     },
     {
       "page": 24,
       "note_part": "ppt/notesSlides/notesSlide13.xml",
       "created": false,
-      "characters": 202
+      "characters": 216
     },
     {
       "page": 25,
       "note_part": "ppt/notesSlides/notesSlide14.xml",
       "created": false,
-      "characters": 186
+      "characters": 188
     },
     {
       "page": 26,
       "note_part": "ppt/notesSlides/notesSlide15.xml",
       "created": false,
-      "characters": 168
+      "characters": 136
     },
     {
       "page": 27,
       "note_part": "ppt/notesSlides/notesSlide16.xml",
       "created": false,
-      "characters": 174
+      "characters": 162
     },
     {
       "page": 28,
       "note_part": "ppt/notesSlides/notesSlide31.xml",
       "created": true,
-      "characters": 209
+      "characters": 410
     },
     {
       "page": 29,
       "note_part": "ppt/notesSlides/notesSlide32.xml",
       "created": true,
-      "characters": 177
+      "characters": 253
     },
     {
       "page": 30,
       "note_part": "ppt/notesSlides/notesSlide33.xml",
       "created": true,
-      "characters": 202
+      "characters": 250
     },
     {
       "page": 31,
       "note_part": "ppt/notesSlides/notesSlide34.xml",
       "created": true,
-      "characters": 181
+      "characters": 306
     },
     {
       "page": 32,
       "note_part": "ppt/notesSlides/notesSlide35.xml",
       "created": true,
-      "characters": 158
+      "characters": 234
     },
     {
       "page": 33,
       "note_part": "ppt/notesSlides/notesSlide17.xml",
       "created": false,
-      "characters": 176
+      "characters": 180
     },
     {
       "page": 34,
       "note_part": "ppt/notesSlides/notesSlide18.xml",
       "created": false,
-      "characters": 185
+      "characters": 174
     },
     {
       "page": 35,
       "note_part": "ppt/notesSlides/notesSlide19.xml",
       "created": false,
-      "characters": 178
+      "characters": 204
     }
   ]
 }
