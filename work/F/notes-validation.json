@@ -1,0 +1,405 @@
+{
+  "source": "ppt.pptx",
+  "output": "F_발표자노트.pptx",
+  "source_sha256": "8e04c3e9b668a35dcf1df76849cb353cf027eccdb0c27b760f69f1d389d98384",
+  "output_sha256": "f9142d521c617de4dbddb7834da7b60364d139dedeece8ae0ef49ee588e96ad4",
+  "canonical_md": "work\\F\\speaker-notes.md",
+  "canonical_md_sha256": "3fbbd7371f72aa5ac0ff493fed59d571ff8bb7cb4235b2ad6254f6117a22f670",
+  "total_slides": 47,
+  "main_notes_written": 32,
+  "new_notes_parts": 15,
+  "appendix_slides_preserved": 15,
+  "all_slide_xml_bytes_unchanged": true,
+  "all_untouched_parts_bytes_unchanged": true,
+  "original_file_unchanged": true,
+  "notes_roundtrip_exact": true,
+  "powerpoint_app_open_tested": false,
+  "alignment": [
+    {
+      "page": 1,
+      "title": "표지",
+      "slide_part": "ppt/slides/slide1.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 2,
+      "title": "목차",
+      "slide_part": "ppt/slides/slide2.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 3,
+      "title": "팀 구성 및 역할",
+      "slide_part": "ppt/slides/slide3.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 4,
+      "title": "프로젝트 소개",
+      "slide_part": "ppt/slides/slide4.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 5,
+      "title": "하드웨어 요구사항",
+      "slide_part": "ppt/slides/slide5.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 6,
+      "title": "시스템 구성",
+      "slide_part": "ppt/slides/slide6.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 7,
+      "title": "검출 모델 선정",
+      "slide_part": "ppt/slides/slide7.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 8,
+      "title": "Full FT와 LoRA",
+      "slide_part": "ppt/slides/slide8.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 9,
+      "title": "현장 데이터 수집 계획",
+      "slide_part": "ppt/slides/slide9.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 10,
+      "title": "실내 근거리 검출의 문제점",
+      "slide_part": "ppt/slides/slide10.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 11,
+      "title": "실내 검출을 위한 방법",
+      "slide_part": "ppt/slides/slide11.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 12,
+      "title": "데이터 설계 의도",
+      "slide_part": "ppt/slides/slide12.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 13,
+      "title": "INT8 양자화와 정확도 검증",
+      "slide_part": "ppt/slides/slide13.xml",
+      "pdf_overlap": 0.8347
+    },
+    {
+      "page": 14,
+      "title": "검출 결과",
+      "slide_part": "ppt/slides/slide14.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 15,
+      "title": "추적 알고리즘",
+      "slide_part": "ppt/slides/slide15.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 16,
+      "title": "세 트래커의 비교",
+      "slide_part": "ppt/slides/slide16.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 17,
+      "title": "성능 비교",
+      "slide_part": "ppt/slides/slide17.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 18,
+      "title": "단순 추적 알고리즘 사용의 한계",
+      "slide_part": "ppt/slides/slide18.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 19,
+      "title": "열영상 외형 특징과 ID 연결",
+      "slide_part": "ppt/slides/slide19.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 20,
+      "title": "RepVGG 선택 근거 · 실행 비용",
+      "slide_part": "ppt/slides/slide20.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 21,
+      "title": "RepVGG 선택 근거 · 검색 정확도",
+      "slide_part": "ppt/slides/slide21.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 22,
+      "title": "KeepID · 가림 뒤 ID 연결 예시",
+      "slide_part": "ppt/slides/slide22.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 23,
+      "title": "외형 특징과 KeepID 적용 결과",
+      "slide_part": "ppt/slides/slide23.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 24,
+      "title": "검출 모델의 정확도와 NPU 지연",
+      "slide_part": "ppt/slides/slide24.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 25,
+      "title": "객체 탐지 지연 감소를 위한 방법",
+      "slide_part": "ppt/slides/slide25.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 26,
+      "title": "객체 탐지 지연 감소를 위한 방법",
+      "slide_part": "ppt/slides/slide26.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 27,
+      "title": "열화상 오차 기반 짐벌 제어와 불감대 튜닝",
+      "slide_part": "ppt/slides/slide27.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 28,
+      "title": "실시간 파이프라인과 큐 정책",
+      "slide_part": "ppt/slides/slide28.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 29,
+      "title": "PC 애플리케이션과 통신",
+      "slide_part": "ppt/slides/slide29.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 30,
+      "title": "주요 성과",
+      "slide_part": "ppt/slides/slide30.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 31,
+      "title": "검출 문제점과 후속 검증",
+      "slide_part": "ppt/slides/slide31.xml",
+      "pdf_overlap": 1.0
+    },
+    {
+      "page": 32,
+      "title": "중·장거리 한계점",
+      "slide_part": "ppt/slides/slide32.xml",
+      "pdf_overlap": 1.0
+    }
+  ],
+  "notes": [
+    {
+      "page": 1,
+      "note_part": "ppt/notesSlides/notesSlide1.xml",
+      "created": false,
+      "characters": 68
+    },
+    {
+      "page": 2,
+      "note_part": "ppt/notesSlides/notesSlide2.xml",
+      "created": false,
+      "characters": 102
+    },
+    {
+      "page": 3,
+      "note_part": "ppt/notesSlides/notesSlide3.xml",
+      "created": false,
+      "characters": 38
+    },
+    {
+      "page": 4,
+      "note_part": "ppt/notesSlides/notesSlide4.xml",
+      "created": false,
+      "characters": 203
+    },
+    {
+      "page": 5,
+      "note_part": "ppt/notesSlides/notesSlide5.xml",
+      "created": false,
+      "characters": 198
+    },
+    {
+      "page": 6,
+      "note_part": "ppt/notesSlides/notesSlide18.xml",
+      "created": true,
+      "characters": 172
+    },
+    {
+      "page": 7,
+      "note_part": "ppt/notesSlides/notesSlide19.xml",
+      "created": true,
+      "characters": 235
+    },
+    {
+      "page": 8,
+      "note_part": "ppt/notesSlides/notesSlide6.xml",
+      "created": false,
+      "characters": 322
+    },
+    {
+      "page": 9,
+      "note_part": "ppt/notesSlides/notesSlide7.xml",
+      "created": false,
+      "characters": 98
+    },
+    {
+      "page": 10,
+      "note_part": "ppt/notesSlides/notesSlide20.xml",
+      "created": true,
+      "characters": 189
+    },
+    {
+      "page": 11,
+      "note_part": "ppt/notesSlides/notesSlide8.xml",
+      "created": false,
+      "characters": 155
+    },
+    {
+      "page": 12,
+      "note_part": "ppt/notesSlides/notesSlide21.xml",
+      "created": true,
+      "characters": 215
+    },
+    {
+      "page": 13,
+      "note_part": "ppt/notesSlides/notesSlide22.xml",
+      "created": true,
+      "characters": 207
+    },
+    {
+      "page": 14,
+      "note_part": "ppt/notesSlides/notesSlide23.xml",
+      "created": true,
+      "characters": 203
+    },
+    {
+      "page": 15,
+      "note_part": "ppt/notesSlides/notesSlide24.xml",
+      "created": true,
+      "characters": 406
+    },
+    {
+      "page": 16,
+      "note_part": "ppt/notesSlides/notesSlide25.xml",
+      "created": true,
+      "characters": 189
+    },
+    {
+      "page": 17,
+      "note_part": "ppt/notesSlides/notesSlide26.xml",
+      "created": true,
+      "characters": 195
+    },
+    {
+      "page": 18,
+      "note_part": "ppt/notesSlides/notesSlide9.xml",
+      "created": false,
+      "characters": 208
+    },
+    {
+      "page": 19,
+      "note_part": "ppt/notesSlides/notesSlide27.xml",
+      "created": true,
+      "characters": 220
+    },
+    {
+      "page": 20,
+      "note_part": "ppt/notesSlides/notesSlide10.xml",
+      "created": false,
+      "characters": 224
+    },
+    {
+      "page": 21,
+      "note_part": "ppt/notesSlides/notesSlide11.xml",
+      "created": false,
+      "characters": 216
+    },
+    {
+      "page": 22,
+      "note_part": "ppt/notesSlides/notesSlide12.xml",
+      "created": false,
+      "characters": 188
+    },
+    {
+      "page": 23,
+      "note_part": "ppt/notesSlides/notesSlide13.xml",
+      "created": false,
+      "characters": 136
+    },
+    {
+      "page": 24,
+      "note_part": "ppt/notesSlides/notesSlide28.xml",
+      "created": true,
+      "characters": 410
+    },
+    {
+      "page": 25,
+      "note_part": "ppt/notesSlides/notesSlide29.xml",
+      "created": true,
+      "characters": 253
+    },
+    {
+      "page": 26,
+      "note_part": "ppt/notesSlides/notesSlide30.xml",
+      "created": true,
+      "characters": 177
+    },
+    {
+      "page": 27,
+      "note_part": "ppt/notesSlides/notesSlide14.xml",
+      "created": false,
+      "characters": 176
+    },
+    {
+      "page": 28,
+      "note_part": "ppt/notesSlides/notesSlide31.xml",
+      "created": true,
+      "characters": 306
+    },
+    {
+      "page": 29,
+      "note_part": "ppt/notesSlides/notesSlide32.xml",
+      "created": true,
+      "characters": 234
+    },
+    {
+      "page": 30,
+      "note_part": "ppt/notesSlides/notesSlide15.xml",
+      "created": false,
+      "characters": 180
+    },
+    {
+      "page": 31,
+      "note_part": "ppt/notesSlides/notesSlide16.xml",
+      "created": false,
+      "characters": 174
+    },
+    {
+      "page": 32,
+      "note_part": "ppt/notesSlides/notesSlide17.xml",
+      "created": false,
+      "characters": 204
+    }
+  ]
+}
