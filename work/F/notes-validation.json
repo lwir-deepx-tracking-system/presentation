@@ -2,9 +2,9 @@
   "source": "ppt.pptx",
   "output": "F_발표자노트.pptx",
   "source_sha256": "8e04c3e9b668a35dcf1df76849cb353cf027eccdb0c27b760f69f1d389d98384",
-  "output_sha256": "f9142d521c617de4dbddb7834da7b60364d139dedeece8ae0ef49ee588e96ad4",
+  "output_sha256": "ab4fc646eac95e66825d3dba336f5f89c81b360eae1c16e4edaec38b57c42079",
   "canonical_md": "work\\F\\speaker-notes.md",
-  "canonical_md_sha256": "3fbbd7371f72aa5ac0ff493fed59d571ff8bb7cb4235b2ad6254f6117a22f670",
+  "canonical_md_sha256": "640bca4a022abebe69bd4a541dd147a689f4005ec0b6a32631d94fa50d560a1f",
   "total_slides": 47,
   "main_notes_written": 32,
   "new_notes_parts": 15,
@@ -363,7 +363,7 @@
       "page": 26,
       "note_part": "ppt/notesSlides/notesSlide30.xml",
       "created": true,
-      "characters": 177
+      "characters": 164
     },
     {
       "page": 27,
